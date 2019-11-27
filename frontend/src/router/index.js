@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from '../views/home.vue'
 import about from '../views/about.vue'
+import city from '../views/city.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,7 +14,11 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component:about
+    component: about
+  },
+  {
+    path: '/city/:_id',
+    component: city
   }
 ]
 
