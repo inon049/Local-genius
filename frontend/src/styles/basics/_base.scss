@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat, sans-serif;
+    color: darken($clr4, 40%);
+}
+
+body {
+    margin: 0;
+
+}
+
+img {
+    width: 100%;
+}
+
+.app-container {
+    height: 100%;
+}
