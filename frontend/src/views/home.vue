@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <h1>Homepage</h1>
+    <h1>Dror</h1>
+  <h2>aaaa</h2>
+  <h3>Dror</h3>
   </div>
 </template>
 
