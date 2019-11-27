@@ -15,12 +15,10 @@
             "city": "Sydney",
             "desc": "I work as an architect,my curated map is full of carefully chosen coffee shops, bars, restaurants and art ",
             "about": "As an architect, Layla has an eye for shapes, lines and aesthetics. Known for her fine taste, Layla prefers Mackenzies Bay over Bondi Beach, Solange over Beyonce, and vintage clothes over ordinary H&M items. Her curated map is full of carefully chosen coffee shops, bars, restaurants and art. Let her upgrade you.",
+            "price": 43,
             "interests": [
                 "Culture",
-                "Coffee",
-                "Architecture",
-                "Food",
-                "NightLife"
+                "Coffee"
             ],
             "questions": {
                 "WHAT’S YOUR CHOICE OF TRANSPORTATION IN SYDNEY AND WHY?": "I catch the train to work and uni, parking is such a hassle. Plus I enjoy spending some time walking on foot.",
@@ -46,10 +44,10 @@
             "city": "New-York",
             "desc": "I have an indie label, I love discovering new music, On the side, I do a million things  – playlists brands, DJ, music ,shopping, and go out at night with some friends ",
             "about": "I recommend wearing flat shoes while traveling with me, cause you're gonna be partying it up, big time, and going deep Bushwick. I try to be a musical  scouter and know about the hottest new musicians before anyone else, I know what's happening after dark as it's happening (and not a minute too late), and I am a fun-loving creature who loves good times, throwbacks and cheap drinks. Enjoy :)",
+            "price": 43,
             "interests": [
                 "Shopping",
-                "NightLife",
-                "Music"
+                "NightLife"
             ],
             "questions": {
                 "fav breakfast": "eggs"
@@ -73,6 +71,7 @@
             "city": "Athens",
             "desc": "aaa",
             "about": "aaa",
+            "price": 55,
             "interests": [
                 "Animals",
                 "Coffee",
@@ -99,6 +98,7 @@
             "city": "Paris",
             "desc": "aaa",
             "about": "aaa",
+            "price": 33,
             "interests": [
                 "Food",
                 "Coffee",
@@ -124,6 +124,7 @@
             "city": "Paris",
             "desc": "aaa",
             "about": "aaa",
+            "price": 20,
             "interests": [
                 "Animals",
                 "Culture",
@@ -149,6 +150,7 @@
             "city": "Paris",
             "desc": "aaa",
             "about": "aaa",
+            "price": 15,
             "interests": [
                 "Culture",
                 "Coffee",
@@ -175,6 +177,7 @@
             "city": "Paris",
             "desc": "aaa",
             "about": "aaa",
+            "price": 40,
             "interests": [
                 "Food",
                 "Coffee",
@@ -201,6 +204,7 @@
             "city": "New-York",
             "desc": "aaa",
             "about": "aaa",
+            "price": 35,
             "interests": [
                 "Photography",
                 "Culture"
@@ -227,6 +231,7 @@
             "city": "New-York",
             "desc": "aaa",
             "about": "aaa",
+            "price": 30,
             "interests": [
                 "NightLife",
                 "Culture",
@@ -255,6 +260,7 @@
             "city": "New-York",
             "desc": "aaa",
             "about": "aaa",
+            "price": 25,
             "interests": [
                 "NightLife",
                 "Culture",
@@ -280,6 +286,7 @@
             "city": "Athens",
             "desc": "aaa",
             "about": "aaa",
+            "price": 45,
             "interests": [
                 "Culture",
                 "Dancing"
@@ -307,6 +314,7 @@
             "city": "New-York",
             "desc": "aaa",
             "about": "aaa",
+            "price": 32,
             "interests": [
                 "Sport",
                 "Culture",
@@ -334,6 +342,7 @@
             "city": "New-York",
             "desc": "aaa",
             "about": "aaa",
+            "price": 40,
             "interests": [
                 "Culture",
                 "Coffee",
@@ -361,6 +370,7 @@
             "city": "Mexico-City",
             "desc": "aaa",
             "about": "aaa",
+            "price": 60,
             "interests": [
                 "Culture",
                 "Music",
@@ -388,6 +398,7 @@
             "city": "Moscow",
             "desc": "aaa",
             "about": "aaa",
+            "price": 23,
             "interests": [
                 "Food",
                 "NightLife",
@@ -413,6 +424,7 @@
             "city": "Moscow",
             "desc": "aaa",
             "about": "aaa",
+            "price": 35,
             "interests": [
                 "Food",
                 "Music",
@@ -441,6 +453,7 @@
             "city": "Moscow",
             "desc": "aaa",
             "about": "aaa",
+            "price": 20,
             "interests": [
                 "Food",
                 "NightLife",
@@ -468,6 +481,7 @@
             "city": "Moscow",
             "desc": "aaa",
             "about": "aaa",
+            "price": 15,
             "interests": [
                 "Food",
                 "Culture",
@@ -494,6 +508,7 @@
             "city": "Moscow",
             "desc": "aaa",
             "about": "aaa",
+            "price": 32,
             "interests": [
                 "Culture",
                 "Architecture",
