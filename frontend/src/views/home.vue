@@ -10,14 +10,10 @@
 </template>
 
 <script>
-import httpService from '@/services/http.service'
+import httpService from "@/services/http.service";
 export default {
-  name: 'home',
-  components: {
-  },
-  async created(){
-    var users = await httpService.get('user')
-    console.log(users);
-  }
-}
+  name: "home",
+  components: {},
+  created() {}
+};
 </script>

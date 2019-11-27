@@ -15,6 +15,7 @@
           "city": "Sydney",
           "desc": "aaa",
           "about": "aaa",
+          "price":43,
           "interests": [
               "Culture",
               "Coffee"
@@ -40,6 +41,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":43,
           "interests": [
               "Shopping",
               "NightLife"
@@ -66,6 +68,7 @@
           "city": "Athens",
           "desc": "aaa",
           "about": "aaa",
+          "price":55,
           "interests": [
               "Animals",
               "Coffee",
@@ -92,6 +95,7 @@
           "city": "Paris",
           "desc": "aaa",
           "about": "aaa",
+          "price":33,
           "interests": [
               "Food",
               "Coffee",
@@ -117,6 +121,7 @@
           "city": "Paris",
           "desc": "aaa",
           "about": "aaa",
+          "price":20,
           "interests": [
               "Animals",
               "Culture",
@@ -142,6 +147,7 @@
           "city": "Paris",
           "desc": "aaa",
           "about": "aaa",
+          "price":15,
           "interests": [
               "Culture",
               "Coffee",
@@ -168,6 +174,7 @@
           "city": "Paris",
           "desc": "aaa",
           "about": "aaa",
+          "price":40,
           "interests": [
               "Food",
               "Coffee",
@@ -194,6 +201,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":35,
           "interests": [
               "Photography",
               "Culture"
@@ -220,6 +228,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":30,
           "interests": [
               "NightLife",
               "Culture",
@@ -248,6 +257,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":25,
           "interests": [
               "NightLife",
               "Culture",
@@ -273,6 +283,7 @@
           "city": "Athens",
           "desc": "aaa",
           "about": "aaa",
+          "price":45,
           "interests": [
               "Culture",
               "Dancing"
@@ -300,6 +311,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":32,
           "interests": [
               "Sport",
               "Culture",
@@ -327,6 +339,7 @@
           "city": "New-York",
           "desc": "aaa",
           "about": "aaa",
+          "price":40,
           "interests": [
               "Culture",
               "Coffee",
@@ -354,6 +367,7 @@
           "city": "Mexico-City",
           "desc": "aaa",
           "about": "aaa",
+          "price":60,
           "interests": [
               "Culture",
               "Music",
@@ -381,6 +395,7 @@
           "city": "Moscow",
           "desc": "aaa",
           "about": "aaa",
+          "price":23,
           "interests": [
               "Food",
               "NightLife",
@@ -406,6 +421,7 @@
           "city": "Moscow",
           "desc": "aaa",
           "about": "aaa",
+          "price":35,
           "interests": [
               "Food",
               "Music",
@@ -434,6 +450,7 @@
           "city": "Moscow",
           "desc": "aaa",
           "about": "aaa",
+          "price":20,
           "interests": [
               "Food",
               "NightLife",
@@ -461,6 +478,7 @@
           "city": "Moscow",
           "desc": "aaa",
           "about": "aaa",
+          "price":15,
           "interests": [
               "Food",
               "Culture",
@@ -487,6 +505,7 @@
           "city": "Moscow",
           "desc": "aaa",
           "about": "aaa",
+          "price":32,
           "interests": [
               "Culture",
               "Architecture",
