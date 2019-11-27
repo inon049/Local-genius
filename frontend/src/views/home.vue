@@ -10,9 +10,11 @@
 
 <script>
 import httpService from '@/services/http.service'
+import cityList from '@/components/city-list'
 export default {
   name: 'home',
   components: {
+    cityList
   },
   async created(){
     var users = await httpService.get('user')
