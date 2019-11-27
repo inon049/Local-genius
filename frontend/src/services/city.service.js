@@ -2,35 +2,45 @@
 
 var gCities = [
     {
-        id: 101,
+        _id: "101",
         name: 'New-York'
     },
     {
-        id: 102,
+        _id: "102",
         name: 'Moscow'
     },
     {
-        id: 103,
+        _id: "103",
         name: 'Paris'
     },
     {
-        id: 104,
+        _id: "104",
         name: 'Sydney'
     },
     {
-        id: 106,
+        _id: "106",
         name: 'Mexico-City'
     },
     {
-        id: 107,
+        _id: "107",
         name: 'Athens'
     },
     {
-        id: 108,
+        _id: "108",
         name: 'Seoul'
     },
 ]
 
-function query() {
+
+async function query() {
     return gCities
+}
+async function getById(cityId) {
+    var city = gCities.find(city => city._id === cityId)
+    return city
+}
+
+export default {
+    query,
+    getById,
 }
