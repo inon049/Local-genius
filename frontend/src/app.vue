@@ -9,3 +9,11 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  async created() {
+    await this.$store.dispatch({ type: "loadUsers" });
+  }
+};
+</script>
