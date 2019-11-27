@@ -1,19 +1,29 @@
 <template>
-  <div class="home">
-    <h2>inon</h2>
-    <h1>Homepage</h1>
-    <h2>testing</h2>
-    <h1>dror</h1>
-    <h1>Ori</h1>
-    <h3>lala</h3>
-  </div>
+  <section class="home">
+    <city-list :cities="cities"></city-list>
+  </section>
 </template>
 
 <script>
-import httpService from "@/services/http.service";
+// SERVICES
+import cityService from '@/services/city.service'
+// COMPONENTS
+import cityList from '@/components/home/city-list'
+
+
 export default {
-  name: "home",
-  components: {},
-  created() {}
-};
+  name: 'home',
+  components: {
+    cityList
+  },
+  data(){
+    return{
+      cities:[]
+    }
+  },
+  async created(){
+    var cities = await cityService.query()
+    this.cities=cities
+  }
+}
 </script>

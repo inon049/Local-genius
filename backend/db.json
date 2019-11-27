@@ -14,7 +14,7 @@
             ],
             "city": "Sydney",
             "desc": "I work as an architect,my curated map is full of carefully chosen coffee shops, bars, restaurants and art ",
-            "about": "As an architect, Layla has an eye for shapes, lines and aesthetics. Known for her fine taste, Layla prefers Mackenzies Bay over Bondi Beach, Solange over Beyonce, and vintage clothes over ordinary H&M items. Her curated map is full of carefully chosen coffee shops, bars, restaurants and art. Let her upgrade you.",
+            "about": "As an architect, I have an eye for shapes, lines and aesthetics. Known for my fine taste, I prefer Mackenzies Bay over Bondi Beach, Solange over Beyonce, and vintage clothes over ordinary H&M items.My curated map is full of carefully chosen coffee shops, bars, restaurants and art. Let her upgrade you.",
             "price": 43,
             "interests": [
                 "Culture",
@@ -50,7 +50,11 @@
                 "NightLife"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT’S THE ONE PLACE IN NEW YORK THAT YOU’RE SURE ONLY YOU TRULY APPRECIATE?": "Flushing, Queens because it takes maybe 2 hours to get to via train but it’s like a younger Chinatown.",
+                "WHAT’S YOUR DREAM JOB?": "Running my own label with my friends.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Miami because it’s a quick and cheap ticket to escape to a beautiful beach year round.",
+                "WHERE DO YOU GO IN NEW-YORK CITY IF YOU HAVE TWO HOURS TO KILL?": "I love to just walk from my office in Soho to Chinatown. There’s funny tourist shops, hidden mini malls, and walking past Little Italy is always fun.",
+                "WHO’S YOUR HERO AND WHERE WOULD YOU TAKE THEM OUT FOR A BITE OR A DRINK IN NEW-YORK CITY?": "Julia Willinger, she was the first person to ever believe & employ me in music. I would take her to Juno because it’s one of the nicer cute date places in Bushwick that’s walking distance from my home."
             },
             "link": "https://www.coolcousin.com/cities/new-york/briana-b85035c3/"
         },
@@ -69,8 +73,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/64c662df-9ca8-49af-b773-65bbf7d50330/0d44129bab4fce53.jpg"
             ],
             "city": "Athens",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I like to observe the life around me, I love my city, from beautiful synagogues to funky museums, when it comes to me you can expect the unexpected",
+            "about": "A “creative observer”, I am a Moscow-born Athenian that takes nothing for what it is. The sense of exploration i have for life also manifest in my love for Athens, the city I am called my lovely new home. As a true individual, my recommendations for the city are far from cliché: from beautiful synagogues to funky museums, when it comes to me you can expect the unexpected.",
             "price": 55,
             "interests": [
                 "Animals",
@@ -78,7 +82,9 @@
                 "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN ATHENS WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Thinking of heroes, I do badly miss a few friends of mine who I have been knowing since my high school and college years. The only place in Athens for all of us to meet and not to start a fight is unquestionably a bar in Mets, named after one shady Talmudic character. Cain.",
+                "TOMORROW’S YOUR LAST DAY IN ATHENS. HOW DO YOU SPEND IT?": "Whole day shooting of an action packed commercial and late night seafood dinner.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Actually I lean toward two cities, both start with B. Berlin is an essential town for my abstract mind to focus on and create something new. And there is Bordeaux plus surroundings for my unrestful spirit to defocus and float away."
             },
             "link": "https://www.coolcousin.com/cities/athens/boris-64c662df/"
         },
@@ -96,44 +102,53 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/94f531ad-b384-4ad6-a81c-f918d5a8983f/644603b90e2a50f8.jpg"
             ],
             "city": "Paris",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I am  a fashion manager who sees Paris through my artsy eyes, If you’re looking for a chic park or are in the mood for a Parisian style hair-cut before you hit those boutiques, I am your femme de l'heure.",
+            "about": "I am  a fashion manager who sees Paris through my artsy eyes. Between at least 5 latte breaks a day, I like to lose track of time while skimming through old fashion magazines packed in the decorated halls of Arts Décoratifs Museum. If you’re looking for a chic park or are in the mood for a Parisian style hair-cut before you hit those boutiques, I am your femme de l'heure.",
             "price": 33,
             "interests": [
                 "Food",
                 "Coffee",
-                "OutDoor"
+                "Culture",
+                "Shopping"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "The super talented painter and fashion designer Sonia Delaunay. I have a major crush on her. I would take her to dinner at my favorite bistro “Aux Deux Amis”, drink wine and talk for hours. It’s a small place for stylish locals so she would fit in easily. It has a weird-ish, old school look but the real thing is the food. The menu changes everyday and the dishes are small and perfect for sharing.",
+                "WHAT WOULD MAKE A PERFECT DAY IN THE SUN FOR YOU?": "Picnic with a friend, alongside wine and goodies to eat. Paris is full of green spots, the challenge is to find one where you are actually allowed to sit on the grass.",
+                "IF TOMORROW WAS YOUR LAST DAY IN PARIS BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I would get breakfast in one of my favorite places – than spend a few hours in the Marais district, sipping coffee in one of my regular spots. Then, I would meet friends for dinner and drinks at a rooftop, which has an amazing view of the whole city. Sounds like a good plan!"
             },
             "link": "https://www.coolcousin.com/cities/paris/lior-94f531ad/"
         },
         {
             "_id": "5",
-            "name": "Nicolas",
+            "name": "Nicole",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/349a9f23-22ef-4685-9d32-72b083587bb8/66620633107b80a2.jpg",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/43cab6749d013d97.jpg",
             "imgUrls": [
-                "https://dlq9ebkqqrcon.cloudfront.net/349a9f23-22ef-4685-9d32-72b083587bb8/1a201ca2765cc427.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/349a9f23-22ef-4685-9d32-72b083587bb8/5c410fd44417adf4.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/349a9f23-22ef-4685-9d32-72b083587bb8/d3809223c47d2ba4.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/813f695635a3d23a.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/ec89015f6bda2040.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/6b8bf10317173480.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/494af52ff15ba2c1.jpg"
             ],
-            "city": "Paris",
-            "desc": "aaa",
-            "about": "aaa",
+            "city": "Vancouver",
+            "desc": "I am a digital marketer, I live to give an authentic voice of the city. Follow my lead for the best places to eat, drink, and people watch. No unicorn food included - I hate it.",
+            "about": "I was born in Istanbul, moved to Vancouver for university and then spent some time living in different places in Europe. But Vancouver’s special vibe pulled me back in, and I have been there ever since. I try to be always after a good laugh, and Louis CK, Seinfeld, Tina Fey and Ilana Glazer are practically my spirit guides. Follow my lead for the best places to eat, drink, and people watch. No unicorn food included - I hate it.",
             "price": 20,
             "interests": [
                 "Animals",
-                "Culture",
-                "OutDoor"
+                "Food",
+                "OutDoor",
+                "NightLife"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Ilana Glazer, Alibi Room.",
+                "WHAT’S THE THING YOU LOVE TO DO IN YOUR CITY THAT YOU NEVER GET TO DO?": "Swim! I love dipping in the Pacific, but somehow I rarely do it.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "Bus! I would love to say a bike but i am not about to ride uphill.",
+                "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "I rush to the beach and call all my friends there to have a bbq.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Milan, so many hidden gems and great people. Also pasta."
             },
-            "link": "https://www.coolcousin.com/cities/paris/nicolas-349a9f23/"
+            "link": "https://www.coolcousin.com/cities/vancouver/meltem-436c298f/"
         },
         {
             "_id": "6",
@@ -141,15 +156,15 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/2154b02c-569d-4e9b-a52d-aae213ad64c6/416d0306d1d6d99c.jpg",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/0dc6a3ebe1b84efa.jpg",
             "imgUrls": [
-                "https://dlq9ebkqqrcon.cloudfront.net/2154b02c-569d-4e9b-a52d-aae213ad64c6/1e231adf1701c70c.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/2154b02c-569d-4e9b-a52d-aae213ad64c6/d462cc92c74a84b9.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/2154b02c-569d-4e9b-a52d-aae213ad64c6/c8b01235d85c2608.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/3bbdefe660805125.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/b91b6f24ac113ff7.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/674132b89cf12ea0.jpg"
             ],
-            "city": "Paris",
-            "desc": "aaa",
-            "about": "aaa",
+            "city": "Vancouver",
+            "desc": " If you feel like getting into the wild and you are dreaming of rivers, creeks, picturesque beaches and mountainside forest trails - follow me.",
+            "about": "From all of the wonderful things Vancouver has to offer, Me (and my dogs) get most excited by all the hiking opportunities near by. Girl talks with my daughters at the kitchen table, ice cream, Starbucks chai tea lattes and a great TV series are a few of my favorite things. If you feel like getting into the wild and you are dreaming of rivers, creeks, picturesque beaches and mountainside forest trails - follow me.",
             "price": 15,
             "interests": [
                 "Culture",
@@ -157,9 +172,12 @@
                 "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My two twenty something daughters are my heroes and when not hanging around my kitchen island you might find us with various Starbucks lattes in our hand looking for the closest fabulous baked goodie or some Earnest Ice Cream (location coming soon to North Van!)",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?":"My Fiat 500, it is perfect for getting me, a friend and my two golden retrievers to where we need to go.",
+                "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "I would start the day with a Starbucks chai tea latte, get a sour cherry and buckwheat scone from Purebread in Gastown, pick up a new Kit and Ace t-shirt, go for a swim in Second Beach Pool in Stanley Park, then I would grab a shwarma from the Babylon Cafe on Robson Street for lunch, hike through Lighthouse Park in West Vancouver and have drinks and dinner on the deck of the Beach House Restaurant on Dundareve Beach in West Vancouver.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Rome, the food, wine, people and historical treasures keep surprising."
             },
-            "link": "https://www.coolcousin.com/cities/paris/gabriela-2154b02c/"
+            "link": "https://www.coolcousin.com/cities/vancouver/shauna-779333ed/"
         },
         {
             "_id": "7",
@@ -175,8 +193,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/d8751f92-4b32-4eac-b051-d8d04b282514/86ecf9bc73487d48.jpg"
             ],
             "city": "Paris",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I am a man of many passions - traveling, indie music but most I am the one to trust about restaurant recommendations. Your tummy will thank you",
+            "about": "I am a man of many passions - real estate, traveling, indie music, but one passion is above all the rest -I am passion for food. Vegetarian food, to be specific. Just one look at my aesthetic Instagram account is enough to know I am the one to trust about restaurant recommendations, especially if you don't eat meat - but even if you do. Your tummy will thank you.",
             "price": 40,
             "interests": [
                 "Food",
@@ -184,7 +202,10 @@
                 "Culture"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN NEW YORK WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My hero is Anthony Bourdain and I would take him to the East Village to hang out in cool bars like Rue B and Kingston Hall.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN NEW YORK AND WHY?": "Subway or Citi Bike are my choice of transportation in New York. I feel its a bit more efficient and enjoyable that driving or taking taxis.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "My favorite vacation city in world would be Barcelona because there is so much character in the city, the food is outstanding, and the people are genuine.",
+                "NAME SOME SPOTS IN NEW YORK THAT ARE GOOD FOR A TINDER DATE.": "I would use this as an opportunity to try some new places both have never been to. This way, if its bad, we can both bitch about it! If it is good, it becomes the spot to go to for any occassion."
             },
             "link": "https://www.coolcousin.com/cities/new-york/samir-d8751f92/"
         },
@@ -202,15 +223,18 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/2fada0cc-35fa-48a7-ad3a-781154fe9849/c85dd7ce6ac90542.jpg"
             ],
             "city": "New-York",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": " Get my map for a Brooklyn bonanza of vintage clothing, dive bars Thai food, work outs and salad haunts, with some Nolita touches to tie it up.",
+            "about": "Bushwick is the star of my map, and the cafe by my gym that makes their own nut milk is the hero. If I go out for a celebration, I would take the L to the Lorimer stop and wing it from there, and if I had to leave the city for good,I would probably be saddest to say cya to the Natural History Museum. Get my map for a Brooklyn bonanza of vintage clothing, dive bars Thai food, work outs and salad haunts, with some Nolita touches to tie it up.",
             "price": 35,
             "interests": [
                 "Photography",
                 "Culture"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE WOULD YOU TAKE THEM OUT FOR A BITE OR A DRINK IN NEW YORK?": "Wow. Um… I want to say I’d party with Robert Mapplethorpe, but that would be a total lie bc truthfully I’d grab coffee with my mom.",
+                "IF YOU WERE GIVEN A CHOICE, MAYOR OF WHICH NEIGHBORHOOD IN NEW YORK WOULD YOU BE?": "That’s a hard one – on the one hand, Bushwick is without a doubt my favorite neighborhood and home, but to be mayor would be the peak of gentrification, and not something I feel comfortable with. Could I be co-mayor with an original Bushwickian? Is that an option?",
+                "WHAT WOULD MAKE A PERFECT DAY IN THE SUN FOR YOU?": "Take pictures around the city, maybe grab a train to the beach at Rockaways, fall asleep somewhere surprising, sip some beer, read, act like a dumb idiot who likes the sun too much, be a goof and listen to The Kinks or maybe “My Sweet Lord” bc yolo and winter’s coming.",
+                "IT’S YOUR LAST DAY IN NEW YORK – HOW DO YOU SPEND YOUR TIME?":"I actually have a list like that, just in case. I’d go to my favorite spots and the sentimental ones. Wake up, drink coffee, go to my gym, ride to Williamsburg, walk the bridge, buy a bag or shoes at , grab lunch in a perfect Thai restaurant, go to some museums (to sadly say goodbye), and then barhop!, and anything else I can cram in before passing out. Possibly karaoke."
             },
             "link": "https://www.coolcousin.com/cities/new-york/dana-2fada0cc/"
         },
@@ -229,16 +253,20 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/a7cd3661-0832-4335-b73c-568df2bd4ae4/5d4c7df9027e3f36.jpg"
             ],
             "city": "New-York",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I have the  travel bug, big time,I even runs a travel blog that updates so often it can make you really jealous. Here is me, enjoy it while you can",
+            "about": "I have the  travel bug, big time - I even runs a travel blog that updates so often it can make you really jealous. Apparently it runs in my family, and has already lived in Colorado, New York, Florida, Boston and even Australia. For now i am in NYC, but i cant promise it will be long until I will hop on the next adventure. Here is my map, enjoy it while you can.",
             "price": 30,
             "interests": [
                 "NightLife",
                 "Culture",
-                "OutDoor"
+                "OutDoor",
+                "Food"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT DO YOU DO AND WHY DO YOU DO IT?": "My day job is a Production Assistant, but I am always looking for another project to learn about, whether it's travel or entertainment. I hope to one day combine both passions as I document my travels around the world. I believe that you will never truly work a day in your life if you love what you do and I work every day to make sure that I experience just that. So far so good!",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN NEW YORK AND WHY?": "My feet, always. How else am I supposed to see the guy in the speedo roller blading down the street?",
+                "TOMORROW’S YOUR LAST DAY IN NEW YORK. HOW DO YOU SPEND IT?": "Walk around the west village till my feet hurt and when they do, have a picnic with good food and good friends.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "I love exploring new places, but one place i'll never get sick of is Durango, CO."
             },
             "link": "https://www.coolcousin.com/cities/new-york/danielle-a7cd3661/"
         },
@@ -248,18 +276,16 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/92fe43f172268b23.jpg",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/45d43acf36092bf8.jpg",
             "imgUrls": [
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/1d92528897459056.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/f2c96888fd21f06d.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/642f141eae8d67ab.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/c19abbda8f511550.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/7e7e1a71a8dd0f7a.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/d53ed72b-d76c-4795-8e1e-1da68bb8b010/c660b775615c4ae1.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/f7977d3d3de96c13.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/efb7aed82a77e5f4.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/14e6c5d4221d0566.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/3bf54d6705d9a097.jpg"
             ],
-            "city": "New-York",
-            "desc": "aaa",
-            "about": "aaa",
+            "city": "Vancouver",
+            "desc": "I am a yoga teacher and Nurse because I love to help people feel their healthiest! I love healthy food choices,utdoor forays and I appreciate  all the great things my city offers",
+            "about": "I am a yoga teacher AND a nurse, which means I can help you stretch and take care of you if you get injured. My love for taking care of our body and soul manifests through every aspect of my life - my happy and healthy food choices, my outdoor forays, and my appreciation of all the great things my city offers.",
             "price": 25,
             "interests": [
                 "NightLife",
@@ -267,9 +293,12 @@
                 "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Rihanna - I would take her to Wreck Beach for some major chilling.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "Biking! Vancouver has a vast network of bike lanes. Although they are controversial, they get you where you need to be FAST. Many Vancouverites will bike all year round, as we don't often get snow, and the rain doesn't bug us too much.",
+                "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "Eating snacks, drinking beer from a growler, and chilling on the beach.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Cartagena, Colombia because it is romantic, inviting, and sultry. The people and food are wonderful."
             },
-            "link": "https://www.coolcousin.com/cities/new-york/shaun-d53ed72b/"
+            "link": "https://www.coolcousin.com/cities/vancouver/alana-d4a2324f/"
         },
         {
             "_id": "12",
@@ -277,24 +306,27 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/8cb02d79-0569-4f7a-98a7-f30bce1146c9/70780a6c203dba2f.jpg",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/70fdeb7cc6888842.jpg",
             "imgUrls": [
-                "https://dlq9ebkqqrcon.cloudfront.net/8cb02d79-0569-4f7a-98a7-f30bce1146c9/b7f17949a397a317.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/8cb02d79-0569-4f7a-98a7-f30bce1146c9/c29fa1748f78f71e.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/8cb02d79-0569-4f7a-98a7-f30bce1146c9/e8ef48e3158e475e.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/6071a347e183ce90.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/3beae6a0f4d4970c.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/b2185fa88a5e58d0.jpg"
             ],
-            "city": "Athens",
-            "desc": "aaa",
-            "about": "aaa",
+            "city": "Vancouver",
+            "desc": "I am a West Vancouver socialite & foodist. I love to be active but best of all I love to eat only the best foods I can find in Vancouver",
+            "about": "I am a West Vancouver socialite & foodist. I organize parties and get togethers with my friends. We frequent restaurants, shopping and hiking in the city for good measures. I love to be active but best of all I love to eat only the best foods I can find in Vancouver. I love badminton, tennis, golf, skiing etc. I do it because I love to be around people and I love socializing with only good well meaning people.",
             "price": 45,
             "interests": [
-                "Culture",
-                "Dancing"
+                "Food",
+                "Shopping",
+                "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Anyone who rescues animals and free all animals in captivity from all the aquariums and zoos. I would recommend hiking the Garibaldi to enjoy the beautiful lake.",
+                "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "Have dim sum at Chef Tony, bike around downtown Vancouver, have lunch at Kingyo, end with dinner in the sky in North Vancouver.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Barcelona. Unfortunately it is under attack today. The city is beautiful and the people and food is fantastic."
             },
-            "link": "https://www.coolcousin.com/cities/athens/maria-8cb02d79/"
+            "link": "https://www.coolcousin.com/cities/vancouver/maria-868c5b72/"
         },
         {
             "_id": "13",
@@ -312,8 +344,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/eb98a2cc-ff91-4320-94fd-f67d00d88dec/986e916e19d08460.jpg"
             ],
             "city": "New-York",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "Imagine what a Canadian turned NYC filmmaker who hangs out around the West Village would recommend for his city",
+            "about": "Imagine what a Canadian turned NYC filmmaker who hangs out around the West Village would recommend for his city. If you thought of standup comedy, outdoor arches and modern art - you're spot on! My map includes some of the best art-house cinemas in town, tips for where you can admire neoclassical architecture (selfie!), a perfect juice bar, a restaurant that serves jerk chicken with staff that often bursts into spontaneous dance, some casual bars in the Village and even a friendly spot.",
             "price": 32,
             "interests": [
                 "Sport",
@@ -322,7 +354,10 @@
                 "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT’S YOUR DREAM JOB?": "Filmmaker …I’m glad its my actual job.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "London, because of the great memories when I was in school.",
+                "WHO’S YOUR HERO AND WHERE WOULD YOU TAKE THEM OUT FOR A BITE OR A DRINK IN NEW-YORK CITY?": "Screenwriter Charlie Kaufman. I would take him to Joe’s Pizza or Prodigy Coffee.",
+                "WHERE DO YOU GO IN NEW-YORK CITY IF YOU HAVE TWO HOURS TO KILL?": "I love to just walk from my office in Soho to Chinatown. There’s funny tourist shops, hidden mini malls, and walking past Little Italy is always fun."
             },
             "link": "https://www.coolcousin.com/cities/new-york/shom-eb98a2cc/"
         },
@@ -332,27 +367,30 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/fcf40ab1-990e-4e9d-b004-84099d1aa80e/615ac00bac4885e5.jpg",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/ba16ee9797b4bdf3.jpg",
             "imgUrls": [
-                "https://dlq9ebkqqrcon.cloudfront.net/fcf40ab1-990e-4e9d-b004-84099d1aa80e/21410227a3e64112.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/fcf40ab1-990e-4e9d-b004-84099d1aa80e/8c407705806473f3.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/fcf40ab1-990e-4e9d-b004-84099d1aa80e/5f134c8fb368f729.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/fcf40ab1-990e-4e9d-b004-84099d1aa80e/75587ae9a5e395f8.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/51a086cf0d0eff5b.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/ad765278f40e6d13.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/68bd41ddc614a11a.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/46be7541ce52650c.jpg"
             ],
-            "city": "New-York",
-            "desc": "aaa",
-            "about": "aaa",
+            "city": "Vancouver",
+            "desc": "Although I tried living elsewhere, I just can’t get away from this city. Not only is there a lot to explore, it’s just downright, drop-dead gorgeous.",
+            "about": "Although I tried living elsewhere, I just can’t get away from this city where the ocean meets the mountains and I was born and raised. Not only is there a lot to explore, it’s just downright, drop-dead gorgeous. My psychology degree helps me understand the target demographic I markets to at work, but I am not using it to analyze you - I swears. I like being a foodie more than my wallet does, but I can point you to the best thrift stores and flea markets in town.",
             "price": 40,
             "interests": [
-                "Culture",
+                "Shopping",
                 "Coffee",
                 "OutDoor",
-                "Architecture"
+                "Food"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WERE YOU BORN AND RAISED IN VANCOUVER? IF NOT, WHERE DID YOU GROW UP AND WHAT BROUGHT YOU TO VANCOUVER?": "I was born and raised in North Van(couver). I went to England for a year of university and Ontario for the rest of it, and came right on back to Vancouver afterwards. You can't keep me from the mountains and the ocean I call home on the west coast for too long.",
+                "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My mom is my hero and we hang out all the time... A good hang for us would be at the Trout Lake Farmer's Market in the summer where the dogs can swim. Ideally, there would be an antique show on at the Croatian Cultural Centre, but if not we might swing around Main Street. For good chats, there's nothing better than curling up with tea on the couch.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "I take the Skytrain to/from work because it's faster to get into the city than driving in rush hour and cheaper (no pay parking)! It's also handy to get to/from downtown when I know there will be drinks involved. To get to North Van, Kits, or adventures a little further afield like Hemlock Valley or Whistler, I drive my car."
+                
             },
-            "link": "https://www.coolcousin.com/cities/new-york/emily-fcf40ab1/"
+            "link": "https://www.coolcousin.com/cities/vancouver/tate-b00fbcc3/"
         },
         {
             "_id": "15",
@@ -368,17 +406,22 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/8a432304-33ac-4233-a558-7fb6d0469034/159fb43fe343aced.jpg"
             ],
             "city": "Mexico-City",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "My love for this city makes sense when you discover My favorite spots for the city -tons of great food to try, rich culture and colorful nightlife",
+            "about": "After studying for a degree in Visual Journalism in California, I went right back to my hometown Mexico City. My love for this city makes sense when you discover My favorite spots for the city - tons of great food to try, rich culture and colorful nightlife. And hey, you can always trust a photographer to know the secret places where beauty hides.",
             "price": 60,
             "interests": [
                 "Culture",
                 "Music",
                 "OutDoor",
-                "Food"
+                "Food",
+                "Photography"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "NAME THE BEST TV SHOWS OF ALL TIME, AND WHAT MAKES THEM SO GOOD?": "It didn’t say I only have to choose one, so here go my list of absolute favorites: Charmed, what’s not to love? magic, fun and handsome dudes! Sex in the City, I don’t think I have to explain this, hahaha. And Seinfeld, because who doesn’t love to laugh?",
+                "WHO’S YOUR HERO AND WHERE IN MEXICO CITY WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Optimus Prime! And I would take him to Teotihuacan.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN MEXICO CITY AND WHY?": "Car, because the subway is not near my house and it doesn’t get to where I work.",
+                "TOMORROW’S YOUR LAST DAY IN MEXICO CITY. HOW DO YOU SPEND IT?": "Eating as much food as I can manage, nothing beats Mexican breakfast!!! Chilaquiles, molletes, sopes, quesadillas, oh myyyyyy I love the food.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "This one is a tough one but if I can't go to a new one, my favorite cities are Mexico City (I know I am biased but it is an amazing one with never-ending fun!), Tel Aviv (food and fun) and Miami (just go relaxing and shopping!)."
             },
             "link": "https://www.coolcousin.com/cities/mexico-city/violeta-8a432304/"
         },
@@ -396,8 +439,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/2c8d4ecf7889dd0d.jpg"
             ],
             "city": "Moscow",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park",
+            "about": "If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park, wandering the streets and maybe showing him my secret entrance to the spot under the bridges over Moskva-river. Seeing as I am dead, as media manager I am willing to do something similar for you guys, and I added a cafe where you can relax while listening to the orchestra rehearse, a forest in the middle of the city, an industrial complex full of bars and galleries, a shop for garage art fans, a multi-floor bar where they LUV foreigners and more.",
             "price": 23,
             "interests": [
                 "Food",
@@ -405,7 +448,11 @@
                 "OutDoor"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT ARE YOU WORKING ON THESE DAYS?": "I’m working on my time management with the hope that it will help with media management, which is what I do.",
+                "WHAT DRIVES YOU MAD THESE DAYS?": "Total zeit-not (need of time) – because I always want to do more than I can.",
+                "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "Hunter S. Thompson – the famous journalist – it will be a bottle of rum at one of the parks, which is insufficiently wild however.",
+                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I will walk around all the central streets with a bottle of red wine.",
+                "WHAT MAKES YOU HAPPY?": "Fly-fishing on small streams."
             },
             "link": "https://www.coolcousin.com/cities/moscow/yury-8b718b01/"
         },
@@ -422,16 +469,20 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/1066fd1899c29fb5.jpg"
             ],
             "city": "Moscow",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I am jet setter with a purpose, chasing stories across the globe as a journalist.",
+            "about": "I am jet setter with a purpose, chasing stories across the globe as a journalist. I keep myself grounded by reading, listening to music (Alt-J, Ukranian hip hop) and wishes I had more time to hang with family over beers and burgers and pulling all-nighters dancing with friends. My map has some serious treats, like conspiracy theories, a hidden house of tea and ice cream, the spot where Pussy Riot was arrested, a bar that tailors your night according to how drunk you want to get and Jamie Oliver's bar/restaurant near a fancy market in the Red Square.",
             "price": 35,
             "interests": [
                 "Food",
                 "Music",
-                "OutDoor"
+                "OutDoor",
+                "Culture"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT ARE YOU WORKING ON THESE DAYS?": "Every day I make a news report for REN TV channel. At my job, you never know where you will be this evening. I can fly to another city or even another country every moment. Once I was suddenly sent to the North Pole. Luckily, it was winter and I didn’t have to go there wearing shorts). Since then I always keep a special travel bag with stuff for every situation in the office.",
+                "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I would take Sergey Lavrov to “Pivbar” – so we could chill and eat burgers like good friends.",
+                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "“Pod muhoy” bar. Every time I leave Moscow for a long time I however end up to drink there."
+                
             },
             "link": "https://www.coolcousin.com/cities/moscow/vitaly-7cbd9e79/"
         },
@@ -451,8 +502,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/d17ad3bc1477b1f6.jpg"
             ],
             "city": "Moscow",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "I think there is something poetic about the way i see my city and this attitude is very clear in my recommendations for my hometown",
+            "about": "I think there is something poetic about the way i see my city, and this attitude is very clear in my recommendations for my hometown — from a traditional donut joint in a park that reminds me of childhood, a park that boasts over 30 kinds of lilacs, a bar that plays oldies where people dance all night, a secret bar located behind a Chinese noodle stand, an escape room, a rooftop bar that is best to visit at 4 AM and Europe's highest restaurant.",
             "price": 20,
             "interests": [
                 "Food",
@@ -461,7 +512,9 @@
                 "Luxury"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I will invite Lewis Carrol for dinner and a couple of cocktails at White Rabbit (find more detailed information about this restaurant in my map!). I think, it is not necessary to explain why I would take him exactly to this restaurant",
+                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I would walk all day, especially along Moscow-river, then would spend some time on Chistoprudny Boulevard (it’s my favorite). 100% that I would have dinner on Strelka’s terrace with spectacular view to the Cathedral of Christ the Saviour",
+                "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?": "In the summer – walking through the centre and having a rest in my country house. In winter – ice-skating and drinking mulled wine, that’s Moscow."
             },
             "link": "https://www.coolcousin.com/cities/moscow/mila-f914f101/"
         },
@@ -479,8 +532,8 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/88cbcf04-d131-4da6-b592-d61fc1d127fd/e436078dd72b08d4.jpg"
             ],
             "city": "Moscow",
-            "desc": "aaa",
-            "about": "aaa",
+            "desc": "A journalist by training and designer of Moscow-inspired broaches by trade, I love to tell stories about my hometown, and I am totally done my research",
+            "about": "A journalist by training and designer of Moscow-inspired broaches by trade, I love to tell stories about my hometown, and I am totally done my research. My map offers something in almost all hoods in town, with a focus on Lubianka, Kitay Gorod and Polyanka and can point you toward a cafe with the best moody playlists and happy waiters, USSR style photography, casual shopping, a forest known as 'the lungs of Moscow' where you can cycle for hours and a Stalinistic monument worth a trip out of town.",
             "price": 15,
             "interests": [
                 "Food",
@@ -488,7 +541,11 @@
                 "Coffee"
             ],
             "questions": {
-                "fav breakfast": "eggs"
+                "WHAT ARE YOU WORKING ON THESE DAYS?": "I’m working on a brand new collection of badges of St. Petersburg and writing an article about constructivism in architecture.",
+                "WHAT MAKES YOU HAPPY?": "Quietness, when it feels like it. An opportunity to work on something you really care about. That last step which separates you from finishing up something important. A good book, movie or good news. Friends and family when they come together to hang out and have a delicious dinner.",
+                "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "It’s a complex question. I was always interested in personalities living here long before me. When I was a kid I was imagining how a time machine would bring back my favourite writers – Mayakovsky for instance – to present. And how I would take him to my friends and show my favourite city spots and ask how does he like it. It would be fun!",
+                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I would ride a bike by the river, then take a trolleybus along the Sadovoe ring, and visit all my friends. But what does it mean “forever”? Do you wanna make me cry?",
+                "WHAT’S THE SPOT IN MOSCOW YOU WOULDN’T BE CAUGHT DEAD IN?": "Apparently, I was supposed to call the most remote and maybe criminal areas but no – I was so exhausted by my everyday road from home to school that I still hate that area instead. It’s not far from the center – Kutuzovsky prospekt."
             },
             "link": "https://www.coolcousin.com/cities/moscow/marianna-88cbcf04/"
         },
