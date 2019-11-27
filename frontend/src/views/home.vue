@@ -2,6 +2,7 @@
   <div class="home">
     <h1>Homepage</h1>
     <h2>testing</h2>
+    <h1>dror</h1>
   </div>
 </template>
 
