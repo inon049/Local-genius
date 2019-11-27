@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h2>inon</h2>
     <h1>Homepage</h1>
     <h2>testing</h2>
     <h1>dror</h1>
