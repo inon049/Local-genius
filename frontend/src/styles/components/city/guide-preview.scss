@@ -1,6 +1,8 @@
 .guide-preview {
-  border: 1px solid black;
-  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   img {
     border-top-left-radius: 10px;
@@ -9,59 +11,84 @@
 }
 
 .guides-container {
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    @include for-normal-layout {
-        max-width: 750px;
-    }
-    @include for-wide-layout {
-        max-width: $break-normal;
-    }
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include for-normal-layout {
+    max-width: 750px;
+  }
+  @include for-wide-layout {
+    max-width: $break-normal;
+  }
+  @include for-narrow-layout {
+    max-width: 800px;
+  }
 }
 
 .guide-name {
   height: 10%;
   display: flex;
-  padding: 20px;
-  align-items: flex-end;
+  padding: 0 10px;
+  align-items: center;
 
-  h3{
-      margin: 0;
-      padding: 0;
-      font-size: 1.2rem;
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #21626a;
+    &:hover{
+      text-decoration: underline;
+    }
   }
-  p{
-      margin: 0;
-      margin-left: 15px;
-      padding: 0;
-      font-size: .7rem;
-      font-style: italic;
-      
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-style: italic;
+    &:not(:last-child):after {
+      content: ",";
+    }
   }
 }
 
 /// CHANGE MEDIA QUERY
 
 .ratio-card-guide {
-  height: 75%;
+  height: 70%;
   @include guide-card-aspect-ratio(100, 80);
 }
 
 //GUIDE INTERESTS
 
-.guide-interests-list{
-    padding: 10px;
-    width: 100%;
-    list-style: none;
-    height: 15%;
-    display: flex;
-
+.guide-interests-list {
+  padding: 5px;
+  width: 100%;
+  list-style: none;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.guide-interest{
-    border: 1px solid black;
-    max-width: 30%;
-    height: 45%;
+.guide-interest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid black;
+  background-color: rgb(211, 211, 211);
+  border-radius: 5px;
+  width: 32%;
+  height: 45%;
+  margin: 0 2px;
+  font-size: 0.9rem;
+  padding: 0 5px;
+  img {
+    width: 15%;
+  }
 
+  // &:nth-child(3){
+  //   margin:0;
+  //   margin-left: 2px;
+  // }
 }
