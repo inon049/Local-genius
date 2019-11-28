@@ -1,6 +1,5 @@
 <template>
   <section class="city-list">
-    <h2>Popular touring destinations</h2>
     <section class="flex-list">
       <city-preview v-for="city in citiesToWhow" :key="city._id" :city="city"></city-preview>
     </section>
