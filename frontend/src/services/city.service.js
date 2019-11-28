@@ -22,7 +22,7 @@ var gCities = [
     {
         _id: '102',
         name: 'Moscow',
-        imgUrl:'https://cdn.getyourguide.com/img/tour_img-1667715-146.jpg'
+        imgUrl:'https://bigseventravel.com/wp-content/uploads/2019/03/moscow-1200x675.png'
     },
     {
         _id: '103',
@@ -42,7 +42,7 @@ var gCities = [
     {
         _id: '107',
         name: 'Athens',
-        imgUrl: 'https://cdn.getyourguide.com/img/tour_img-1667715-146.jpg'
+        imgUrl: 'https://bigseventravel.com/wp-content/uploads/2019/03/anastasia-sklyar-1171169-unsplash-1024x683.jpg'
     },
     {
         _id: '108',

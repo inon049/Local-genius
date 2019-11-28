@@ -1,29 +1,34 @@
 <template>
   <section class="home">
-    <city-list :cities="cities"></city-list>
+    <city-list @showCityPage="showCityPage" :cities="cities"></city-list>
   </section>
 </template>
 
 <script>
-// SERVICES
-import cityService from '@/services/city.service'
-// COMPONENTS
-import cityList from '@/components/home/city-list'
-
+import router from '@/router/index'
+import cityService from "@/services/city.service";
+import cityList from "@/components/home/city-list";
 
 export default {
-  name: 'home',
+  router,
+  name: "home",
   components: {
     cityList
   },
-  data(){
-    return{
-      cities:[]
-    }
+  data() {
+    return {
+      cities: []
+    };
   },
-  async created(){
-    var cities = await cityService.query()
-    this.cities=cities
+  async created() {
+    var cities = await cityService.query();
+    this.cities = cities;
+  },
+  methods:{
+    showCityPage(id){
+      console.log('here2');
+      router.push(`/city/${id}`)
+    }
   }
-}
+};
 </script>
