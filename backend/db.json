@@ -2,10 +2,14 @@
     "user": [
         {
             "_id": "1",
-            "name": "Dona",
+            "name": "Dona Smith",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Spanish"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/638e8388-666f-448b-a635-49da2fb9e122/8f87ab658439729a.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/638e8388-666f-448b-a635-49da2fb9e122/9418f9cc18cfe088.jpg",
@@ -30,10 +34,15 @@
         },
         {
             "_id": "2",
-            "name": "Briana",
+            "name": "Briana Smith",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Spanish",
+                "Italian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/b85035c3-dc5b-4e16-8af8-349c68bc45d2/7ae6f944a96d78b2.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/b85035c3-dc5b-4e16-8af8-349c68bc45d2/22f7519edbe55d2c.jpg",
@@ -60,10 +69,15 @@
         },
         {
             "_id": "3",
-            "name": "Mark",
+            "name": "Mark Rizenko",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Russian",
+                "Greek"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/64c662df-9ca8-49af-b773-65bbf7d50330/64d3b89a3bac93e2.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/64c662df-9ca8-49af-b773-65bbf7d50330/0ae13794ec322f5c.jpg",
@@ -90,10 +104,14 @@
         },
         {
             "_id": "4",
-            "name": "Luna",
+            "name": "Luna Authier",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/94f531ad-b384-4ad6-a81c-f918d5a8983f/ab90888e1ff528e7.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/94f531ad-b384-4ad6-a81c-f918d5a8983f/5a3abe10a17dbae0.jpg",
@@ -120,10 +138,14 @@
         },
         {
             "_id": "5",
-            "name": "Nicole",
+            "name": "Nicole Robinson",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/43cab6749d013d97.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/436c298f-0ff1-4fc7-9ede-7e97c1b200bd/813f695635a3d23a.jpg",
@@ -152,10 +174,14 @@
         },
         {
             "_id": "6",
-            "name": "Gabi",
+            "name": "Gabi Belanger",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/0dc6a3ebe1b84efa.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/779333ed-0e6f-479b-ace4-8cb43f3bbe47/3bbdefe660805125.jpg",
@@ -181,10 +207,14 @@
         },
         {
             "_id": "7",
-            "name": "Gabi",
+            "name": "Gabi Champoux",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/d8751f92-4b32-4eac-b051-d8d04b282514/adbdf0ca3435e0a4.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/d8751f92-4b32-4eac-b051-d8d04b282514/b69b7e63ce111870.jpg",
@@ -211,10 +241,13 @@
         },
         {
             "_id": "8",
-            "name": "Maya",
+            "name": "Maya Williams",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/2fada0cc-35fa-48a7-ad3a-781154fe9849/7e8acbd326eed0f2.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/2fada0cc-35fa-48a7-ad3a-781154fe9849/c7df51c40bcfc7f8.jpg",
@@ -240,10 +273,15 @@
         },
         {
             "_id": "9",
-            "name": "Maggie",
+            "name": "Maggie Johnson",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French",
+                "spanish"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/a7cd3661-0832-4335-b73c-568df2bd4ae4/9c6fbec010946058.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/a7cd3661-0832-4335-b73c-568df2bd4ae4/da885e6701d014a6.jpg",
@@ -272,10 +310,14 @@
         },
         {
             "_id": "11",
-            "name": "Shon",
+            "name": "Shon Scott",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/45d43acf36092bf8.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/d4a2324f-6394-44dc-90da-791a540113ab/f7977d3d3de96c13.jpg",
@@ -302,10 +344,14 @@
         },
         {
             "_id": "12",
-            "name": "Ariel",
+            "name": "Ariel Grant",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "French"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/70fdeb7cc6888842.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/868c5b72-2783-46a9-b1f5-9341b2bddc81/6071a347e183ce90.jpg",
@@ -330,10 +376,14 @@
         },
         {
             "_id": "13",
-            "name": "Ron",
+            "name": "Ron Brown",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Italian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/eb98a2cc-ff91-4320-94fd-f67d00d88dec/c5eca7476ef87fc8.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/eb98a2cc-ff91-4320-94fd-f67d00d88dec/27bdc7a0496171cf.jpg",
@@ -363,10 +413,15 @@
         },
         {
             "_id": "14",
-            "name": "Emily",
+            "name": "Emily Watson",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Italian",
+                "Chinese"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/ba16ee9797b4bdf3.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/b00fbcc3-6c22-4972-99d1-c6c14e67ee88/51a086cf0d0eff5b.jpg",
@@ -393,10 +448,15 @@
         },
         {
             "_id": "15",
-            "name": "Violeta",
+            "name": "Violeta García",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Italian",
+                "Spanish"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/8a432304-33ac-4233-a558-7fb6d0469034/871ae694afca8308.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/8a432304-33ac-4233-a558-7fb6d0469034/4a94ccca8e5f7212.jpg",
@@ -426,16 +486,22 @@
         },
         {
             "_id": "16",
-            "name": "Boris",
+            "name": "Boris Turgenev",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Russian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/93a8e9abc237d897.jpg",
             "imgUrls": [
+                "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/6365410803685a79.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/bb73fd3c84fd5ade.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/89435f5cbdf7ab8a.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/89435f5cbdf7ab8a.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/96276276ad66128f.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/2c8d4ecf7889dd0d.jpg"
+                
             ],
             "city": "Moscow",
             "desc": "If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park",
@@ -457,15 +523,20 @@
         },
         {
             "_id": "17",
-            "name": "Yuri",
+            "name": "Yuri Lebedev",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Russian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/90078933115e12b5.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/b5e7caa2c2157505.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/b5e7caa2c2157505.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/1066fd1899c29fb5.jpg"
+                "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/ddc67bb35378b3df.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/1066fd1899c29fb5.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/7cbd9e79-8328-486a-a264-c50015ee7259/7951ca87d88aaab9.jpg"
             ],
             "city": "Moscow",
             "desc": "I am jet setter with a purpose, chasing stories across the globe as a journalist.",
@@ -480,21 +551,25 @@
             "questions": {
                 "WHAT ARE YOU WORKING ON THESE DAYS?": "Every day I make a news report for REN TV channel. At my job, you never know where you will be this evening. I can fly to another city or even another country every moment. Once I was suddenly sent to the North Pole. Luckily, it was winter and I didn’t have to go there wearing shorts). Since then I always keep a special travel bag with stuff for every situation in the office.",
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I would take Sergey Lavrov to “Pivbar” – so we could chill and eat burgers like good friends.",
-                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "“Pod muhoy” bar. Every time I leave Moscow for a long time I however end up to drink there."
+                "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "“Pod muhoy” bar. Every time I leave Moscow for a long time I however end up to drink there.",
+                "":""
             },
             "link": "https://www.coolcousin.com/cities/moscow/vitaly-7cbd9e79/"
         },
         {
             "_id": "18",
-            "name": "Nadia",
+            "name": "Nadia Ivanov",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "profileImgUrl": "https://www.coolcousin.com/cities/moscow/mila-f914f101/",
+            "lang": [
+                "English",
+                "Russian"
+            ],
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/89ed6cbb8812a2aa.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/130085ff861de9eb.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/5ef9546676591cd4.jpg",
-                "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/89ed6cbb8812a2aa.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/945ffea754d52fcc.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/408d6ed9ae51d5ca.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/f914f101-1dac-4cd5-b514-8c66c1d45529/d17ad3bc1477b1f6.jpg"
@@ -512,16 +587,21 @@
             "questions": {
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I will invite Lewis Carrol for dinner and a couple of cocktails at White Rabbit (find more detailed information about this restaurant in my map!). I think, it is not necessary to explain why I would take him exactly to this restaurant",
                 "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I would walk all day, especially along Moscow-river, then would spend some time on Chistoprudny Boulevard (it’s my favorite). 100% that I would have dinner on Strelka’s terrace with spectacular view to the Cathedral of Christ the Saviour",
-                "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?": "In the summer – walking through the centre and having a rest in my country house. In winter – ice-skating and drinking mulled wine, that’s Moscow."
+                "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?": "In the summer – walking through the centre and having a rest in my country house. In winter – ice-skating and drinking mulled wine, that’s Moscow.",
+                "":""
             },
             "link": "https://www.coolcousin.com/cities/moscow/mila-f914f101/"
         },
         {
             "_id": "19",
-            "name": "Marina",
+            "name": "Marina Preobrazhensky",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Russian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/88cbcf04-d131-4da6-b592-d61fc1d127fd/32a9d8160c80e088.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/88cbcf04-d131-4da6-b592-d61fc1d127fd/b4b70006080c00c8.jpg",
@@ -549,10 +629,14 @@
         },
         {
             "_id": "20",
-            "name": "Seaor",
+            "name": "Seaor Hernández",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Spanish"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/011f0548-2a4c-4385-bad7-dc63cfe69dba/cf749ad520dcad33.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/011f0548-2a4c-4385-bad7-dc63cfe69dba/7df6915408a45cad.jpg",
@@ -577,10 +661,14 @@
         },
         {
             "_id": "21",
-            "name": "Millie",
+            "name": "Millie López",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": [
+                "English",
+                "Spanish"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/a2067b5424555b70.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/665d26641c53d184.jpg",
@@ -608,10 +696,11 @@
         },
         {
             "_id": "22",
-            "name": "Emmillio",
+            "name": "Emmillio Fucilla",
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "lang": ["English" ,"Spanish","Italian"],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
