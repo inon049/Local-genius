@@ -6,6 +6,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.3,
             "langs": [
                 "English",
                 "Spanish"
@@ -38,6 +39,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.1,
             "langs": [
                 "English",
                 "Spanish",
@@ -56,6 +58,7 @@
             "price": 43,
             "interests": [
                 "Shopping",
+                "Music",
                 "NightLife"
             ],
             "questions": {
@@ -73,6 +76,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.7,
             "langs": [
                 "English",
                 "Russian",
@@ -108,6 +112,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.6,
             "langs": [
                 "English",
                 "French"
@@ -142,6 +147,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.9,
             "langs": [
                 "English",
                 "French"
@@ -178,6 +184,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":5,
             "langs": [
                 "English",
                 "French"
@@ -211,6 +218,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":3.8,
             "langs": [
                 "English",
                 "French"
@@ -245,6 +253,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.2,
             "langs": [
                 "English"
             ],
@@ -277,6 +286,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.4,
             "langs": [
                 "English",
                 "French",
@@ -314,6 +324,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.4,
             "langs": [
                 "English",
                 "French"
@@ -348,6 +359,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.7,
             "langs": [
                 "English",
                 "French"
@@ -380,6 +392,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.9,
             "langs": [
                 "English",
                 "Italian"
@@ -417,6 +430,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.1,
             "langs": [
                 "English",
                 "Italian",
@@ -452,6 +466,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.3,
             "langs": [
                 "English",
                 "Italian",
@@ -490,6 +505,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4,
             "langs": [
                 "English",
                 "Russian"
@@ -527,6 +543,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.2,
             "langs": [
                 "English",
                 "Russian"
@@ -562,6 +579,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.4,
             "langs": [
                 "English",
                 "Russian"
@@ -598,6 +616,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4,
             "langs": [
                 "English",
                 "Russian"
@@ -633,6 +652,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":3.6,
             "langs": [
                 "English",
                 "Spanish"
@@ -665,6 +685,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.4,
             "langs": [
                 "English",
                 "Spanish"
@@ -700,6 +721,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
+            "rate":4.7,
             "langs": ["English" ,"Spanish","Italian"],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
             "imgUrls": [

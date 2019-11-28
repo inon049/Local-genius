@@ -1,12 +1,13 @@
 .guide-preview {
+  margin: 10px 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 
   img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
   }
 }
 
@@ -25,16 +26,21 @@
   }
 }
 
-.guide-name {
-  height: 10%;
+.guide-top-data{
+  //IN THIS CMP SHOW RATE
+  height: 7%;
   display: flex;
   padding: 0 10px;
   align-items: center;
+}
 
+.guide-name {
+  display: flex;
+  align-items: center;
   a {
     margin: 0;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-right: 15px;
     text-decoration: none;
     color: #21626a;
@@ -53,10 +59,16 @@
   }
 }
 
-/// CHANGE MEDIA QUERY
+.guide-short-desc{
+  height: 15%;
+  padding: 0 10px;
+  p{
+    margin: 10px 0;
+  }
+}
 
 .ratio-card-guide {
-  height: 70%;
+  height: 60%;
   @include guide-card-aspect-ratio(100, 80);
 }
 
@@ -66,7 +78,7 @@
   padding: 5px;
   width: 100%;
   list-style: none;
-  height: 20%;
+  height: 15%;
   display: flex;
   flex-wrap: wrap;
 }
