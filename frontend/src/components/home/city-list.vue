@@ -1,7 +1,7 @@
 <template>
   <section class="city-list">
-    <h2>List title</h2>
-    <section class="card-grid">
+    <h2>Popular touring destinations</h2>
+    <section class="flex-list">
       <city-preview v-for="city in citiesToWhow" :key="city._id" :city="city"></city-preview>
     </section>
   </section>
@@ -29,7 +29,7 @@ export default {
     citiesToWhow() {
       if (!this.expandCityList) {
         return this.cities.splice(0, 4);
-      } else return this.cities;
+      } else return this.cities.splice(0, 8);
     }
   },
 };

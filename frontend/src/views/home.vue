@@ -1,15 +1,16 @@
 <template>
   <section class="home">
-    <div class="flex col center">
+    <div class="flex justify-center">
       <div class="titles">
         <h2>Travel perfection made simple.</h2>
-        <h3>Get insider tips straight from vetted locals in over 100 cities</h3>
+        <h3>Find yourself a local genius in more then 100 cities</h3>
       </div>
-
       <city-filter :cities="cities"></city-filter>
       <img class="hero-img" src="@/assets/img/home-bg.jpg" alt />
     </div>
-    <city-list :cities="cities"></city-list>
+    <div class="container">
+      <city-list :cities="cities"></city-list>
+    </div>
   </section>
 </template>
 
