@@ -1,18 +1,29 @@
 <template>
   <section class="home">
-    <city-list @showCityPage="showCityPage" :cities="cities"></city-list>
+    <div class="flex col center">
+      <div class="titles">
+        <h2>Travel perfection made simple.</h2>
+        <h3>Get insider tips straight from vetted locals in over 100 cities</h3>
+      </div>
+
+      <city-filter :cities="cities"></city-filter>
+      <img class="hero-img" src="@/assets/img/home-bg.jpg" alt />
+    </div>
+    <city-list :cities="cities"></city-list>
   </section>
 </template>
 
 <script>
-import router from '@/router/index'
+import router from "@/router/index";
 import cityService from "@/services/city.service";
 import cityList from "@/components/home/city-list";
+import cityFilter from "@/components/home/city-filter";
 
 export default {
   router,
   name: "home",
   components: {
+    cityFilter,
     cityList
   },
   data() {
@@ -22,13 +33,7 @@ export default {
   },
   async created() {
     var cities = await cityService.query();
-    this.cities = cities;
-  },
-  methods:{
-    showCityPage(id){
-      console.log('here2');
-      router.push(`/city/${id}`)
-    }
+    this.cities = JSON.parse(JSON.stringify(cities));
   }
 };
 </script>
