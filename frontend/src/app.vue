@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-      <router-link to="/guide/:_id">Guide</router-link>
-    </div>
-    <section class="">
+   <main-header></main-header>
+    <section class="main-link">
       <router-view />
     </section>
   </div>
 </template>
 
 <script>
+import mainHeader from './components/main-header'
 export default {
   async created() {
     await this.$store.dispatch({ type: "loadUsers" });
+  },
+  components:{
+    mainHeader
   }
 };
 </script>
+
+<style >
+
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="guide-details-container continer">
+  <section class="guide-details-container">
     <guide-personal-info :guide="guide"></guide-personal-info>
   </section>
 </template>

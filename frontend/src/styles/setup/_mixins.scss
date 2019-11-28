@@ -5,8 +5,18 @@
       @content;
     }
   }
+  @mixin for-medium-layout {
+    @media (min-width: $break-medium) {
+      @content;
+    }
+  }
   
   @mixin for-normal-layout {
+    @media (min-width: $break-normal) {
+      @content;
+    }
+  }
+  @mixin for-mid-wide-layout {
     @media (min-width: $break-normal) {
       @content;
     }
@@ -17,6 +27,7 @@
       @content;
     }
   }
+
   
 
 /* Media  Mixins */
