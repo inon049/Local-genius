@@ -1,0 +1,67 @@
+.guide-preview {
+  border: 1px solid black;
+  border-radius: 10px;
+
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.guides-container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include for-normal-layout {
+        max-width: 750px;
+    }
+    @include for-wide-layout {
+        max-width: $break-normal;
+    }
+}
+
+.guide-name {
+  height: 10%;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+
+  h3{
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+  }
+  p{
+      margin: 0;
+      margin-left: 15px;
+      padding: 0;
+      font-size: .7rem;
+      font-style: italic;
+      
+  }
+}
+
+/// CHANGE MEDIA QUERY
+
+.ratio-card-guide {
+  height: 75%;
+  @include guide-card-aspect-ratio(100, 80);
+}
+
+//GUIDE INTERESTS
+
+.guide-interests-list{
+    padding: 10px;
+    width: 100%;
+    list-style: none;
+    height: 15%;
+    display: flex;
+
+}
+
+.guide-interest{
+    border: 1px solid black;
+    max-width: 30%;
+    height: 45%;
+
+}
