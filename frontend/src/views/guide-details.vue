@@ -1,10 +1,11 @@
 <template>
-  <section>
-     <h1 v-if="guide">{{guide.name}}</h1>
+  <section class="guide-details-container continer">
+    <guide-personal-info :guide="guide"></guide-personal-info>
   </section>
 </template>
 
 <script>
+import guidePersonalInfo from '../components/guide-details/guide-personal-info'
 export default {
   computed:{
       guide(){
@@ -18,6 +19,9 @@ export default {
     } catch (err) {
       console.log(err);
     }
+  },
+  components:{
+    guidePersonalInfo
   }
 };
 </script>

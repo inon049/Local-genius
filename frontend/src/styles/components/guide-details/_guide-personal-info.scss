@@ -1,0 +1,26 @@
+.guide-details-container{
+    font-family: OpenSansCondensed;
+}
+.guide-details {
+    column-count: 2;
+    h1{
+        // font-family: OpenSansCondensedBold;
+        font-size: 1.8rem;
+    }
+    img{
+        height: 400px;
+        object-fit: cover;
+    }
+}
+.profile-img{
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.personal-title-continer{
+    padding-bottom:40px;
+    column-count: 2;
+    h1{
+        font-size:4rem;
+    }
+}
