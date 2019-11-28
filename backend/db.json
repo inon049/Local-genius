@@ -173,7 +173,7 @@
             ],
             "questions": {
                 "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My two twenty something daughters are my heroes and when not hanging around my kitchen island you might find us with various Starbucks lattes in our hand looking for the closest fabulous baked goodie or some Earnest Ice Cream (location coming soon to North Van!)",
-                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?":"My Fiat 500, it is perfect for getting me, a friend and my two golden retrievers to where we need to go.",
+                "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "My Fiat 500, it is perfect for getting me, a friend and my two golden retrievers to where we need to go.",
                 "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "I would start the day with a Starbucks chai tea latte, get a sour cherry and buckwheat scone from Purebread in Gastown, pick up a new Kit and Ace t-shirt, go for a swim in Second Beach Pool in Stanley Park, then I would grab a shwarma from the Babylon Cafe on Robson Street for lunch, hike through Lighthouse Park in West Vancouver and have drinks and dinner on the deck of the Beach House Restaurant on Dundareve Beach in West Vancouver.",
                 "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Rome, the food, wine, people and historical treasures keep surprising."
             },
@@ -234,7 +234,7 @@
                 "WHO’S YOUR HERO AND WHERE WOULD YOU TAKE THEM OUT FOR A BITE OR A DRINK IN NEW YORK?": "Wow. Um… I want to say I’d party with Robert Mapplethorpe, but that would be a total lie bc truthfully I’d grab coffee with my mom.",
                 "IF YOU WERE GIVEN A CHOICE, MAYOR OF WHICH NEIGHBORHOOD IN NEW YORK WOULD YOU BE?": "That’s a hard one – on the one hand, Bushwick is without a doubt my favorite neighborhood and home, but to be mayor would be the peak of gentrification, and not something I feel comfortable with. Could I be co-mayor with an original Bushwickian? Is that an option?",
                 "WHAT WOULD MAKE A PERFECT DAY IN THE SUN FOR YOU?": "Take pictures around the city, maybe grab a train to the beach at Rockaways, fall asleep somewhere surprising, sip some beer, read, act like a dumb idiot who likes the sun too much, be a goof and listen to The Kinks or maybe “My Sweet Lord” bc yolo and winter’s coming.",
-                "IT’S YOUR LAST DAY IN NEW YORK – HOW DO YOU SPEND YOUR TIME?":"I actually have a list like that, just in case. I’d go to my favorite spots and the sentimental ones. Wake up, drink coffee, go to my gym, ride to Williamsburg, walk the bridge, buy a bag or shoes at , grab lunch in a perfect Thai restaurant, go to some museums (to sadly say goodbye), and then barhop!, and anything else I can cram in before passing out. Possibly karaoke."
+                "IT’S YOUR LAST DAY IN NEW YORK – HOW DO YOU SPEND YOUR TIME?": "I actually have a list like that, just in case. I’d go to my favorite spots and the sentimental ones. Wake up, drink coffee, go to my gym, ride to Williamsburg, walk the bridge, buy a bag or shoes at , grab lunch in a perfect Thai restaurant, go to some museums (to sadly say goodbye), and then barhop!, and anything else I can cram in before passing out. Possibly karaoke."
             },
             "link": "https://www.coolcousin.com/cities/new-york/dana-2fada0cc/"
         },
@@ -388,7 +388,6 @@
                 "WERE YOU BORN AND RAISED IN VANCOUVER? IF NOT, WHERE DID YOU GROW UP AND WHAT BROUGHT YOU TO VANCOUVER?": "I was born and raised in North Van(couver). I went to England for a year of university and Ontario for the rest of it, and came right on back to Vancouver afterwards. You can't keep me from the mountains and the ocean I call home on the west coast for too long.",
                 "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My mom is my hero and we hang out all the time... A good hang for us would be at the Trout Lake Farmer's Market in the summer where the dogs can swim. Ideally, there would be an antique show on at the Croatian Cultural Centre, but if not we might swing around Main Street. For good chats, there's nothing better than curling up with tea on the couch.",
                 "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "I take the Skytrain to/from work because it's faster to get into the city than driving in rush hour and cheaper (no pay parking)! It's also handy to get to/from downtown when I know there will be drinks involved. To get to North Van, Kits, or adventures a little further afield like Hemlock Valley or Whistler, I drive my car."
-                
             },
             "link": "https://www.coolcousin.com/cities/vancouver/tate-b00fbcc3/"
         },
@@ -482,7 +481,6 @@
                 "WHAT ARE YOU WORKING ON THESE DAYS?": "Every day I make a news report for REN TV channel. At my job, you never know where you will be this evening. I can fly to another city or even another country every moment. Once I was suddenly sent to the North Pole. Luckily, it was winter and I didn’t have to go there wearing shorts). Since then I always keep a special travel bag with stuff for every situation in the office.",
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I would take Sergey Lavrov to “Pivbar” – so we could chill and eat burgers like good friends.",
                 "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "“Pod muhoy” bar. Every time I leave Moscow for a long time I however end up to drink there."
-                
             },
             "link": "https://www.coolcousin.com/cities/moscow/vitaly-7cbd9e79/"
         },
@@ -576,6 +574,68 @@
                 "fav breakfast": "eggs"
             },
             "link": "https://www.coolcousin.com/cities/mexico-city/sigifredo-011f0548/"
+        },
+        {
+            "_id": "21",
+            "name": "Millie",
+            "email": "ww@ww.com",
+            "password": "11",
+            "type": "guide",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/a2067b5424555b70.jpg",
+            "imgUrls": [
+                "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/665d26641c53d184.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/fa43ac2234bc44e0.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/6edb63fd932195dd.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/ac310822758cecb5.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/f5b0dad7-5a01-4f74-b1c6-47e5429c3055/3f34a83ca2eca029.jpg"
+            ],
+            "city": "Barcelona",
+            "desc": "I was born in Napoli, and reborn in Barcelona",
+            "about": "I was born in Napoli, and reborn in Barcelona. But wait, there’s a whole lotta stops in between: I have lived in (take a deep breath): New York, Korea, Ibiza, London and Germany. All this experience around the globe brought me to open a tourism company based in Barcelona, the only place that she I truly call home. Check out my map to discover why.",
+            "price": 32,
+            "interests": [
+                "Culture",
+                "Shopping",
+                "Photography"
+            ],
+            "questions": {
+                "WHAT DO YOU DO AND WHY DO YOU DO IT?": "I'm an entrepreneur and I'm about to open my own company - A concierge company based in Barcelona and Ibiza, an all around service agency which can satisfy any kind of requests. I find that work with tourism is the right job for this city. Barcelona is one of the most touristic cities in the world, so helping travellers is the best I could do as I'm one of them!",
+                "WHO’S YOUR HERO AND WHERE IN BARCELONA WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My hero is my mum, (not with me anymore unfortunately) I would take her everywhere, from up the Tibidabo to Barceloneta. I wish this could be possible.",
+                "TOMORROW’S YOUR LAST DAY IN BARCELONA. HOW DO YOU SPEND IT?": "A walk around the city, stoping at all of my favorite bars and restaurants.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Not really a city but an island, my dearest Ibiza. The sea there is amazing, the countryside and of course the parties!!!"
+            },
+            "link": "https://www.coolcousin.com/cities/barcelona/valentina-f5b0dad7/"
+        },
+        {
+            "_id": "22",
+            "name": "Emmillio",
+            "email": "ww@ww.com",
+            "password": "11",
+            "type": "guide",
+            "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
+            "imgUrls": [
+                "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/8a9bb21fba253971.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/06e28ca080a4ff80.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/3b444fa8700048cb.jpg",
+                "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/efd6742388c201be.jpg"
+            ],
+            "city": "Rome",
+            "desc": "I am a journalist who cares about details so much that I made it my business to write about what matters most - everyday life.",
+            "about": "I am a journalist who cares about details so much that I made it my business to write about what matters most - everyday life. Recently, I am also developed a love for photo reportage, which fine tunes I already inquisitive eye. So if you're looking for a guide to the Italian capital who appreciates the small things in life (kissing my son at the end of my work day) but who still enjoys splurging on an indulgent night out, this is for you. Soak in a traditional Roman bath, pay a visit to the cemetery where poets Shelley and Keats are buried, eat, eat and eat, and then maybe grab a drink and a live show.",
+            "price": 32,
+            "interests": [
+                "Culture",
+                "Food",
+                "Photography"
+            ],
+            "questions": {
+                "WHAT ARE YOU WORKING ON THESE DAYS?": "I am a journalist who writes about everyday life in Rome. With my editorial staff we are examining all the ideas of the next mayor of Rome to improve the city. I’m curious to know what he will do to increase the quality of public transport and to promote the artistic heritage of the city.",
+                "WHO’S YOUR HERO AND WHERE IN ROME WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "He is not alive and not dead, but an Italian comics hero, Dylan Dog. He is a nightmare investigator, a vegetarian detective with the heart of gold, which looks like Rupert Everett, who lives his adventures between parallel dimensions, ghosts, monsters, witches and murderers. Always on the side of the humble people.",
+                "TOMORROW’S YOUR LAST DAY IN ROME. HOW DO YOU SPEND IT?": "A walk to the Foro Romano with my woman and my son. The heart of ancient Rome of 2000 years ago.",
+                "WHAT MAKES YOU HAPPY?": "For about 13 months now: coming back home after a day’s work and hug my little son and his beautiful mom."
+            },
+            "link": "https://www.coolcousin.com/cities/rome/emiliano-84222de8/"
         }
     ]
 }

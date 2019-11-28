@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     users: [],
     // cities: [], // city stuff for inon
-    currCity: null
+    currCity: null,
+    currGuide : null
   },
   getters: {
     users(state) {
@@ -27,7 +28,9 @@ export default new Vuex.Store({
         
         return guides
       })
-
+    },
+    guide(state){
+      return state.currGuide
     }
   },
   mutations: {
@@ -39,6 +42,9 @@ export default new Vuex.Store({
     // },
     setCurrCity(state, { currCity }) {
       state.currCity = currCity      
+    },
+    setCurrGuide(state , {guide}){
+      state.currGuide = guide
     }
   },
   actions: {
@@ -54,6 +60,10 @@ export default new Vuex.Store({
       const currCity = await cityService.getById(cityId)      
       context.commit({ type: 'setCurrCity', currCity })
       return currCity
+    },
+    async getGuideById(context , {_id}){
+      const guide = await userService.getGuideById(_id);
+      context.commit({type:'setCurrGuide', guide})
     }
   },
   modules: {
