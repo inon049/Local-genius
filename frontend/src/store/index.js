@@ -23,10 +23,11 @@ export default new Vuex.Store({
         if (user.city) {
           return user.city === state.currCity
         }
-        console.log(guides);
-        
-        return guides
       })
+      // console.log('pp');
+      // console.log(guides);
+
+      return guides
 
     }
   },
@@ -38,7 +39,7 @@ export default new Vuex.Store({
     //   state.cities = cities
     // },
     setCurrCity(state, { currCity }) {
-      state.currCity = currCity      
+      state.currCity = currCity
     }
   },
   actions: {
@@ -51,7 +52,7 @@ export default new Vuex.Store({
     //   context.commit({ type: 'setCities', cities })
     // },
     async getCityById(context, { cityId }) {
-      const currCity = await cityService.getById(cityId)      
+      const currCity = await cityService.getById(cityId)
       context.commit({ type: 'setCurrCity', currCity })
       return currCity
     }
