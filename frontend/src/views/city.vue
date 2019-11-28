@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h2 v-if="currCity">{{currCity.name}}'s Guides</h2>
+      <div class="city-header-img">
+      <h2 v-if="currCity">{{currCity.name}}'s Guides</h2>
+    </div>
     <guide-list :guides="guides"></guide-list>
   </section>
 </template>
@@ -34,3 +36,7 @@ export default {
   }
 };
 </script>
+
+<style>
+
+</style>
