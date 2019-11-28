@@ -24,13 +24,15 @@ export default new Vuex.Store({
         if (user.city) {
           return user.city === state.currCity
         }
-        console.log(guides);
-        
-        return guides
       })
+      return guides
     },
     guide(state){
       return state.currGuide
+      // console.log('pp');
+      // console.log(guides);
+
+
     }
   },
   mutations: {
@@ -57,12 +59,12 @@ export default new Vuex.Store({
     //   context.commit({ type: 'setCities', cities })
     // },
     async getCityById(context, { cityId }) {
-      const currCity = await cityService.getById(cityId)      
+      const currCity = await cityService.getById(cityId)
       context.commit({ type: 'setCurrCity', currCity })
       return currCity
     },
-    async getGuideById(context , {_id}){
-      const guide = await userService.getGuideById(_id);
+    async getGuideById(context , {guideId}){
+      const guide = await userService.getGuideById(guideId);
       context.commit({type:'setCurrGuide', guide})
     }
   },

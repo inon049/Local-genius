@@ -1,6 +1,6 @@
 <template>
   <section>
-      {{guide}}
+     <h1 v-if="guide">{{guide.name}}</h1>
   </section>
 </template>
 
@@ -8,17 +8,13 @@
 export default {
   computed:{
       guide(){
-         return  this.$store.getters.guide;
+         return this.$store.getters.guide;
       }
   },
   async created() {
     const guideId = this.$route.params._id;
     try {
-      const guide  = await this.$store.dispatch({
-        type: "getGuideById",
-        guideId
-      });
-      this.guide = guide;
+      await this.$store.dispatch({type: "getGuideById", guideId});
     } catch (err) {
       console.log(err);
     }

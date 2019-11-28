@@ -15,6 +15,9 @@ export default {
       guides: []
     };
   },
+  computed:{
+
+  },
   async created() {
     const cityId = this.$route.params._id;
     try {
@@ -27,6 +30,8 @@ export default {
       console.log(err);
     }
     this.guides = this.$store.getters.guides;
+    console.log(this.guides);
+    
   }
 };
 </script>

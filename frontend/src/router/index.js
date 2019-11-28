@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import home from '../views/home.vue'
 import about from '../views/about.vue'
 import city from '../views/city.vue'
-import guide from '../views/guide.vue'
+import guideDetails from '../views/guide-details.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: '/guide/:_id',
-    component: guide
+    component: guideDetails
   }
 ]
 

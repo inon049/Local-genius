@@ -8,7 +8,7 @@ async function query(){
 }
 
 async function getGuideById(_id){
-    const guide = await httpService.getById(`guide/:${_id}`)
+    const guide = await httpService.get(`user/${_id}`)
     return guide
 }
 
