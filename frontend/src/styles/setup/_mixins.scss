@@ -9,6 +9,11 @@
     @media (min-width: $break-medium) {
       @content;
     }
+    
+  @mixin for-very-narrow-layout {
+    @media (max-width: 650px) {
+      @content;
+    }
   }
   
   @mixin for-normal-layout {
