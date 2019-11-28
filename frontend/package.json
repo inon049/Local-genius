@@ -14,7 +14,6 @@
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
-    "vuelendar": "^1.0.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
