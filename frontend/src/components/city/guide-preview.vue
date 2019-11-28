@@ -4,12 +4,19 @@
       <img :src="guide.profileImgUrl" />
     </div>
     <div class="guide-name">
-      <h3>{{guide.name}}</h3>
-      <p>Malasian,Japanese</p>
+      <router-link :to="'/guide/' + guide._id">{{guide.name}}</router-link>(
+      <p v-for="(lang,idx) in guide.langs" :key="idx">{{lang}}</p>)
     </div>
     <ul class="guide-interests-list">
-      <li v-for="(interest,idx) in guide.interests" :key="idx" class="guide-interest" :class="interest">
-        {{interest}}</li>
+      <li
+        v-for="(interest,idx) in guide.interests"
+        :key="idx"
+        class="guide-interest"
+        :class="interest"
+      >
+        {{interest.toUpperCase()}}
+        <img :src="require('@/assets/img/interests/' + interest + '.png')" />
+      </li>
     </ul>
   </li>
 </template>
@@ -18,6 +25,11 @@
 export default {
   props: {
     guide: Object
+  },
+  computed:{
+    currIcon(){
+      
+    }
   }
 };
 </script>
