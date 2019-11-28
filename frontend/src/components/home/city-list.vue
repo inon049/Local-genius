@@ -1,6 +1,9 @@
 <template>
-  <section class="city-list card-grid">
-      <city-preview v-for="city in citiesToWhow" :key="city.id" :city="city"></city-preview>
+  <section class="city-list">
+      <h2>List title</h2>
+      <section class="card-grid">
+      <city-preview v-for="city in citiesToWhow" :key="city._id" :city="city"></city-preview>
+      </section>
   </section>
 </template>
 
@@ -11,7 +14,7 @@
 export default {
     data(){
         return {
-            expandCityList:false,
+            expandCityList:true,
             expandGuideList:false
         }
     },
@@ -30,8 +33,9 @@ export default {
         }
     },
     methods:{
-        showCityPage(){
-            
+        showCityPage(id){
+            console.log('here1');
+            this.$emit('showCityPage',id)
         }
     }
 };

@@ -8,9 +8,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     users: [],
-    // cities: [], // city stuff for inon
     currCity: null,
-    currGuide : null
+    currGuide : null,
+    cities: [],
   },
   getters: {
     users(state) {
@@ -21,27 +21,21 @@ export default new Vuex.Store({
     },
     guides(state) {
       const guides = state.users.filter(user => {
-        if (user.city) {
-          return user.city === state.currCity
-        }
+        if (user.city) return user.city === state.currCity.name
       })
       return guides
     },
     guide(state){
       return state.currGuide
-      // console.log('pp');
-      // console.log(guides);
-
-
     }
   },
   mutations: {
     setUsers(state, { users }) {
       state.users = users
     },
-    // setCities(state, { cities }) {
-    //   state.cities = cities
-    // },
+    setCities(state, { cities }) {
+      state.cities = cities
+    },
     setCurrCity(state, { currCity }) {
       state.currCity = currCity      
     },
@@ -54,10 +48,10 @@ export default new Vuex.Store({
       const users = await userService.query();
       context.commit({ type: 'setUsers', users })
     },
-    // async loadCities(context) {
-    //   const cities = await cityService.query();
-    //   context.commit({ type: 'setCities', cities })
-    // },
+    async loadCities(context) {
+      const cities = await cityService.query();
+      context.commit({ type: 'setCities', cities })
+    },
     async getCityById(context, { cityId }) {
       const currCity = await cityService.getById(cityId)
       context.commit({ type: 'setCurrCity', currCity })

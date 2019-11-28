@@ -1,13 +1,12 @@
 <template>
   <section>
     <h2 v-if="currCity">{{currCity.name}}'s Guides</h2>
-    <ul>
-      <li v-for="guide in guides" :key="guide.id">{{guide.name}}</li>
-    </ul>
+    <guide-list :guides="guides"></guide-list>
   </section>
 </template>
 
 <script>
+import guideList from "@/components/city/guide-list";
 export default {
   data() {
     return {
@@ -15,23 +14,23 @@ export default {
       guides: []
     };
   },
-  computed:{
-
-  },
+  computed: {},
   async created() {
     const cityId = this.$route.params._id;
     try {
-      const currCity = await this.$store.dispatch({
+      this.currCity = await this.$store.dispatch({
         type: "getCityById",
         cityId
       });
-      this.currCity = currCity;
+      //how can i avoid this?
+      await this.$store.dispatch("loadUsers");
+      this.guides = this.$store.getters.guides;
     } catch (err) {
       console.log(err);
     }
-    this.guides = this.$store.getters.guides;
-    console.log(this.guides);
-    
+  },
+  components: {
+    guideList
   }
 };
 </script>
