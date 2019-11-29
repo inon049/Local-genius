@@ -22,12 +22,12 @@
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 500px;
+  max-width: 530px;
   @include for-narrow-layout {
     max-width: 800px;
   }
   @include for-normal-layout {
-    max-width: 750px;
+    max-width: 950px;
   }
   @include for-wide-layout {
     max-width: $break-normal;

@@ -1,22 +1,46 @@
 <template>
   <section>
-    <div class="city-header-img">
+    <div class="city-header-img city-header-container">
       <h2 class="city-name" v-if="currCity">{{currCity.name}}'s Guides</h2>
+      <guide-filter @filtered="setFilter"></guide-filter>
     </div>
-    <guide-list :guides="guides"></guide-list>
+    <guide-list :guides="guidesToShow"></guide-list>
   </section>
 </template>
 
 <script>
 import guideList from "@/components/city/guide-list";
+import guideFilter from "@/components/city/guide-filter";
 export default {
   data() {
     return {
       currCity: "",
-      guides: []
+      guides: [],
+      filterBy: null
     };
   },
-  computed: {},
+  methods: {
+    setFilter(filterBy) {
+      //later maybe server side
+      //now if any of the selections exists it shoes, can switch to every
+      this.filterBy = filterBy;
+    }
+  },
+  computed: {
+    guidesToShow() {
+      if (!this.filterBy || this.filterBy.interests.length === 0)
+        return this.guides;
+      else {
+        const filteredGuides = this.guides.filter(guide => {
+          const guides = guide.interests.some(
+            interest => this.filterBy.interests.indexOf(interest) !== -1
+          );
+          return guides;
+        });
+        return filteredGuides;
+      }
+    }
+  },
   async created() {
     const cityId = this.$route.params._id;
     try {
@@ -33,6 +57,7 @@ export default {
   },
   components: {
     guideList,
+    guideFilter
   }
 };
 </script>

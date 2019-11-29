@@ -1,7 +1,4 @@
-.city-name{
-  font-size: 4rem;
-  padding-left: 40px;
-}
+
 .guide-list {
   list-style: none;
 }
@@ -10,13 +7,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
+  @include for-normal-layout {
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
+    gap: 35px;
+  }
   > * {
     height: 450px;
   }
 }
 
-
-.city-header-img{
-  height: 100px;
- background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)), url(https://dlq9ebkqqrcon.cloudfront.net/destination_map/50961473-c5b5-4859-b5b4-3ea5f56374b0/70d06bfd53acbca4.jpg);
-}
