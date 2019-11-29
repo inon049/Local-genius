@@ -1,7 +1,7 @@
 <template>
 <section class="profile flex">
   <profile-menu></profile-menu>
-  <router-view/>
+  <router-view class="router"/>
 </section>
 </template>
 

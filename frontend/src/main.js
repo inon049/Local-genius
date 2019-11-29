@@ -14,9 +14,8 @@ import VueTinySlider from "vue-tiny-slider";
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  components: {
-  },
-  render: h => h(app)
+    router,
+    store,
+    components: {},
+    render: h => h(app)
 }).$mount('#app')
