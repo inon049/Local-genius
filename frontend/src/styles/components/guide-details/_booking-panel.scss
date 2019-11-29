@@ -24,10 +24,12 @@
     border: 1px solid #de4d5c;
     outline: none;
     border-radius: 3px;
+    cursor: pointer;
   }
 }
 
 .book-btn{
+    outline: none;
     background-color: rgb(255, 90, 95);
     border: none;
     padding: 10px;
@@ -37,6 +39,7 @@
     font-size:1.2rem;
     align-self: center;
     margin-top:20px;
+    cursor: pointer;
 }
 .booking-rate {
   p {

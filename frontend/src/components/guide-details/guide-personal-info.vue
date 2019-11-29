@@ -32,16 +32,6 @@ export default {
   props: {
     guide: Object
   },
-  data(){
-    return{
-      isClick : false
-    }
-  },
-  methods:{
-    click(){
-      this.isClick = !this.isClick
-    }
-  },
   components: {
     bookingPanel
   }

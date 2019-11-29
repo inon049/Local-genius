@@ -1,6 +1,6 @@
 <template>
   <div class="booking-panel-container">
-    <div class="booking-panel">
+    <div class="booking-panel flex col">
       <h1>Pick a date</h1>
       <calander />
       <div class="booking-price-rate flex space-around">
@@ -26,7 +26,7 @@
         <option>5</option>
       </select>
       </div>
-    <button class="book-btn">Book</button>
+    <button @click="click"  class="book-btn" :class="{booked : isClick}">Book</button>
     </div>
   </div>
 </template>
@@ -39,7 +39,17 @@ export default {
   },
   components: {
     calander
-  }
+  },
+   data(){
+    return{
+      isClick : false
+    }
+  },
+    methods:{
+    click(){
+      this.isClick = !this.isClick
+    }
+  },
 };
 </script>
 
