@@ -5,6 +5,8 @@ import router from './router'
 import store from './store'
 import '@/styles/global.scss'
 import VueTinySlider from "vue-tiny-slider";
+import VCalendar from 'v-calendar';
+Vue.use(VCalendar);
 
 
 Vue.config.productionTip = false

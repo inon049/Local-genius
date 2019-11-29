@@ -2,38 +2,44 @@
   font-family: OpenSansCondensed;
 }
 .guide-container {
-  display: flex;
-  flex-direction: column;
   padding: 20px;
 }
-.guide-details-container {
-  display: flex;
-  flex-direction: column;
-  @include for-narrow-layout {
-    flex-direction: row;
-  }
-}
 
+.main-quest{
+border-bottom:1px solid;
+color:#21626a;
+padding-bottom:30px;
+margin-bottom:30px;
+h1{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+}
 .giude-details {
-  column-gap: 20px;
+  column-gap: 40px;
   break-inside: avoid-column;
   padding-right: 0;
 
   h1 {
     font-size: 1.8rem;
+    margin-bottom:15px;
+  }
+  h3{
+    margin-bottom:40px;
   }
   img {
-    height: rem(300px);
+    height: rem(400px);
     object-fit: cover;
-    @include for-narrow-layout {
-      height: rem(400px);
+    margin-bottom:40px;
+    @include for-normal-layout {
+      height: rem(300px);
     }
   }
   @include for-narrow-layout {
     column-count: 1;
     padding-right: 20px;
   }
-  @include for-medium-layout {
+  @include for-normal-layout {
     column-count: 2;
   }
 }
@@ -49,12 +55,12 @@
 }
 
 .personal-title-continer {
-  display: flex;
   align-self: center;
-  justify-content: space-between;
   max-width: rem(1300px);
-  margin-bottom: rem(30px);
+  margin-bottom: rem(40px);
   flex-direction: column;
+  border-bottom:  1px solid #21626a;
+  padding-bottom:rem(40px); 
   h1 {
     font-size: 4rem;
   }
@@ -70,40 +76,20 @@
 }
 
 .personal-txt {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  h1{
+    margin-bottom:15px;
+  }
+  h2{
+    margin-bottom:30px;
+  }
   @include for-medium-layout {
     width: 50%;
   }
-  @include for-normal-layout {
-    width: 50%;
-  }
-  @include for-wide-layout {
-    width: 50%;
-  }
+
 }
 
-.side-bar {
-  height: 50px;
-  position: fixed;
-  width: 150px;
-  bottom:20px;
-  right: 20px;
-  background-color: #1aa4b6;
-  border-radius: 10px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  h2{
-      color: white;
-      align-self: center;
-     
-  }
- 
-}
+
 .guide-profile-container {
   display: flex;
 }
@@ -112,25 +98,3 @@
     background-color: grey;
 }
 
-// h1 {
-//     display: none;
-//   }
-//   @include for-narrow-layout {
-//     border-radius: 0;
-//     border: 1px solid black;
-//     height: 100vh;
-//     min-width: 20%;
-//     position: sticky;
-//     padding: 20px;
-//     padding-top: 40px;
-//     top: 0;
-//     background-color: white;
-//     text-align: start;
-//     h1 {
-//       display: block;
-//       font-size: 2rem;
-//     }
-//     h2{
-//         color: black;
-//     }
-//   }
