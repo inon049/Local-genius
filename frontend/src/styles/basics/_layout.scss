@@ -3,13 +3,15 @@
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
- 
-  @include for-normal-layout {
-    max-width: $break-narrow;
-  }
+  max-width: $break-narrow;
   @include for-medium-layout {
     max-width: $break-medium;
   }
+  @include for-normal-layout {
+    max-width: $break-narrow;
+  }
+  
+  
 }
 
 // Grids

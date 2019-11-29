@@ -1,22 +1,63 @@
-.booking-panel-container{
-    position: sticky;
-    top: 10px;
-    margin-right: 45px;
-    width: rem(400px);
-    z-index: 3;
-    padding: rem(25px);
-    margin: 0px;
-    border: 1px solid #bbbbbb;
-    background-color: #ffffff;
-    height: rem(700px);
-    margin-left:10px;
+.booking-panel-container {
+  position: sticky;
+  top: 10px;
+  margin-right: 45px;
+  width: rem(320px);
+  z-index: 3;
+  padding: rem(25px);
+  margin: 0px;
+  border: 1px solid #bbbbbb;
+  background-color: #ffffff;
+  height: rem(700px);
+  margin-left: 10px;
+}
+.guide-price {
+  h4 {
+    margin-left: 10px;
+  }
+}
+.persons {
+  margin-top: 15px;
+  width: 100%;
+  select {
+    width: 20%;
+    border: 1px solid #de4d5c;
+    outline: none;
+    border-radius: 3px;
+  }
 }
 
-.booking-panel{
-    color: #DE4D5C;
+.book-btn{
+    background-color: rgb(255, 90, 95);
+    border: none;
+    padding: 10px;
+    width: 60%;
+    border-radius: 3px;
+    color: white;
+    font-size:1.2rem;
+    align-self: center;
+    margin-top:20px;
+}
+.booking-rate {
+  p {
+    margin: 0;
+  }
+  font-size: 1.2rem;
+  span {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+}
+.booking-price-rate {
+  margin-top: 20px;
+  width: 100%;
+  color: #de4d5c;
 
-    h1{
-        font-size:2rem;
-        margin-bottom:15px;
-    }
+}
+.booking-panel {
+  color: #de4d5c;
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
 }

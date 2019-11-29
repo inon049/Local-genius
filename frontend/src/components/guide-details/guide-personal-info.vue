@@ -1,15 +1,15 @@
 <template>
-    <section class="guide-container" v-if="guide">
-      <div class="personal-title-continer">
-        <div class="personal-txt">
+    <section class="guide-container flex col" v-if="guide">
+      <div class="personal-title-continer flex space-between">
+        <div class="personal-txt flex col">
           <h1>{{guide.name}}</h1>
           <h2>{{guide.desc}}</h2>
         </div>
         <img class="profile-img" :src="guide.profileImgUrl" />
       </div>
-        <div class="personals">
-      <div class="guide-details-container container">
-        <div class="main-quest">
+        <div class="flex row">
+      <div class="container flex col">
+        <div class="main-quest flex col">
         <h1>TELL US A LITTLE BIT ABOUT YOURSELF</h1>
         <h2>{{guide.about}}</h2>
         </div>
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import calander from "./calander";
 import bookingPanel from './booking-panel'
 export default {
   props: {
@@ -44,7 +43,6 @@ export default {
     }
   },
   components: {
-    calander,
     bookingPanel
   }
 };
