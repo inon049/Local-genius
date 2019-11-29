@@ -11,8 +11,7 @@
 
 // COMPONENTS
 
-@import 'components/guide-details/guide-personal-info';
-// COMPONENTS//
+
 //HOME
 @import 'components/home/city-preview.scss';
 
@@ -23,7 +22,8 @@
 
 //GUIDE DETAILS
 
-
+@import 'components/guide-details/guide-personal-info';
+@import 'components/guide-details/booking-panel';
 
 //VIEWS
 @import 'views/home';

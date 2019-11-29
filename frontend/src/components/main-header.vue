@@ -4,7 +4,7 @@
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>|
-      <router-link to="/guide/:_id">Guide</router-link>
+      
     </div>
   </div>
 </template>

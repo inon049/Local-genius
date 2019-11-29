@@ -3,15 +3,12 @@
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: $break-narrow;
+ 
   @include for-normal-layout {
+    max-width: $break-narrow;
+  }
+  @include for-medium-layout {
     max-width: $break-medium;
-  }
-  @include for-mid-wide-layout {
-    max-width: $break-normal;
-  }
-  @include for-wide-layout {
-    max-width: $break-normal;
   }
 }
 

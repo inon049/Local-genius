@@ -1,0 +1,22 @@
+.booking-panel-container{
+    position: sticky;
+    top: 10px;
+    margin-right: 45px;
+    width: rem(400px);
+    z-index: 3;
+    padding: rem(25px);
+    margin: 0px;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    height: rem(700px);
+    margin-left:10px;
+}
+
+.booking-panel{
+    color: #DE4D5C;
+
+    h1{
+        font-size:2rem;
+        margin-bottom:15px;
+    }
+}
