@@ -4,6 +4,9 @@ import home from '../views/home.vue'
 import about from '../views/about.vue'
 import city from '../views/city.vue'
 import guideDetails from '../views/guide-details.vue'
+import profile from '../views/profile.vue'
+//profile children 
+import messenger from '../components/profile/messenger.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,6 +27,16 @@ const routes = [
   {
     path: '/guide/:_id',
     component: guideDetails
+  },
+  {
+    path: '/profile/:_id?',
+    component: profile,
+    children:[
+      {
+        path: '/profile/messenger',
+        component: messenger
+      }
+    ]
   }
 ]
 
