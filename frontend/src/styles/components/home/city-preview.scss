@@ -1,21 +1,21 @@
-.city-preview{
-    img{
+.city-preview {
+    img {
         object-fit: cover;
-        min-height:rem(250px);
+        min-height: 20.625rem;
     }
     position: relative;
     cursor: pointer;
-    .city-prev-title{
+    .city-prev-title {
         position: absolute;
-        margin-block-start:0px;
+        margin-block-start: 0px;
         z-index: 1;
         min-width: 40%;
         color: rgb(0, 61, 117);
         background-color: rgba(255, 255, 255, 0.699);
         text-align: center;
-        
     }
 }
-.city-list{
+
+.city-list {
     padding-top: 30px;
 }
