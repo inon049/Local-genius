@@ -1,6 +1,6 @@
 <template>
     <section class="city-filter">
-        <input type="text" placeholder="Where do you wanna go?">
+        <input list="cities" type="text" placeholder="Where do you wanna go?">
     </section>
 </template>
 
