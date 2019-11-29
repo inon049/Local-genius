@@ -7,11 +7,15 @@ import '@/styles/global.scss'
 import VCalendar from 'v-calendar'
 
 Vue.use(VCalendar);
+import VueTinySlider from "vue-tiny-slider";
+
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
+  components: {
+  },
   render: h => h(app)
 }).$mount('#app')

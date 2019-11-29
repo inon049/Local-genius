@@ -1,6 +1,5 @@
 <template>
   <section class="guide-list-container">
-  
     <ul class="guide-list guide-list-grid guides-container">
       <guide-preview v-for="guide in guides" :key="guide.id" :guide="guide"></guide-preview>
     </ul>

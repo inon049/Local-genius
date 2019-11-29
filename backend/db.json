@@ -1,4 +1,34 @@
 {
+    "msg": [
+        {
+            "_id": "1",
+            "fromId": "20",
+            "toId": "21",
+            "sentAt": 1575029410596,
+            "txt": "blablibueblade"
+        },
+        {
+            "_id": "2",
+            "fromId": "21",
+            "toId": "20",
+            "sentAt": 1575029420596,
+            "txt": "are you sure"
+        },
+        {
+            "_id": "3",
+            "fromId": "21",
+            "toId": "20",
+            "sentAt": 1575029430596,
+            "txt": "yeah FORSURE"
+        },
+        {
+            "_id": "22",
+            "fromId": "20",
+            "toId": "21",
+            "sentAt": 1575029440596,
+            "txt": "K thanks"
+        }
+    ],
     "user": [
         {
             "_id": "1",
@@ -6,7 +36,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.3,
+            "rate": 4.3,
             "langs": [
                 "English",
                 "Spanish"
@@ -19,8 +49,7 @@
             ],
             "city": "Sydney",
             "desc": "I work as an architect,my curated map is full of carefully chosen coffee shops, bars, restaurants and art ",
-            "about": "As an architect, I have an eye for shapes, lines and aesthetics. Known for my fine taste, I prefer Mackenzies Bay over Bondi Beach, Solange over Beyonce, and vintage clothes over ordinary H&M items.My curated map is full of carefully chosen coffee shops, bars, restaurants and art. Let her upgrade you."
-            ,
+            "about": "As an architect, I have an eye for shapes, lines and aesthetics. Known for my fine taste, I prefer Mackenzies Bay over Bondi Beach, Solange over Beyonce, and vintage clothes over ordinary H&M items.My curated map is full of carefully chosen coffee shops, bars, restaurants and art. Let her upgrade you.",
             "price": 43,
             "interests": [
                 "Culture",
@@ -40,7 +69,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.1,
+            "rate": 4.1,
             "langs": [
                 "English",
                 "Spanish",
@@ -56,13 +85,13 @@
             "city": "New-York",
             "desc": "I have an indie label, I love discovering new music, On the side, I do a million things  – playlists brands, DJ, music ,shopping, and go out at night with some friends ",
             "price": 43,
-            "about":"I recommend wearing flat shoes while traveling with me, cause you're gonna be partying it up, big time, and going deep Bushwick. I try to be a musical  scouter and know about the hottest new musicians before anyone else, I know what's happening after dark as it's happening (and not a minute too late), and I am a fun-loving creature who loves good times, throwbacks and cheap drinks. Enjoy :)",
+            "about": "I recommend wearing flat shoes while traveling with me, cause you're gonna be partying it up, big time, and going deep Bushwick. I try to be a musical  scouter and know about the hottest new musicians before anyone else, I know what's happening after dark as it's happening (and not a minute too late), and I am a fun-loving creature who loves good times, throwbacks and cheap drinks. Enjoy :)",
             "interests": [
                 "Shopping",
                 "Music",
                 "NightLife"
             ],
-            "questions": { 
+            "questions": {
                 "WHAT’S THE ONE PLACE IN NEW YORK THAT YOU’RE SURE ONLY YOU TRULY APPRECIATE?": "Flushing, Queens because it takes maybe 2 hours to get to via train but it’s like a younger Chinatown.",
                 "WHAT’S YOUR DREAM JOB?": "Running my own label with my friends.",
                 "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Miami because it’s a quick and cheap ticket to escape to a beautiful beach year round.",
@@ -77,7 +106,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.7,
+            "rate": 4.7,
             "langs": [
                 "English",
                 "Russian",
@@ -113,7 +142,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.6,
+            "rate": 4.6,
             "langs": [
                 "English",
                 "French"
@@ -128,7 +157,7 @@
             "city": "Paris",
             "desc": "I am  a fashion manager who sees Paris through my artsy eyes, If you’re looking for a chic park or are in the mood for a Parisian style hair-cut before you hit those boutiques, I am your femme de l'heure.",
             "price": 33,
-            "about":"I am  a fashion manager who sees Paris through my artsy eyes. Between at least 5 latte breaks a day, I like to lose track of time while skimming through old fashion magazines packed in the decorated halls of Arts Décoratifs Museum. If you’re looking for a chic park or are in the mood for a Parisian style hair-cut before you hit those boutiques, I am your femme de l'heure.",
+            "about": "I am  a fashion manager who sees Paris through my artsy eyes. Between at least 5 latte breaks a day, I like to lose track of time while skimming through old fashion magazines packed in the decorated halls of Arts Décoratifs Museum. If you’re looking for a chic park or are in the mood for a Parisian style hair-cut before you hit those boutiques, I am your femme de l'heure.",
             "interests": [
                 "Food",
                 "Coffee",
@@ -148,7 +177,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.9,
+            "rate": 4.9,
             "langs": [
                 "English",
                 "French"
@@ -163,7 +192,7 @@
             "city": "Vancouver",
             "desc": "I am a digital marketer, I live to give an authentic voice of the city. Follow my lead for the best places to eat, drink, and people watch. No unicorn food included - I hate it.",
             "price": 20,
-            "about":"I was born in Istanbul, moved to Vancouver for university and then spent some time living in different places in Europe. But Vancouver’s special vibe pulled me back in, and I have been there ever since. I try to be always after a good laugh, and Louis CK, Seinfeld, Tina Fey and Ilana Glazer are practically my spirit guides. Follow my lead for the best places to eat, drink, and people watch. No unicorn food included - I hate it.",
+            "about": "I was born in Istanbul, moved to Vancouver for university and then spent some time living in different places in Europe. But Vancouver’s special vibe pulled me back in, and I have been there ever since. I try to be always after a good laugh, and Louis CK, Seinfeld, Tina Fey and Ilana Glazer are practically my spirit guides. Follow my lead for the best places to eat, drink, and people watch. No unicorn food included - I hate it.",
             "interests": [
                 "Animals",
                 "Food",
@@ -171,7 +200,7 @@
                 "NightLife"
             ],
             "questions": {
-                "NAME SOME SPOTS IN VANCOUVER THAT ARE GOOD FOR A TINDER DATE.":"If you absolutely must go on a Tinder date then: Brassneck Brewery (bright so you can see your date's face and strong beers in case he/she is boring). Keefer Bar if you want to still meet nice people after your date has left because he/she sucked.",
+                "NAME SOME SPOTS IN VANCOUVER THAT ARE GOOD FOR A TINDER DATE.": "If you absolutely must go on a Tinder date then: Brassneck Brewery (bright so you can see your date's face and strong beers in case he/she is boring). Keefer Bar if you want to still meet nice people after your date has left because he/she sucked.",
                 "WHAT’S THE THING YOU LOVE TO DO IN YOUR CITY THAT YOU NEVER GET TO DO?": "Swim! I love dipping in the Pacific, but somehow I rarely do it.",
                 "WHAT’S YOUR CHOICE OF TRANSPORTATION IN VANCOUVER AND WHY?": "Bus! I would love to say a bike but i am not about to ride uphill.",
                 "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "I rush to the beach and call all my friends there to have a bbq.",
@@ -185,7 +214,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":5,
+            "rate": 5,
             "langs": [
                 "English",
                 "French"
@@ -199,7 +228,7 @@
             "city": "Vancouver",
             "desc": " If you feel like getting into the wild and you are dreaming of rivers, creeks, picturesque beaches and mountainside forest trails - follow me.",
             "price": 15,
-            "about":"From all of the wonderful things Vancouver has to offer, Me (and my dogs) get most excited by all the hiking opportunities near by. Girl talks with my daughters at the kitchen table, ice cream, Starbucks chai tea lattes and a great TV series are a few of my favorite things. If you feel like getting into the wild and you are dreaming of rivers, creeks, picturesque beaches and mountainside forest trails - follow me.",
+            "about": "From all of the wonderful things Vancouver has to offer, Me (and my dogs) get most excited by all the hiking opportunities near by. Girl talks with my daughters at the kitchen table, ice cream, Starbucks chai tea lattes and a great TV series are a few of my favorite things. If you feel like getting into the wild and you are dreaming of rivers, creeks, picturesque beaches and mountainside forest trails - follow me.",
             "interests": [
                 "Culture",
                 "Coffee",
@@ -218,7 +247,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":3.8,
+            "rate": 3.8,
             "langs": [
                 "English",
                 "French"
@@ -252,7 +281,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.2,
+            "rate": 4.2,
             "langs": [
                 "English"
             ],
@@ -284,7 +313,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.4,
+            "rate": 4.4,
             "langs": [
                 "English",
                 "French",
@@ -301,7 +330,7 @@
             "city": "New-York",
             "desc": "I have the  travel bug, big time,I even runs a travel blog that updates so often it can make you really jealous. Here is me, enjoy it while you can",
             "price": 30,
-            "about":"I have the  travel bug, big time - I even runs a travel blog that updates so often it can make you really jealous. Apparently it runs in my family, and has already lived in Colorado, New York, Florida, Boston and even Australia. For now i am in NYC, but i cant promise it will be long until I will hop on the next adventure. Here is my map, enjoy it while you can.",
+            "about": "I have the  travel bug, big time - I even runs a travel blog that updates so often it can make you really jealous. Apparently it runs in my family, and has already lived in Colorado, New York, Florida, Boston and even Australia. For now i am in NYC, but i cant promise it will be long until I will hop on the next adventure. Here is my map, enjoy it while you can.",
             "interests": [
                 "NightLife",
                 "Culture",
@@ -322,7 +351,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.4,
+            "rate": 4.4,
             "langs": [
                 "English",
                 "French"
@@ -345,7 +374,7 @@
             ],
             "questions": {
                 "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "Rihanna - I would take her to Wreck Beach for some major chilling.",
-               "NAME SOME SPOTS IN VANCOUVER THAT ARE GOOD FOR A TINDER DATE.":"If you drink, head to one of the many bars or breweries to break the ice. Otherwise, hit up a yoga class and get sweaty with your date!",
+                "NAME SOME SPOTS IN VANCOUVER THAT ARE GOOD FOR A TINDER DATE.": "If you drink, head to one of the many bars or breweries to break the ice. Otherwise, hit up a yoga class and get sweaty with your date!",
                 "TOMORROW’S YOUR LAST DAY IN VANCOUVER. HOW DO YOU SPEND IT?": "Eating snacks, drinking beer from a growler, and chilling on the beach.",
                 "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Cartagena, Colombia because it is romantic, inviting, and sultry. The people and food are wonderful."
             },
@@ -357,7 +386,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.7,
+            "rate": 4.7,
             "langs": [
                 "English",
                 "French"
@@ -390,7 +419,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.9,
+            "rate": 4.9,
             "langs": [
                 "English",
                 "Italian"
@@ -407,7 +436,7 @@
             "city": "New-York",
             "desc": "Imagine what a Canadian turned NYC filmmaker who hangs out around the West Village would recommend for his city",
             "price": 32,
-            "about":"Imagine what a Canadian turned NYC filmmaker who hangs out around the West Village would recommend for his city. If you thought of standup comedy, outdoor arches and modern art - you're spot on! My map includes some of the best art-house cinemas in town, tips for where you can admire neoclassical architecture (selfie!), a perfect juice bar, a restaurant that serves jerk chicken with staff that often bursts into spontaneous dance, some casual bars in the Village and even a friendly spot.",
+            "about": "Imagine what a Canadian turned NYC filmmaker who hangs out around the West Village would recommend for his city. If you thought of standup comedy, outdoor arches and modern art - you're spot on! My map includes some of the best art-house cinemas in town, tips for where you can admire neoclassical architecture (selfie!), a perfect juice bar, a restaurant that serves jerk chicken with staff that often bursts into spontaneous dance, some casual bars in the Village and even a friendly spot.",
             "interests": [
                 "Sport",
                 "Culture",
@@ -428,7 +457,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.1,
+            "rate": 4.1,
             "langs": [
                 "English",
                 "Italian",
@@ -444,7 +473,7 @@
             "city": "Vancouver",
             "desc": "Although I tried living elsewhere, I just can’t get away from this city. Not only is there a lot to explore, it’s just downright, drop-dead gorgeous.",
             "price": 40,
-            "about":"Although I tried living elsewhere, I just can’t get away from this city where the ocean meets the mountains and I was born and raised. Not only is there a lot to explore, it’s just downright, drop-dead gorgeous. My psychology degree helps me understand the target demographic I markets to at work, but I am not using it to analyze you - I swears. I like being a foodie more than my wallet does, but I can point you to the best thrift stores and flea markets in town.",
+            "about": "Although I tried living elsewhere, I just can’t get away from this city where the ocean meets the mountains and I was born and raised. Not only is there a lot to explore, it’s just downright, drop-dead gorgeous. My psychology degree helps me understand the target demographic I markets to at work, but I am not using it to analyze you - I swears. I like being a foodie more than my wallet does, but I can point you to the best thrift stores and flea markets in town.",
             "interests": [
                 "Shopping",
                 "Coffee",
@@ -454,7 +483,6 @@
             "questions": {
                 "WERE YOU BORN AND RAISED IN VANCOUVER? IF NOT, WHERE DID YOU GROW UP AND WHAT BROUGHT YOU TO VANCOUVER?": "I was born and raised in North Van(couver). I went to England for a year of university and Ontario for the rest of it, and came right on back to Vancouver afterwards. You can't keep me from the mountains and the ocean I call home on the west coast for too long.",
                 "WHO’S YOUR HERO AND WHERE IN VANCOUVER WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "My mom is my hero and we hang out all the time... A good hang for us would be at the Trout Lake Farmer's Market in the summer where the dogs can swim. Ideally, there would be an antique show on at the Croatian Cultural Centre, but if not we might swing around Main Street. For good chats, there's nothing better than curling up with tea on the couch."
-            
             },
             "link": "https://www.coolcousin.com/cities/vancouver/tate-b00fbcc3/"
         },
@@ -464,7 +492,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.3,
+            "rate": 4.3,
             "langs": [
                 "English",
                 "Italian",
@@ -480,7 +508,7 @@
             "city": "Mexico-City",
             "desc": "My love for this city makes sense when you discover My favorite spots for the city -tons of great food to try, rich culture and colorful nightlife",
             "price": 60,
-            "about":"After studying for a degree in Visual Journalism in California, I went right back to my hometown Mexico City. My love for this city makes sense when you discover My favorite spots for the city - tons of great food to try, rich culture and colorful nightlife. And hey, you can always trust a photographer to know the secret places where beauty hides.",
+            "about": "After studying for a degree in Visual Journalism in California, I went right back to my hometown Mexico City. My love for this city makes sense when you discover My favorite spots for the city - tons of great food to try, rich culture and colorful nightlife. And hey, you can always trust a photographer to know the secret places where beauty hides.",
             "interests": [
                 "Culture",
                 "Music",
@@ -502,7 +530,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4,
+            "rate": 4,
             "langs": [
                 "English",
                 "Russian"
@@ -514,12 +542,11 @@
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/89435f5cbdf7ab8a.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/96276276ad66128f.jpg",
                 "https://dlq9ebkqqrcon.cloudfront.net/8b718b01-d694-40e3-b072-923820f8c214/2c8d4ecf7889dd0d.jpg"
-                
             ],
             "city": "Moscow",
             "desc": "If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park",
             "price": 23,
-            "about":"If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park, wandering the streets and maybe showing him my secret entrance to the spot under the bridges over Moskva-river. Seeing as I am dead, as media manager I am willing to do something similar for you guys, and I added a cafe where you can relax while listening to the orchestra rehearse, a forest in the middle of the city, an industrial complex full of bars and galleries, a shop for garage art fans, a multi-floor bar where they LUV foreigners and more.",
+            "about": "If Hunter S. Thompson was alive, I would be first in line to give the writer a wild tour of Moscow. This would probably include getting drunk in a park, wandering the streets and maybe showing him my secret entrance to the spot under the bridges over Moskva-river. Seeing as I am dead, as media manager I am willing to do something similar for you guys, and I added a cafe where you can relax while listening to the orchestra rehearse, a forest in the middle of the city, an industrial complex full of bars and galleries, a shop for garage art fans, a multi-floor bar where they LUV foreigners and more.",
             "interests": [
                 "Food",
                 "NightLife",
@@ -539,7 +566,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.2,
+            "rate": 4.2,
             "langs": [
                 "English",
                 "Russian"
@@ -565,7 +592,7 @@
                 "WHAT ARE YOU WORKING ON THESE DAYS?": "Every day I make a news report for REN TV channel. At my job, you never know where you will be this evening. I can fly to another city or even another country every moment. Once I was suddenly sent to the North Pole. Luckily, it was winter and I didn’t have to go there wearing shorts). Since then I always keep a special travel bag with stuff for every situation in the office.",
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I would take Sergey Lavrov to “Pivbar” – so we could chill and eat burgers like good friends.",
                 "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "“Pod muhoy” bar. Every time I leave Moscow for a long time I however end up to drink there.",
-                "":""
+                "": ""
             },
             "link": "https://www.coolcousin.com/cities/moscow/vitaly-7cbd9e79/"
         },
@@ -575,7 +602,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.4,
+            "rate": 4.4,
             "langs": [
                 "English",
                 "Russian"
@@ -591,7 +618,7 @@
             "city": "Moscow",
             "desc": "I think there is something poetic about the way i see my city and this attitude is very clear in my recommendations for my hometown",
             "price": 20,
-            "about":"I think there is something poetic about the way i see my city, and this attitude is very clear in my recommendations for my hometown — from a traditional donut joint in a park that reminds me of childhood, a park that boasts over 30 kinds of lilacs, a bar that plays oldies where people dance all night, a secret bar located behind a Chinese noodle stand, an escape room, a rooftop bar that is best to visit at 4 AM and Europe's highest restaurant.",
+            "about": "I think there is something poetic about the way i see my city, and this attitude is very clear in my recommendations for my hometown — from a traditional donut joint in a park that reminds me of childhood, a park that boasts over 30 kinds of lilacs, a bar that plays oldies where people dance all night, a secret bar located behind a Chinese noodle stand, an escape room, a rooftop bar that is best to visit at 4 AM and Europe's highest restaurant.",
             "interests": [
                 "Food",
                 "NightLife",
@@ -602,7 +629,7 @@
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "I will invite Lewis Carrol for dinner and a couple of cocktails at White Rabbit (find more detailed information about this restaurant in my map!). I think, it is not necessary to explain why I would take him exactly to this restaurant",
                 "IF TOMORROW WAS YOUR LAST DAY IN MOSCOW BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "I would walk all day, especially along Moscow-river, then would spend some time on Chistoprudny Boulevard (it’s my favorite). 100% that I would have dinner on Strelka’s terrace with spectacular view to the Cathedral of Christ the Saviour",
                 "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?": "In the summer – walking through the centre and having a rest in my country house. In winter – ice-skating and drinking mulled wine, that’s Moscow.",
-                "":""
+                "": ""
             },
             "link": "https://www.coolcousin.com/cities/moscow/mila-f914f101/"
         },
@@ -612,7 +639,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4,
+            "rate": 4,
             "langs": [
                 "English",
                 "Russian"
@@ -627,7 +654,7 @@
             "city": "Moscow",
             "desc": "A journalist by training and designer of Moscow-inspired broaches by trade, I love to tell stories about my hometown, and I am totally done my research",
             "price": 15,
-            "about":"A journalist by training and designer of Moscow-inspired broaches by trade, I love to tell stories about my hometown, and I am totally done my research. My map offers something in almost all hoods in town, with a focus on Lubianka, Kitay Gorod and Polyanka and can point you toward a cafe with the best moody playlists and happy waiters, USSR style photography, casual shopping, a forest known as 'the lungs of Moscow' where you can cycle for hours and a Stalinistic monument worth a trip out of town.",
+            "about": "A journalist by training and designer of Moscow-inspired broaches by trade, I love to tell stories about my hometown, and I am totally done my research. My map offers something in almost all hoods in town, with a focus on Lubianka, Kitay Gorod and Polyanka and can point you toward a cafe with the best moody playlists and happy waiters, USSR style photography, casual shopping, a forest known as 'the lungs of Moscow' where you can cycle for hours and a Stalinistic monument worth a trip out of town.",
             "interests": [
                 "Food",
                 "Culture",
@@ -646,7 +673,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":3.6,
+            "rate": 3.6,
             "langs": [
                 "English",
                 "Spanish"
@@ -662,7 +689,7 @@
             "city": "Mexico-City",
             "desc": "My dream was to live as a tourist in my own city, and I think I succeeded!",
             "price": 32,
-            "about":"I am a frequent flyer and i think i succeeded in doing what most of us wish for - living as a tourist in my own city. I am always on a quest to find the best taco, exploring the historical sites and their stories, finding the best live music venues and the most authentic bars. Even after 15 years in Mexico City, I am always keep it fresh.",
+            "about": "I am a frequent flyer and i think i succeeded in doing what most of us wish for - living as a tourist in my own city. I am always on a quest to find the best taco, exploring the historical sites and their stories, finding the best live music venues and the most authentic bars. Even after 15 years in Mexico City, I am always keep it fresh.",
             "interests": [
                 "Culture",
                 "Architecture",
@@ -670,7 +697,7 @@
             ],
             "questions": {
                 "WHO’S YOUR HERO AND WHERE IN MEXICO CITY WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "I can’t think of any particular hero, I have lots of people I admire, and the place depends on who it is. I am an all-time tourist and there are two things that I like the most while traveling, surprises and watching people.",
-                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?":"In Mexico it's Playa del Carmen, because it has the most beautiful beach in the world, the people are very friendly and you still have great food and nightlife. Abroad my favorite vacation city is Las Vegas, because it has everything for every plan.",
+                "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "In Mexico it's Playa del Carmen, because it has the most beautiful beach in the world, the people are very friendly and you still have great food and nightlife. Abroad my favorite vacation city is Las Vegas, because it has everything for every plan.",
                 "NAME SOME SPOTS IN MEXICO CITY THAT ARE GOOD FOR A TINDER DATE.": "La Condesa because it has some nice places without been cheap or too much."
             },
             "link": "https://www.coolcousin.com/cities/mexico-city/sigifredo-011f0548/"
@@ -681,7 +708,7 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.4,
+            "rate": 4.4,
             "langs": [
                 "English",
                 "Spanish"
@@ -697,7 +724,7 @@
             "city": "Barcelona",
             "desc": "I was born in Napoli, and reborn in Barcelona",
             "price": 32,
-            "about":"I was born in Napoli, and reborn in Barcelona. But wait, there’s a whole lotta stops in between: I have lived in (take a deep breath): New York, Korea, Ibiza, London and Germany. All this experience around the globe brought me to open a tourism company based in Barcelona, the only place that she I truly call home. Check out my map to discover why.",
+            "about": "I was born in Napoli, and reborn in Barcelona. But wait, there’s a whole lotta stops in between: I have lived in (take a deep breath): New York, Korea, Ibiza, London and Germany. All this experience around the globe brought me to open a tourism company based in Barcelona, the only place that she I truly call home. Check out my map to discover why.",
             "interests": [
                 "Culture",
                 "Shopping",
@@ -716,8 +743,12 @@
             "email": "ww@ww.com",
             "password": "11",
             "type": "guide",
-            "rate":4.7,
-            "langs": ["English" ,"Spanish","Italian"],
+            "rate": 4.7,
+            "langs": [
+                "English",
+                "Spanish",
+                "Italian"
+            ],
             "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
             "imgUrls": [
                 "https://dlq9ebkqqrcon.cloudfront.net/84222de8-1b3c-4a55-ad9f-0726de2a19b5/082b57fec5063462.jpg",
@@ -729,7 +760,7 @@
             "city": "Rome",
             "desc": "I am a journalist who cares about details so much that I made it my business to write about what matters most - everyday life.",
             "price": 32,
-            "about":"I am a journalist who cares about details so much that I made it my business to write about what matters most - everyday life. Recently, I am also developed a love for photo reportage, which fine tunes I already inquisitive eye. So if you're looking for a guide to the Italian capital who appreciates the small things in life (kissing my son at the end of my work day) but who still enjoys splurging on an indulgent night out, this is for you. Soak in a traditional Roman bath, pay a visit to the cemetery where poets Shelley and Keats are buried, eat, eat and eat, and then maybe grab a drink and a live show.",
+            "about": "I am a journalist who cares about details so much that I made it my business to write about what matters most - everyday life. Recently, I am also developed a love for photo reportage, which fine tunes I already inquisitive eye. So if you're looking for a guide to the Italian capital who appreciates the small things in life (kissing my son at the end of my work day) but who still enjoys splurging on an indulgent night out, this is for you. Soak in a traditional Roman bath, pay a visit to the cemetery where poets Shelley and Keats are buried, eat, eat and eat, and then maybe grab a drink and a live show.",
             "interests": [
                 "Culture",
                 "Food",
