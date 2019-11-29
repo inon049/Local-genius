@@ -8,8 +8,7 @@ import VCalendar from 'v-calendar'
 
 Vue.use(VCalendar);
 import VueTinySlider from "vue-tiny-slider";
-import VCalendar from 'v-calendar';
-Vue.use(VCalendar);
+
 
 
 Vue.config.productionTip = false
