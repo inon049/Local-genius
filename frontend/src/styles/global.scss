@@ -9,21 +9,26 @@
 @import 'basics/layout';
 
 
-// COMPONENTS
 
-@import 'components/guide-details/guide-personal-info';
-// COMPONENTS//
+//************VIEWS***************//
+@import 'views/home';
+@import 'views/profile';
+
+// **********COMPONENTS************//
+
+//PROFILE
+@import 'components/profile/profile-menu';
+@import 'components/profile/messenger';
+
 //HOME
-@import 'components/home/city-preview.scss';
+@import 'components/home/city-preview';
 
 
 //CITY
-@import 'components/city/guide-list.scss';
-@import 'components/city/guide-preview.scss';
+@import 'components/city/guide-list';
+@import 'components/city/guide-preview';
 
 //GUIDE DETAILS
+@import 'components/guide-details/guide-personal-info';
 
 
-
-//VIEWS
-@import 'views/home';

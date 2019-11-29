@@ -10,15 +10,12 @@
 <script>
 import mainHeader from './components/main-header'
 export default {
-  async created() {
-    await this.$store.dispatch({ type: "loadUsers" });
+ async created() {
+     await this.$store.dispatch({ type: "loadUsers" });
+     await this.$store.dispatch({ type: "loadCities" });
   },
   components:{
     mainHeader
   }
 };
 </script>
-
-<style >
-
-</style>
