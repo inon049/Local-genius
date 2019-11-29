@@ -1,6 +1,6 @@
 .guide-preview {
-  margin: 10px 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 15px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -11,27 +11,35 @@
   }
 }
 
+.guide-preview:hover {
+  .tns-controls {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .guides-container {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  max-width: 500px;
+  @include for-narrow-layout {
+    max-width: 800px;
+  }
   @include for-normal-layout {
     max-width: 750px;
   }
   @include for-wide-layout {
     max-width: $break-normal;
   }
-  @include for-narrow-layout {
-    max-width: 800px;
-  }
 }
 
-.guide-top-data{
-  //IN THIS CMP SHOW RATE
+.guide-top-data {
   height: 7%;
   display: flex;
   padding: 0 10px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .guide-name {
@@ -44,7 +52,7 @@
     margin-right: 15px;
     text-decoration: none;
     color: #21626a;
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -59,16 +67,31 @@
   }
 }
 
-.guide-short-desc{
+.guide-short-desc {
   height: 15%;
   padding: 0 10px;
-  p{
+  p {
     margin: 10px 0;
+  }
+}
+
+.rating {
+  font-size: 1.2rem;
+  span {
+    font-size: 1.4rem;
   }
 }
 
 .ratio-card-guide {
   height: 60%;
+  @include guide-card-aspect-ratio(100, 80);
+  > * {
+    height: 100%;
+  }
+}
+
+.ratio-guide-img {
+  max-height: 60%;
   @include guide-card-aspect-ratio(100, 80);
 }
 
@@ -87,7 +110,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // border: 1px solid black;
   background-color: rgb(211, 211, 211);
   border-radius: 5px;
   width: 32%;
@@ -98,9 +120,33 @@
   img {
     width: 15%;
   }
+}
 
-  // &:nth-child(3){
-  //   margin:0;
-  //   margin-left: 2px;
-  // }
+//IMG SLIDER
+
+.tns-controls {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  transition: 0 .5s opacity ease-in-out;
+
+  button {
+    color: rgba(255, 255, 255, 0.664);
+    font-size: 45px;
+    line-height: 30px;
+    height: 40px;
+    width: 40px;
+    z-index: 6666;
+    outline: none;
+    border: none;
+    border-radius: 999px;
+    background-color: transparent;
+    -webkit-text-stroke: 2px black;
+    // transition: .5s opacity ease-in-out;
+  }
 }
