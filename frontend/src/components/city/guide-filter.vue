@@ -41,9 +41,9 @@ export default {
     };
   },
   methods: {
-    //   selectInterest(interest) {                          //IS REACTIVE
-    //       this.filterBy.interests.push(interest);
-    //   console.log(this.filterBy);
+      // selectInterest(interest) {                          //IS REACTIVE
+      //     this.filterBy.interests.push(interest);
+      // console.log(this.filterBy);
 
     selectInterest(interest) {
       //not reactive for some reason, not critical but important
@@ -52,7 +52,6 @@ export default {
       if (interestIdx < 0) {
         this.filterBy.interests.push(interest);
       } else this.filterBy.interests.splice(interestIdx, 1);
-      console.log(this.filterBy.interests);
     },
     markSelection(ev) {
       ev.stopPropagation();
