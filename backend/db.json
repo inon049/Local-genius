@@ -53,7 +53,8 @@
             "price": 43,
             "interests": [
                 "Culture",
-                "Coffee"
+                "Coffee",
+                "Science"
             ],
             "questions": {
                 "WHAT’S YOUR CHOICE OF TRANSPORTATION IN SYDNEY AND WHY?": "I catch the train to work and uni, parking is such a hassle. Plus I enjoy spending some time walking on foot.",
@@ -162,7 +163,8 @@
                 "Food",
                 "Coffee",
                 "Culture",
-                "Shopping"
+                "Shopping",
+                "Science"
             ],
             "questions": {
                 "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "The super talented painter and fashion designer Sonia Delaunay. I have a major crush on her. I would take her to dinner at my favorite bistro, drink wine and talk for hours.",
@@ -298,7 +300,8 @@
             "about": "Bushwick is the star of my map, and the cafe by my gym that makes their own nut milk is the hero. If I go out for a celebration, I would take the L to the Lorimer stop and wing it from there, and if I had to leave the city for good,I would probably be saddest to say cya to the Natural History Museum. Get my map for a Brooklyn bonanza of vintage clothing, dive bars Thai food, work outs and salad haunts, with some Nolita touches to tie it up.",
             "interests": [
                 "Photography",
-                "Culture"
+                "Culture",
+                "Science"
             ],
             "questions": {
                 "WHO’S YOUR HERO AND WHERE WOULD YOU TAKE THEM OUT FOR A BITE OR A DRINK IN NEW YORK?": "Wow. Um… I want to say I’d party with Robert Mapplethorpe, but that would be a total lie bc truthfully I’d grab coffee with my mom.",

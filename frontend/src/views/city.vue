@@ -2,7 +2,15 @@
   <section>
     <div class="city-header-img city-header-container">
       <h2 class="city-name" v-if="currCity">{{currCity.name}}'s Guides</h2>
-      <guide-filter @filtered="setFilter"></guide-filter>
+      <div class="filter-panel">
+      <h4>Find your guides, get their insight on the city, and enjoy {{currCity.name}}
+        like it was your second home! </h4>
+      <button @click="toggleFilter">Find the guide for me</button>
+      </div>
+      <guide-filter @filtered="setFilter" :isOpen="isFilterOpen">
+        <button @click="toggleFilter" class="filter-close-btn">x</button>
+
+      </guide-filter>
     </div>
     <guide-list :guides="guidesToShow"></guide-list>
   </section>
@@ -16,15 +24,20 @@ export default {
     return {
       currCity: "",
       guides: [],
-      filterBy: null
+      filterBy: null,
+      isFilterOpen: false
     };
   },
   methods: {
     setFilter(filterBy) {
       //later maybe server side
-      //now if any of the selections exists it shoes, can switch to every
+      //now if any of the selections exists it shows, can switch to every
       this.filterBy = filterBy;
-    }
+      this.isFilterOpen = false;
+    },
+    toggleFilter() {
+      this.isFilterOpen = !this.isFilterOpen;
+    },
   },
   computed: {
     guidesToShow() {

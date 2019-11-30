@@ -1,35 +1,85 @@
 .guide-filter-container {
-  width: 70%;
-  // height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
 }
 
 .guide-interests-filter-list {
-  padding: 5px;
-  width: 100%;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  padding: 25px;
+  width: 60%;
   list-style: none;
-  height: 15%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 
 .guide-filter-interest {
-    box-sizing: border-box;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(233, 233, 233);
   border-radius: 5px;
-  width: 20%;
+  width: 48%;
   height: 25%;
-  margin: 2px 2px;
-  font-size: 0.9rem;
-  padding: 0 5px;
+  margin: 5px 5px;
+  font-size: 1.5rem;
+  padding: 2px 5px;
   cursor: pointer;
   img {
-    width: 15%;
+    width: 12%;
+    pointer-events: none;
   }
 }
 
-.interest-selected{
-    border: 2px solid black;
+.interest-selected {
+  border: 2px solid black;
+  padding: 0 3px;
+}
+
+.filter-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    outline: none;
+    background-color: rgb(255, 90, 95);
+    border: none;
+    padding: 10px;
+    width: 60%;
+    border-radius: 3px;
+    color: white;
+    font-size: 1.2rem;
+    align-self: center;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+.filter-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filter-close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(207, 207, 207);
+  }
+
 }

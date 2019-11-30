@@ -1,9 +1,7 @@
 .city-name {
-  font-size: 4rem;
-  padding-left: 40px;
-  @include for-very-narrow-layout {
-    font-size: 2.5rem;
-    padding-left: 20px;
+  font-size: 2.5rem;
+  @include for-narrow-layout {
+    font-size: 4rem;
   }
 }
 
@@ -13,8 +11,38 @@
     url(https://dlq9ebkqqrcon.cloudfront.net/destination_map/50961473-c5b5-4859-b5b4-3ea5f56374b0/70d06bfd53acbca4.jpg);
 }
 
-.city-header-container{
-    display: flex;
-    align-items: center;
-    // justify-content: space-between;
+.city-header-container {
+  height: 1%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  justify-content: space-between;
+}
+
+.filter-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  h4 {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+
+  button {
+    height: 25%;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    color: black;
+    font-size: 1rem;
+    align-self: flex-end;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(224, 224, 224, 0.336);
+    }
+  }
 }
