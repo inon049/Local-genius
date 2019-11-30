@@ -12,13 +12,6 @@
 //COMPONENTS
 import cityPreview from "./city-preview";
 export default {
-  data() {
-    return {
-      expandCityList: false,
-      expandGuideList: false
-    };
-  },
-
   props: {
     cities: Array
   },
@@ -27,9 +20,7 @@ export default {
   },
   computed: {
     citiesToWhow() {
-      if (!this.expandCityList) {
         return this.cities.splice(0, 4);
-      } else return this.cities.splice(0, 8);
     }
   }
 };

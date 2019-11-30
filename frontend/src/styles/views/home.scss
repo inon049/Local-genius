@@ -1,56 +1,77 @@
 .home {
-    .flex-list {
-        display: flex;
+    hr{
+        border-top: 1px solid #EBEBEB;
+        margin: 10px 0px;
+    }
+  .hero-img {
+    height: 80vh;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .titles {
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+    padding: 30px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    @include for-very-narrow-layout {
+      text-align: center;
+    }
+    @include for-narrow-layout {
+      font-size: rem(40px);
+      white-space: nowrap;
+    }
+    > * {
+      padding: 10px;
+    }
+  }
+  .city-filter {
+    position: absolute;
+    width: 50%;
+    margin-top: 17rem;
+    @include for-normal-layout {
+      width: 30%;
+    }
+    input {
+      height: 3rem;
+      min-width: rem(180px);
+      border-radius: 1000px;
+      padding: rem(10px);
+      user-select: none;
+      border: 0;
+      outline: none;
+      width: 100%;
+    }
+  }
+  .list-title{
+      margin-bottom: 10px;
+  }
+  .flex-list {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; 
+    @include for-normal-layout {
+        overflow:initial;
         flex-wrap: wrap;
-        >* {
-            padding: 10px 0px;
-            width: 100%;
-            @include for-normal-layout {
-                width: 50%;
-                padding: rem(10px);
-            }
-            @include for-wide-layout {
-                width: 25%;
-            }
-        }
+        
+      }
+    &::-webkit-scrollbar {
+      display: none;
     }
-    .hero-img {
-        height: 80vh;
-        object-fit: cover;
-    }
-    .titles {
-        position: absolute;
-        font-size: 1.5rem;
-        color: white;
-        padding: 30px;
-        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
-        @include for-very-narrow-layout {
-            text-align: center;
-        }
-        @include for-narrow-layout {
-            font-size: rem(40px);
-            white-space: nowrap;
-        }
-        >* {
-            padding: 10px;
-        }
-    }
-    .city-filter {
-        position: absolute;
+    > * {
+      width: 95%;
+      flex-shrink: 0;
+      height: 100%;
+      scroll-snap-align: start;
+      padding: 0px 10px;
+      @include for-normal-layout {
         width: 50%;
-        margin-top: 17rem;
-        @include for-normal-layout {
-            width: 30%;
-        }
-        input {
-            height: 3rem;
-            min-width: rem(180px);
-            border-radius: 1000px;
-            padding: rem(10px);
-            user-select: none;
-            border: 0;
-            outline: none;
-            width: 100%;
-        }
+        padding: 10px 10px;
+      }
+      @include for-wide-layout {
+        width: 25%;
+      }
     }
+  }
 }

@@ -24,12 +24,6 @@
     }
 }
 
-@mixin for-mid-wide-layout {
-    @media (min-width: $break-normal) {
-        @content;
-    }
-}
-
 @mixin for-wide-layout {
     @media (min-width: $break-wide) {
         @content;
