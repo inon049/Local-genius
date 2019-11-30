@@ -1,13 +1,32 @@
 <template>
   <v-date-picker
-  mode="range"
+  @input="dates"
   :value="null"
   color="red"
   is-inline
-  />
+  :disabled-dates='pickedDate'
+/>
 </template>
 
 <script>
+export default {
+  data(){
+    return {
+      pickedDate : []
+    }
+  },
+  methods:{
+    dates(ev){
+      this.pickedDate.push(ev)
+    }
+  },
+ computed:{
+   disabledDates(){
+     
+   }
+ }
+
+}
 </script>
 
 <style>
