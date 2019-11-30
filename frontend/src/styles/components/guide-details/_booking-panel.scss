@@ -1,45 +1,82 @@
 .booking-panel-container {
-  position: sticky;
-  top: 10px;
-  margin-right: 45px;
-  width: rem(320px);
-  z-index: 3;
-  padding: rem(25px);
-  margin: 0px;
+  .booking-desktop {
+    display: none;
+  }
+
+  font-size: 1.5rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   border: 1px solid #bbbbbb;
   background-color: #ffffff;
-  height: rem(700px);
-  margin-left: 10px;
+  height: 13%;
+  padding: 20px;
+  @include for-mid-narrow-layout {
+    position: sticky;
+    top: 10px;
+    margin-right: 45px;
+    width: rem(320px);
+    z-index: 3;
+    padding: rem(25px);
+    margin: 0px;
+    height: rem(700px);
+    margin-left: 10px;
+    .booking-desktop {
+      display: block;
+    }
+  }
 }
+
 .guide-price {
   h4 {
     margin-left: 10px;
+    font-size:1.2rem;
+
   }
+  h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  line-height: 20px;
+  margin-top:15px;
+  margin-bottom:15px; 
 }
 .persons {
+  display: none;
   margin-top: 15px;
   width: 100%;
+  @include for-mid-narrow-layout{
+    display: block;
+  }
   select {
     width: 20%;
     border: 1px solid #de4d5c;
     outline: none;
     border-radius: 3px;
     cursor: pointer;
+    background-color: #ffffff;
   }
 }
 
-.book-btn{
-    outline: none;
-    background-color: rgb(255, 90, 95);
-    border: none;
-    padding: 10px;
-    width: 60%;
-    border-radius: 3px;
-    color: white;
-    font-size:1.2rem;
+.book-btn {
+  background-color: rgb(255, 90, 95);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30%;
+  margin: 0;
+  height: rem(60px);
+  @include for-mid-narrow-layout {
     align-self: center;
-    margin-top:20px;
-    cursor: pointer;
+    width: 80%;
+    margin-top: 55px;
+    padding: 10px;
+  }
 }
 .booking-rate {
   p {
@@ -52,10 +89,16 @@
   }
 }
 .booking-price-rate {
-  margin-top: 20px;
-  width: 100%;
   color: #de4d5c;
-
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  @include for-mid-narrow-layout {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .booking-panel {
   color: #de4d5c;
@@ -63,4 +106,40 @@
     font-size: 2rem;
     margin-bottom: 15px;
   }
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: rem(700px);
+  margin: 0 auto;
+  @include for-mid-narrow-layout {
+    flex-direction: column;
+  }
+}
+
+.show-modal {
+    height: 50%;
+  .persons{
+    display: block !important;
+
+  }
+ 
+  .booking-desktop {
+    display: block !important;
+  }
+  .booking-modal {
+    display: flex;
+    flex-direction: column;
+  }
+  .booking-price-rate {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .book-btn{
+    width: 50%;
+  }
+  .booking-panel{
+    width: 80%;
+    margin: 0 auto;
+  }
+
 }
