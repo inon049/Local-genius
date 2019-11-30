@@ -1,4 +1,7 @@
-export default{
+
+import msgService from '@/services/msg.service'
+
+export default {
     state:{
         msg:'s'
       },

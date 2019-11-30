@@ -9,7 +9,12 @@
       <img class="hero-img" src="@/assets/img/home-bg.jpg" alt />
     </div>
     <div class="container">
+      <h2 class="list-title">SPOTLIGHT DESTINATIONS</h2>
       <city-list :cities="cities"></city-list>
+    <hr>
+    <h2 class="list-title">GUIDES OF THE MONTH</h2>
+    <guide-list :guides="guides"></guide-list>
+    <hr>
     </div>
   </section>
 </template>
@@ -17,24 +22,33 @@
 <script>
 import router from "@/router/index";
 import cityService from "@/services/city.service";
+import userService from "@/services/user.service";
 import cityList from "@/components/home/city-list";
 import cityFilter from "@/components/home/city-filter";
+import guideList from "@/components/city/guide-list";
 
 export default {
   router,
   name: "home",
   components: {
     cityFilter,
-    cityList
+    cityList,
+    guideList
   },
   data() {
     return {
-      cities: []
+      cities: [],
+      guides:[]
     };
   },
   async created() {
     var cities = await cityService.query();
     this.cities = JSON.parse(JSON.stringify(cities));
+
+
+    var guides = await userService.query();
+    guides = JSON.parse(JSON.stringify(guides));
+    this.guides = guides.splice(0,4)
   }
 };
 </script>

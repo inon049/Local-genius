@@ -1,7 +1,14 @@
 .city-preview {
     img {
         object-fit: cover;
-        min-height: 20.625rem;
+        height: 20.625rem;
+        @include for-very-narrow-layout{
+            height: 33.625rem;
+        }
+        @include for-normal-layout {
+            height: 20.625rem;;
+        }
+
     }
     position: relative;
     cursor: pointer;
@@ -14,8 +21,4 @@
         background-color: rgba(255, 255, 255, 0.699);
         text-align: center;
     }
-}
-
-.city-list {
-    padding-top: 30px;
 }
