@@ -1,11 +1,10 @@
-.messenger{
-    width: 100%;
-    .recent-chats{
-        width :40%;
+.messenger {
+    .recent-chats {
         border: 1px solid red;
+        height: 100%;
     }
-    .chat{
-        width: 60%;
+    .chat {
         border: 1px solid blue;
+        height: 100%;
     }
 }

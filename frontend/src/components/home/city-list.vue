@@ -3,6 +3,7 @@
     <section class="flex-list">
       <city-preview v-for="city in citiesToWhow" :key="city._id" :city="city"></city-preview>
     </section>
+
   </section>
 </template>
 
@@ -22,7 +23,7 @@ export default {
     cities: Array
   },
   components: {
-    cityPreview
+    cityPreview,
   },
   computed: {
     citiesToWhow() {
@@ -30,6 +31,6 @@ export default {
         return this.cities.splice(0, 4);
       } else return this.cities.splice(0, 8);
     }
-  },
+  }
 };
 </script>

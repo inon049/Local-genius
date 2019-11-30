@@ -1,6 +1,6 @@
 <template>
   <section class="chat">
-      <h2>IN DEVELOPMENT</h2>
+      <h2>Chat</h2>
   </section>
 </template>
 
