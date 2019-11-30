@@ -1,5 +1,5 @@
 <template>
-  <section v-if="chats" class="recent-chats">
+  <section class="recent-chats">
     <h1>recent chts</h1>
     <chat-preview v-for="(chat,idx) in chats" :key="idx" :chat="chat"></chat-preview>
   </section>
