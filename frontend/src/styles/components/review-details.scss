@@ -1,0 +1,36 @@
+.review-details {
+    padding: 10px;
+    height: 200px;
+  .review-header {
+    img {
+      width: rem(80px);
+      border-radius: 50%;
+    }
+    h2 {
+        padding: 10px 0px 0px 10px;
+        display: inline-block;
+        width: 100%;
+        color: 000;
+      position: absolute;
+      top: 0;
+      span {
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// <template>
+//   <section class="review-details">
+//     <div class="review-header">
+//         <img :src="imgUrl">
+//       <h2 class="by-user-name">{{review.byUserName}}</h2>
+//       <span>{{ review.createdAt | moment("from") }}</span>
+//     </div>
+//     <div class="review-content">
+//     <h3>{{review.title}}</h3>
+
+//     </div>
+//   </section>
+// </template>

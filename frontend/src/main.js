@@ -10,6 +10,8 @@ import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
 Vue.use(VCalendar);
 
+Vue.use(VCalendar);
+Vue.use(require('vue-moment'));
 
 
 Vue.config.productionTip = false
