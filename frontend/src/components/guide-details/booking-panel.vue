@@ -5,7 +5,7 @@
         <div class="booking-modal">
           <span class="close-btn" v-if="isOpen" @click="click">&#x2716;</span>
           <h1>Pick a date</h1>
-          <calander />
+          <calander @datePicked="setDate" :disabledDates="disabledDates" />
         </div>
         </div>
       <div class="booking-price-rate flex">
@@ -13,13 +13,12 @@
             <label for="persons">
               <h4>How many people?</h4>
             </label>
-            <select id="persons">
-              <option></option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <select  v-model="booking.attendees" id="persons">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
           </div>
         <div>
@@ -52,6 +51,15 @@ export default {
   },
   data() {
     return {
+      disabledDates: [],
+      booking:{
+        byUserId:'',
+        toGuideId:'',
+        createdAt:'',
+        at:'',
+        price:'',
+        attendees:''
+      },
       isOpen: false,
       isBooking : false
     };
@@ -59,12 +67,23 @@ export default {
   methods: {
     click() {
       this.isOpen = !this.isOpen;
-      console.log('pp');
     },
     onBook(){
+      this.booking.createdAt = Date.now()
+      this.booking.price =  this.guide.price
+      this.booking.price = this.booking.attendees * this.booking.price
       this.isBooking = !this.isBooking
+      this.$store.dispatch({type: 'saveBooking', booking : JSON.parse(JSON.stringify(this.booking))})
+    },
+    setDate(date){
+      this.booking.at = date
+    },
+
+  },
+    created(){
+      this.booking.toGuideId = this.$route.params._id
+      this.booking.byUserId = this.$store.getters.loggedInUser._id;
     }
-  }
 };
 </script>
 

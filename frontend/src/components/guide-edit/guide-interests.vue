@@ -31,6 +31,7 @@ export default {
   },
   data() {
     return {
+      guide:{},
       selectedInterests:{interests:[]},
       interests: [
         { name: "Culture", isSelected: false },
@@ -58,11 +59,12 @@ export default {
       } else this.selectedInterests.interests.splice(interestIdx, 1);
     },
     save() {
-      this.guideToEdit.interests = this.selectedInterests.interests;
-      eventBus.$emit("saveInfo", this.guideToEdit);
+      this.guide.interests = this.selectedInterests.interests;
+      eventBus.$emit("saveInfo", this.guide);
     }
   },
   created() {
+    this.guide = this.guideToEdit
   }
 };
 </script>

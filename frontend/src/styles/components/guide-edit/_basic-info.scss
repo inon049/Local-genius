@@ -42,14 +42,6 @@
   }
 }
 
-@include for-narrow-layout {
-  .save-btn {
-    width: 30%;
-  }
-  .next-btn {
-    width: 30%;
-  }
-}
 .next-btn {
   border-radius: 3px;
   background-color: rgb(18, 22, 18);
@@ -77,10 +69,12 @@
   font-weight: 700;
 }
 
-// .vs__dropdown-toggle{
-//     width: 70%;
-// }
 
-// .vs__dropdown-menu{
-//     width: 70%!important;
-// }
+@include for-narrow-layout {
+  .save-btn {
+    width: 30%;
+  }
+  .next-btn {
+    width: 30%;
+  }
+}

@@ -1,34 +1,28 @@
 <template>
-  <v-date-picker
-  @input="dates"
-  :value="null"
-  color="red"
-  is-inline
-  :disabled-dates='pickedDate'
-/>
+  <v-date-picker @input="dates" :value="null" color="red" is-inline :disabled-dates="disabledDates"/>
 </template>
 
 <script>
 export default {
-  data(){
+  props: {
+    disabledDates: Array
+  },
+  data() {
     return {
-      pickedDate : []
+      pickedDate:''
+    };
+  },
+  methods: {
+    dates(date) {
+     this.pickedDate = date
+     this.$emit('datePicked', date)
     }
   },
-  methods:{
-    dates(ev){
-      this.pickedDate.push(ev)
-    }
+  computed: {
   },
- computed:{
-   disabledDates(){
-     
-   }
- }
-
-}
+ 
+};
 </script>
 
 <style>
-
 </style>

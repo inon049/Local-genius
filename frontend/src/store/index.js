@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import userStore from './modules/user-store'
 import cityStore from './modules/city-store'
 import msgStore from './modules/msg-store'
+import bookingStore from './modules/booking-store'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -18,5 +19,6 @@ export default new Vuex.Store({
     userStore,
     cityStore,
     msgStore,
+    bookingStore
   }
 })
