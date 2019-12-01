@@ -1,4 +1,14 @@
 {
+    "booking": [
+        {
+            "byUserId": "5de37f341c9d440000854041",
+            "toGuideId": "5de394c81c9d440000854043",
+            "createdAt": "new Date(2019,11,19)",
+            "at": "new Date(2019,11,20)",
+            "price": 60,
+            "attendees": 3
+        }
+    ],
     "msg": [
         {
             "_id": "1",
