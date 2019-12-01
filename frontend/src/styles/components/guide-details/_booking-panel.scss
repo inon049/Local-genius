@@ -2,7 +2,6 @@
   .booking-desktop {
     display: none;
   }
-
   font-size: 1.5rem;
   position: fixed;
   left: 0;
@@ -40,8 +39,11 @@
     font-weight: 700;
   }
   line-height: 20px;
-  margin-top:15px;
-  margin-bottom:15px; 
+  margin-bottom:15px;
+  margin-top:0;
+  @include for-mid-narrow-layout{
+    margin-top:15px; 
+  }
 }
 .persons {
   display: none;
@@ -71,11 +73,13 @@
   width: 30%;
   margin: 0;
   height: rem(60px);
+  display: none;
   @include for-mid-narrow-layout {
     align-self: center;
-    width: 80%;
+    width: 60%;
     margin-top: 55px;
     padding: 10px;
+    display: block;
   }
 }
 .booking-rate {
@@ -116,30 +120,83 @@
 }
 
 .show-modal {
-    height: 50%;
+  .close-btn{
+    position: absolute;
+    right: 30px;
+    border: 1px solid #de4d5c;
+    cursor: pointer;
+    padding: 0 5px;
+    &:hover{
+      background-color: #de4d5c48;
+    }
+  }
+  height: 80%;
+  .booking-panel{
+    flex-direction: column;
+    align-items: center;
+  }
   .persons{
     display: block !important;
-
   }
- 
   .booking-desktop {
     display: block !important;
+  }
+  .booking-price-rate{
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-btn{
+    display: block;
+    width: 60%;
+    margin-top:15px;
+  }
+  .guide-price{
+    margin-top:15px;
   }
   .booking-modal {
     display: flex;
     flex-direction: column;
-  }
-  .booking-price-rate {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .book-btn{
-    width: 50%;
-  }
-  .booking-panel{
-    width: 80%;
-    margin: 0 auto;
-  }
 
+  }
+  .modal-btn{
+    display: none;
+  }
+  @include for-narrow-layout{
+    height: 50%;
+    .booking-price-rate {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .book-btn{
+      width: 60%;
+    }
+    .booking-panel{
+      margin: 0 auto;
+      flex-direction: row;
+    }
+  
+  }
+}
+
+.modal-btn{
+  display: block;
+  background-color: rgb(255, 90, 95);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30%;
+  margin: 0;
+  height: rem(60px);
+  @include for-mid-narrow-layout{
+    display: none;
+  }
+}
+
+
+.booked{
+  background-color: grey;
 }

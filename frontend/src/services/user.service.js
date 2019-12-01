@@ -8,6 +8,7 @@ async function query(){
 }
 
 async function getGuideById(_id){
+    console.log('service');
     const guide = await httpService.get(`user/${_id}`)
     return guide
 }

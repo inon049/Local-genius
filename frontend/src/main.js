@@ -5,9 +5,10 @@ import router from './router'
 import store from './store'
 import '@/styles/global.scss'
 import VCalendar from 'v-calendar'
-
-Vue.use(VCalendar);
 import VueTinySlider from "vue-tiny-slider";
+import vSelect from 'vue-select'
+Vue.component('v-select', vSelect)
+Vue.use(VCalendar);
 
 
 

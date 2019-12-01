@@ -8,6 +8,7 @@
       <city-filter :cities="cities"></city-filter>
       <img class="hero-img" src="@/assets/img/home-bg.jpg" alt />
     </div>
+    <router-link to="/guide/edit">BECOME A GUIDE</router-link>
     <div class="container">
       <h2 class="list-title">SPOTLIGHT DESTINATIONS</h2>
       <city-list :cities="cities"></city-list>

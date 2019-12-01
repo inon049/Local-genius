@@ -34,7 +34,14 @@
 @import 'components/guide-details/guide-personal-info';
 @import 'components/guide-details/booking-panel';
 
+// GUIDE EDIT
+@import 'components/guide-edit/guide-edit';
+@import 'components/guide-edit/details-bar';
+@import 'components/guide-edit/basic-info';
+@import 'components/guide-edit/guide-interests';
 
 //CAROUSEL NPM
 
 @import 'tiny-slider/src/tiny-slider';
+
+@import "vue-select/src/scss/vue-select.scss";

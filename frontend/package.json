@@ -15,6 +15,7 @@
     "v-calendar": "^1.0.0-beta.22",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
+    "vue-select": "^3.3.0",
     "vue-tiny-slider": "^0.1.39",
     "vuex": "^3.0.1"
   },

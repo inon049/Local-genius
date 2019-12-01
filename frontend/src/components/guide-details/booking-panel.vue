@@ -1,8 +1,9 @@
 <template>
-  <div class="booking-panel-container"  :class="{'show-modal' : isBooking}">
+  <div class="booking-panel-container"  :class="{'show-modal' : isOpen}">
     <div class="booking-panel flex">
       <div class="booking-desktop">
         <div class="booking-modal">
+          <span class="close-btn" v-if="isOpen" @click="click">&#x2716;</span>
           <h1>Pick a date</h1>
           <calander />
         </div>
@@ -33,7 +34,8 @@
             </p>
           </div>
         </div>
-        <button @click="click" class="book-btn">Book</button>
+        <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
+        <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn">Book</button>
       </div>
     </div>
   </div>
@@ -41,24 +43,26 @@
 
 <script>
 import calander from "./calander";
-import bookingPicker from "./booking-picker";
 export default {
   props: {
     guide: Object
   },
   components: {
-    bookingPicker,
     calander
   },
   data() {
     return {
-      isBooking: false
+      isOpen: false,
+      isBooking : false
     };
   },
   methods: {
     click() {
-      this.isBooking = !this.isBooking;
-      console.log("pp");
+      this.isOpen = !this.isOpen;
+      console.log('pp');
+    },
+    onBook(){
+      this.isBooking = !this.isBooking
     }
   }
 };
