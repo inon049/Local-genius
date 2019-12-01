@@ -10,8 +10,8 @@
 import msgService from '@/services/msg.service'
 
 //COMPONENTS//
-import chat from "./chat";
-import recentChats from "./recent-chats";
+import chat from "./messenger/chat";
+import recentChats from "./messenger/recent-chats";
 export default {
   components: {
     recentChats,
