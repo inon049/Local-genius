@@ -20,7 +20,6 @@
 <script>
 import guideList from "@/components/city/guide-list";
 import guideFilter from "@/components/city/guide-filter";
-import bookingService from "@/services/booking.service";
 export default {
   data() {
     return {
