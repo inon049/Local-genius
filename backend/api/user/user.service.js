@@ -79,7 +79,7 @@ async function update(user) {
 async function add(user) {
     const collection = await dbService.getCollection('user')
     try {
-        await collection.insertOne(user);
+        await collection.insert(user);
         return user;
     } catch (err) {
         console.log(`ERROR: cannot insert user`)

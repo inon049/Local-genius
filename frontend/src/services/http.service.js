@@ -3,7 +3,7 @@ import router from '@/router'
 
 const BASE_URL = process.env.NODE_ENV === 'production'
     ? '/'
-    : '//localhost:3000/'
+    : '//localhost:3000/api/'
 
 
 import Axios from 'axios';

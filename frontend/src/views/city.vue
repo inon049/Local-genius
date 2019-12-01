@@ -3,13 +3,14 @@
     <div class="city-header-img city-header-container">
       <h2 class="city-name" v-if="currCity">{{currCity.name}}'s Guides</h2>
       <div class="filter-panel">
-      <h4>Find your guides, get their insight on the city, and enjoy {{currCity.name}}
-        like it was your second home! </h4>
-      <button @click="toggleFilter">Find the guide for me</button>
+        <h4>
+          Find your guides, get their insight on the city, and enjoy {{currCity.name}}
+          like it was your second home!
+        </h4>
+        <button @click="toggleFilter">Find the guide for me</button>
       </div>
       <guide-filter @filtered="setFilter" :isOpen="isFilterOpen">
         <button @click="toggleFilter" class="filter-close-btn">x</button>
-
       </guide-filter>
     </div>
     <guide-list :guides="guidesToShow"></guide-list>
@@ -19,6 +20,7 @@
 <script>
 import guideList from "@/components/city/guide-list";
 import guideFilter from "@/components/city/guide-filter";
+import bookingService from "@/services/booking.service";
 export default {
   data() {
     return {
@@ -37,7 +39,7 @@ export default {
     },
     toggleFilter() {
       this.isFilterOpen = !this.isFilterOpen;
-    },
+    }
   },
   computed: {
     guidesToShow() {
