@@ -5,16 +5,16 @@ export default {
     users: [],
     currGuide: null,
     loggedInUser: {
-      "_id": "1",
-      "name": "Dona Smith",
-      "email": "ww@ww.com",
-      "password": "11",
-      "type": "guide",
-      "rate": 4.3,
+      _id: "5de3ed727fe0b526944c41e8",
+      name: "Maya Williams",
+      email: "ww@ww.com",
+      password: "11",
+      type: "guide",
+      rate: 4.2
     }
   },
   getters: {
-    loggedInUser(state){
+    loggedInUser(state) {
       return state.loggedInUser
     },
     users(state) {

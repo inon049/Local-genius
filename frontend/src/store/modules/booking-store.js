@@ -15,9 +15,10 @@ export default {
         }
     },
     actions: {
-        saveBooking(context, { booking }) {
+        async saveBooking(context, { booking }) {
             console.log('bpoking', booking);
             const currBooking = await bookingService.add(booking)
+            console.log('pp', currBooking);
             context.commit({ type: 'setCurrBooking', booking : currBooking })
             return currBooking
         }
