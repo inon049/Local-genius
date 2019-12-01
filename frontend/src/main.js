@@ -9,9 +9,9 @@ import VueTinySlider from "vue-tiny-slider";
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
 Vue.use(VCalendar);
-
-Vue.use(VCalendar);
 Vue.use(require('vue-moment'));
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
 
 
 Vue.config.productionTip = false
