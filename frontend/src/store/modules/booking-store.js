@@ -1,4 +1,4 @@
-import cityService from '@/services/city.service'
+import bookingService from '@/services/booking.service'
 
 export default {
     state: {
@@ -17,9 +17,9 @@ export default {
     actions: {
         saveBooking(context, { booking }) {
             console.log('bpoking', booking);
-            // const currBooking = await bookingService.add(booking)
-            // context.commit({ type: 'setCurrBooking', booking : currBooking })
-            // return currBooking
+            const currBooking = await bookingService.add(booking)
+            context.commit({ type: 'setCurrBooking', booking : currBooking })
+            return currBooking
         }
     }
 }
