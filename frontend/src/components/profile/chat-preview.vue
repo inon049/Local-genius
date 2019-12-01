@@ -1,6 +1,6 @@
 <template>
 <div class="chat-preview">
-
+<pre>{{chat}}</pre>
 </div>
 </template>
 

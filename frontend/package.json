@@ -14,6 +14,8 @@
     "register-service-worker": "^1.6.2",
     "v-calendar": "^1.0.0-beta.22",
     "vue": "^2.6.10",
+    "vue-carousel": "^0.18.0",
+    "vue-moment": "^4.0.0",
     "vue-router": "^3.1.3",
     "vue-tiny-slider": "^0.1.39",
     "vuex": "^3.0.1"

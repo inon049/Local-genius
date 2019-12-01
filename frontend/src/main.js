@@ -5,10 +5,10 @@ import router from './router'
 import store from './store'
 import '@/styles/global.scss'
 import VCalendar from 'v-calendar'
-
-Vue.use(VCalendar);
 import VueTinySlider from "vue-tiny-slider";
 
+Vue.use(VCalendar);
+Vue.use(require('vue-moment'));
 
 
 Vue.config.productionTip = false
