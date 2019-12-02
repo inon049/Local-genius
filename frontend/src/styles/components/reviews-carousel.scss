@@ -1,5 +1,16 @@
-.reviews-carousel{
-    .review-details {
-        width: 100%;
-      }
+.reviews-carousel {
+  width: 100%;
+  .review-details {
+    width: 100%;
+  }
+  .VueCarousel-pagination {
+    position: absolute;
+    bottom: -20px;
+  }
+  .VueCarousel-dot {
+    margin: 0;
+    &:focus {
+      outline: none;
+    }
+  }
 }
