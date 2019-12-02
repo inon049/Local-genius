@@ -5,6 +5,16 @@
   }
 }
 
+.loading-svg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img{
+    width: 50%;
+    margin:  0 auto;
+  }
+}
+
 .city-header-img {
   height: 100px;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)),
