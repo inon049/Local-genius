@@ -5,6 +5,7 @@
       {{booking.byUser.name}}
       Is intrested in your service
       <span :title="booking.at" >At: {{ booking.at | moment("from") }}</span>
+       <span>Attendees:{{booking.attendees}}</span>
     </h2>
   </section>
 </template>
