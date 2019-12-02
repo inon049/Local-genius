@@ -20,17 +20,3 @@
     }
   }
 }
-
-// <template>
-//   <section class="review-details">
-//     <div class="review-header">
-//         <img :src="imgUrl">
-//       <h2 class="by-user-name">{{review.byUserName}}</h2>
-//       <span>{{ review.createdAt | moment("from") }}</span>
-//     </div>
-//     <div class="review-content">
-//     <h3>{{review.title}}</h3>
-
-//     </div>
-//   </section>
-// </template>
