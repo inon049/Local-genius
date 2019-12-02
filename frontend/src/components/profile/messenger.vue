@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <section  class="messenger">
+=======
+  <section class="messenger">
+>>>>>>> origin/inon
     <recent-chats :chats="recentChats" @selectChat="selectChat"></recent-chats>
     <chat></chat>
   </section>

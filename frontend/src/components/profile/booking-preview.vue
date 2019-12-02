@@ -3,10 +3,17 @@
     <img :src="imgUrl" />
     <h2>
       {{booking.byUser.name}}
+<<<<<<< HEAD
       Is intrested in your service
       <span :title="booking.at" >At: {{ booking.at | moment("from") }}</span>
        <span>Attendees:{{booking.attendees}}</span>
+=======
+      <span>{{ booking.createdAt | moment("calendar") }}</span>
+      <span>Booked a tour with: {{booking.attendees}} attendees</span>
+      <span :title="booking.at|moment('calendar')">{{ booking.at | moment("from")}}</span>
+>>>>>>> origin/inon
     </h2>
+    <button>Send messege</button>
   </section>
 </template>
 
@@ -23,42 +30,6 @@ export default {
       return imgUrl;
     }
   }
+
 };
-
-//         "_id": "5de3b78c186a322e481ed3d9",
-//         "createdAt": "new Date(2019,11,19)",
-//         "at": "new Date(2019,11,20)",
-//         "price": 60,
-//         "attendees": 3,
-//         "byUser": {
-//             "_id": "5de37f341c9d440000854041",
-//             "name": "borisov"
-//         },
-//         "toGuide": {
-//             "_id": "5de394c81c9d440000854043",
-//             "name": "dimitry"
-//         }
 </script>
-
-<style lang="scss" >
-.booking-preview {
-    padding: 10px;
-    height: 200px;
-    img {
-      width: 80px;
-      border-radius: 50%;
-    }
-    h2 {
-        padding: 10px 0px 0px 10px;
-        display: inline-block;
-        width: 100%;
-        color: 000;
-      position: absolute;
-      top: 0;
-      span {
-        display: block;
-        font-size: 14px;
-      }
-    }
-}
-</style>
