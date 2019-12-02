@@ -42,7 +42,7 @@ async function query(filterBy = {}) {
         ]).toArray()
 
         bookings = bookings.map(booking => {
-            booking.byUser = { _id: booking.byUser._id, name: booking.byUser.name }
+            booking.byUser = { _id: booking.byUser._id, name: booking.byUser.name,imgUrl:booking.byUser.profileImgUrl }
             booking.toGuide = { _id: booking.toGuide._id, name: booking.toGuide.name }
             delete booking.byUserId;
             delete booking.toGuideId;
