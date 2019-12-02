@@ -1,5 +1,5 @@
 <template>
-  <section v-if="recentChats.length" class="messenger">
+  <section  class="messenger">
     <recent-chats :chats="recentChats" @selectChat="selectChat"></recent-chats>
     <chat></chat>
   </section>
