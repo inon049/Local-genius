@@ -19,8 +19,6 @@ async function addUser(user) {
     return newUser
 }
 
-
-
 export default {
     query,
     getGuideById,
