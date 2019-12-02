@@ -6,8 +6,8 @@
         <h3>Connecting travelers with local guides worldwide</h3>
       </div>
       <city-filter :cities="cities"></city-filter>
-      <img class="hero-img" src="@/assets/img/home-bg.jpg" alt />
-    <router-link class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
+      <img class="hero-img" src="@/assets/img/home-bg.jpg" alt /> 
+    <router-link  class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
     </div>
     <div class="container">
       <h2 class="list-title">SPOTLIGHT DESTINATIONS</h2>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+// BECOME A GUIDE WITH V-IF LOGGED IN GUIDE
 import router from "@/router/index";
 import cityService from "@/services/city.service";
 import userService from "@/services/user.service";
