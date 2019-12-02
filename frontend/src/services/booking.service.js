@@ -2,7 +2,8 @@
 
 import httpService from '@/services/http.service'
 
-//know its duplicated will fix later
+//know its duplicated will fix later LOL I WAS ABOUT TO COMMENT duplicate pls fix
+//it should be called query like in other services.
 async function getGuideBookings(_id){
     const bookings = await httpService.get(`booking/?toGuideId=${_id}`)
     return bookings

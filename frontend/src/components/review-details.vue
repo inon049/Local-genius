@@ -4,8 +4,8 @@
       <img :src="imgUrl" />
       <h2>
         {{review.byUserName}}
-        
         <span>{{ review.createdAt | moment("from") }}</span>
+              <span>★ {{review.rate}}</span>
       </h2>
     </div>
     <div class="review-content">
