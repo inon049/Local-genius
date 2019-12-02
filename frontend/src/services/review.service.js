@@ -3,13 +3,13 @@
 import httpService from '@/services/http.service'
 
 //know its duplicated will fix later
-async function getGuideReviews(_id) {
-    const reviews = await httpService.get(`review/?toGuideId=${_id}`)
+async function getGuideReviews(_id, query = '') {
+    const reviews = await httpService.get(`review/?toGuideId=${_id}${query}`)
     return reviews
 }
 
-async function getUserReviews(_id) {
-    const reviews = await httpService.get(`review/?byUserId=${_id}`)
+async function getUserReviews(_id, query = '') {
+    const reviews = await httpService.get(`review/?byUserId=${_id}${query}`)
     return reviews
 }
 
