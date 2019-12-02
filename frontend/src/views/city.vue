@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-10">
     <div class="city-header-img city-header-container">
       <h2 class="city-name" v-if="currCity">{{currCity.name}}'s Guides</h2>
       <div class="filter-panel">

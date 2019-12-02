@@ -1,5 +1,5 @@
 <template>
-  <div class="edit-guide-container">
+  <div class="edit-guide-container mt-10">
     <h1>Submit your profile</h1>
       <detailsBar/>
       <router-view/>

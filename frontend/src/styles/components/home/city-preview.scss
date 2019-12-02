@@ -1,5 +1,6 @@
 .city-preview {
     img {
+        border-radius: 2px;
         object-fit: cover;
         height: 20.625rem;
         @include for-very-narrow-layout{
