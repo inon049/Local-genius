@@ -33,6 +33,8 @@
             </p>
           </div>
         </div>
+        <transition enter-active-class="animated zoomIn"><img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png">
+        </transition>
         <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
         <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn">Book</button>
       </div>
@@ -41,6 +43,7 @@
 </template>
 
 <script>
+import {eventBus} from '../../services/event.bus.service'
 import calander from "./calander";
 export default {
   props: {
@@ -73,6 +76,7 @@ export default {
       this.booking.price =  this.guide.price
       this.booking.price = this.booking.attendees * this.booking.price
       this.isBooking = !this.isBooking
+      eventBus.$emit('book')
       this.$store.dispatch({type: 'saveBooking', booking : JSON.parse(JSON.stringify(this.booking))})
     },
     setDate(date){
