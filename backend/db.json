@@ -1,12 +1,22 @@
 {
     "booking": [
         {
-            "byUserId": "5de37f341c9d440000854041",
-            "toGuideId": "5de394c81c9d440000854043",
-            "createdAt": "new Date(2019,11,19)",
+            "byUserId": "5de3ed727fe0b526944c41ed",
+            "toGuideId": "5de3ed727fe0b526944c41e5",
+            "createdAt": "1575294204195",
             "at": "new Date(2019,11,20)",
             "price": 60,
             "attendees": 3
+        }
+    ],
+    "review": [
+        {
+            "byUserId": "5de3ed727fe0b526944c41ed",
+            "aboutGuideId": "5de3ed727fe0b526944c41e5",
+            "createdAt": "1575294204195",
+            "rate": 5,
+            "title":"nice tour",
+            "txt":"i had the best time of my life with mulu"
         }
     ],
     "msg": [

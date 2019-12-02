@@ -1,7 +1,7 @@
 <template>
   <li class="guide-preview">
     <div class="ratio-card-guide">
-      <vue-tiny-slider
+      <vue-tiny-slider 
         ref="tinySlider"
         :mouse-drag="true"
         :loop="true"
