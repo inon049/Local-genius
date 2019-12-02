@@ -33,6 +33,8 @@
             </p>
           </div>
         </div>
+        <transition enter-active-class="animated zoomIn"><img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png">
+        </transition>
         <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
         <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn">Book</button>
       </div>

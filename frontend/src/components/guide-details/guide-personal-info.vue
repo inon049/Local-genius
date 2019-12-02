@@ -2,6 +2,7 @@
     <section class="guide-container flex col" v-if="guide">
       <div class="personal-title-continer flex space-between">
         <div class="personal-txt flex col">
+          <button @click="back" class="back-btn">Back</button>
           <h1>{{guide.name}}</h1>
           <h2>{{guide.desc}}</h2>
         </div>
@@ -34,6 +35,12 @@ export default {
   },
   components: {
     bookingPanel
+  },
+  methods:{
+    back(){
+      this.$router.go(-1)
+
+    }
   }
 };
 </script>

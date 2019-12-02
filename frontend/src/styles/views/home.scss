@@ -8,6 +8,19 @@
     object-fit: cover;
     margin-bottom: 10px;
   }
+  .become-guide-btn{
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+    z-index: 100;
+    text-decoration: none;
+    background-color: #ffffff96;
+    color: black;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
   .titles {
     position: absolute;
     font-size: 1.5rem;
@@ -35,7 +48,7 @@
     input {
       height: 3rem;
       min-width: rem(180px);
-      border-radius: 1000px;
+      border-radius: 3px;
       padding: rem(10px);
       user-select: none;
       border: 0;

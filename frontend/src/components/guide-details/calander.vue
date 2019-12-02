@@ -14,6 +14,7 @@ export default {
   },
   methods: {
     dates(date) {
+      console.log(date);
      this.pickedDate = date
      this.$emit('datePicked', date)
     }
