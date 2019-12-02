@@ -18,7 +18,7 @@
         <div v-for="(ans,question,idx) in guide.questions" :key="idx">
             <h1>{{question}}</h1>
             <h3>{{ans}}</h3>
-          <img v-if="guide.imgUrls[idx]" :src="guide.imgUrls[idx++]" />
+          <img v-if="guide.imgUrls[idx]" :src="guide.imgUrls[idx++]"/>
         </div>
         </div>
         </div>
@@ -39,7 +39,6 @@ export default {
   methods:{
     back(){
       this.$router.go(-1)
-
     }
   }
 };

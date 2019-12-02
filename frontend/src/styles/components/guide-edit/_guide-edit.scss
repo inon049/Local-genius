@@ -1,8 +1,26 @@
 .edit-guide-container{
-    padding: 20px;
+    padding: 20px 0;
     h1{
         text-align: center;
         font-size: 2rem;
     }
   
+}
+
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+    color: #de4d5c!important;
+}
+.el-tabs--border-card>.el-tabs__header .el-tabs__item:not(.is-disabled):hover{
+    color: #de4d5c!important;
+}
+.el-tabs__item{
+    font-size: 1.6rem!important;
+}
+.el-tabs--border-card>.el-tabs__header{
+    display: flex;
+    justify-content: center;
+}
+.el-tabs--border-card{
+    
+    margin-top:20px;
 }

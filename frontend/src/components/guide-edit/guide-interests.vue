@@ -1,5 +1,5 @@
 <template>
-  <div class="guide-interests-container">
+  <div class="guide-interests-container" v-if="guide">
     <ul class="guide-interests-list-picker">
       <div class="interests-header">
         <h2>What are your interestes?</h2>
@@ -17,10 +17,9 @@
         />
       </li>
     </ul>
-    <div class="guide-btns flex space-between">
+    <div class="flex justify-center">
       <button @click="save" class="save-btn">SAVE</button>
-      <router-link class="next-btn" to="/guide/edit/experience">NEXT</router-link>
-    </div>
+      </div>
   </div>
 </template>
 
@@ -60,11 +59,17 @@ export default {
     },
     save() {
       this.guide.interests = this.selectedInterests.interests;
-      eventBus.$emit("saveInfo", this.guide);
-    }
+      this.$emit("save", this.guide);
+    },
+  
   },
   created() {
-    this.guide = this.guideToEdit
+    if(this.guideToEdit) this.guide = this.guideToEdit
+    this.guideToEdit.interests.forEach(interest => {
+      if (interest.isSelected) 
+     var selected = this.interests.find(localInterest => localInterest.name === interest.name)
+     selected.isSelected = true;
+    });
   }
 };
 </script>

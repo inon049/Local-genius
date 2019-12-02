@@ -6,9 +6,9 @@ import city from '../views/city.vue'
 import guideDetails from '../views/guide-details.vue'
 import profile from '../views/profile.vue'
 import editGuide from '../views/guide-edit.vue'
-import basicInfo from '../components/guide-edit/basic-info.vue'
-import guideIterests from '../components/guide-edit/guide-interests.vue'
-import guideExperience from '../components/guide-edit/guide-experience.vue'
+// import basicInfo from '../components/guide-edit/basic-info.vue'
+// import guideIterests from '../components/guide-edit/guide-interests.vue'
+// import guideExperience from '../components/guide-edit/guide-experience.vue'
 
 //profile children 
 import messenger from '../components/profile/messenger.vue'
@@ -31,28 +31,28 @@ const routes = [
     component: city
   },
   {
-    path: '/guide/edit/',
+    path: '/guide/edit/:_id?',
     component: editGuide,
-    children: [
-      {
-        path: 'basic',
-        component: basicInfo,
-        props:true,
-        name: 'basic'
-      },
-      {
-        path: 'interests',
-        component: guideIterests,
-        props:true,
-        name: 'interests'
-      },
-      {
-        path: 'experience',
-        component: guideExperience,
-        props:true,
-        name: 'experience'
-      }
-    ]
+    // children: [
+    //   {
+    //     path: 'basic',
+    //     component: basicInfo,
+    //     props:true,
+    //     name: 'basic'
+    //   },
+    //   {
+    //     path: 'interests',
+    //     component: guideIterests,
+    //     props:true,
+    //     name: 'interests'
+    //   },
+    //   {
+    //     path: 'experience',
+    //     component: guideExperience,
+    //     props:true,
+    //     name: 'experience'
+    //   }
+    // ]
   },
   {
     path: '/guide/:_id',

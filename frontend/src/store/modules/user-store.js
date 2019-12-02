@@ -3,7 +3,7 @@ import userService from '@/services/user.service'
 export default {
   state: {
     users: [],
-    currGuide: null,
+    currUser: null,
     loggedInUser: {
       _id: "5de3ed727fe0b526944c41e8",
       name: "Maya Williams",
@@ -27,7 +27,7 @@ export default {
       return guides
     },
     guide(state) {
-      return state.currGuide
+      return state.currUser
     }
   },
   mutations: {
@@ -40,8 +40,8 @@ export default {
     setCurrCity(state, { currCity }) {
       state.currCity = currCity
     },
-    setCurrGuide(state, { guide }) {
-      state.currGuide = guide
+    setCurrUser(state, { guide }) {
+      state.currUser = guide
     }
   },
   actions: {
@@ -49,9 +49,12 @@ export default {
       const users = await userService.query();
       context.commit({ type: 'setUsers', users })
     },
-    async getGuideById(context, { guideId }) {
-      const guide = await userService.getGuideById(guideId);
-      context.commit({ type: 'setCurrGuide', guide })
+    async getUserById(context, { _id }) {
+      const guide = await userService.getById(_id);
+      context.commit({ type: 'setCurrUser', guide })
+    },
+    async addGuide(context,{guide}){
+      console.log('new guide in store', guide);
     }
   },
 }

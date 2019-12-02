@@ -12,10 +12,14 @@ async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('review')
     try {
-        var reviews = await collection.aggregate([
+        var pipeline = [
             {
                 $match: criteria
             },
+            (filterBy.recent) ? { $sort: { createdAt: -1 } } :
+                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
+            (filterBy.amount) ? { $limit: +filterBy.amount } :
+                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
             {
                 $lookup:
                 {
@@ -40,11 +44,13 @@ async function query(filterBy = {}) {
             {
                 $unwind: '$aboutGuide'
             }
-        ]).toArray()
+        ]
+
+        var reviews = await collection.aggregate(pipeline).toArray()
 
         reviews = reviews.map(review => {
-            review.byUser = { _id: review.byUser._id, name: review.byUser.name }
-            review.aboutUser = { _id: review.aboutGuide._id, name: review.aboutGuide.name }
+            review.byUser = { _id: review.byUser._id, name: review.byUser.name, imgUrl: review.byUser.profileImgUrl }
+            review.aboutGuide = { _id: review.aboutGuide._id, name: review.aboutGuide.name }
             delete review.byUserId;
             delete review.aboutGuideId;
             return review;
@@ -77,7 +83,7 @@ async function add(review) {
         await collection.insertOne(review);
         return review;
     } catch (err) {
-        console.log(`ERROR: cannot insert user`)
+        console.log(`ERROR: cannot insert reivew`)
         throw err;
     }
 }
@@ -91,6 +97,7 @@ function _buildCriteria(filterBy) {
     if (filterBy.aboutGuideId) {
         criteria.aboutGuideId = ObjectId(filterBy.aboutGuideId)
     }
+    console.log(criteria, ' review crit');
     return criteria;
 }
 

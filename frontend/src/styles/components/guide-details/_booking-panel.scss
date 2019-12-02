@@ -124,6 +124,13 @@
   }
 }
 
+.el-radio-button__inner:hover{
+color: black!important;
+}
+.persons-header{
+
+  margin-bottom:10px;
+}
 .show-modal {
   .close-btn{
     position: absolute;
@@ -141,6 +148,7 @@
     align-items: center;
   }
   .persons{
+
     display: block !important;
   }
   .booking-desktop {

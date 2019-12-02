@@ -15,7 +15,7 @@ export default {
   async created() {
     const guideId = this.$route.params._id;
     try {
-      await this.$store.dispatch({type: "getGuideById", guideId});
+      await this.$store.dispatch({type: "getUserById", _id : guideId});
     } catch (err) {
       console.log(err);
     }
