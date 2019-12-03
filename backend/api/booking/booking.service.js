@@ -11,10 +11,14 @@ async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('booking')
     try {
-        var bookings = await collection.aggregate([
+        var pipeline = [
             {
                 $match: criteria
             },
+            (filterBy.recent) ? { $sort: { createdAt: -1 } } :
+                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
+            (filterBy.amount) ? { $limit: +filterBy.amount } :
+                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
             {
                 $lookup:
                 {
@@ -38,11 +42,12 @@ async function query(filterBy = {}) {
             },
             {
                 $unwind: '$toGuide'
-            }
-        ]).toArray()
+            },
+        ]
+        var bookings = await collection.aggregate(pipeline).toArray()
 
         bookings = bookings.map(booking => {
-            booking.byUser = { _id: booking.byUser._id, name: booking.byUser.name,imgUrl:booking.byUser.profileImgUrl }
+            booking.byUser = { _id: booking.byUser._id, name: booking.byUser.name, imgUrl: booking.byUser.profileImgUrl }
             booking.toGuide = { _id: booking.toGuide._id, name: booking.toGuide.name }
             delete booking.byUserId;
             delete booking.toGuideId;
@@ -93,6 +98,9 @@ function _buildCriteria(filterBy) {
     if (filterBy.price) {
         criteria.price = +filterBy.price
     }
+    // if (filterBy.recent) {
+    //     criteria.recent = filterBy.recent
+    // }
     console.log(criteria, ' booking crit');
     return criteria;
 

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-10">
     <div class="city-header-img city-header-container">
       <h2 class="city-name" v-if="currCity">{{currCity.name}}'s Guides</h2>
       <div class="filter-panel">
@@ -9,24 +9,30 @@
         </h4>
         <button @click="toggleFilter">Find the guide for me</button>
       </div>
-      <guide-filter @filtered="setFilter" :isOpen="isFilterOpen">
+      <guide-filter @filtered="setFilter" :isOpen="isFilterOpen" :interests="interests">
         <button @click="toggleFilter" class="filter-close-btn">x</button>
       </guide-filter>
     </div>
-    <guide-list :guides="guidesToShow"></guide-list>
+    <div v-if="guides.length===0" class="loading-svg">
+      <img src="@/assets/img/loading.svg" alt="loading">
+    </div>
+    <guide-list v-else :guides="guidesToShow"></guide-list>
   </section>
 </template>
 
 <script>
 import guideList from "@/components/city/guide-list";
 import guideFilter from "@/components/city/guide-filter";
+import userService from "@/services/user.service";
+
 export default {
   data() {
     return {
       currCity: "",
       guides: [],
       filterBy: null,
-      isFilterOpen: false
+      isFilterOpen: false,
+      interests: []
     };
   },
   methods: {
@@ -68,6 +74,7 @@ export default {
     } catch (err) {
       console.log(err);
     }
+    this.interests = userService.getInterests();
   },
   components: {
     guideList,

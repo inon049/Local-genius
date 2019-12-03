@@ -1,6 +1,6 @@
 <template>
   <section class="home">
-    <div class="flex justify-center">
+    <div class="hero-container flex justify-center">
       <div class="titles">
         <h2>Travel perfection made simple.</h2>
         <h3>Connecting travelers with local guides worldwide</h3>

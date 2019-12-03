@@ -12,8 +12,7 @@
 }
 
 .guide-preview:hover {
-  .tns-controls {
-    visibility: visible;
+  .tns-controls button{
     opacity: 1;
   }
 }
@@ -129,15 +128,12 @@
 //IMG SLIDER
 
 .tns-controls {
-  visibility: hidden;
-  opacity: 0;
   position: absolute;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  transition: 0 0.5s opacity ease-in-out;
 
   button {
     color: rgba(255, 255, 255, 0.664);
@@ -151,6 +147,7 @@
     border-radius: 999px;
     background-color: transparent;
     -webkit-text-stroke: 2px black;
-    // transition: .5s opacity ease-in-out;
+    opacity: 0;
+    transition: .3s opacity ease-in-out;
   }
 }

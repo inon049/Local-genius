@@ -15,12 +15,12 @@
 @import 'views/profile';
 
 // **********COMPONENTS************//
+//PROFILE
 @import 'components/review-details';
 @import 'components/reviews-carousel';
-
-//PROFILE
 @import 'components/profile/profile-menu';
 @import 'components/profile/messenger';
+@import 'components/profile/booking-preview';
 
 //HOME
 @import 'components/home/city-preview';

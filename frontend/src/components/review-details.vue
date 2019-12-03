@@ -2,10 +2,10 @@
   <section class="review-details">
     <div class="review-header">
       <img :src="imgUrl" />
+        <span class="rate">★ {{review.rate}}</span>
       <h2>
-        {{review.byUserName}}
-        
-        <span>{{ review.createdAt | moment("from") }}</span>
+        {{review.byUser.name}}
+        <span :title="review.createdAt|moment('calendar')">{{ review.createdAt | moment("from") }}</span>
       </h2>
     </div>
     <div class="review-content">
@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     imgUrl() {
-      let imgUrl = this.review.byUserImg
+      let imgUrl = this.review.byUser.imgUrl
         ? this.review.byUserImg
         : "https://srpc.ukzn.ac.za/wp-content/uploads/2018/05/profile-placeholder.png";
       return imgUrl;

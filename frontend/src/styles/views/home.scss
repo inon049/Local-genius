@@ -1,31 +1,41 @@
 .home {
-    hr{
-        border-top: 1px solid #EBEBEB;
-        margin: 10px 0px;
-    }
+  margin-bottom: 10vh;
+  width: 100%;
+  @include for-very-narrow-layout {
+    margin-bottom: 0;
+  }
+  hr {
+    border-top: 1px solid #ebebeb;
+    margin: 10px 0px;
+  }
+  .hero-container {
+    position: relative;
+  }
   .hero-img {
     height: 80vh;
     object-fit: cover;
     margin-bottom: 10px;
+    @include for-very-narrow-layout {
+      height: 90vh;
+    }
   }
-  .become-guide-btn{
+  .become-guide-btn {
     position: absolute;
-    bottom: 90px;
+    bottom: 27px;
     left: 10px;
     z-index: 100;
     text-decoration: none;
-    background-color: #ffffff96;
+    background-color: #ffffffbe;
     color: black;
     padding: 10px;
     border-radius: 3px;
     font-weight: 700;
-    margin-top: 15px;
   }
   .titles {
     position: absolute;
     font-size: 1.5rem;
     color: white;
-    padding: 30px;
+    padding: em(30px);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     @include for-very-narrow-layout {
       text-align: center;
@@ -56,19 +66,18 @@
       width: 100%;
     }
   }
-  .list-title{
-      margin-bottom: 10px;
+  .list-title {
+    margin-bottom: 10px;
   }
   .flex-list {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory;
     @include for-normal-layout {
-        overflow:initial;
-        flex-wrap: wrap;
-        
-      }
+      overflow: initial;
+      flex-wrap: wrap;
+    }
     &::-webkit-scrollbar {
       display: none;
     }

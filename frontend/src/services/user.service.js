@@ -18,8 +18,26 @@ async function addUser(user) {
     return newUser
 }
 
+function getInterests() {
+    return [
+        { name: "Culture", isSelected: false },
+        { name: "Coffee", isSelected: false },
+        { name: "Shopping", isSelected: false },
+        { name: "Music", isSelected: false },
+        { name: "NightLife", isSelected: false },
+        { name: "Animals", isSelected: false },
+        { name: "OutDoor", isSelected: false },
+        { name: "Food", isSelected: false },
+        { name: "Photography", isSelected: false },
+        { name: "Luxury", isSelected: false },
+        { name: "Architecture", isSelected: false },
+        { name: "Science", isSelected: false }
+    ]
+}
+
 export default {
     query,
     getById,
-    addUser
+    addUser,
+    getInterests
 }

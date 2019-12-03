@@ -2,10 +2,13 @@
   .booking-desktop {
     display: none;
   }
+  bottom: 10vh;
+  @include for-very-narrow-layout{
+    bottom: 0;
+  }
   font-size: 1.5rem;
   position: fixed;
   left: 0;
-  bottom: 0;
   width: 100%;
   text-align: center;
   border-top: 1px solid #bbbbbb;
