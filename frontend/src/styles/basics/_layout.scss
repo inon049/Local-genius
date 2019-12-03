@@ -33,18 +33,22 @@
   z-index: 1;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  background: #ffffff24;
   .logo {
     width: 40%;
     max-width: 150px;
     height: 50%;
   }
   a {
-    color: $clr4;
+    margin: 10px;
+    color: black;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
     &:hover {
-      color: #fff;
+      text-decoration: underline;
     }
+    
   }
   .nav-bar {
     display: flex;
@@ -65,14 +69,14 @@
   bottom: 0;
   width: 100%;
   height: 10vh;
-
-  img{
+padding: 10px;
+  img {
     width: 35px;
+    svg{
+      fill:blue
+    }
   }
-  background-color: rgb(218, 216, 216);
-  .img-by-line {
-    font-size: 14px;
-  }
+  background-color: #fff;
   @include for-very-narrow-layout {
     display: none;
   }

@@ -1,5 +1,5 @@
 <template>
-  <section class="profile flex mt-10">
+  <section class="profile mt-10">
     <profile-menu></profile-menu>
     <!-- <reviews-carousel></reviews-carousel> -->
     <router-view class="router" />
