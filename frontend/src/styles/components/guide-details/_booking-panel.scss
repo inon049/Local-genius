@@ -11,20 +11,22 @@
   left: 0;
   width: 100%;
   text-align: center;
-  border: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
   background-color: #ffffff;
-  height: 13%;
+  height: rem(107px);
   padding: 20px;
   @include for-mid-narrow-layout {
     position: sticky;
     top: 10px;
     margin-right: 45px;
-    width: rem(320px);
+    min-width: 20rem;
+    max-width: 20rem;
     z-index: 3;
     padding: rem(25px);
     margin: 0px;
     height: rem(750px);
-    margin-left: 10px;
+    border-top:none;
+    border: 1px solid #bbbbbb;
     .booking-desktop {
       display: block;
     }
@@ -178,7 +180,7 @@ color: black!important;
     display: none;
   }
   @include for-narrow-layout{
-    height: 50%;
+    height: 60%;
     .booking-price-rate {
       flex-direction: column;
       justify-content: space-around;

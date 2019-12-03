@@ -1,25 +1,21 @@
 .city-preview {
-    img {
-        border-radius: 2px;
-        object-fit: cover;
-        height: 20.625rem;
-        @include for-very-narrow-layout{
-            height: 33.625rem;
-        }
-        @include for-normal-layout {
-            height: 20.625rem;;
-        }
-
+  img {
+    border-radius: 2px;
+    object-fit: cover;
+    height: 25.625rem;
+    @include for-very-narrow-layout {
+      height: 20.625rem;
     }
-    position: relative;
-    cursor: pointer;
-    .city-prev-title {
-        position: absolute;
-        margin-block-start: 0px;
-        z-index: 1;
-        min-width: 40%;
-        color: rgb(0, 61, 117);
-        background-color: rgba(255, 255, 255, 0.699);
-        text-align: center;
-    }
+  }
+  position: relative;
+  cursor: pointer;
+  .city-prev-title {
+    position: absolute;
+    margin-block-start: 0px;
+    z-index: 1;
+    min-width: 40%;
+    color: rgb(0, 61, 117);
+    background-color: rgba(255, 255, 255, 0.699);
+    text-align: center;
+  }
 }

@@ -2,14 +2,14 @@
     <section class="guide-container flex col" v-if="guide">
       <div class="personal-title-continer flex space-between">
         <div class="personal-txt flex col">
-          <button @click="back" class="back-btn">Back</button>
+         
           <h1>{{guide.name}}</h1>
           <h2>{{guide.desc}}</h2>
         </div>
         <img class="profile-img" :src="guide.profileImgUrl" />
       </div>
         <div class="flex row">
-      <div class="container flex col">
+      <div class="questions-container container flex col">
         <div class="main-quest flex col">
         <h1>TELL US A LITTLE BIT ABOUT YOURSELF</h1>
         <h2>{{guide.about}}</h2>
@@ -33,6 +33,10 @@ export default {
   props: {
     guide: Object
   },
+  data(){
+    return{
+    }
+  },
   components: {
     bookingPanel
   },
@@ -40,7 +44,8 @@ export default {
     back(){
       this.$router.go(-1)
     }
-  }
+  },
+
 };
 </script>
 

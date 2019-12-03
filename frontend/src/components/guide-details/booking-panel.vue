@@ -75,6 +75,7 @@ export default {
   methods: {
     click() {
       this.isOpen = !this.isOpen;
+      this.isBooking=!this.isBooking
     },
     onBook() {
       this.booking.createdAt = Date.now();
@@ -95,13 +96,6 @@ export default {
     this.booking.toGuideId = this.$route.params._id;
     this.booking.byUserId = this.$store.getters.loggedInUser._id;
   }
-  //  <select v-model="booking.attendees" id="persons">
-  //           <option value="1">1</option>
-  //           <option value="2">2</option>
-  //           <option value="3">3</option>
-  //           <option value="4">4</option>
-  //           <option value="5">5</option>
-  //         </select>
 };
 </script>
 

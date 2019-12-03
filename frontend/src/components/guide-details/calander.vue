@@ -14,9 +14,9 @@ export default {
   },
   methods: {
     dates(date) {
-      console.log(date);
+      console.log(date,'date');
      this.pickedDate = date
-     this.$emit('datePicked', date)
+     this.$emit('datePicked', date.getTime())
     }
   },
   computed: {

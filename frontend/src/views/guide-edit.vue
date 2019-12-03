@@ -29,7 +29,6 @@ export default {
         guideInterests: "Interests",
         guideExperience: "Experience page"
       },
-      // },
       cmp: editHeader,
       guideToEdit: {
         email: "",
