@@ -28,8 +28,5 @@ export default {
       this.selectedChat = chat;
     }
   },
-  async created() {
-    
-  }
 };
 </script>

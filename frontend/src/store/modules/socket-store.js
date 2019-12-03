@@ -1,9 +1,9 @@
 import socket from '@/services/socket.service.js'
 
 // socket.emit('test event', 'this is a testing string')
-// socket.on('saying to all', (data) =>{
-//     console.log(data)
-// })
+socket.on('userNotif', (data) =>{
+    console.log(data)
+})
 export default {
     state: {
         
@@ -15,11 +15,20 @@ export default {
 
     },
     actions: {
-        sendMsg(context, {msg}) {
-            socket.emit('sendMsg', msg)
+      ///********* needs to happen after login currently in app.vue created()*********/
+        createUserSocket(context){
+          let userId = context.rootState.userStore.loggedInUser._id
+          socket.emit('createUserSocket',userId)
         },
-        getChatHistory(context, {chatId}) {
-            socket.emit('getHistory', chatId)
-        }
+
+        sendNotif(context, {to,msg}) {
+          let notif ={
+            to,msg
+          }
+            socket.emit('sendNotif', notif)
+        },
+        // getChatHistory(context, {chatId}) {
+        //     socket.emit('getHistory', chatId)
+        // }
     }
 }

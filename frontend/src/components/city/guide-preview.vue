@@ -1,7 +1,7 @@
 <template>
   <li class="guide-preview">
     <div class="ratio-card-guide">
-      <vue-tiny-slider 
+      <vue-tiny-slider
         ref="tinySlider"
         :mouse-drag="true"
         :loop="true"
@@ -10,10 +10,10 @@
         :controlsText="['&#10094;','&#10095;']"
       >
         <div class="ratio-guide-img">
-          <img :src="guide.profileImgUrl" />
+          <img :src="guide.profileImgUrl" @click="showGuideProfile(guide._id)" />
         </div>
         <div class="ratio-guide-img" v-for="(imgUrl,idx) in guide.imgUrls" :key="idx">
-          <img :src="imgUrl" />
+          <img :src="imgUrl" @click="showGuideProfile(guide._id)" />
         </div>
       </vue-tiny-slider>
     </div>
@@ -62,7 +62,11 @@ export default {
   components: {
     "vue-tiny-slider": VueTinySlider
   },
-  created() {}
+  methods: {
+    showGuideProfile(id) {
+      this.$router.push(`/guide/${id}`);
+    }
+  }
 };
 </script>
 

@@ -11,7 +11,6 @@ methods:{
 
 },
 created(){
-  this.$store.dispatch('sendMsg','bliblue')
 } 
 }
 </script>

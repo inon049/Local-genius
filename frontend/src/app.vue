@@ -13,6 +13,7 @@ import mainHeader from './components/main-header'
 import mobileNav from './components/mobile-nav'
 export default {
  async created() {
+   this.$store.dispatch({type:'createUserSocket'})
      await this.$store.dispatch({ type: "loadUsers" });
      await this.$store.dispatch({ type: "loadCities" });
   },
