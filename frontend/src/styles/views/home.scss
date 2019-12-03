@@ -1,15 +1,21 @@
 .home {
+  margin-bottom: 10vh;
+  width: 100%;
+  @include for-very-narrow-layout {
+    margin-bottom: 0;
+  }
   hr {
     border-top: 1px solid #ebebeb;
     margin: 10px 0px;
   }
-  .hero-container{
+  .hero-container {
     position: relative;
-  } .hero-img {
+  }
+  .hero-img {
     height: 80vh;
     object-fit: cover;
     margin-bottom: 10px;
-    @include for-very-narrow-layout{
+    @include for-very-narrow-layout {
       height: 90vh;
     }
   }

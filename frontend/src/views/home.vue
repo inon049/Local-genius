@@ -1,5 +1,5 @@
 <template>
-  <section class="home mt-10">
+  <section class="home">
     <div class="hero-container flex justify-center">
       <div class="titles">
         <h2>Travel perfection made simple.</h2>
