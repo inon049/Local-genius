@@ -17,6 +17,8 @@ async function query(filterBy = {}) {
             },
             (filterBy.recent) ? { $sort: { createdAt: -1 } } :
                 { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
+            (filterBy.upcoming) ? { $sort: { at: 1 } } :
+                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
             (filterBy.amount) ? { $limit: +filterBy.amount } :
                 { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
             {
@@ -53,7 +55,6 @@ async function query(filterBy = {}) {
             delete booking.toGuideId;
             return booking;
         })
-
         return bookings
     } catch (err) {
         console.log('ERROR: cannot find bookings')
@@ -96,11 +97,11 @@ function _buildCriteria(filterBy) {
         criteria.toGuideId = ObjectId(filterBy.toGuideId)
     }
     if (filterBy.price) {
-        criteria.price = +filterBy.price
+        criteria.price = { $gte: +filterBy.price }
     }
-    // if (filterBy.recent) {
-    //     criteria.recent = filterBy.recent
-    // }
+    if (filterBy.upcoming) {
+        criteria.at = { $gte: Date.now()}
+    }
     console.log(criteria, ' booking crit');
     return criteria;
 

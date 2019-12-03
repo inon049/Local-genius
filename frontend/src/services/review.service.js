@@ -2,14 +2,24 @@
 
 import httpService from '@/services/http.service'
 
-//know its duplicated will fix later
-async function getGuideReviews(_id, query = '') {
-    const reviews = await httpService.get(`review/?toGuideId=${_id}${query}`)
-    return reviews
-}
+// get specific values from the reviews db :
+// you will need to send a filterBy object 
+// to get reviews for specific user  -  _id : <ID>
+// to get values for guide  -  isGuide:true  else will be by user
+// to get recent  -  recent : 1,
+// to get specific amount  -   amount : <AMOUNT>
 
-async function getUserReviews(_id, query = '') {
-    const reviews = await httpService.get(`review/?byUserId=${_id}${query}`)
+async function query(filterBy = {}) {
+    var queryUrl = ``
+
+    if (!filterBy._id) queryUrl += ``
+    else if (filterBy.isGuide) queryUrl += `aboutGuideId=${filterBy._id}&`
+    else queryUrl += `byUserId=${filterBy._id}&`
+
+    for (const param in filterBy) {
+        queryUrl += `${param}=${filterBy[param]}&`
+    }
+    const reviews = await httpService.get(`review/?${queryUrl}`)
     return reviews
 }
 
@@ -25,8 +35,7 @@ async function remove(reviewId) {
 
 
 export default {
-    getGuideReviews,
-    getUserReviews,
+    query,
     add,
     remove
 }

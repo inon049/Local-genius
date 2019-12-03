@@ -2,25 +2,37 @@
 
 import httpService from '@/services/http.service'
 
-//know its duplicated will fix later LOL I WAS ABOUT TO COMMENT duplicate pls fix
-//it should be called query like in other services.
-async function getGuideBookings(_id){
-    const bookings = await httpService.get(`booking/?toGuideId=${_id}`)
+// get specific values from the bookings db :
+// you will need to send a filterBy object 
+// to get bookings for specific user  -  _id : <ID>
+// to get values for guide  -  isGuide:true  else will be by user
+// to get recent  -  recent : 1,
+// to get upcoming  -  upcoming : 1,
+// to get specific amount  -   amount : <AMOUNT>
+
+async function query(filterBy = {}) {
+    var queryUrl = ``
+
+    if (!filterBy._id) queryUrl += ``
+    else if (filterBy.isGuide) queryUrl += `toGuideId=${filterBy._id}&`
+    else queryUrl += `byUserId=${filterBy._id}&`
+
+    for (const param in filterBy) {
+        queryUrl += `${param}=${filterBy[param]}&`
+    }
+    const bookings = await httpService.get(`booking/?${queryUrl}`)
     return bookings
 }
 
-async function getUserBookings(_id){
-    const bookings = await httpService.get(`booking/?byUserId=${_id}`)
-    return bookings
-}
-
-async function add(booking){
-    const bookingConfirm = await httpService.post(`booking`,booking)
+async function add(booking) {
+    const bookingConfirm = await httpService.post(`booking`, booking)
     return bookingConfirm
 }
 
+////CHANGE ALL BOOKING STUFF TO QUERY
+//delete all the booking with new Date() at "at" in the db
+
 export default {
-    getGuideBookings,
-    getUserBookings,
+    query,
     add,
 }

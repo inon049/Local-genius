@@ -27,8 +27,8 @@ export default {
             context.commit({ type: 'setCurrBooking', booking : currBooking })
             return currBooking
         },
-        async loadBookings(_id){
-            const bookings = await bookingService.getGuideBookings(_id)
+        async loadBookings(){
+            const bookings = await bookingService.query()
             context.commit({type:'setBookings', bookings})
             return bookings
         }
