@@ -35,7 +35,7 @@
     position: absolute;
     font-size: 1.5rem;
     color: white;
-    padding: em(30px);
+    padding:em(32px);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     @include for-very-narrow-layout {
       text-align: center;
@@ -51,7 +51,7 @@
   .city-filter {
     position: absolute;
     width: 50%;
-    margin-top: 17rem;
+    margin-top: 18rem;
     @include for-normal-layout {
       width: 30%;
     }
@@ -74,7 +74,7 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-    @include for-normal-layout {
+    @include for-very-narrow-layout {
       overflow: initial;
       flex-wrap: wrap;
     }
@@ -87,7 +87,7 @@
       height: 100%;
       scroll-snap-align: start;
       padding: 0px 10px;
-      @include for-normal-layout {
+      @include for-very-narrow-layout {
         width: 50%;
         padding: 10px 10px;
       }
