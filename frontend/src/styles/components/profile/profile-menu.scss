@@ -1,9 +1,12 @@
 .profile-menu {
     text-align: center;
+    flex-direction: row-reverse;
     a {
         font-size: 20px;
-        border-bottom: 1px solid black;
-        width: 100%;
+        border-width: 0.5px 0px 0.5px 0.5px;
+        border-color:black;
+        border-style: solid;
+        width: 100px;
         text-decoration: none;
     }
 }
