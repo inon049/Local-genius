@@ -37,7 +37,7 @@ function getInterests() {
 
 export default {
     query,
-    getGuideById,
+    getById,
     addUser,
     getInterests
 }
