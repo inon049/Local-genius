@@ -1,4 +1,5 @@
 .booking-panel-container {
+  display: none;
   .booking-desktop {
     display: none;
   }
@@ -17,14 +18,14 @@
   padding: 20px;
   @include for-mid-narrow-layout {
     position: sticky;
-    top: 10px;
+    top: 80px;
     margin-right: 45px;
     min-width: 20rem;
     max-width: 20rem;
     z-index: 3;
     padding: rem(25px);
     margin: 0px;
-    height: rem(750px);
+    height: 47.875rem;
     border-top:none;
     border: 1px solid #bbbbbb;
     .booking-desktop {
@@ -32,8 +33,8 @@
     }
   }
   .confirm-img{
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     margin-top:10px
   }
 }
@@ -147,7 +148,7 @@ color: black!important;
       background-color: #de4d5c48;
     }
   }
-  height: 95%;
+  height: 90%;
   .booking-panel{
     flex-direction: column;
     align-items: center;

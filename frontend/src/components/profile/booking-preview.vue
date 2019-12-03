@@ -1,13 +1,20 @@
 <template>
   <section class="booking-preview">
-    <img :src="imgUrl" />
-    <h2>
-      {{booking.byUser.name}}
-      <span>{{ booking.createdAt | moment("calendar") }}</span>
-      <span>Booked a tour with: {{booking.attendees}} attendees</span>
-      <span :title="booking.at|moment('calendar')">{{ booking.at | moment("from")}}</span>
-    </h2>
+    <div class="flex space-between">
+    <h3>Booked by {{booking.byUser.name}} </h3>
+    <p class="date">{{ booking.createdAt | moment("calendar") }}</p>
+    </div>
+    <div class="flex space-between">
+    <img :src="imgUrl"/>
+    <div class="flex col space-around">
+      <ul>
+      <li>For {{booking.attendees}} attendees</li>
+      <li :title="booking.at|moment('calendar')">You will meet each other {{ booking.at | moment("from")}}</li>
+      <li>({{date}})</li>
+      </ul>
     <button>Send messege</button>
+      </div>
+      </div>
   </section>
 </template>
 
@@ -22,8 +29,13 @@ export default {
         ? this.booking.byUser.imgUrl
         : "https://srpc.ukzn.ac.za/wp-content/uploads/2018/05/profile-placeholder.png";
       return imgUrl;
+    },
+    date(){
+      var date = new Date(this.booking.at)
+     return date.toLocaleDateString()
     }
-  }
+  },
+
 
 };
 </script>

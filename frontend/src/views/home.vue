@@ -12,10 +12,8 @@
     <div class="container">
       <h2 class="list-title">SPOTLIGHT DESTINATIONS</h2>
       <city-list :cities="cities"></city-list>
-    <hr>
     <h2 class="list-title">GUIDES OF THE MONTH</h2>
     <guide-list :guides="guides"></guide-list>
-    <hr>
     </div>
   </section>
 </template>

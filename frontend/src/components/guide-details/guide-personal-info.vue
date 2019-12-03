@@ -1,6 +1,6 @@
 <template>
     <section class="guide-container flex col" v-if="guide">
-      <div class="personal-title-continer flex space-between">
+      <div class="personal-title-container flex space-between">
         <div class="personal-txt flex col">
          
           <h1>{{guide.name}}</h1>
@@ -38,7 +38,8 @@ export default {
     }
   },
   components: {
-    bookingPanel
+    bookingPanel,
+    
   },
   methods:{
     back(){

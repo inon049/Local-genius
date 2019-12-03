@@ -17,7 +17,7 @@ export default {
         setCurrBooking(state,{booking}){
             state.currBooking = booking
         },
-        setBookings(state,bookings){
+        setBookings(state,{bookings}){
             state.bookings = bookings
         }
     },
@@ -28,10 +28,11 @@ export default {
             context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})
             return currBooking
         },
-        async loadBookings(){
-            const bookings = await bookingService.query()
+        async loadBookings(context,{filterBy}){
+            const bookings = await bookingService.query(filterBy)
             context.commit({type:'setBookings', bookings})
             return bookings
-        }
+        },
+        
     }
 }

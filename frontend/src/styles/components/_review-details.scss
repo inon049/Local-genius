@@ -1,0 +1,35 @@
+.review-details {
+  padding: 15px;
+  border-bottom: 1px solid $clr3;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+  .review-header {
+    .review-txt {
+      justify-self: flex-end;
+      padding: 0 15px;
+      
+      .review-txt-title{
+        margin-bottom:15px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 100;
+    }
+    img {
+      width: 15%;
+      height: 15%;
+      border-radius: 50%;
+    }
+  }
+}

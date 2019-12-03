@@ -4,9 +4,14 @@
 .guide-container {
   padding: 20px;
   padding-bottom:rem(110px);
+  @include for-mid-narrow-layout{
+    padding-bottom:0;
+
+  }
   @include for-normal-layout{
     max-width: $break-normal;
-   margin: 0 auto;
+    margin: 0 auto;
+
   }
   @include for-wide-layout{
     width: $break-mid-wide;
@@ -41,9 +46,14 @@
   column-gap: 40px;
   break-inside: avoid-column;
   padding-right: 0;
+  color: $clr1;
+  > * {
+    border-bottom: 1px solid $clr3;
+  }
   h1 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    margin-top: 20px;
   }
   h3 {
     margin-bottom: 40px;
@@ -53,7 +63,7 @@
   img {
     height: rem(400px);
     object-fit: cover;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @include for-normal-layout {
       height: rem(300px);
     }
@@ -75,13 +85,14 @@
   }
 }
 
-.personal-title-continer {
+.personal-title-container {
   align-self: center;
   margin-bottom: rem(40px);
   flex-direction: column;
-  border-bottom: 1px solid #21626a;
+  border-bottom: 1px solid $clr3;
   padding-bottom: rem(40px);
-  h1 {
+  color:$clr1;
+    h1 {
     font-size: 4rem;
   }
   h2 {
