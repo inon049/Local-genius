@@ -1,35 +1,26 @@
 <template>
   <div class="edit-guide-container mt-10">
     <h1>Submit your profile</h1>
-    <el-tabs  type="border-card"  @tab-click="setCmp">
-      <el-tab-pane  v-for="(page,title,idx) in cmps" :key="idx" :label="page" :name="title">
-        <component  @save="save" :is="cmp" :guideToEdit="guideToEdit"></component>
+    <el-tabs type="border-card" v-model="activeName" @tab-click="setCmp">
+      <el-tab-pane v-for="(page,idx) in cmps" :key="idx" :label="page" :name="page">
+        <component @start="start" @save="save" :is="activeName" :guideToEdit="guideToEdit"></component>
       </el-tab-pane>
     </el-tabs>
-    <edit-header @start="start" v-if="isStart"></edit-header>
   </div>
 </template>
 
 <script>
-import detailsBar from "../components/guide-edit/details-bar";
-import basicInfo from "../components/guide-edit/basic-info";
-import guideExperience from "../components/guide-edit/guide-experience";
-import guideInterests from "../components/guide-edit/guide-interests";
-import editHeader from "../components/guide-edit/edit-header";
+import Information from "../components/guide-edit/basic-info";
+import Experience from "../components/guide-edit/guide-experience";
+import Interests from "../components/guide-edit/guide-interests";
+import Hello from "../components/guide-edit/edit-header";
 
 export default {
   data() {
     return {
       isStart: true,
-      activeName:[ basicInfo, guideInterests, guideExperience],
-      // cmps:["hello", "Basic Information", "Interests", "Experience page"],
-      cmps:{
-        // editHeader: "hello",
-        basicInfo: "Basic Information",
-        guideInterests: "Interests",
-        guideExperience: "Experience page"
-      },
-      cmp: editHeader,
+      activeName: "Hello",
+      cmps: ["Hello","Information", "Interests", "Experience"],
       guideToEdit: {
         email: "",
         password: "",
@@ -48,11 +39,10 @@ export default {
     };
   },
   components: {
-    detailsBar,
-    basicInfo,
-    guideExperience,
-    guideInterests,
-    editHeader
+    Information,
+    Experience,
+    Interests,
+    Hello
   },
   methods: {
     currCmp(cmp) {
@@ -66,12 +56,11 @@ export default {
       });
     },
     start() {
-      this.cmp = basicInfo;
-
+      this.activeName = "Information";
     },
     setCmp(cmp) {
-      this.isStart = false
-      this.cmp = cmp.paneName;
+      this.isStart = false;
+      this.activeName = cmp.paneName;
     }
   },
   async created() {

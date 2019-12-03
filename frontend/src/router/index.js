@@ -5,13 +5,10 @@ import city from '../views/city.vue'
 import guideDetails from '../views/guide-details.vue'
 import profile from '../views/profile.vue'
 import editGuide from '../views/guide-edit.vue'
-// import basicInfo from '../components/guide-edit/basic-info.vue'
-// import guideIterests from '../components/guide-edit/guide-interests.vue'
-// import guideExperience from '../components/guide-edit/guide-experience.vue'
 
 //profile children 
-import messenger from '../components/profile/messenger.vue'
-import summary from '../components/profile/summary.vue'
+// import messenger from '../components/profile/messenger.vue'
+// import summary from '../components/profile/summary.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -27,26 +24,6 @@ const routes = [
   {
     path: '/guide/edit/:_id?',
     component: editGuide,
-    // children: [
-    //   {
-    //     path: 'basic',
-    //     component: basicInfo,
-    //     props:true,
-    //     name: 'basic'
-    //   },
-    //   {
-    //     path: 'interests',
-    //     component: guideIterests,
-    //     props:true,
-    //     name: 'interests'
-    //   },
-    //   {
-    //     path: 'experience',
-    //     component: guideExperience,
-    //     props:true,
-    //     name: 'experience'
-    //   }
-    // ]
   },
   {
     path: '/guide/:_id',
@@ -55,16 +32,16 @@ const routes = [
   {
     path: '/profile/:_id?',
     component: profile,
-    children: [
-      {
-        path: '/profile/messenger',
-        component: messenger
-      },
-      {
-        path: '/profile/summary',
-        component: summary
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '/profile/messenger',
+    //     component: messenger
+    //   },
+    //   {
+    //     path: '/profile/summary',
+    //     component: summary
+    //   }
+    // ]
   }
 ]
 

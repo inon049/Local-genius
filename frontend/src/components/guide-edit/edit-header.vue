@@ -1,11 +1,8 @@
 <template>
   <div class="edit-header-container">
-    <button  @click="start" class="start-btn">Let's go</button>
+    <button @click="start" class="start-btn">Let's go</button>
     <video class="video" autoplay loop muted playsinline>
-      <source
-        src="../../assets/video/video.mp4"
-        type="video/mp4"
-      />
+      <source src="../../assets/video/video.mp4" type="video/mp4" />
     </video>
     <div class="video-header">
       <h1>Do what you love</h1>
