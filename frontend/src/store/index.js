@@ -19,13 +19,7 @@ export default new Vuex.Store({
   modules: {
     userStore,
     cityStore,
-<<<<<<< HEAD
     socketStore,
     bookingStore
-=======
-    msgStore,
-    bookingStore,
-    reviewStore
->>>>>>> 5f546937970e3a37d02547a7f41852496eaf9356
   }
 })
