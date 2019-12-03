@@ -4,9 +4,14 @@
 .guide-container {
   padding: 20px;
   padding-bottom:rem(110px);
+  @include for-mid-narrow-layout{
+    padding-bottom:0;
+
+  }
   @include for-normal-layout{
     max-width: $break-normal;
-   margin: 0 auto;
+    margin: 0 auto;
+
   }
   @include for-wide-layout{
     width: $break-mid-wide;
@@ -81,7 +86,8 @@
   flex-direction: column;
   border-bottom: 1px solid $clr3;
   padding-bottom: rem(40px);
-  h1 {
+  color:$clr1;
+    h1 {
     font-size: 4rem;
   }
   h2 {

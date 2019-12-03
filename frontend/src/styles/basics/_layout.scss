@@ -28,20 +28,24 @@
 .main-header {
   display: none;
   height: 10vh;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1;
   align-items: center;
   justify-content: space-between;
   background: #ffffff24;
+  border-bottom:1px solid $clr2;
+  z-index: 100;
   .logo {
-    width: 40%;
-    max-width: 150px;
-    height: 50%;
-  }
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color:$clr4;
+    }
   a {
     margin: 10px;
-    color: black;
+    color:$clr4;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 22px;

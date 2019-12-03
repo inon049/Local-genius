@@ -1,6 +1,6 @@
 <template>
   <div class="main-header">
-    <img class="logo" src="../assets/img/start-logo.png" />
+   <h1 class="logo">LOCAL GENIUS</h1>
     <button v-if="location" class="back-btn">Back</button>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>

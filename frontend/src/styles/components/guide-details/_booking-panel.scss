@@ -17,14 +17,14 @@
   padding: 20px;
   @include for-mid-narrow-layout {
     position: sticky;
-    top: 10px;
+    top: 80px;
     margin-right: 45px;
     min-width: 20rem;
     max-width: 20rem;
     z-index: 3;
     padding: rem(25px);
     margin: 0px;
-    height: rem(750px);
+    height: 47.875rem;
     border-top:none;
     border: 1px solid #bbbbbb;
     .booking-desktop {
