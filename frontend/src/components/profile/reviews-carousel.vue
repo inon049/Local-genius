@@ -10,7 +10,7 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
-import reviewDetails from "../components/review-details";
+import reviewDetails from "../profile/review-details";
 export default {
   components: {
     Carousel,

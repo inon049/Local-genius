@@ -2,15 +2,15 @@
   <section class="booking-preview">
     <div class="flex space-between">
     <h3>Booked by {{booking.byUser.name}} </h3>
-    <p class="date">{{date}}</p>
+    <p class="date">{{ booking.createdAt | moment("calendar") }}</p>
     </div>
     <div class="flex space-between">
     <img :src="imgUrl"/>
     <div class="flex col space-around">
       <ul>
-      <li>{{ booking.createdAt | moment("calendar") }}</li>
       <li>For {{booking.attendees}} attendees</li>
       <li :title="booking.at|moment('calendar')">You will meet each other {{ booking.at | moment("from")}}</li>
+      <li>({{date}})</li>
       </ul>
     <button>Send messege</button>
       </div>

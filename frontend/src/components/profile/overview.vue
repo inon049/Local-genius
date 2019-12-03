@@ -8,14 +8,14 @@
     <div class="dates-picker">
       <h2>Your Calendar</h2>
       <h5>Select dates to block them</h5>
-     <v-date-picker @input="dates" mode="range" :disabled-dates="disabledDates" :value="null" color="red" is-inline />
+     <v-date-picker :attributes="attrs" @input="dates" mode="range" :disabled-dates="disabledDates" :value="null" color="red" is-inline />
      <button class="dates-btn" @click="saveDates">Block these dates</button>
      </div>
 </div>
-    <h2>Upcoming Bookings:</h2>
+    <h2 class="overview-headers">Upcoming Bookings:</h2>
     <booking-carousel :bookings="bookings"></booking-carousel>
-    <h2>Recent Reviews:</h2>
-    <reviews-carousel :reviews="reviews"></reviews-carousel>
+    <h2 class="overview-headers">Recent Reviews:</h2>
+     <review-details v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
   </section>
 </template>
 
@@ -25,14 +25,22 @@ import bookingService from "@/services/booking.service";
 import reviewService from "@/services/review.service";
 //COMPONENTS
 import bookingCarousel from "../profile/booking-carousel";
-import reviewsCarousel from "../reviews-carousel";
+import reviewDetails from "../profile/review-details";
+
 export default {
   components: {
-    reviewsCarousel,
-    bookingCarousel
+    bookingCarousel,
+    reviewDetails
   },
   data() {
     return {
+        attrs: [
+        {
+          key: 'today',
+          dot: true,
+          dates: [new Date(2019, 11, 5)]
+        },
+      ],
       selectedDates:[],
       guide: {},
       bookings: [],
@@ -60,11 +68,12 @@ export default {
     };
     await this.$store.dispatch({ type: "loadBookings", filterBy });
     this.bookings = this.$store.getters.bookings;
-    let reviews = await reviewService.query(filterBy);
-    this.reviews = reviews;
     this.bookings.forEach(booking => {
     this.disabledDates.push(new Date(booking.at))
     });
+    let reviews = await reviewService.query(filterBy);
+    this.reviews = reviews;
+    // this.attrs[0].dates = this.disabledDates
   }
 };
 </script>

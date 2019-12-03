@@ -75,7 +75,7 @@ export default {
   methods: {
     click() {
       this.isOpen = !this.isOpen;
-      this.isBooking=!this.isBooking
+      this.isBooking = false
     },
     onBook() {
       this.booking.createdAt = Date.now();
