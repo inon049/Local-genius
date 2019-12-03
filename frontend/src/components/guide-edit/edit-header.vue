@@ -3,7 +3,7 @@
     <button  @click="start" class="start-btn">Let's go</button>
     <video class="video" autoplay loop muted playsinline>
       <source
-        src="https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4"
+        src="../../assets/video/video.mp4"
         type="video/mp4"
       />
     </video>

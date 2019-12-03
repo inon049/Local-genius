@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="guide-short-desc">
-      <p>"{{guide.desc}}"</p>
+      <p>{{guide.desc}}</p>
     </div>
     <ul class="guide-interests-list">
       <li
