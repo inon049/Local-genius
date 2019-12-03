@@ -75,11 +75,11 @@
   }
 }
 
-.personal-title-continer {
+.personal-title-container {
   align-self: center;
   margin-bottom: rem(40px);
   flex-direction: column;
-  border-bottom: 1px solid #21626a;
+  border-bottom: 1px solid $clr3;
   padding-bottom: rem(40px);
   h1 {
     font-size: 4rem;
