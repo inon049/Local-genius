@@ -29,9 +29,6 @@ export default {
     }
   },
   async created() {
-    let userChats = await msgService.query();
-    this.recentChats = userChats;
-    console.log(userChats,'in messenger');
     
   }
 };

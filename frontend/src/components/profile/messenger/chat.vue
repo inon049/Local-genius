@@ -5,7 +5,13 @@
 </template>
 
 <script>
+import socketService from '@/services/socket.service'
 export default {
+methods:{
 
+},
+created(){
+  this.$store.dispatch('sendMsg','bliblue')
+} 
 }
 </script>

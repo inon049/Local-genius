@@ -97,7 +97,7 @@ function _buildCriteria(filterBy) {
     if (filterBy.aboutGuideId) {
         criteria.aboutGuideId = ObjectId(filterBy.aboutGuideId)
     }
-    console.log(criteria, ' review crit');
+    // console.log(criteria, ' review crit');
     return criteria;
 }
 

@@ -1,7 +1,7 @@
 const bookingService = require('./booking.service')
 
 async function getBookings(req, res) {
-    console.log(req.query);
+    // console.log(req.query);
     const bookings = await bookingService.query(req.query)
     res.send(bookings)
 }
