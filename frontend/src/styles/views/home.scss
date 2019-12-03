@@ -74,7 +74,7 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-    @include for-normal-layout {
+    @include for-very-narrow-layout {
       overflow: initial;
       flex-wrap: wrap;
     }
@@ -87,7 +87,7 @@
       height: 100%;
       scroll-snap-align: start;
       padding: 0px 10px;
-      @include for-normal-layout {
+      @include for-very-narrow-layout {
         width: 50%;
         padding: 10px 10px;
       }
