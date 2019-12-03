@@ -38,7 +38,8 @@ export default {
     }
   },
   components: {
-    bookingPanel
+    bookingPanel,
+    
   },
   methods:{
     back(){
