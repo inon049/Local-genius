@@ -35,7 +35,7 @@
     position: absolute;
     font-size: 1.5rem;
     color: white;
-    padding: em(30px);
+    padding:em(32px);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     @include for-very-narrow-layout {
       text-align: center;
@@ -51,7 +51,7 @@
   .city-filter {
     position: absolute;
     width: 50%;
-    margin-top: 17rem;
+    margin-top: 18rem;
     @include for-normal-layout {
       width: 30%;
     }
