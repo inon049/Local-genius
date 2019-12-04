@@ -25,46 +25,61 @@
     padding: 10px 20px;
     border-radius: 3px;
   }
+  .join-btn-container {
+    position: absolute;
+    color: #fff;
+    width: 50%;
+    margin-top: 25rem;
+    a {
+      text-decoration: none;
+      background-color: #ff5a60ce;
+      color: white;
+      // font-weight: bold;
+      // text-decoration: underline;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-left: 10px;
+    }
+    @include for-normal-layout {
+      width: 30%;
+    }
+  }
   .titles {
     position: absolute;
     color: white;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     font-family: Lato;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     text-align: center;
 
-
-    h2{
-      font-size:2.5rem;
+    h2 {
+      font-size: 2.5rem;
       font-weight: 400;
     }
-    h3{
+    h3 {
       font-size: 2rem;
       font-weight: 400;
     }
     @include for-very-very-narrow-layout {
       text-align: center;
       padding-top: 2rem;
-
     }
     @include for-very-narrow-layout {
       text-align: center;
       padding-top: 6.3rem;
-
     }
     @include for-narrow-layout {
-      h2{
+      h2 {
         font-size: 3rem;
       }
-      h3{
+      h3 {
         font-size: 2.5rem;
-
       }
       white-space: nowrap;
     }
     > * {
       padding: 10px;
-      @include for-very-narrow-layout{
+      @include for-very-narrow-layout {
         padding: 20px;
       }
     }
@@ -86,7 +101,7 @@
       border: 0;
       outline: none;
     }
-    option{
+    option {
       width: 100%;
       min-width: rem(180px);
     }
@@ -94,16 +109,15 @@
   .list-title {
     margin-bottom: 10px;
     color: $clr1;
-    padding-top:10px;
-  
+    padding-top: 10px;
   }
   .flex-list {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-      border-bottom: 1px solid $clr3;
-      padding-bottom:10px;
+    border-bottom: 1px solid $clr3;
+    padding-bottom: 10px;
     @include for-very-narrow-layout {
       overflow: initial;
       flex-wrap: wrap;
@@ -128,6 +142,6 @@
   }
 }
 
-.scroll{
-  background-color: #fff!important;
+.scroll {
+  background-color: #fff !important;
 }

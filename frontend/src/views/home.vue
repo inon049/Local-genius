@@ -6,6 +6,9 @@
         <h3>Connecting travelers with local guides worldwide</h3>
       </div>
       <city-filter :cities="cities"></city-filter>
+       <div class="join-btn-container">
+         Not a member?<router-link to="/signup">JOIN!</router-link>
+       </div>
       <img class="hero-img" src="@/assets/img/home-bg.jpg" alt /> 
     <router-link  class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
     </div>

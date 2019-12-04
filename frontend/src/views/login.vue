@@ -12,7 +12,7 @@
           autocomplete="off"
         ></el-input>
       </el-form-item>
-      <el-form-item prop="pass">
+      <el-form-item prop="password">
         <el-input
           placeholder="Password"
           aria-placeholder="Password"
@@ -27,7 +27,7 @@
         <el-button @click="resetForm('ruleForm')">Reset</el-button>
       </el-form-item>
     </el-form>
-    <a href="/signup">Not a user? Signup!</a>
+    <a href="/signup">Not a member? Signup!</a>
   </section>
 </template>
 
@@ -53,11 +53,15 @@ export default {
     };
   },
   methods: {
-     submitForm(formName) {
+    submitForm(formName) {
       this.$refs[formName].validate(async valid => {
         if (valid) {
-        await this.$store.dispatch({type:'login',userCred:this.ruleForm})
-        this.$router.replace('/')
+          const user = await this.$store.dispatch({
+            type: "login",
+            userCred: this.ruleForm
+          });
+          if (user) this.$router.replace("/");
+          // else msg error
         } else {
           console.log("error submit!!");
           return false;
@@ -67,9 +71,7 @@ export default {
     resetForm(formName) {
       this.$refs[formName].resetFields();
     },
-    created(){
-        
-    }
+    created() {}
   }
 };
 </script>
