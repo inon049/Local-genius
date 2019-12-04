@@ -10,7 +10,7 @@
     <router-link  class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
     </div>
     <div class="container">
-      <h2 class="list-title">SPOTLIGHT DESTINATIONS</h2>
+      <h2 class="list-title">FEATURED DESTINATIONS</h2>
       <city-list :cities="cities"></city-list>
     <h2 class="list-title">GUIDES OF THE MONTH</h2>
     <guide-list :guides="guides"></guide-list>

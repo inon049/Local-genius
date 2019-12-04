@@ -13,7 +13,7 @@ async function login(req, res) {
 
 async function signup(req, res) {
     try {
-        const { email, password } = req.body
+        const { email, password } = req.body        
         const account = await authService.signup(email, password)
         const user = await authService.login(email, password)
         req.session.user = user

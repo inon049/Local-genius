@@ -32,7 +32,9 @@
     color: white;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     font-family: Lato;
-    padding-top: 2.3rem;
+    padding-top: .5rem;
+    text-align: center;
+
 
     h2{
       font-size:2.5rem;
@@ -41,6 +43,11 @@
     h3{
       font-size: 2rem;
       font-weight: 400;
+    }
+    @include for-very-very-narrow-layout {
+      text-align: center;
+      padding-top: 2rem;
+
     }
     @include for-very-narrow-layout {
       text-align: center;
@@ -58,7 +65,10 @@
       white-space: nowrap;
     }
     > * {
-      padding: 20px;
+      padding: 10px;
+      @include for-very-narrow-layout{
+        padding: 20px;
+      }
     }
   }
   .city-filter {

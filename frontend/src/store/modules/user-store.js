@@ -1,24 +1,17 @@
 
 import userService from '@/services/user.service'
 
-var localLoggedinUser = null;
-if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user);
+var localLoggedinUser = null
+if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user)
 
 export default {
   state: {
     users: [],
-    currUser: null,
-    loggedInUser: {
-      _id: "5de3ed727fe0b526944c41e8",
-      name: "Maya Williams",
-      email: "Maya@ww.com",
-      password: "11",
-      type: "guide",
-      rate: 4.2
-    }
+    currGuide: null,
+    loggedInUser: localLoggedinUser
   },
   getters: {
-    loggedInUser(state) {
+    loggedInUser(state) {      
       return state.loggedInUser
     },
     users(state) {
@@ -31,12 +24,15 @@ export default {
       return guides
     },
     guide(state) {
-      return state.currUser
+      return state.currGuide
     }
   },
   mutations: {
     setUsers(state, { users }) {
       state.users = users
+    },
+    setUser(state, { user }) {
+      state.loggedInUser = user
     },
     setCities(state, { cities }) {
       state.cities = cities
@@ -44,12 +40,10 @@ export default {
     setCurrCity(state, { currCity }) {
       state.currCity = currCity
     },
-    setCurrUser(state, { guide }) {
-      state.currUser = guide
+    setCurrGuide(state, { guide }) {
+      state.currGuide = guide
     }
   },
-
-  //FINISH BRINGING AUTH STUFF TO STORE
   actions: {
     async loadUsers(context) {
       const users = await userService.query();
@@ -57,7 +51,21 @@ export default {
     },
     async getUserById(context, { _id }) {
       const guide = await userService.getById(_id);
-      context.commit({ type: 'setCurrUser', guide })
+      context.commit({ type: 'setCurrGuide', guide })
+    },
+    async login(context, { userCred }) {
+      const user = await userService.login(userCred);
+      context.commit({ type: 'setUser', user })
+      return user;
+    },
+    async signup(context, { userCred }) {
+      const user = await userService.signup(userCred)
+      context.commit({ type: 'setUser', user })
+      return user;
+    },
+    async logout(context) {
+      await userService.logout()
+      context.commit({ type: 'setUser', user: null })
     },
     async addGuide(context, { guide }) {
       console.log('new guide in store', guide);
