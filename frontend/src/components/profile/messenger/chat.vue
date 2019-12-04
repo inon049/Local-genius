@@ -1,8 +1,8 @@
 <template>
   <section class="chat" v-if="chat">
     <div class="chat-header">
-      <img :src="chat.fromUser.imgUrl" />
-      <h1>{{chat.fromUser.name}}</h1>
+      <img :src="chat.user.imgUrl" />
+      <h1>{{chat.user.name}}</h1>
     </div>
     <div class="chat-txt">
       <div  class="msg" :class="checkMsg(msg)"  v-for="(msg,idx) in chat.msgs" :key="idx">
@@ -35,8 +35,8 @@ export default {
       else return 'sent-msg';
     },
     checkUrl(msg){
-      if(msg.in) return this.chat.fromUser.imgUrl;
-      else return this.chat.toUser.imgUrl;
+      if(msg.in) return this.chat.user.imgUrl;
+      else return this.chat.guide.imgUrl;
     }
   },
   mounted() {

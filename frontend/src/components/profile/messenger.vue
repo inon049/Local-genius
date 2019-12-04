@@ -23,11 +23,11 @@ export default {
   methods: {
     selectChat(chat) {
       this.selectedChat = chat;
-    },
-    computed: {
-      recentChats() {
-        return this.$store.getters.chats;
-      }
+    }
+  },
+  computed: {
+    recentChats() {
+      return this.$store.getters.chats;
     }
   },
   created() {

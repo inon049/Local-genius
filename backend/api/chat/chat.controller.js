@@ -1,7 +1,7 @@
 const chatService = require('./chat.service')
 
 async function getChats(req, res) {
-    const chats = await chatService.query(req.params.id)
+    const chats = await chatService.query(req.query)
     res.send(chats)
 }
 

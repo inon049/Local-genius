@@ -9,7 +9,7 @@ export default {
 }
 
 async function query(id){
-    const chats = await httpService.get(`chat/${id}`)
+    const chats = await httpService.get(`chat/?id=${id}`)
     return chats
 }
 

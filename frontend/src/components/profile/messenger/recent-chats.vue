@@ -1,7 +1,7 @@
 <template>
-  <section class="recent-chats">
+  <section class="recent-chats" v-if="chats.length">
     <div class="chat-title">
-    <img :src="chats[0].toUser.imgUrl">
+    <img :src="chats[0].user.imgUrl">
     <h1>Chats</h1>
     </div>
     <chat-preview @click.native="selectChat(chat)" v-for="(chat,idx) in chats" :key="idx" :chat="chat"></chat-preview>
