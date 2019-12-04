@@ -5,6 +5,7 @@ import cityStore from './modules/city-store'
 import socketStore from './modules/socket-store.js'
 import bookingStore from './modules/booking-store'
 import reviewStore from './modules/review-store'
+import chatStore from './modules/chat-store'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -20,6 +21,8 @@ export default new Vuex.Store({
     userStore,
     cityStore,
     socketStore,
-    bookingStore
+    bookingStore,
+    chatStore,
+    reviewStore
   }
 })
