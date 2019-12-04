@@ -1,10 +1,10 @@
 <template>
-  <section class="chat" v-if="chat">
+  <section id="recent" class="chat" v-if="chat">
     <div class="chat-header">
       <img :src="chat.fromUser.imgUrl" />
       <h1>{{chat.fromUser.name}}</h1>
     </div>
-    <div class="chat-txt">
+    <div  class="chat-txt">
       <div  class="msg" :class="checkMsg(msg)"  v-for="(msg,idx) in chat.msgs" :key="idx">
         <img :src="checkUrl(msg)"/>
         <p >{{msg.txt}}</p>
