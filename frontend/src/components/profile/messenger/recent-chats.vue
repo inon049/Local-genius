@@ -1,5 +1,5 @@
 <template>
-  <section class="recent-chats">
+  <section class="recent-chats" id="recent">
     <div class="chat-title">
     <img :src="chats[0].toUser.imgUrl">
     <h1>Chats</h1>

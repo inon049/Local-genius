@@ -1,12 +1,16 @@
 .messenger-container {
   display: flex;
+  height: 82vh;
   .recent-chats {
     width: auto;
+    height: 82vh;
+    overflow: auto;
+    direction:ltr;
+    border-right: 1px solid #97c6cc93;
     @include for-narrow-layout {
       min-width: 330px;
     }
 
-    border-right: 1px solid $clr3;
     .chat-title {
     display: none;
       align-items: center;
@@ -31,6 +35,8 @@
   }
   .chat {
     width: 70%;
+    display: flex;
+    flex-direction: column;
     .chat-header{
         display: flex;
         align-items: center;
@@ -53,7 +59,8 @@
         justify-content: flex-end;
         padding: 20px;
         padding-bottom: 200px;
-        height: 80%;
+        flex:1;
+        overflow-y: auto;
         .msg{
             border-radius: 5px;
             padding: 5px;
@@ -163,4 +170,17 @@
         color: white;
         margin-left: 10px;
     }
+}
+
+
+
+#recent::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ff5a60a2;
+}
+
+#recent::-webkit-scrollbar {
+  background-color: white;
+  width: 10px;
 }
