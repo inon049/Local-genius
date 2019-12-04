@@ -25,6 +25,7 @@ export default {
         async saveBooking(context, { booking }) {
             const currBooking = await bookingService.add(booking)
             context.commit({ type: 'setCurrBooking', booking : currBooking })
+            context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})
             return currBooking
         },
         async loadBookings(context,{filterBy}){

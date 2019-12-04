@@ -102,7 +102,7 @@ function _buildCriteria(filterBy) {
     if (filterBy.minBalance) {
         criteria.balance = { $gte: +filterBy.minBalance }
     }
-    console.log(criteria, 'user crit');
+    // console.log(criteria, 'user crit');
     return criteria;
 }
 

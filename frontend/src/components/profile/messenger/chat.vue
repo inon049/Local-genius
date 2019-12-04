@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import socketService from '@/services/socket.service'
 export default {
+methods:{
 
+},
+created(){
+} 
 }
 </script>

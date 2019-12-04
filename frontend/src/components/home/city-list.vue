@@ -20,8 +20,8 @@ export default {
   },
   computed: {
     citiesToWhow() {
-        return this.cities.splice(0, 4);
+        return JSON.parse(JSON.stringify(this.cities)).splice(0, 4);
     }
-  }
+  },
 };
 </script>

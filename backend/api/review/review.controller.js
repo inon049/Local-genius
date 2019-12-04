@@ -1,7 +1,7 @@
 const reviewService = require('./review.service')
  
 async function getReviews(req, res) {
-    console.log(req.query);
+    // console.log(req.query);
     const reviews = await reviewService.query(req.query)    
     res.send(reviews)
 }

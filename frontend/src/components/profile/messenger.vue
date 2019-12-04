@@ -28,11 +28,5 @@ export default {
       this.selectedChat = chat;
     }
   },
-  async created() {
-    let userChats = await msgService.query();
-    this.recentChats = userChats;
-    console.log(userChats,'in messenger');
-    
-  }
 };
 </script>
