@@ -22,16 +22,9 @@ async function updateUser(req, res) {
     res.send(user)
 }
 
-async function addUser(req, res) {
-    const user = req.body;
-    await userService.add(user)
-    res.send(user)
-}
-
 module.exports = {
     getUser,
     getUsers,
     deleteUser,
     updateUser,
-    addUser
 }

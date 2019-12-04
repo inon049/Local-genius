@@ -1,11 +1,52 @@
-.review-form{
-    // margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+.review-panel-container {
+  // padding-bottom: rem(110px);
+  // @include for-mid-narrow-layout {
+  //   padding-bottom: 0;
+  // }
+  @include for-normal-layout {
+    max-width: $break-normal;
+    margin: 0 auto;
+  }
+  @include for-wide-layout {
+    width: $break-mid-wide;
+    margin: 0 auto;
+  }
+}
+
+.review-form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include for-narrow-layout {
+  }
+  .form-inputs {
     display: flex;
     flex-direction: column;
-    .form-inputs{
-        display: flex;
-        
+    width: 80%;
+
+    @include for-very-narrow-layout {
+      width: 70%;
     }
+    @include for-narrow-layout {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 70%;
+    }
+    // @include for-normal-layout {
+
+    // }
+    // @include for-wide-layout {
+
+    // }
+  }
+  .rate-select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .v-select{
+      // width: 30%;
+    }
+  }
 }

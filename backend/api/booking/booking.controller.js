@@ -16,7 +16,6 @@ async function addBooking(req, res) {
     // booking.byUserId = req.session.user._id;
     booking = await bookingService.add(booking)
     // booking.byUser = req.session.user;
-    // booking.aboutUser = {} 
     res.send(booking)
 }
 

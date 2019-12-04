@@ -5,10 +5,12 @@
       <div class="form-inputs">
         <p>Review Title:</p>
         <input type="text" placeholder="Title" v-model="review.title" />
-        <p>Review Text</p>
+        <p>Review Text:</p>
         <textarea placeholder="Your opinion matters!" v-model="review.txt"></textarea>
-        <p>Rate</p>
-        <v-select v-model="review.rate" :options="[1,2,3,4,5]" />
+        <div class="rate-select">
+          <p>Rate:</p>
+          <v-select v-model="review.rate" :options="[1,2,3,4,5]" />
+        </div>
       </div>
       <button>Send</button>
     </form>
@@ -29,6 +31,7 @@ export default {
         return; // user msgm to fill all forms
       }
       this.$emit("saveReview", JSON.parse(JSON.stringify(this.review)));
+      this.review = {};
     }
   },
   async created() {}
