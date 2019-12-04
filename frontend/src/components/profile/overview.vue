@@ -15,7 +15,9 @@
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <booking-carousel :bookings="bookings"></booking-carousel>
     <h2 class="overview-headers">Recent Reviews:</h2>
+    <div class="review-details-list">
      <review-details v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
+     </div>
   </section>
 </template>
 

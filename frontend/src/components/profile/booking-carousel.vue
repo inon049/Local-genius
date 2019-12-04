@@ -15,7 +15,8 @@ export default {
   },
   props: {
     bookings: Array
-  }
+  },
+
 };
 </script>
 <style scoped lang="scss">

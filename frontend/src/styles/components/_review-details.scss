@@ -1,10 +1,15 @@
 .review-details {
   padding: 15px;
   border-bottom: 1px solid $clr3;
+  border-left: 1px solid $clr3;
+  margin:10px;
   border-radius: 3px;
   display: flex;
   flex-direction: row;
   width: 100%;
+  @include for-normal-layout{
+    width: 40%;
+  }
   p {
     margin: 0;
   }
@@ -17,18 +22,21 @@
         margin-bottom:15px;
         display: flex;
         flex-direction: column;
+      .rate{
+       margin-left:25px;
+      }
       }
     }
     h2 {
       font-size: 1rem;
     }
     h3 {
-      font-size: 1rem;
-      font-weight: 100;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
     img {
-      width: 15%;
-      height: 15%;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
   }

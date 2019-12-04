@@ -6,16 +6,18 @@
         <div class="review-txt flex col">
           <div class="review-txt-title">
         <h2>{{review.byUser.name}}</h2>
+        <div class="flex space-between">
         <span
           :title="+review.createdAt|moment('calendar')"
         >{{+review.createdAt | moment("calendar") }}</span>
         <span class="rate">★ {{review.rate}}</span>
-        </div>
-          </div>
+        </div> 
         </div>
           <h3>{{review.title}}</h3>
           <p>{{review.txt}}</p>
       </div>
+        </div>
+          </div>
   </section>
 </template>
 
