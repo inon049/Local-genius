@@ -9,7 +9,7 @@
     <div class="flex col space-around">
       <ul>
       <li>For {{booking.attendees}} attendees</li>
-      <li :title="booking.at|moment('calendar')">You will meet each other {{ booking.at | moment("from")}}</li>
+      <li :title="booking.at|moment('calendar')">The tour is {{ booking.at | moment("from")}}</li>
       <li>({{date}})</li>
       </ul>
     <button>Send messege</button>

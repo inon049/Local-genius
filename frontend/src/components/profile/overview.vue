@@ -64,15 +64,16 @@ export default {
     let filterBy = {
       _id: id,
       isGuide: true,
-      upcoming: 1
+      // recent: 1
     };
     await this.$store.dispatch({ type: "loadBookings", filterBy });
     this.bookings = this.$store.getters.bookings;
     this.bookings.forEach(booking => {
-    this.disabledDates.push(new Date(booking.at))
+    this.attrs[0].dates.push(new Date(booking.at))
     });
     let reviews = await reviewService.query(filterBy);
     this.reviews = reviews;
+    console.log(this.attrs[0]);
     // this.attrs[0].dates = this.disabledDates
   }
 };
