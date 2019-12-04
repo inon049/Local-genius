@@ -1,3 +1,29 @@
+.bookings-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  .booking-preview{
+    width: 60%;
+    @include for-normal-layout{
+      width: 48%;
+    }
+    .booking-top{
+      display: flex;
+      flex-direction: column;
+      @include for-narrow-layout{
+        flex-direction: row;
+      }
+      @include for-medium-layout{
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+
 .booking-preview {
   position: relative;
   padding: 15px;

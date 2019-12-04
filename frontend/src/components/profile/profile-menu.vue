@@ -9,11 +9,12 @@
 <script>
 import Overview from "./overview";
 import Messenger from "./messenger";
+import Bookings from "./booking-list";
 export default {
   data() {
     return {
       activeName:'Overview',
-      cmps: ["Overview", "Messenger"],
+      cmps: ["Overview", "Messenger","Bookings"],
       cmp: ''
     };
   },
@@ -24,7 +25,8 @@ export default {
   },
   components: {
     Overview,
-    Messenger
+    Messenger,
+    Bookings
   }
 };
 </script>
