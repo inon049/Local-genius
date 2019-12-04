@@ -20,6 +20,7 @@ export default new Vuex.Store({
     userStore,
     cityStore,
     socketStore,
-    bookingStore
+    bookingStore,
+    reviewStore
   }
 })

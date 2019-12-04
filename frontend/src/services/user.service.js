@@ -13,10 +13,36 @@ async function getById(_id) {
     const guide = await httpService.get(USER_URL + _id)
     return guide
 }
-async function addUser(user) {
-    const newUser = await httpService.post(USER_URL, user)
-    return newUser
+
+async function login(userCred) {
+    const user = await httpService.post('auth/login', userCred)
+    return _handleLogin(user)
 }
+
+async function signup(userCred) {
+    const user = await httpService.post('auth/signup', userCred)
+    return _handleLogin(user)
+}
+
+async function logout() {
+    await httpService.post('auth/logout');
+    sessionStorage.clear();
+}
+
+function _handleLogin(user) {
+    sessionStorage.setItem('user', JSON.stringify(user))    
+    return user;
+}
+
+export default {
+    query,
+    getById,
+    getInterests,
+    login,
+    signup,
+    logout
+}
+
 
 function getInterests() {
     return [
@@ -33,11 +59,4 @@ function getInterests() {
         { name: "Architecture", isSelected: false },
         { name: "Science", isSelected: false }
     ]
-}
-
-export default {
-    query,
-    getById,
-    addUser,
-    getInterests
 }
