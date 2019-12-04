@@ -33,6 +33,9 @@ export default {
         : "https://srpc.ukzn.ac.za/wp-content/uploads/2018/05/profile-placeholder.png";
       return imgUrl;
     }
+  },
+  created(){
+    // console.log(this.review);
   }
 };
 </script>

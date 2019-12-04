@@ -1,8 +1,8 @@
-.review-panel-container {
-  // padding-bottom: rem(110px);
-  // @include for-mid-narrow-layout {
-  //   padding-bottom: 0;
-  // }
+.review-list-container {
+  color: $clr1;
+  @include for-mid-narrow-layout {
+    padding-bottom: 0;
+  }
   @include for-normal-layout {
     max-width: $break-normal;
     margin: 0 auto;
@@ -12,41 +12,80 @@
     margin: 0 auto;
   }
 }
-
-.review-form {
-  justify-content: center;
-  align-items: center;
+.review-preview-container {
+  border-top: 1px solid $clr3;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  @include for-narrow-layout {
-  }
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-
-    @include for-very-narrow-layout {
-      width: 70%;
-    }
-    @include for-narrow-layout {
-      flex-direction: row;
-      justify-content: space-around;
-      width: 70%;
-    }
-    // @include for-normal-layout {
-
-    // }
-    // @include for-wide-layout {
-
-    // }
-  }
-  .rate-select{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .v-select{
-      // width: 30%;
-    }
+  flex-wrap: wrap;
+  color: $clr1;
+  justify-content: center;
+  @include for-normal-layout {
+      padding: 40px;
   }
 }
+
+.review-form-container {
+  padding: 40px 20px ;
+  display: flex;
+  flex-direction: column;
+  color: $clr1;
+ 
+  .new-review{
+      height: 50%;
+  }
+  .add-review-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-bottom:10px;
+    flex-direction: column;
+    @include for-normal-layout{
+    flex-direction: row;
+    }
+  }
+  h2 {
+    padding: 10px;
+  }
+  .review-form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    @include for-normal-layout{
+        margin: 0;
+        width: 30%;
+    }
+    .form-inputs {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      > *{
+          margin-bottom:10px;
+      }
+      .details-input {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #21626a;
+        outline: none;
+        font-size: 1rem;
+      }
+    }
+    
+  }
+}
+
+.add-review-btn{
+    background-color: rgb(255, 90, 95);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    align-self: flex-end;
+  }

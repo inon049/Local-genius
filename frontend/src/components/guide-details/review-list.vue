@@ -1,38 +1,19 @@
 <template>
-  <ul class="review-list">
-    <li v-for="review in reviews" :key="review._id">
-      <img :src="review.byUser.imgUrl" />
-      <section>
-        <div class="writer-details">
-          <h4>By {{review.byUser.name}}</h4>
-          <p muted>Written at {{date(review.createdAt)}}</p>
-        </div>
-        <div class="review-content">
-          <h5>{{review.title}}</h5>
-          {{review.txt}}
-        </div>
-      </section>
-    </li>
-  </ul>
+  <div class="review-preview-container">
+    <reviewDetails v-for="(review,idx) in reviews" :key="idx" :review="review"></reviewDetails>
+  </div>
 </template>
 
 <script>
+import reviewDetails from "../../components/profile/review-details";
 export default {
   props: {
     reviews: Array
   },
-  date() {
-    return {};
+  components: {
+    reviewDetails
   },
-  methods: {
-    date(timeStamp) {
-      var date = new Date(timeStamp);
-      console.log(date);
 
-      return date.toLocaleString();
-    }
-  },
-  watch: {}
 };
 </script>
 

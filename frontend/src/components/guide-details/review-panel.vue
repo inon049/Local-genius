@@ -1,7 +1,6 @@
 <template>
-  <section class="review-panel-container">
-    <review-add @saveReview="saveReview"></review-add>
-    <h2>reviews:</h2>
+  <section class="review-list-container">
+    <review-add :guide="guide" @saveReview="saveReview"></review-add>
     <review-list :reviews="reviews"></review-list>
   </section>
 </template>
@@ -14,15 +13,15 @@ import reviewAdd from "./review-add";
 export default {
   data() {
     return {
-      filterBy: null
+      filterBy:null
     };
   },
   computed: {
     guide() {
       return this.$store.getters.guide;
     },
-    reviews() {
-      return this.$store.getters.reviews;
+    reviews(){
+      return this.$store.getters.reviews
     }
   },
   methods: {
@@ -31,16 +30,16 @@ export default {
         JSON.stringify(this.$store.getters.loggedInUser)
       );
       review.createdAt = Date.now();
-      review.byUserId = loggedInUser._id; //LATER THIS WILL HAPPEN IN THE BACKEND
-      review.aboutGuideId = this.guide._id;
+      review.byUserId = loggedInUser._id; 
+      review.byGuideId = this.guide._id;
       const newReview = await this.$store.dispatch({
         type: "saveReview",
         review
       });
-      await this.$store.dispatch({
-        type: "loadReviews",
-        filterBy: JSON.parse(JSON.stringify(this.filterBy))
-      });
+       await this.$store.dispatch({
+      type: "loadReviews",
+      filterBy : JSON.parse(JSON.stringify(this.filterBy))
+    });
     }
   },
   async created() {
@@ -48,7 +47,7 @@ export default {
       _id: this.guide._id,
       isGuide: true
     };
-    this.filterBy = filterBy;
+    this.filterBy = filterBy
     await this.$store.dispatch({
       type: "loadReviews",
       filterBy
