@@ -1,6 +1,6 @@
 <template>
   <div class="main-header">
-   <h1 class="logo">LOCAL GENIUS</h1>
+   <h1 class="logo">Local Genius</h1>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <router-link v-if="user" to="/profile/summary">Profile</router-link>
