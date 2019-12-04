@@ -11,6 +11,11 @@ export default {
 
     },
     actions: {
+        async loadChats(context){
+        let userId = context.rootState.userStore.loggedInUser._id
+        await chatService.query(userId)
+        },
+
         addChat(context,{chat}){
             // chat.guideId 
             // chat.userId 
