@@ -5,6 +5,8 @@ import city from '../views/city.vue'
 import guideDetails from '../views/guide-details.vue'
 import profile from '../views/profile.vue'
 import editGuide from '../views/guide-edit.vue'
+import login from '../views/login.vue'
+import signup from '../views/signup.vue'
 
 //profile children 
 // import messenger from '../components/profile/messenger.vue'
@@ -28,6 +30,14 @@ const routes = [
   {
     path: '/guide/:_id',
     component: guideDetails
+  },
+  {
+    path: '/login',
+    component: login
+  },
+  {
+    path: '/signup',
+    component: signup
   },
   {
     path: '/profile/:_id?',

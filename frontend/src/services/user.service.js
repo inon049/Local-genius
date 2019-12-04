@@ -15,7 +15,7 @@ async function getById(_id) {
 }
 
 async function login(userCred) {
-    const user = await httpService.post('auth/login', userCred)
+    const user = await httpService.post('auth/login', userCred)    
     return _handleLogin(user)
 }
 
