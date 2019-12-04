@@ -1,7 +1,6 @@
 <template>
   <div class="main-header">
    <h1 class="logo">LOCAL GENIUS</h1>
-    <button v-if="location" class="back-btn">Back</button>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/profile/summary">Profile<img @click="click" class="notif-img" v-if="isBooked" src="../assets/img/notification.png" ></router-link>
@@ -35,11 +34,6 @@ export default {
       this.isBooked = true;
     });
   },
-  watch: {
-    $route(to, from) {
-      console.log("watch",to,from);
-      this.params = to.path;
-    }
-  }
+
 };
 </script>

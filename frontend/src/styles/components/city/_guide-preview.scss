@@ -72,7 +72,11 @@
   p {
     margin: 10px 0;
     font-size: 1rem;
-    line-height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
 }
 

@@ -10,12 +10,15 @@
   position: relative;
   cursor: pointer;
   .city-prev-title {
+    text-transform: uppercase;
     position: absolute;
     margin-block-start: 0px;
     z-index: 1;
     min-width: 40%;
     color: $clr4;
     background-color: rgba(255, 255, 255, 0.699);
+    border-bottom-right-radius: 3px;
     text-align: center;
+    padding: 5px;
   }
 }

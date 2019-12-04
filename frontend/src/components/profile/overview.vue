@@ -75,7 +75,6 @@ export default {
     });
     let reviews = await reviewService.query(filterBy);
     this.reviews = reviews;
-    console.log(this.attrs[0]);
     // this.attrs[0].dates = this.disabledDates
   }
 };

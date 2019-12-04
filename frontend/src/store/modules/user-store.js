@@ -14,7 +14,8 @@ export default {
       email: "Maya@ww.com",
       password: "11",
       type: "guide",
-      rate: 4.2
+      rate: 4.2,
+      profileImgUrl: "https://dlq9ebkqqrcon.cloudfront.net/2fada0cc-35fa-48a7-ad3a-781154fe9849/7e8acbd326eed0f2.jpg",
     }
   },
   getters: {
