@@ -45,6 +45,7 @@
         {
             "userId": "5de3ed727fe0b526944c41ed",
             "guideId": "5de3ed727fe0b526944c41e5",
+            "updatedAt":"1575294204999",
             "msgs": [
                 {
                     "fromId": "5de3ed727fe0b526944c41ed",
@@ -61,6 +62,38 @@
                     "isRead": false
                 }
             ]
+        }
+    ],
+    "INCOMINGchat": [
+        {
+            "_id":"5de3ed727fe0b526944c41ed",
+            "updatedAt":"1575294204999",
+            "msgs": [
+                {
+                    "fromId": "5de3ed727fe0b526944c41ed",
+                    "toId": "5de3ed727fe0b526944c41e5",
+                    "txt": "i had the best time of my life ty",
+                    "sentAt": "1575294204195",
+                    "isRead": true
+                },
+                {
+                    "fromId": "5de3ed727fe0b526944c41e5",
+                    "toId": "5de3ed727fe0b526944c41ed",
+                    "txt": "ty i enjoied too",
+                    "sentAt": "1575294204999",
+                    "isRead": false
+                }
+            ],
+            "guide":{
+                "_id":"5de3ed727fe0b526944c41ed",
+                "name":"ff",
+                "imgUrl":"oo"
+            },
+            "user":{
+                "_id":"5de3ed727fe0b526944c41ed",
+                "name":"ff",
+                "imgUrl":"oo"
+            }
         }
     ],
     "msg": [
