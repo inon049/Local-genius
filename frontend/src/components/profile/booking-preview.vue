@@ -1,6 +1,6 @@
 <template>
   <section class="booking-preview">
-    <div class="flex space-between">
+    <div class="booking-top flex space-between">
     <h3>Booked by {{booking.byUser.name}} </h3>
     <p class="date">{{ booking.createdAt | moment("calendar") }}</p>
     </div>
@@ -9,7 +9,7 @@
     <div class="flex col space-around">
       <ul>
       <li>For {{booking.attendees}} attendees</li>
-      <li :title="booking.at|moment('calendar')">You will meet each other {{ booking.at | moment("from")}}</li>
+      <li :title="booking.at|moment('calendar')">The tour is {{ booking.at | moment("from")}}</li>
       <li>({{date}})</li>
       </ul>
     <button>Send messege</button>
@@ -35,7 +35,5 @@ export default {
      return date.toLocaleDateString()
     }
   },
-
-
 };
 </script>

@@ -1,0 +1,33 @@
+.review-list {
+  list-style: none;
+  li {
+    display: flex;
+    margin: 30px 0;
+    border-bottom: 1px solid $clr3;
+    img {
+      width: 10%;
+      border-radius: 999px;
+      margin-right: 20px;
+    }
+    .writer-details {
+        display: flex;
+        align-items: flex-end;
+      p {
+        margin: 0 10px;
+        font-size: 0.7rem;
+        color: rgb(173, 173, 173);
+      }
+    }
+    h5 {
+      margin: 0;
+    }
+    .review-content{
+        display: flex;
+        flex-direction: column;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+}

@@ -37,8 +37,30 @@
             "aboutGuideId": "5de3ed727fe0b526944c41e5",
             "createdAt": "1575294204195",
             "rate": 5,
-            "title":"nice tour",
-            "txt":"i had the best time of my life with mulu"
+            "title": "nice tour",
+            "txt": "i had the best time of my life with mulu"
+        }
+    ],
+    "chat": [
+        {
+            "userId": "5de3ed727fe0b526944c41ed",
+            "guideId": "5de3ed727fe0b526944c41e5",
+            "msgs": [
+                {
+                    "fromId": "5de3ed727fe0b526944c41ed",
+                    "toId": "5de3ed727fe0b526944c41e5",
+                    "txt": "i had the best time of my life ty",
+                    "sentAt": "1575294204195",
+                    "isRead": true
+                },
+                {
+                    "fromId": "5de3ed727fe0b526944c41e5",
+                    "toId": "5de3ed727fe0b526944c41ed",
+                    "txt": "ty i enjoied too",
+                    "sentAt": "1575294204999",
+                    "isRead": false
+                }
+            ]
         }
     ],
     "msg": [

@@ -33,7 +33,6 @@ export default {
     }
   },
   created(){
-      console.log(this.review);
   }
 }
 </script>

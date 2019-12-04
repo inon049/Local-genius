@@ -15,7 +15,9 @@
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <booking-carousel :bookings="bookings"></booking-carousel>
     <h2 class="overview-headers">Recent Reviews:</h2>
+    <div class="review-details-list">
      <review-details v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
+     </div>
   </section>
 </template>
 
@@ -64,12 +66,12 @@ export default {
     let filterBy = {
       _id: id,
       isGuide: true,
-      upcoming: 1
+      // recent: 1
     };
     await this.$store.dispatch({ type: "loadBookings", filterBy });
     this.bookings = this.$store.getters.bookings;
     this.bookings.forEach(booking => {
-    this.disabledDates.push(new Date(booking.at))
+    this.attrs[0].dates.push(new Date(booking.at))
     });
     let reviews = await reviewService.query(filterBy);
     this.reviews = reviews;

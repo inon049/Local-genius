@@ -78,7 +78,6 @@ export default {
         var { url } = await cloudinary.uploadImg(file);
         this.guide.imgUrls.push(url);
       });
-      console.log(this.guide.imgUrls, "aaaaaaa");
     },
     save() {
       this.$emit("saveInfo", this.guide);
