@@ -47,7 +47,7 @@
   break-inside: avoid-column;
   padding-right: 0;
   color: $clr1;
-  > * {
+  > *:not(:last-child) {
     border-bottom: 1px solid $clr3;
   }
   h1 {
