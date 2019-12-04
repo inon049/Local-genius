@@ -3,9 +3,11 @@
    <h1 class="logo">Local Genius</h1>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
-      <router-link v-if="user" to="/profile/summary">Profile</router-link>
+      <template v-if="user">
+        <router-link to="/profile/summary">Profile</router-link>
+        <button @click="logout">Logout</button>
+      </template>
       <router-link v-else to="/login">Login</router-link>
-      <!-- <button v-else @click="logout">Logout</button> -->
     </div>
   </div>
 </template>
@@ -33,14 +35,15 @@ export default {
     click() {
       this.isBooked = false;
     },
-    logout() {
-      this.$store.dispatch({ type: "logout" });
+    async logout() {
+      await this.$store.dispatch({ type: "logout" });
+      location.reload()
     }
   },
   created() {
     eventBus.$on("book", () => {
       this.isBooked = true;
     });
-  },
+  }
 };
 </script>

@@ -37,7 +37,7 @@
         <el-button @click="resetForm('ruleForm')">Reset</el-button>
       </el-form-item>
     </el-form>
-    <a href="/login">Already a user? Login!</a>
+    <a href="/login">Already a member? Login!</a>
   </section>
 </template>
 
