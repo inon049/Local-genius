@@ -34,7 +34,6 @@
       <h3>Which city will you host your experience in?</h3>
       <input v-model="guide.city" type="text" class="details-input" placeholder="Enter city" />
       <div class="flex space-between">
- 
         <button @click="save" class="save-btn">SAVE</button>
       </div>
     </div>
@@ -42,7 +41,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     guideToEdit: Object
@@ -55,12 +53,10 @@ export default {
   methods: {
     save() {
       this.$emit("save", this.guide);
-
-    },
-
+    }
   },
   created() {
-      if(this.guideToEdit) this.guide = this.guideToEdit;
+    if (this.guideToEdit) this.guide = this.guideToEdit;
   }
 };
 </script>

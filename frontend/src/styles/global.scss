@@ -24,14 +24,14 @@
 @import 'components/profile/booking-preview';
 
 //HOME
-@import 'components/home/city-preview';
+@import '/components/home/city-preview';
 
 
 //CITY
 @import 'views/city';
-@import 'components/city/guide-list';
-@import 'components/city/guide-preview';
-@import 'components/city/guide-filter';
+@import '/components/city/guide-list';
+@import '/components/city/guide-preview';
+@import '/components/city/guide-filter';
 
 //GUIDE DETAILS
 @import 'components/guide-details/guide-personal-info';
