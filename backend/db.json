@@ -45,7 +45,7 @@
         {
             "userId": "5de3ed727fe0b526944c41ed",
             "guideId": "5de3ed727fe0b526944c41e5",
-            "updatedAt":"1575294204999",
+            "updatedAt": "1575294204999",
             "msgs": [
                 {
                     "fromId": "5de3ed727fe0b526944c41ed",
@@ -60,14 +60,60 @@
                     "txt": "ty i enjoied too",
                     "sentAt": "1575294204999",
                     "isRead": false
+                },
+                {
+                    "name": "Dror Uzi",
+                    "email": "Dror@ww.com",
+                    "password": "11",
+                    "type": "guide",
+                    "langs": [
+                        "English"
+                    ],
+                    "profileImgUrl": "https://i.ibb.co/ZffMm1C/dror.jpg",
+                    "city": "New-York"
+                },
+                {
+                    "name": "Lorena Pablo",
+                    "email": "Lorena@ww.com",
+                    "password": "11",
+                    "type": "guide",
+                    "rate": "4.4",
+                    "attendees": "4",
+                    "langs": [
+                        "English",
+                        "Spanish"
+                    ],
+                    "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/def3cb7d-8651-419d-b637-9267946b4996/c80430cbefa26275.jpg",
+                    "imgUrls": [
+                        "https://dlq9ebkqqrcon.cloudfront.net/def3cb7d-8651-419d-b637-9267946b4996/1732365114db7251.jpg",
+                        "https://dlq9ebkqqrcon.cloudfront.net/def3cb7d-8651-419d-b637-9267946b4996/493101885d367275.jpg",
+                        "https://dlq9ebkqqrcon.cloudfront.net/def3cb7d-8651-419d-b637-9267946b4996/f8f166aefb0386e9.jpg",
+                        "https://dlq9ebkqqrcon.cloudfront.net/def3cb7d-8651-419d-b637-9267946b4996/79f4fd132492927f.jpg"
+                    ],
+                    "city": "Mexico-City",
+                    "desc": "My love for aesthetics comes out also in my recommendations for the city - beautiful food, beautiful culture, beautiful anything.",
+                    "price": "20",
+                    "about": "I think I am  one hell off a lucky girl.I was born and raised in one of the greatest cities in the world (Mexico City), my job brings me passion for art and for design together (I am an interior design) and I am actually never had a really lousy job. My love for aesthetics comes out also in my recommendations for the city - beautiful food, beautiful culture, beautiful anything.",
+                    "interests": [
+                        "Food",
+                        "NightLife",
+                        "Coffee",
+                        "Luxury"
+                    ],
+                    "questions": {
+                        "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?": "These days I would say my hero is Peter Marion (boutique interior designer) I would take him to this cute place in Polanco called Cafe Budapest.",
+                        "IF TOMORROW WAS YOUR LAST DAY IN MEXICO CITY BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?": "Eating tacos, chilaquiles and pan dulce in the most delicious and cute cafes around the city.",
+                        "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Tel Aviv during summer time because I know the city pretty well so that makes it very enjoyable. I love the food, the fact that you can walk everywhere (thing that would never happen in Mexico City), the beach is amazing and I could never get bored there."
+                    },
+                    "link": "https://www.coolcousin.com/cities/moscow/mila-f914f101/"
                 }
             ]
         }
     ],
     "INCOMINGchat": [
         {
-            "_id":"5de3ed727fe0b526944c41ed",
-            "updatedAt":"1575294204999",
+            "_id": "5de3ed727fe0b526944c41ed",
+            "updatedAt": "1575294204999",
             "msgs": [
                 {
                     "fromId": "5de3ed727fe0b526944c41ed",
@@ -84,15 +130,15 @@
                     "isRead": false
                 }
             ],
-            "guide":{
-                "_id":"5de3ed727fe0b526944c41ed",
-                "name":"ff",
-                "imgUrl":"oo"
+            "guide": {
+                "_id": "5de3ed727fe0b526944c41ed",
+                "name": "ff",
+                "imgUrl": "oo"
             },
-            "user":{
-                "_id":"5de3ed727fe0b526944c41ed",
-                "name":"ff",
-                "imgUrl":"oo"
+            "user": {
+                "_id": "5de3ed727fe0b526944c41ed",
+                "name": "ff",
+                "imgUrl": "oo"
             }
         }
     ],

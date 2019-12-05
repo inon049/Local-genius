@@ -40,7 +40,7 @@ export default {
         {
           key: 'today',
           dot: true,
-          dates: [new Date(2019, 11, 5)]
+          dates: [new Date(2020, 0, 5)]
         },
       ],
       selectedDates:[],

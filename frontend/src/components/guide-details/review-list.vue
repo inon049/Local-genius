@@ -13,7 +13,8 @@ export default {
   components: {
     reviewDetails
   },
-
+  created() {    
+  }
 };
 </script>
 
