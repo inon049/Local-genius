@@ -42,10 +42,14 @@
     font-family: Kaushan;
     font-size: 1.8rem;
     font-weight: 400;
-    color:$clr4;
-    border-bottom:2px solid #de4d5c;
+    color: $clr4;
+    border-bottom: 2px solid #de4d5c;
+    &:hover{
+      cursor: pointer;
     }
-  a {
+  }
+  a,
+  button {
     margin: 10px;
     color: $clr4;
     text-decoration: none;
@@ -62,6 +66,7 @@
     cursor: pointer;
     outline: none;
     font-family: OpenSans;
+    font-size: 18px;
   }
   .nav-bar {
     display: flex;
