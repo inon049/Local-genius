@@ -11,7 +11,8 @@ export default {
 
     },
     actions: {
-        addChat(context,{chat}){
+        createChat(context,{chat}){
+            console.log(chat);
             // chat.guideId 
             // chat.userId 
         },
