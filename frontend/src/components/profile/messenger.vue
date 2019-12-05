@@ -1,7 +1,7 @@
 <template>
   <section class="messenger-container">
-    <recent-chats :chats="recentChats" @selectChat="selectChat"></recent-chats>
-    <chat :user="user" :chat="selectedChat"></chat>
+    <recent-chats :user="user" :chats="recentChats" @selectChat="selectChat"></recent-chats>
+    <chat v-if="selectedChat" :user="user" @sendMsg="sendMsg" :chat="selectedChat"></chat>
   </section>
 </template>
 
@@ -22,6 +22,9 @@ export default {
   methods: {
     selectChat(chat) {
       this.selectedChat = chat;
+    },
+    sendMsg(msg){
+      this.$store.dispatch({type:'sendMsg',chatId:this.selectedChat._id,msg})
     }
   },
   computed: {

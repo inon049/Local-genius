@@ -4,6 +4,9 @@ import socket from '@/services/socket.service.js'
 socket.on('userNotif', (data) =>{
     console.log(data)
 })
+socket.on('userMsgNotif', (data) =>{
+    console.log(data,'usernotifmsg in front')
+})
 export default {
     state: {
         
@@ -20,13 +23,16 @@ export default {
           let userId = context.rootState.userStore.loggedInUser._id
           socket.emit('createUserSocket',userId)
         },
-
         sendNotif(context, {to,msg}) {
           let notif ={
             to,msg
           }
             socket.emit('sendNotif', notif)
         },
+        sendMsgNotif(context,{to,chatId,msg}){
+          let notif ={to,chatId,msg}
+          socket.emit('sendMsgNotif',notif)
+        }
         // getChatHistory(context, {chatId}) {
         //     socket.emit('getHistory', chatId)
         // }

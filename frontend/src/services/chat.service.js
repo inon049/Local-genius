@@ -4,7 +4,7 @@ import httpService from '@/services/http.service'
 
 export default {
     query,
-    addChat,
+    createChat,
     addMsg,
 }
 
@@ -13,10 +13,11 @@ async function query(id){
     return chats
 }
 
-async function addChat(chat) {
-
+async function createChat(chat) {
+    let newChat = await httpService.post('chat/',chat)
+    console.log(newChat);
+    return newChat
 }
-async function addMsg(){
-    
+ function addMsg(id,msg){
+ return httpService.post(`chat/${id}`,msg)
 }
-// router.post('/:id', addMsg)

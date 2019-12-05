@@ -1,19 +1,19 @@
 <template>
-  <section id="recent" class="chat" v-if="chat">
+  <section id="recent" class="chat" v-if="chat!==null">
     <div class="chat-header">
       <img :src="chat.user.imgUrl" />
       <h1>{{chat.user.name}}</h1>
     </div>
-    <div  class="chat-txt">
-      <div  class="msg" :class="checkMsg(msg)"  v-for="(msg,idx) in chat.msgs" :key="idx">
-        <img :src="checkUrl(msg)"/>
-        <p >{{msg.txt}}</p>
+    <div class="chat-txt">
+      <div class="msg" :class="checkMsg(msg)" v-for="(msg,idx) in chat.msgs" :key="idx">
+        <img :src="checkUrl(msg)" />
+        <p>{{msg.txt}}</p>
       </div>
     </div>
-    <div class="input-msg">
-      <input type="text" placeholder="Type a message...">
+    <form @submit.prevent="sendMsg" class="input-msg">
+      <input type="text" v-model="msg.txt" placeholder="Type a message..." />
       <button>Send</button>
-    </div>
+    </form>
   </section>
 </template>
 
@@ -26,25 +26,42 @@ export default {
   },
   data() {
     return {
+      msg: {
+        txt: "",
+        isRead: false
+      },
+
       isIncoming: false
     };
   },
   methods: {
     checkMsg(msg) {
-      if (msg.in) return 'incoming-msg';
-      else return 'sent-msg';
+      if (msg.in) return "incoming-msg";
+      else return "sent-msg";
     },
-    checkUrl(msg){
-      if(msg.in) return this.chat.user.imgUrl;
+    checkUrl(msg) {
+      if (msg.in) return this.chat.user.imgUrl;
       else return this.chat.guide.imgUrl;
+    },
+    sendMsg() {
+      if (this.msg.txt) {
+        this.msg.fromId = this.user._id;
+        this.msg.toId =
+          this.chat.guide._id === this.user._id
+            ? this.chat.user._id
+            : this.chat.guide._id;
+        this.$emit("sendMsg", JSON.parse(JSON.stringify(this.msg)));
+        this.msg.txt = "";
+      }
     }
   },
-  mounted() {
-    setTimeout(() => {
+  created() {
+    if (this.chat.msgs.length) {
+      
       this.chat.msgs.forEach(msg => {
         if (msg.fromId !== this.user._id) msg.in = true;
       });
-    }, 2000);
+    }
   }
 };
 </script>

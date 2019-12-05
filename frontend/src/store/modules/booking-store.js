@@ -23,14 +23,21 @@ export default {
     },
     actions: {
         async saveBooking(context, { booking }) {
-            console.log(booking);
+            await this.$store.dispatch({ type: "loadChats" });
+            let chats= context.rootGetters.chats
+            if(!chats.some(chat=>{ 
+                return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
+            })){
+                context.dispatch({type:'createChat', chat:{guideId:booking.toGuideId,userId:booking.byUserId}})
+                const currBooking = await bookingService.add(booking)
+                context.commit({ type: 'setCurrBooking', booking : currBooking })
+                context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})
+                return currBooking
 
-            //Chatstorecreate
-            context.dispatch({type:'createChat', chat:{guideId:booking.toGuideId,userId:booking.byUserId}})
-            const currBooking = await bookingService.add(booking)
-            context.commit({ type: 'setCurrBooking', booking : currBooking })
-            context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})
-            return currBooking
+            }else{
+                console.log('bookedAlready');
+            }
+            
         },
         async loadBookings(context,{filterBy}){
             const bookings = await bookingService.query(filterBy)
