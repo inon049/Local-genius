@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-preview">
+  <div class="chat-preview" v-if="chat">
     <img :src="chat.user.imgUrl" />
     <div class="chat-preview-content">
       <h4>{{chat.user.name}}</h4>
