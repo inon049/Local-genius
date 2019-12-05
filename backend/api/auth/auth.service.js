@@ -3,7 +3,7 @@ const userService = require('../user/user.service')
 
 const saltRounds = 10
 
-async function login(email, password) {
+async function login(email, password) {    
     if (!email || !password) return Promise.reject('email and password are required!')
 
     const user = await userService.getByEmail(email)

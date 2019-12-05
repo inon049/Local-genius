@@ -15,16 +15,10 @@ export default {
         }
     },
     actions: {
-        async loadChats(context){
-        let userId = context.rootState.userStore.loggedInUser._id
-        let chats = await chatService.query(userId)
-        console.log(chats,'from store after query');
-        context.commit({type:'setChats',chats})
-        },
-
-        addChat(context,{chat}){
-            chat.guideId 
-            chat.userId 
+        createChat(context,{chat}){
+            console.log(chat);
+            // chat.guideId 
+            // chat.userId 
         },
         sendMsg(context,{chatId,msg}){
             

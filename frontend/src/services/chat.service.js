@@ -13,7 +13,7 @@ async function query(id){
     return chats
 }
 
-async function addChat(chat){
+async function addChat(chat) {
 
 }
 async function addMsg(){

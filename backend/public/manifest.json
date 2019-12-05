@@ -1,15 +1,15 @@
 {
     "name": "Local Genius",
     "short_name": "Local Genius",
-    "theme_color": "#4DBA87",
+    "theme_color": "#ff5a5f",
     "icons": [
         {
-            "src": "./img/travel.png",
+            "src": "./img/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "./img/travel.png",
+            "src": "./img/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

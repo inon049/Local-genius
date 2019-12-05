@@ -23,6 +23,10 @@ export default {
     },
     actions: {
         async saveBooking(context, { booking }) {
+            console.log(booking);
+
+            //Chatstorecreate
+            context.dispatch({type:'createChat', chat:{guideId:booking.toGuideId,userId:booking.byUserId}})
             const currBooking = await bookingService.add(booking)
             context.commit({ type: 'setCurrBooking', booking : currBooking })
             context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})

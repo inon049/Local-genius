@@ -1,5 +1,5 @@
 <template>
-  <section class="recent-chats" v-if="chats.length">
+  <section class="recent-chats" id="recent">
     <div class="chat-title">
     <img :src="chats[0].user.imgUrl">
     <h1>Chats</h1>

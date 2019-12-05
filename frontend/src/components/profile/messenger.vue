@@ -6,7 +6,6 @@
 </template>
 
 <script>
-//COMPONENTS//
 import chat from "./messenger/chat";
 import recentChats from "./messenger/recent-chats";
 export default {
