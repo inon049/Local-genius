@@ -1,8 +1,8 @@
 <template>
   <section class="city-filter">
-    <input v-model="city._id" @change="goToCity" list="cities" type="text" placeholder="Where do you wanna go?" />
+    <input @change="goToCity" list="cities" type="text" placeholder="Where do you wanna go?" />
     <datalist id="cities">
-      <option  v-for="city in cities" :key="city._id" :label="city.name" :value="city._id"></option>
+      <option v-for="city in cities" :key="city._id" :value="city.name"></option>
     </datalist>
   </section>
 </template>
@@ -12,18 +12,13 @@ export default {
   props: {
     cities: Array
   },
-  data(){
-    return {
-      city:{
-        _id:''
-      } 
-    }
-  },
-  methods:{
-    goToCity(a){
-      console.log(a.target.value);
-      // this.$route.push(``)
-      console.log(this.city, 'city');
+
+  methods: {
+    goToCity(ev) {
+      let idx = this.cities.findIndex(city=>{
+        return city.name===ev.target.value
+      })
+      this.$router.push(`/city/${this.cities[idx]._id}`)
     }
   }
 };
