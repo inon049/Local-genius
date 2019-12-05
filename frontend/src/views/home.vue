@@ -9,7 +9,7 @@
        <div class="join-btn-container">
          Not a member?<router-link to="/signup">JOIN!</router-link>
        </div>
-      <img class="hero-img" src="@/assets/img/home-bg.jpg" alt /> 
+      <img class="hero-img" src="@/assets/img/home-bg2.jpg" alt /> 
     <router-link  class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
     </div>
     <div class="container">
