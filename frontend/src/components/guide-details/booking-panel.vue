@@ -36,7 +36,7 @@
           <img class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">
           <img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png" />
         </transition>
-        <button @click="click" class="modal-btn" ref="bookBtn">Modal</button>
+        <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
          <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn"><a class="scroll" href="#" v-scroll-to="'#book'"></a>Book</button>
       </div>
     </div>
