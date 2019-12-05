@@ -18,7 +18,7 @@ export default {
     }
   },
  async created() {
-   this.$store.dispatch({type:'createUserSocket'})
+   if(this.$store.getters.loggedInUser) this.$store.dispatch({type:'createUserSocket'})
      await this.$store.dispatch({ type: "loadUsers" });
      await this.$store.dispatch({ type: "loadCities" });
     window.addEventListener('scroll', this.handleScroll);
