@@ -24,7 +24,7 @@
     color: white;
     padding: 10px 20px;
     border-radius: 3px;
-    &:hover{
+    &:hover {
       background-color: #d1464b;
     }
   }
@@ -40,7 +40,7 @@
       padding: 4px 12px;
       border-radius: 3px;
       margin-left: 10px;
-      &:hover{
+      &:hover {
         background-color: #db494ece;
       }
     }
@@ -173,6 +173,20 @@
   }
 }
 
-.scroll {
-  background-color: #fff !important;
+.scroll-up {
+  text-decoration: none;
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  width: 45px;
+  display: flex;
+  height: 43px;
+  background-color: #fe031d8c;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  .arrow-up {
+    width: 30px;
+    height: 30px;
+  }
 }

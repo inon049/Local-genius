@@ -20,6 +20,7 @@
     "vue-carousel": "^0.18.0",
     "vue-moment": "^4.0.0",
     "vue-router": "^3.1.3",
+    "vue-scrollto": "^2.17.1",
     "vue-select": "^3.3.0",
     "vue-tiny-slider": "^0.1.39",
     "vuex": "^3.0.1"

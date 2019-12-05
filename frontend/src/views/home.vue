@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section  class="home">
     <div class="hero-container flex justify-center">
       <div class="titles">
         <h2>Travel perfection made simple.</h2>
@@ -18,6 +18,7 @@
     <h2 class="list-title">GUIDES OF THE MONTH</h2>
     <guide-list :guides="guides"></guide-list>
     </div>
+ 
   </section>
 </template>
 
@@ -47,7 +48,6 @@ export default {
   async created() {
     var cities = await cityService.query();
     this.cities = JSON.parse(JSON.stringify(cities));
-
 
     var guides = await userService.query();
     guides = JSON.parse(JSON.stringify(guides));

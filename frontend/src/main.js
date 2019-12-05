@@ -10,6 +10,8 @@ import VAnimateCss from 'v-animate-css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueCarousel from 'vue-carousel';
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
 Vue.use(ElementUI);
 Vue.use(VAnimateCss);
 Vue.component('v-select', vSelect)
