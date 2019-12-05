@@ -11,6 +11,7 @@ async function deleteChat(req, res) {
 }
 async function addMsg(req,res){
     let msg = req.body;
+    console.log('addMsg is runing');
     let chatId = req.params.id
     msg = await chatService.addMsg(msg,chatId)
     res.send(msg)
@@ -18,7 +19,8 @@ async function addMsg(req,res){
 }
 
 
-async function addChat(req, res) {
+async function createChat(req, res) {
+    console.log('createChat is runing');
     let chat = req.body;
     chat.msgs=[]
     chat.createdAt=Date.now()
@@ -29,6 +31,6 @@ async function addChat(req, res) {
 module.exports = {
     getChats,
     deleteChat,
-    addChat,
+    createChat,
     addMsg
 }

@@ -53,6 +53,11 @@ async function query(filterBy = {}) {
             chat.guide ={_id:chat.guide._id,name: chat.guide.name, imgUrl: chat.guide.profileImgUrl }
             delete chat.userId;
             delete chat.guideId;
+            chat.msgs.sort((a,b)=>{
+                if(a.createdAt>b.createdAt) return 1
+                if(a.createdAt<b.createdAt) return -1
+                else return 0
+            })
             return chat;
         })
         return chats
@@ -95,9 +100,11 @@ function _buildCriteria(filterBy) {
 }
 async function addMsg(msg,chatId) {
     msg.sentAt=Date.now()
+    console.log(chatId);
     const collection = await dbService.getCollection('chat')
+    chatId=ObjectId(chatId)
     try {
-       let chat = await collection.update({ "_id": ObjectId(chatId) },
+       let chat = await collection.update({ "_id":chatId },
        {$push: { msgs: msg}},
        { $set: { updatedAt : Date.now() }
     }

@@ -1,10 +1,10 @@
 <template>
-  <section class="recent-chats" id="recent">
+  <section v-if="chats.length" class="recent-chats" id="recent">
     <div class="chat-title">
-    <img :src="chats[0].toUser.imgUrl">
+    <img :src="chats[0].user.imgUrl">
     <h1>Chats</h1>
     </div>
-    <chat-preview @click.native="selectChat(chat)" v-for="(chat,idx) in chats" :key="idx" :chat="chat"></chat-preview>
+    <chat-preview :id="user._id" @click.native="selectChat(chat)" v-for="(chat,idx) in chats" :key="idx" :chat="chat"></chat-preview>
   </section>
 </template>
 
@@ -12,7 +12,8 @@
 import chatPreview from "./chat-preview";
 export default {
   props: {
-    chats: Array
+    chats: Array,
+    user: Object
   },
   components: {
     chatPreview
@@ -20,6 +21,7 @@ export default {
   methods:{
     selectChat(chat){
       this.$emit('selectChat',chat)
+      console.log(chat);
     }
   }
 };
