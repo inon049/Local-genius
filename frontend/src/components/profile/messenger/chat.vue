@@ -16,7 +16,7 @@
     </form>
   </section>
 </template>
-
+//
 <script>
 import socketService from "@/services/socket.service";
 export default {
@@ -40,8 +40,9 @@ export default {
       else return "sent-msg";
     },
     checkUrl(msg) {
-      if (msg.in) return this.chat.user.imgUrl;
-      else return this.chat.guide.imgUrl;
+      if (msg.fromId === this.loggedInUser._id && this.loggedInUser._id === this.chat.user._id)
+       return this.chat.guide.imgUrl;
+      else return this.chat.user.imgUrl;
     },
     sendMsg() {
       if (this.msg.txt) {
@@ -56,14 +57,21 @@ export default {
     },
     sortMsgs(){
         this.chat.msgs.forEach(msg => {
-        if (msg.fromId !== this.user._id) msg.in = true;
+        if (msg.fromId !== this.loggedInUser._id) msg.in = true;
       });
     }
+  },
+  computed:{
+    loggedInUser(){
+      return this.$store.getters.loggedInUser
+    },
   },
   created() {
     if (this.chat.msgs.length) {
       this.sortMsgs()
     }
+    console.log(this.chat);
+    
   },
   watch:{
     'chat.msgs'(){

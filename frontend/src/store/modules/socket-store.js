@@ -22,7 +22,7 @@ export default {
     },
     mutations: {
       pushToUserNotifs(state,{txt}){
-
+state.userNotifs.push(txt)
       },
       clearUserNotifs(state){
         state.userNotifs=[]
