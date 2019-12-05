@@ -23,8 +23,11 @@ export default {
     },
     actions: {
         async saveBooking(context, { booking }) {
-            await this.$store.dispatch({ type: "loadChats" });
+            await context.dispatch({ type: "loadChats" });
             let chats= context.rootGetters.chats
+            console.log('sve booking if',chats.some(chat=>{ 
+                return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
+            }));
             if(!chats.some(chat=>{ 
                 return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
             })){

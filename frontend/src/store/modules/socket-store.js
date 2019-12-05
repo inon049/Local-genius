@@ -1,11 +1,13 @@
 import socket from '@/services/socket.service.js'
+import store from '@/store/index'
 
 // socket.emit('test event', 'this is a testing string')
 socket.on('userNotif', (data) =>{
     console.log(data)
 })
-socket.on('userMsgNotif', (data) =>{
-    console.log(data,'usernotifmsg in front')
+socket.on('userMsgNotif', function({chatId,msg}){
+    console.log('usernotifmsg in front')
+    store.dispatch({type:'pushUserMsg',chatId,msg})
 })
 export default {
     state: {
@@ -20,7 +22,7 @@ export default {
     actions: {
       ///********* needs to happen after login currently in app.vue created()*********/
         createUserSocket(context){
-          let userId = context.rootState.userStore.loggedInUser._id
+          let userId = context.rootGetters.loggedInUser._id
           socket.emit('createUserSocket',userId)
         },
         sendNotif(context, {to,msg}) {
@@ -33,7 +35,7 @@ export default {
           let notif ={to,chatId,msg}
           socket.emit('sendMsgNotif',notif)
         }
-        // getChatHistory(context, {chatId}) {
+      // getChatHistory(context, {chatId}) {
         //     socket.emit('getHistory', chatId)
         // }
     }
