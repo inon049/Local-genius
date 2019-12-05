@@ -18,7 +18,7 @@ async function addMsg(req,res){
 }
 
 
-async function addChat(req, res) {
+async function createChat(req, res) {
     let chat = req.body;
     chat.msgs=[]
     chat.createdAt=Date.now()
@@ -29,6 +29,6 @@ async function addChat(req, res) {
 module.exports = {
     getChats,
     deleteChat,
-    addChat,
+    createChat,
     addMsg
 }
