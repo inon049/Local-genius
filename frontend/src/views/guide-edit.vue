@@ -1,6 +1,5 @@
 <template>
   <div class="edit-guide-container mt-10">
-    <h1>Submit your profile</h1>
     <el-tabs type="border-card" v-model="activeName" @tab-click="setCmp">
       <el-tab-pane v-for="(page,idx) in cmps" :key="idx" :label="page" :name="page">
         <component @start="start" @save="save" :is="activeName" :guideToEdit="guideToEdit"></component>
