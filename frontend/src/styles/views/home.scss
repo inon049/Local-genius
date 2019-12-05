@@ -176,7 +176,7 @@
 .scroll-up {
   text-decoration: none;
   position: fixed;
-  bottom: 110px;
+  bottom: 145px;;
   right: 20px;
   width: 45px;
   display: flex;
@@ -188,5 +188,8 @@
   .arrow-up {
     width: 30px;
     height: 30px;
+  }
+  @include for-very-narrow-layout{
+    bottom: 110px;
   }
 }
