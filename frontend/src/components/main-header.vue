@@ -1,6 +1,6 @@
 <template>
   <div class="main-header">
-   <h1 class="logo">Local Genius</h1>
+   <h1 class="logo" @click="goToHome">Local Genius</h1>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <template v-if="user">
@@ -38,6 +38,9 @@ export default {
     async logout() {
       await this.$store.dispatch({ type: "logout" });
       location.reload()
+    },
+    goToHome(){
+      this.$router.replace('/')
     }
   },
   created() {

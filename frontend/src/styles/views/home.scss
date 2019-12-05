@@ -24,24 +24,34 @@
     color: white;
     padding: 10px 20px;
     border-radius: 3px;
+    &:hover{
+      background-color: #d1464b;
+    }
   }
   .join-btn-container {
     position: absolute;
     color: #fff;
-    width: 50%;
-    margin-top: 25rem;
+    margin-top: 21rem;
     a {
       text-decoration: none;
       background-color: #ff5a60ce;
       color: white;
-      // font-weight: bold;
-      // text-decoration: underline;
       padding: 4px 12px;
       border-radius: 3px;
       margin-left: 10px;
+      &:hover{
+        background-color: #db494ece;
+      }
+    }
+    @include for-very-very-narrow-layout {
+      margin-top: 21rem;
+    }
+    @include for-very-narrow-layout {
+      margin-top: 24rem;
     }
     @include for-normal-layout {
-      width: 30%;
+      margin-top: 26rem;
+      // width: 35%;
     }
   }
   .titles {
@@ -53,18 +63,31 @@
     text-align: center;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 1.9rem;
       font-weight: 400;
+      @include for-very-very-narrow-layout {
+        font-size: 2rem;
+      }
+      @include for-very-narrow-layout {
+        font-size: 2.4rem;
+      }
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 400;
+      @include for-very-very-narrow-layout {
+        font-size: 2rem;
+      }
+      @include for-very-narrow-layout {
+        font-size: 2.2rem;
+      }
     }
     @include for-very-very-narrow-layout {
       text-align: center;
       padding-top: 2rem;
     }
     @include for-very-narrow-layout {
+      font-size: 2.3rem;
       text-align: center;
       padding-top: 6.3rem;
     }
@@ -73,7 +96,7 @@
         font-size: 3rem;
       }
       h3 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
       }
       white-space: nowrap;
     }
@@ -87,14 +110,21 @@
   .city-filter {
     position: absolute;
     width: 50%;
-    margin-top: 21rem;
+    margin-top: 17rem;
+    @include for-very-very-narrow-layout {
+      margin-top: 17rem;
+    }
+    @include for-very-narrow-layout {
+      margin-top: 20rem;
+    }
     @include for-normal-layout {
-      width: 30%;
+      margin-top: 21rem;
+      width: 35%;
     }
     input {
       width: 100%;
       height: 3rem;
-      min-width: rem(180px);
+      // min-width: rem(120px);
       border-radius: 3px;
       padding: rem(10px);
       user-select: none;
@@ -109,8 +139,7 @@
   .list-title {
     margin-bottom: 10px;
     color: $clr1;
-    padding:10px;
-  
+    padding: 10px;
   }
   .flex-list {
     display: flex;

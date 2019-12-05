@@ -13,19 +13,22 @@ export default {
         setChats(state,{chats}){
             state.chats = chats
         },
-        addChatMsg(state,{chatId,msg}){
+        pushChatMsg(state,{chatId,msg}){
             let idx = state.chats.findIndex(chat=>chat._id===chatId)
-            state.chats[idx].msgs.unshift(msg)
+            state.chats[idx].msgs.push(msg)
         }
     },
     actions: {
+        pushUserMsg(context,{msg,chatId}){
+            context.commit({type:'pushChatMsg',msg,chatId})
+        },
         createChat(context,{chat}){
             chatService.createChat(chat)
         },
         async sendMsg(context,{chatId,msg}){
             console.log(chatId,msg,'b4 server msg<');
          await chatService.addMsg(chatId,msg)
-            context.commit({type:'addChatMsg',msg,chatId})
+            context.commit({type:'pushChatMsg',msg,chatId})
             context.dispatch({type:'sendMsgNotif',to:msg.toId,chatId,msg})
         },
         async loadChats(context){
