@@ -11,7 +11,7 @@
       <div class="booking-price-rate flex">
         <div class="persons flex space-around">
           <label for="persons">
-            <h4 class="persons-header">How many people?</h4>
+            <h4  id="book" class="persons-header">How many people?</h4>
           </label>
           <div>
             <el-radio-group text-color="black" fill="rgba(255, 90, 95, 0.23)" v-model="booking.attendees" size="medium">
@@ -33,10 +33,11 @@
           </div>
         </div>
         <transition enter-active-class="animated zoomIn">
+          <img class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">
           <img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png" />
         </transition>
-        <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
-        <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn">Book</button>
+        <button @click="click" class="modal-btn" ref="bookBtn">Modal</button>
+         <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn"><a class="scroll" href="#" v-scroll-to="'#book'"></a>Book</button>
       </div>
     </div>
   </div>
@@ -64,7 +65,8 @@ export default {
         attendees: 1
       },
       isOpen: false,
-      isBooking: false
+      isBooking: false,
+      isLoading: false
     };
   },
   computed:{
@@ -81,7 +83,14 @@ export default {
       this.booking.createdAt = Date.now();
       this.booking.price = this.guide.price;
       this.booking.price = this.booking.attendees * this.booking.price;
-      this.isBooking = !this.isBooking;
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+        this.isBooking = !this.isBooking
+        if(this.$refs.bookBtn.innerText === 'Booked!'){
+          this.$refs.bookBtn.innerText = 'Book';
+        }else  this.$refs.bookBtn.innerText = 'Booked!';
+      }, 1000);
       eventBus.$emit("book");
       this.$store.dispatch({
         type: "saveBooking",

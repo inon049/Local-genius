@@ -1,5 +1,4 @@
 .booking-panel-container {
-  // display: none;
   .booking-desktop {
     display: none;
   }
@@ -17,6 +16,9 @@
   height: rem(107px);
   padding: 20px;
   @include for-mid-narrow-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: sticky;
     top: 80px;
     margin-right: 45px;
@@ -25,7 +27,7 @@
     z-index: 3;
     padding: rem(25px);
     margin: 0px;
-    height: 47.875rem;
+    height: 42.875rem;
     border-top:none;
     border: 1px solid #bbbbbb;
     .booking-desktop {
@@ -70,6 +72,21 @@
     border-radius: 3px;
     cursor: pointer;
     background-color: #ffffff;
+  }
+}
+.loading-booking{
+  height: 50px;
+    width: 50px;
+    margin-top:10px
+}
+.scroll{
+  text-decoration: none;
+  width: inherit;
+  display: none;
+  justify-content: center;
+  color: $clr5;
+  @include for-mid-narrow-layout {
+  display: flex;
   }
 }
 

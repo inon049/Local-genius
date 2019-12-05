@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-   <main-header :class="{scroll : isScroll}" @scroll.native="handleScroll"></main-header>
+   <main-header></main-header>
     <section class="main">
       <router-view />
+          <a class="scroll-up" href="#" v-scroll-to="'#app'"><img class="arrow-up" src="../src/assets/img/arrow-up.png"></a>
     </section>
     <mobile-nav></mobile-nav>
   </div>
@@ -23,11 +24,6 @@ export default {
      await this.$store.dispatch({ type: "loadCities" });
     window.addEventListener('scroll', this.handleScroll);
 
-  },
-    methods: {
-    handleScroll (event) {
-      this.isScroll = true;
-    }
   },
   components:{
     mainHeader,
