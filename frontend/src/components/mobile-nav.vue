@@ -38,6 +38,11 @@ export default {
       this.activeLink = num;
     },
   
+  },
+  computed:{
+    notifs(){
+      return this.$store.getters.userNotifs
+    }
   }
 };
 </script>

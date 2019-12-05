@@ -53,14 +53,21 @@ export default {
         this.$emit("sendMsg", JSON.parse(JSON.stringify(this.msg)));
         this.msg.txt = "";
       }
+    },
+    sortMsgs(){
+        this.chat.msgs.forEach(msg => {
+        if (msg.fromId !== this.user._id) msg.in = true;
+      });
     }
   },
   created() {
     if (this.chat.msgs.length) {
-      
-      this.chat.msgs.forEach(msg => {
-        if (msg.fromId !== this.user._id) msg.in = true;
-      });
+      this.sortMsgs()
+    }
+  },
+  watch:{
+    'chat.msgs'(){
+      this.sortMsgs()
     }
   }
 };

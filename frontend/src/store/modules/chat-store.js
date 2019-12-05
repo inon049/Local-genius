@@ -26,13 +26,12 @@ export default {
             chatService.createChat(chat)
         },
         async sendMsg(context,{chatId,msg}){
-            console.log(chatId,msg,'b4 server msg<');
+            // console.log(chatId,msg,'b4 server msg<');
          await chatService.addMsg(chatId,msg)
             context.commit({type:'pushChatMsg',msg,chatId})
             context.dispatch({type:'sendMsgNotif',to:msg.toId,chatId,msg})
         },
         async loadChats(context){
-            console.log(context);
             let id = context.rootGetters.loggedInUser._id;
             let chats = await chatService.query(id)
             context.commit({type:'setChats',chats})
