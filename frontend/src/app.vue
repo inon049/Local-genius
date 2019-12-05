@@ -33,6 +33,13 @@ export default {
     mainHeader,
     mobileNav
   },
+  mounted(){
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+  },
    destroyed () {
     window.removeEventListener('scroll', this.handleScroll);
   }

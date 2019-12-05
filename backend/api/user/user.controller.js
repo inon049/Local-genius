@@ -1,8 +1,6 @@
 const userService = require('./user.service')
 
 async function getUser(req, res) {
-    console.log('getuserISON');
-    
     const user = await userService.getById(req.params.id)
     res.send(user)
 }

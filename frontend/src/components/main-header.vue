@@ -1,10 +1,10 @@
 <template>
   <div class="main-header">
-   <h1 class="logo" @click="goToHome">Local Genius</h1>
+    <h1 class="logo" @click="goToHome">Local Genius</h1>
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <template v-if="user">
-        <router-link to="/profile/summary">Profile</router-link>
+        <router-link style="position:relative;" to="/profile/summary"><img src="@/assets/img/notification.png" v-if="notifs" class="notifs-bubble"/>Profile</router-link>
         <button @click="logout">Logout</button>
       </template>
       <router-link v-else to="/login">Login</router-link>
@@ -29,6 +29,9 @@ export default {
     },
     user() {
       return this.$store.getters.loggedInUser;
+    },
+    notifs() {
+      return this.$store.getters.userNotifs;
     }
   },
   methods: {
@@ -37,10 +40,10 @@ export default {
     },
     async logout() {
       await this.$store.dispatch({ type: "logout" });
-      location.reload()
+      location.reload();
     },
-    goToHome(){
-      this.$router.replace('/')
+    goToHome() {
+      this.$router.replace("/");
     }
   },
   created() {

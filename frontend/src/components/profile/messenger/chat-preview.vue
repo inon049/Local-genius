@@ -4,9 +4,9 @@
     <div class="chat-preview-content">
       <h4>{{partnerName}}</h4>
       <div class="chat-preview-txt">
-          <p v-if="chat.msgs.length">{{chat.msgs[0].txt.substring(0,10)}}...</p>
+          <p v-if="chat.msgs.length">{{chat.msgs[chat.msgs.length-1].txt.substring(0,10)}}...</p>
           <p v-else>You and {{partnerName}} have no chat history</p>
-          <p v-if="chat.updatedAt">{{ +chat.updatedAt | moment('calendar', "July 10 2011")}}</p>
+          <p v-if="chat.updatedAt">{{ +chat.updatedAt | moment('calendar')}}</p>
       </div>
     </div>
   </div>

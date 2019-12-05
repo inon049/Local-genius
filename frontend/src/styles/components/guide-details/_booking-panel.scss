@@ -3,7 +3,7 @@
   .booking-desktop {
     display: none;
   }
-  bottom: 10vh;
+  bottom: 8vh;
   @include for-very-narrow-layout{
     bottom: 0;
   }

@@ -10,6 +10,9 @@ import profileMenu from "../components/profile/profile-menu";
 export default {
   components: {
     profileMenu
+  },
+  created(){
+    this.$store.dispatch('clearUserNotifs')
   }
 };
 </script>
