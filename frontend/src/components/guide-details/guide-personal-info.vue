@@ -1,6 +1,6 @@
 <template>
   <section class="guide-container flex col" v-if="guide">
-      <button @click="back" class="back-btn">Back to {{guide.city}} page</button>
+    <button @click="back" class="back-btn">Back</button>
     <div class="personal-title-container flex space-between">
       <div class="personal-txt flex col">
         <h1>{{guide.name}}</h1>
@@ -20,6 +20,11 @@
         </ul>
       </div>
       <img class="profile-img" :src="guide.profileImgUrl" />
+    </div>
+    <div class="details-banner">
+      <p class="from-p">I'm from: {{guide.city}}</p>
+      <p class="langs-p">Languages: <span v-for="(lang,idx) in guide.langs" :key="idx">{{lang}}</span></p>
+      <img src="@/assets/img/banner.png">
     </div>
     <div class="flex row">
       <div class="questions-container container flex col">
