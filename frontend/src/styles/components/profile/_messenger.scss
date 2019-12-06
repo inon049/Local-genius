@@ -1,15 +1,22 @@
 .messenger-container {
   display: flex;
-  height: 79vh;
   width: 100%;
+  height:86vh;
+  @include for-narrow-layout{
+  height:81.5vh;
+    
+  }
   .recent-chats {
     width: auto;
-    height: 82vh;
     overflow: auto;
+    height: 86vh;
+
     direction:ltr;
     border-right: 1px solid #97c6cc93;
     @include for-narrow-layout {
+      height: 82vh;
       min-width: 330px;
+      width: 30%;
     }
 
     .chat-title {
@@ -37,25 +44,29 @@
   .chat {
       flex: 1;
     display: flex;
-    height: 70vh;
+    height: 80vh;
     flex-direction: column;
     overflow-y: auto;
+    @include for-narrow-layout{
+      height: 75vh;
+
+    }
     .chat-header{
         display: flex;
         align-items: center;
         border-bottom:1px solid $clr3;
         padding: 10px 20px;
         width: 100%;
-        height: 70px;
+        height: 71px;
         background-color: #fff;
         position: fixed;
-        @include for-narrow-layout{
-        }
+ 
         img{
             width: 50px;
             height: 50px;
             border-radius: 100px;
             margin-right:15px;
+            
         }
     }
     .chat-txt{
@@ -85,10 +96,9 @@
         background-color: white;
         border-top:0.5px solid #97c6ccdb;
         padding: 10px;
-        bottom: 75px    ;
+        bottom: 35px    ;
         @include for-very-narrow-layout{
             bottom:0;
-
         }
         input{
             border:none;
@@ -115,11 +125,13 @@
     display: flex;
     width: 100%;
     margin-bottom:15px;
-    padding: 5px;
+    padding: 10px 15px;
     border-radius: 10px;
-    padding-right:15px;
-    padding-left:0;
     cursor: pointer;
+    @include for-narrow-layout{
+      padding: 5px 15px;
+
+    }
     &:hover{
         background-color: rgb(243, 243, 243);
     }
@@ -154,8 +166,7 @@
   }
 }
 .el-tabs--border-card>.el-tabs__content{
-    padding: 15px;
-    padding-bottom: 0!important;
+    padding: 0 !important;
 }
 
 .incoming-msg{
@@ -193,4 +204,8 @@
 #recent::-webkit-scrollbar {
   background-color: white;
   width: 10px;
+}
+
+.el-tabs--border-card{
+  box-shadow: none!important;
 }

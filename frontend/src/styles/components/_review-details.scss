@@ -5,12 +5,14 @@
   border-radius: 3px;
   display: flex;
   flex-direction: row;
-  width:48%;
+  width:80%;
   p {
     margin: 0;
   }
   .review-header {
+    width: 100%;
     .review-txt {
+      width: 100%;
       justify-self: flex-end;
       padding: 0 15px;
       
