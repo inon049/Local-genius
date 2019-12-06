@@ -57,7 +57,8 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+  },
   computed: {},
   components: {
     "vue-tiny-slider": VueTinySlider

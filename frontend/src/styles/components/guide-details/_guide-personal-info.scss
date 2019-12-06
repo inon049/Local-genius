@@ -111,6 +111,7 @@
 .personal-txt {
   width: 100%;
   padding: 10px 20px;
+  padding-bottom: 0;
   h1 {
     font-size: 2.2rem;
     margin-bottom: 15px;
@@ -123,6 +124,18 @@
   }
   @include for-medium-layout {
     width: 50%;
+  }
+  .guide-interests-list{
+    height: 100%;
+    margin:0;
+    padding-bottom: 0;
+    padding-left: 0;
+    li{
+      height: rem(30px);
+    }
+    li:first-child{
+      margin-left: 0;
+    }
   }
 }
 
