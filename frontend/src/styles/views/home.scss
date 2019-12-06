@@ -183,7 +183,7 @@
 .scroll-up {
   text-decoration: none;
   position: fixed;
-  bottom: 125px;
+  bottom: 45px;
   right: 0;
   width: 25px;
   display: flex;
@@ -192,9 +192,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 3px;
+  z-index: 1000;
   @include for-very-narrow-layout {
-    bottom: 49px;
-    right: 5px;
+    bottom: 10px;
+    right: 22px;
   }
 
   .arrow-up {

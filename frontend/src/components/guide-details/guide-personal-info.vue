@@ -1,5 +1,6 @@
 <template>
   <section class="guide-container flex col" v-if="guide">
+      <button @click="back" class="back-btn">Back to {{guide.city}} page</button>
     <div class="personal-title-container flex space-between">
       <div class="personal-txt flex col">
         <h1>{{guide.name}}</h1>

@@ -4,24 +4,30 @@
     <h3>Booked by {{booking.byUser.name}} </h3>
     <p class="date">{{ booking.createdAt | moment("calendar") }}</p>
     </div>
-    <div class="flex space-between">
+    <div class="booking-details flex">
     <img :src="imgUrl"/>
-    <div class="flex col space-around">
+    <div class="booking-info flex">
       <ul>
       <li>For {{booking.attendees}} attendees</li>
       <li :title="booking.at|moment('calendar')">The tour is {{ booking.at | moment("from")}}</li>
       <li>({{date}})</li>
       </ul>
-    <button>Send messege</button>
+    <button @click="goToMsg">Send message</button>
       </div>
       </div>
   </section>
 </template>
 
 <script>
+import {eventBus} from '../../services/event.bus.service'
 export default {
   props: {
     booking: Object
+  },
+  methods:{
+    goToMsg(){
+    eventBus.$emit('goMsg')
+    }
   },
   computed: {
     imgUrl() {
@@ -33,7 +39,8 @@ export default {
     date(){
       var date = new Date(this.booking.at)
      return date.toLocaleDateString()
-    }
+    },
   },
+
 };
 </script>
