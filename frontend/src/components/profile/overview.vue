@@ -12,6 +12,7 @@
      <button class="dates-btn" @click="saveDates">Block these dates</button>
      </div>
 </div>
+  <h2 v-if="notifications" class="overview-headers">Notifications</h2>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
     <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
@@ -49,7 +50,8 @@ export default {
       guide: {},
       bookings: [],
       reviews: [],
-      disabledDates:[]
+      disabledDates:[],
+      notifications: []
 
     };
   },

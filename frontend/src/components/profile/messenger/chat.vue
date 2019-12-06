@@ -4,7 +4,7 @@
       <img :src="img" />
       <h1>{{chat.user.name}}</h1>
     </div>
-    <div class="chat-txt">
+    <div id="chat" class="chat-txt">
       <div class="msg" :class="checkMsg(msg)" v-for="(msg,idx) in chat.msgs" :key="idx">
         <img :src="checkUrl(msg)" />
         <p>{{msg.txt}}</p>
@@ -29,7 +29,7 @@ export default {
       msg: {
         txt: "",
         isRead: false
-      },
+      }
     };
   },
   methods: {
@@ -41,8 +41,7 @@ export default {
       // console.log(msg ,'msg');
       // console.log(this.user._id, "loggedIn");
       // console.log(this.chat.user._id, 'chat.user');
-      if (msg.fromId === this.user._id)
-       return this.chat.guide.imgUrl;
+      if (msg.fromId === this.user._id) return this.chat.guide.imgUrl;
       else return this.chat.user.imgUrl;
     },
     sendMsg() {
@@ -56,30 +55,36 @@ export default {
         this.msg.txt = "";
       }
     },
-    sortMsgs(){
-        this.chat.msgs.forEach(msg => {
+    sortMsgs() {
+      this.chat.msgs.forEach(msg => {
         if (msg.fromId !== this.user._id) msg.in = true;
       });
-    }
+    },
+   
   },
-  computed:{
-    img(){
+  computed: {
+    img() {
       // console.log(this.chat,'chat');
       // console.log(this.user._id, 'loogedin.id');
-      if(this.user._id === this.chat.user.id) return this.chat.guide.imgUrl
-      else if(this.user._id === this.chat.guide.id) return this.chat.user.imgUrl
+      if (this.user._id === this.chat.user.id) return this.chat.guide.imgUrl;
+      else if (this.user._id === this.chat.guide.id)
+        return this.chat.user.imgUrl;
     }
   },
   created() {
     if (this.chat.msgs.length) {
-      this.sortMsgs()
+      this.sortMsgs();
     }
-    
   },
-  watch:{
-    'chat.msgs'(){
-      this.sortMsgs()
+  watch: {
+    "chat.msgs"() {
+      this.sortMsgs();
     }
-  }
+  },
+  updated(){            
+  var elem = this.$el
+  elem.scrollTop = elem.scrollHeight;
+},
 };
 </script>
+
