@@ -47,14 +47,14 @@
   color: $clr1;
   > *:not(:last-child) {
     border-bottom: 1px solid $clr3;
-    padding-bottom:20px;
+    padding-bottom: 20px;
   }
-  h1{
+  h1 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     margin-top: 20px;
-    &:first-child{
-      margin-top:0;
+    &:first-child {
+      margin-top: 0;
     }
   }
   h3 {
@@ -91,10 +91,10 @@
 
 .personal-title-container {
   align-self: center;
-  margin-bottom: rem(40px);
+  // margin-bottom: rem(40px);
   flex-direction: column;
   border-bottom: 1px solid $clr3;
-  padding-bottom: rem(40px);
+  padding-bottom: rem(20px);
   color: $clr1;
   h1 {
     font-size: 4rem;
@@ -105,6 +105,56 @@
   @include for-narrow-layout {
     width: 100%;
     flex-direction: row;
+  }
+}
+
+.details-banner {
+  position: relative;
+  border-bottom: 1px solid $clr3;
+  // padding-bottom: rem(40px);
+  font-size: 1.3rem;
+  img {
+    height: 80px;
+  }
+  p {
+    position: absolute;
+    color: white;
+    margin: 0;
+  }
+  .from-p {
+    top: 5%;
+    left: 10%;
+  }
+  .langs-p {
+    top: 40%;
+    left: 10%;
+    line-height: 1;
+    span {
+      font-size: 1.2rem;
+      &:not(:last-child):after {
+        content: " ,";
+      }
+    }
+  }
+  @include for-very-very-narrow-layout {
+    .from-p {
+      top: 10%;
+      left: 10%;
+    }
+    .langs-p {
+      top: 40%;
+      left: 10%;
+    }
+  }
+  @include for-very-narrow-layout {
+    .from-p {
+      top: 20%;
+      left: 10%;
+    }
+    .langs-p {
+      top: 40%;
+      left: 55%;
+    }
   }
 }
 
@@ -125,15 +175,15 @@
   @include for-medium-layout {
     width: 50%;
   }
-  .guide-interests-list{
+  .guide-interests-list {
     height: 100%;
-    margin:0;
+    margin: 0;
     padding-bottom: 0;
     padding-left: 0;
-    li{
+    li {
       height: rem(30px);
     }
-    li:first-child{
+    li:first-child {
       margin-left: 0;
     }
   }
