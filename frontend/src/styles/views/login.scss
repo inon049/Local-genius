@@ -16,4 +16,12 @@
     h1{
         margin-bottom: 30px;
     }
+    a{
+        text-decoration: none;
+        color: $clr5;
+    }
+}
+
+input:-internal-autofill-selected{
+background-color: #ff5a6033!important;
 }
