@@ -6,7 +6,6 @@ socket.on('userNotif', ({ msg }) => {
   store.commit({ type: 'pushToUserNotifs', msg })
 })
 socket.on('userMsgNotif', function ({ chatId, msg }) {
-  console.log('usernotifmsg in front')
   store.dispatch({ type: 'pushUserMsg', chatId, msg })
 })
 export default {
