@@ -1,7 +1,7 @@
 <template>
   <section v-if="chats.length" class="recent-chats" id="recent">
     <div class="chat-title">
-    <img :src="chats[0].user.imgUrl">
+    <img :src="user.profileImgUrl">
     <h1>Chats</h1>
     </div>
     <chat-preview :id="user._id" @click.native="selectChat(chat)" v-for="(chat,idx) in chats" :key="idx" :chat="chat"></chat-preview>
@@ -21,8 +21,8 @@ export default {
   methods:{
     selectChat(chat){
       this.$emit('selectChat',chat)
-      console.log(chat);
     }
-  }
+  },
+
 };
 </script>

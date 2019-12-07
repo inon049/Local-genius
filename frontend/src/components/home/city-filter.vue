@@ -2,7 +2,7 @@
   <section class="city-filter">
     <input @change="goToCity" list="cities" type="text" placeholder="Where do you wanna go?" />
     <datalist id="cities">
-      <option v-for="city in cities" :key="city._id" :value="city.name"></option>
+      <option style="width:100%" v-for="city in cities" :key="city._id" :value="city.name"></option>
     </datalist>
   </section>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <section class="login-form-container">
     <h1>LOGIN</h1>
-    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px">
+    <el-form  :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px">
       <el-form-item prop="email">
         <el-input
           placeholder="Email"
@@ -23,11 +23,11 @@
         ></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">Login</el-button>
-        <el-button @click="resetForm('ruleForm')">Reset</el-button>
+        <el-button type="danger" @click="submitForm('ruleForm')">Login</el-button>
+        <el-button type="danger" plain  @click="resetForm('ruleForm')">Reset</el-button>
       </el-form-item>
     </el-form>
-    <a href="/signup">Not a member? Signup!</a>
+     <el-link href="/signup" type="danger" >Not a member? Signup!</el-link>
   </section>
 </template>
 

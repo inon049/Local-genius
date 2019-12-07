@@ -2,7 +2,7 @@
   <div class="guide-interests-container" v-if="guide">
     <ul class="guide-interests-list-picker">
       <div class="interests-header">
-        <h2>What are your interestes?</h2>
+        <h2>Pick up to 3 interests that describe you the best:</h2>
       </div>
       <li
         v-for="(interest,idx) in interests"
@@ -19,7 +19,7 @@
     </ul>
     <div class="flex justify-center">
       <button @click="save" class="save-btn">SAVE</button>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -30,8 +30,8 @@ export default {
   },
   data() {
     return {
-      guide:{},
-      selectedInterests:{interests:[]},
+      guide: {},
+      selectedInterests: { interests: [] },
       interests: [
         { name: "Culture", isSelected: false },
         { name: "Coffee", isSelected: false },
@@ -50,9 +50,13 @@ export default {
   },
   methods: {
     selectInterest(interest) {
+      if (this.selectedInterests.interests.length === 3 && !interest.isSelected)
+        return;
       interest.isSelected = !interest.isSelected;
       const interests = this.selectedInterests.interests;
-      const interestIdx = this.selectedInterests.interests.indexOf(interest.name);
+      const interestIdx = this.selectedInterests.interests.indexOf(
+        interest.name
+      );
       if (interestIdx < 0) {
         this.selectedInterests.interests.push(interest.name);
       } else this.selectedInterests.interests.splice(interestIdx, 1);
@@ -60,15 +64,16 @@ export default {
     save() {
       this.guide.interests = this.selectedInterests.interests;
       this.$emit("save", this.guide);
-    },
-  
+    }
   },
   created() {
-    if(this.guideToEdit) this.guide = this.guideToEdit
+    if (this.guideToEdit) this.guide = this.guideToEdit;
     this.guideToEdit.interests.forEach(interest => {
-      if (interest.isSelected) 
-     var selected = this.interests.find(localInterest => localInterest.name === interest.name)
-     selected.isSelected = true;
+      if (interest.isSelected)
+        var selected = this.interests.find(
+          localInterest => localInterest.name === interest.name
+        );
+      selected.isSelected = true;
     });
   }
 };
