@@ -11,8 +11,5 @@ export default {
   components: {
     profileMenu
   },
-  created(){
-    this.$store.dispatch('clearUserNotifs')
-  }
 };
 </script>

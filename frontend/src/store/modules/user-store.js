@@ -31,9 +31,9 @@ export default {
     setUsers(state, { users }) {
       state.users = users
     },
-    updateUser(state,{user}){
-      let idx = state.users.findIndex(currUser=>user._id===currUser._id)
-      state.users[idx]=user
+    updateUser(state,{updatedUser}){
+      let idx = state.users.findIndex(user=>user._id===updatedUser._id)
+      state.users[idx]=updatedUser
     },
     setUser(state, { user }) {
       state.loggedInUser = user

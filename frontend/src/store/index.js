@@ -6,6 +6,7 @@ import socketStore from './modules/socket-store.js'
 import bookingStore from './modules/booking-store'
 import reviewStore from './modules/review-store'
 import chatStore from './modules/chat-store'
+import notifStore from './modules/notif-store'
 Vue.use(Vuex)
 
 export default new Vuex.Store({

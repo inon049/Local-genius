@@ -1,7 +1,7 @@
 <template>
   <section class="guide-details-container mt-10">
     <guide-personal-info :guide="guide"></guide-personal-info>
-    <review-panel :guide="guide" v-if="guide"></review-panel>
+    <review-panel :filter="filter" :guide="guide" v-if="guide"></review-panel>
   </section>
 </template>
 
@@ -10,6 +10,11 @@ import guidePersonalInfo from "../components/guide-details/guide-personal-info";
 import reviewPanel from "@/components/guide-details/review-panel";
 
 export default {
+  data(){
+    return {
+      filter:null
+    }
+  },
   computed: {
     guide() {
       return this.$store.getters.guide;
@@ -23,6 +28,16 @@ export default {
       console.log(err);
     }
     window.scrollTo(0, 0);
+    const filterBy = {
+      _id: this.guide._id,
+      isGuide: true,
+      recent: 1
+    };
+    this.filter = filterBy;
+    await this.$store.dispatch({
+      type: "loadReviews",
+      filterBy
+    });
   },
   components: {
     guidePersonalInfo,
