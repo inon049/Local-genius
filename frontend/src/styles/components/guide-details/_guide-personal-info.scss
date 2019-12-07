@@ -110,15 +110,16 @@
 
 .details-banner {
   position: relative;
-  border-bottom: 1px solid $clr3;
+  // border-bottom: 1px solid $clr3;
   // padding-bottom: rem(40px);
   font-size: 1.3rem;
   img {
     height: 80px;
+    opacity: 0.5;
   }
   p {
     position: absolute;
-    color: white;
+    color: black;
     margin: 0;
   }
   .from-p {
@@ -130,6 +131,7 @@
     left: 10%;
     line-height: 1;
     span {
+      color: black;
       font-size: 1.2rem;
       &:not(:last-child):after {
         content: " ,";

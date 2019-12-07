@@ -1,29 +1,49 @@
 <template>
   <section class="overview-container">
     <div class="overview-main">
-    <div class="overview-header">
-    <h1>{{guide.name}}</h1>
-    <img :src="guide.profileImgUrl">
+      <div class="overview-header">
+        <h1>{{guide.name}}</h1>
+        <img :src="guide.profileImgUrl"/>
+      </div>
+      <div class="dates-picker">
+        <h2>Your Calendar</h2>
+        <h5>Select dates to block them</h5>
+        <div v-if="isLoading">
+        <img src="@/assets/img/loading.svg" alt="loading" />
+        </div>
+        <v-date-picker v-else
+          :attributes="attrs"
+          @input="selectDates"
+          mode="range"
+          :disabled-dates="disabledDates"
+          :value="null"
+          color="red"
+          is-inline
+        />
+        <button class="dates-btn" @click="saveDates">Block these dates</button>
+      </div>
     </div>
-    <div class="dates-picker">
-      <h2>Your Calendar</h2>
-      <h5>Select dates to block them</h5>
-     <v-date-picker :attributes="attrs" @input="dates" mode="range" :disabled-dates="disabledDates" :value="null" color="red" is-inline />
-     <button class="dates-btn" @click="saveDates">Block these dates</button>
-     </div>
-</div>
-  <h2 v-if="notifications" class="overview-headers">Notifications</h2>
-  <div class="overview-notifs-list">
-    <notif-preview v-for="(notification,idx) in notifications" :key="idx" :notification="notification"></notif-preview>
-  </div>
+    <h2 v-if="notifications" class="overview-headers">Notifications</h2>
+    <div class="overview-notifs-list">
+      <notif-preview
+        v-for="(notification,idx) in notifications"
+        :key="idx"
+        :notification="notification"
+      ></notif-preview>
+    </div>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
-    <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
+      <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
     </div>
     <h2 class="overview-headers">Recent Reviews:</h2>
     <div class="review-details-list">
-     <review-details :loggedInUser="loggedInUser" v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
-     </div>
+      <review-details
+        :loggedInUser="loggedInUser"
+        v-for="(review,idx) in reviews"
+        :key="idx"
+        :review="review"
+      ></review-details>
+    </div>
   </section>
 </template>
 
@@ -44,62 +64,70 @@ export default {
   },
   data() {
     return {
-        attrs: [
+      isLoading : false,
+      attrs: [
         {
-          key: 'today',
-          dot: true,
-          dates: [new Date(2020, 0, 5)]
-        },
+          bar: true,
+          popover: {
+            label: "Tour!"
+          },
+          dates: []
+        }
       ],
-      selectedDates:[],
+      selectedDates: [],
       guide: {},
       bookings: [],
       reviews: [],
-      disabledDates:[],
-      notifications: [{
-        msg : 'You just got a new customer',
-        type : 'Booking'
-      },
-      {
-        msg : 'You have a new message',
-        type : 'Message'
-      }]
-
+      disabledDates: [],
+      notifications: [
+        {
+          msg: "You just got a new customer",
+          type: "Booking"
+        },
+        {
+          msg: "You have a new message",
+          type: "Message"
+        }
+      ]
     };
   },
-  methods:{
-    dates(dates){
-      this.selectedDates = dates
+  methods: {
+    selectDates(selected) {
+      this.selectedDates = selected;
     },
-    saveDates(){
-      this.disabledDates.push(this.selectedDates)
+    saveDates() {
+      this.disabledDates.push(this.selectedDates);
     }
   },
-  computed:{
+  computed: {
     loggedInUser() {
       const loggedInUser = this.$store.getters.loggedInUser;
       if (loggedInUser) return this.$store.getters.loggedInUser;
       else return { _id: "" };
-    }
+    },
   },
   async created() {
+    this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
     let id = this.$store.getters.loggedInUser._id;
     await this.$store.dispatch({ type: "getUserById", _id: id });
     this.guide = this.$store.getters.guide;
     let filterBy = {
       _id: id,
       isGuide: true,
-      // recent: 1
+      recent: 1
     };
     await this.$store.dispatch({ type: "loadBookings", filterBy });
     this.bookings = this.$store.getters.bookings;
     this.bookings.forEach(booking => {
-    this.attrs[0].dates.push(new Date(booking.at))
+      this.attrs[0].dates.push(new Date(booking.at));
     });
     let reviews = await reviewService.query(filterBy);
     this.reviews = reviews;
-    // this.attrs[0].dates = this.disabledDates
-  }
+  },
+
 };
 </script>
 
