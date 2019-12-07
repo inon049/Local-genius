@@ -13,6 +13,9 @@
      </div>
 </div>
   <h2 v-if="notifications" class="overview-headers">Notifications</h2>
+  <div class="overview-notifs-list">
+    <notif-preview v-for="(notification,idx) in notifications" :key="idx" :notification="notification"></notif-preview>
+  </div>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
     <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
@@ -31,11 +34,13 @@ import reviewService from "@/services/review.service";
 //COMPONENTS
 import reviewDetails from "../profile/review-details";
 import bookingPreview from "../profile/booking-preview";
+import notifPreview from "../profile/notif-preview";
 
 export default {
   components: {
     reviewDetails,
-    bookingPreview
+    bookingPreview,
+    notifPreview
   },
   data() {
     return {
@@ -51,7 +56,14 @@ export default {
       bookings: [],
       reviews: [],
       disabledDates:[],
-      notifications: []
+      notifications: [{
+        msg : 'You just got a new customer',
+        type : 'Booking'
+      },
+      {
+        msg : 'You have a new message',
+        type : 'Message'
+      }]
 
     };
   },
