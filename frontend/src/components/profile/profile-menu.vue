@@ -10,6 +10,7 @@
 import Overview from "./overview";
 import Messenger from "./messenger";
 import Bookings from "./booking-list";
+import { eventBus } from '../../services/event.bus.service';
 export default {
   data() {
     return {
@@ -27,6 +28,11 @@ export default {
     Overview,
     Messenger,
     Bookings
+  },
+  created(){
+    eventBus.$on('goMsg',() => {
+      this.activeName = 'Messenger'
+    })
   }
 };
 </script>

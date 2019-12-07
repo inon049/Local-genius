@@ -103,13 +103,24 @@
   @include guide-card-aspect-ratio(100, 80);
 }
 
+.guide-city{
+  height: 7%;
+  padding: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  p{
+    margin: 0;
+    text-shadow: 0px .1px 0 black;
+  }
+}
+
 //GUIDE INTERESTS
 
 .guide-interests-list {
   padding: 5px;
   width: 100%;
   list-style: none;
-  height: 15%;
+  height: 8%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -122,10 +133,9 @@
   background-color: rgb(240, 240, 240);
   border-radius: 5px;
   width: 32%;
-  height: 45%;
   margin: 0 2px;
   font-size: 0.9rem;
-  padding: 0 5px;
+  padding: 5px 5px;
   img {
     width: 15%;
   }

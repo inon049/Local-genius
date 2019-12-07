@@ -32,6 +32,9 @@
     <div class="guide-short-desc">
       <p>{{guide.desc}}</p>
     </div>
+    <div class="guide-city">
+      <p>From: {{guide.city}}</p>
+    </div>
     <ul class="guide-interests-list">
       <li
         v-for="(interest,idx) in guide.interests"
@@ -57,7 +60,8 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+  },
   computed: {},
   components: {
     "vue-tiny-slider": VueTinySlider

@@ -12,8 +12,11 @@
      <button class="dates-btn" @click="saveDates">Block these dates</button>
      </div>
 </div>
+  <h2 v-if="notifications" class="overview-headers">Notifications</h2>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
-    <booking-carousel :bookings="bookings"></booking-carousel>
+    <div class="overview-booking-list">
+    <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
+    </div>
     <h2 class="overview-headers">Recent Reviews:</h2>
     <div class="review-details-list">
      <review-details v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
@@ -26,13 +29,13 @@
 import bookingService from "@/services/booking.service";
 import reviewService from "@/services/review.service";
 //COMPONENTS
-import bookingCarousel from "../profile/booking-carousel";
 import reviewDetails from "../profile/review-details";
+import bookingPreview from "../profile/booking-preview";
 
 export default {
   components: {
-    bookingCarousel,
-    reviewDetails
+    reviewDetails,
+    bookingPreview
   },
   data() {
     return {
@@ -47,7 +50,8 @@ export default {
       guide: {},
       bookings: [],
       reviews: [],
-      disabledDates:[]
+      disabledDates:[],
+      notifications: []
 
     };
   },

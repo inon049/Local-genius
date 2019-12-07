@@ -25,21 +25,17 @@ export default {
         async saveBooking(context, { booking }) {
             await context.dispatch({ type: "loadChats" });
             let chats= context.rootGetters.chats
-            console.log('sve booking if',chats.some(chat=>{ 
-                return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
-            }));
             if(!chats.some(chat=>{ 
                 return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
             })){
                 context.dispatch({type:'createChat', chat:{guideId:booking.toGuideId,userId:booking.byUserId}})
+            }
                 const currBooking = await bookingService.add(booking)
                 context.commit({ type: 'setCurrBooking', booking : currBooking })
-                context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'Booked'})
+                context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'You just got a new customer'})
                 return currBooking
 
-            }else{
-                console.log('bookedAlready');
-            }
+           
             
         },
         async loadBookings(context,{filterBy}){

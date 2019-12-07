@@ -1,10 +1,10 @@
 <template>
   <section id="recent" class="chat" v-if="chat!==null">
     <div class="chat-header">
-      <img :src="chat.user.imgUrl" />
+      <img :src="img" />
       <h1>{{chat.user.name}}</h1>
     </div>
-    <div class="chat-txt">
+    <div id="chat" class="chat-txt">
       <div class="msg" :class="checkMsg(msg)" v-for="(msg,idx) in chat.msgs" :key="idx">
         <img :src="checkUrl(msg)" />
         <p>{{msg.txt}}</p>
@@ -16,7 +16,7 @@
     </form>
   </section>
 </template>
-
+//
 <script>
 import socketService from "@/services/socket.service";
 export default {
@@ -29,9 +29,7 @@ export default {
       msg: {
         txt: "",
         isRead: false
-      },
-
-      isIncoming: false
+      }
     };
   },
   methods: {
@@ -40,8 +38,11 @@ export default {
       else return "sent-msg";
     },
     checkUrl(msg) {
-      if (msg.in) return this.chat.user.imgUrl;
-      else return this.chat.guide.imgUrl;
+      // console.log(msg ,'msg');
+      // console.log(this.user._id, "loggedIn");
+      // console.log(this.chat.user._id, 'chat.user');
+      if (msg.fromId === this.user._id) return this.chat.guide.imgUrl;
+      else return this.chat.user.imgUrl;
     },
     sendMsg() {
       if (this.msg.txt) {
@@ -53,15 +54,37 @@ export default {
         this.$emit("sendMsg", JSON.parse(JSON.stringify(this.msg)));
         this.msg.txt = "";
       }
+    },
+    sortMsgs() {
+      this.chat.msgs.forEach(msg => {
+        if (msg.fromId !== this.user._id) msg.in = true;
+      });
+    },
+   
+  },
+  computed: {
+    img() {
+      // console.log(this.chat,'chat');
+      // console.log(this.user._id, 'loogedin.id');
+      if (this.user._id === this.chat.user.id) return this.chat.guide.imgUrl;
+      else if (this.user._id === this.chat.guide.id)
+        return this.chat.user.imgUrl;
     }
   },
   created() {
     if (this.chat.msgs.length) {
-      
-      this.chat.msgs.forEach(msg => {
-        if (msg.fromId !== this.user._id) msg.in = true;
-      });
+      this.sortMsgs();
     }
-  }
+  },
+  watch: {
+    "chat.msgs"() {
+      this.sortMsgs();
+    }
+  },
+  updated(){            
+  var elem = this.$el
+  elem.scrollTop = elem.scrollHeight;
+},
 };
 </script>
+

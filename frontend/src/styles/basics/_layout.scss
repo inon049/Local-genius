@@ -25,7 +25,6 @@
 }
 
 // main-header
-
 .main-header {
   display: none;
   height: 10vh;
@@ -38,6 +37,13 @@
   background: #ffffff;
   border-bottom: 1px solid $clr2;
   z-index: 100;
+  .notifs-bubble{
+    width: 20px;
+    position: absolute;
+    top: -11px;
+    left: -13px;
+    z-index: 99999;
+  }
   .logo {
     font-family: Kaushan;
     font-size: 1.8rem;
@@ -90,14 +96,12 @@
   padding: 10px;
   img {
     width: 28px;
-    svg {
-      fill: blue;
-    }
   }
   background-color: #fff;
   @include for-very-narrow-layout {
     display: none;
   }
+
 }
 
 #app {
@@ -109,7 +113,7 @@
   min-height: 90vh;
 }
 .mt-10 {
-  margin-bottom: 10vh;
+  margin-bottom: 5.5vh;
   width: 100%;
   @include for-very-narrow-layout {
     margin-bottom: 0;

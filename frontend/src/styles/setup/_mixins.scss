@@ -32,7 +32,11 @@
         @content;
     }
 }
-
+@mixin for-mid-wide-layout {
+    @media (min-width: $break-mid-wide) {
+        @content;
+    }
+}
 @mixin for-wide-layout {
     @media (min-width: $break-wide) {
         @content;

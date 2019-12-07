@@ -33,8 +33,8 @@
         ></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">Signup</el-button>
-        <el-button @click="resetForm('ruleForm')">Reset</el-button>
+        <el-button type="danger" @click="submitForm('ruleForm')">Signup</el-button>
+        <el-button type="danger" plain @click="resetForm('ruleForm')">Reset</el-button>
       </el-form-item>
     </el-form>
     <a href="/login">Already a member? Login!</a>
