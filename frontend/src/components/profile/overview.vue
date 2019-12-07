@@ -22,7 +22,7 @@
     </div>
     <h2 class="overview-headers">Recent Reviews:</h2>
     <div class="review-details-list">
-     <review-details v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
+     <review-details :loggedInUser="loggedInUser" v-for="(review,idx) in reviews" :key="idx" :review="review"></review-details>
      </div>
   </section>
 </template>
@@ -75,7 +75,13 @@ export default {
       this.disabledDates.push(this.selectedDates)
     }
   },
-
+  computed:{
+    loggedInUser() {
+      const loggedInUser = this.$store.getters.loggedInUser;
+      if (loggedInUser) return this.$store.getters.loggedInUser;
+      else return { _id: "" };
+    }
+  },
   async created() {
     let id = this.$store.getters.loggedInUser._id;
     await this.$store.dispatch({ type: "getUserById", _id: id });
