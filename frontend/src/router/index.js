@@ -8,9 +8,6 @@ import editGuide from '../views/guide-edit.vue'
 import login from '../views/login.vue'
 import signup from '../views/signup.vue'
 
-//profile children 
-// import messenger from '../components/profile/messenger.vue'
-// import summary from '../components/profile/summary.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,16 +39,6 @@ const routes = [
   {
     path: '/profile/:_id?',
     component: profile,
-    // children: [
-    //   {
-    //     path: '/profile/messenger',
-    //     component: messenger
-    //   },
-    //   {
-    //     path: '/profile/summary',
-    //     component: summary
-    //   }
-    // ]
   }
 ]
 
