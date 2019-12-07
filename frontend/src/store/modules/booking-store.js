@@ -32,7 +32,17 @@ export default {
             }
                 const currBooking = await bookingService.add(booking)
                 context.commit({ type: 'setCurrBooking', booking : currBooking })
-                context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'You just got a new customer'})
+                let notif ={
+                    toId: booking.toGuideId,
+                    fromId: booking.fromUserId,
+                    type:'booking',
+                     txt:'You just got a new booking',
+                    isRead:false,
+
+                    }
+
+                context.dispatch({type:'addNotif',notif})
+                context.dispatch({type:'sendNotif' , notif})
                 return currBooking
 
            

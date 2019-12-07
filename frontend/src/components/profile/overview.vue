@@ -14,7 +14,7 @@
 </div>
   <h2 v-if="notifications" class="overview-headers">Notifications</h2>
   <div class="overview-notifs-list">
-    <notif-preview v-for="(notification,idx) in notifications" :key="idx" :notification="notification"></notif-preview>
+    <notif-preview v-for="(notification,idx) in notifications" @click.native="notifClicked(notification)" :key="idx" :notification="notification"></notif-preview>
   </div>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
@@ -56,16 +56,12 @@ export default {
       bookings: [],
       reviews: [],
       disabledDates:[],
-      notifications: [{
-        msg : 'You just got a new customer',
-        type : 'Booking'
-      },
-      {
-        msg : 'You have a new message',
-        type : 'Message'
-      }]
-
     };
+  },
+  computed:{
+ notifications(){
+   return this.$store.getters.userNotifs
+ }
   },
   methods:{
     dates(dates){
@@ -73,6 +69,12 @@ export default {
     },
     saveDates(){
       this.disabledDates.push(this.selectedDates)
+    },
+    notifClicked(notif){
+      notif=JSON.parse(JSON.stringify(notif))
+      notif.isRead=true
+      this.$store.dispatch({type:'updateNotif',notif})
+      // if(notif.type==='msg')
     }
   },
   async created() {

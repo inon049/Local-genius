@@ -49,6 +49,8 @@ export default {
 }
 
 
+
+
 function getInterests() {
     return [
         { name: "Culture", isSelected: false },
