@@ -25,7 +25,6 @@ Vue.config.pwa = {
     name :"Local Genius",
     themeColor : '#ffffff',
 }
-console.log(Vue.config.pwa,'pwa');
 
 new Vue({
     router,
