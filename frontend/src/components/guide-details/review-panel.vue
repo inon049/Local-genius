@@ -27,7 +27,7 @@ export default {
     },
     reviews() {
       if (!this.$store.getters.reviews) return []
-      return this.$store.getters.reviews;
+      else return this.$store.getters.reviews;
     },
     loggedInUser() {
       const loggedInUser = this.$store.getters.loggedInUser;

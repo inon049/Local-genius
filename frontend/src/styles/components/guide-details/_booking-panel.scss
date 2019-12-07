@@ -15,6 +15,7 @@
   background-color: #ffffff;
   height: rem(107px);
   padding: 20px;
+  z-index: 5;
   @include for-mid-narrow-layout {
     display: flex;
     align-items: center;
