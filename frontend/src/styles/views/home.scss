@@ -20,8 +20,8 @@
     bottom: 27px;
     left: 10px;
     text-decoration: none;
-    background-color: #ff5a60;
-    color: white;
+    background-color: #ffffffab;
+    color: black;
     padding: 10px 20px;
     border-radius: 3px;
     &:hover {
@@ -58,14 +58,14 @@
   .titles {
     position: absolute;
     color: white;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
     font-family: Lato;
     padding-top: 0.5rem;
     text-align: center;
 
     h2 {
       font-size: 1.9rem;
-      font-weight: 400;
+      font-weight: 700;
       @include for-very-very-narrow-layout {
         font-size: 2rem;
       }
@@ -75,7 +75,7 @@
     }
     h3 {
       font-size: 1.7rem;
-      font-weight: 400;
+      font-weight: 700;
       @include for-very-very-narrow-layout {
         font-size: 2rem;
       }
@@ -131,6 +131,9 @@
       user-select: none;
       border: 0;
       outline: none;
+      &::placeholder{
+        font-size: 1.2rem;
+      }
     }
     option {
       width: 100%;
