@@ -21,7 +21,6 @@ Vue.use(VueCarousel);
 
 
 Vue.config.productionTip = false
-
 new Vue({
     router,
     store,

@@ -4,7 +4,7 @@
     <section class="main">
       <router-view />
       <a v-if="isScroll" class="scroll-up" href="#" v-scroll-to="{el:'#app', force:false}">
-        <img class="arrow-up" src="../src/assets/img/arrow-up.png" />
+        <img class="arrow-up" src="@/assets/img/arrow-up.png" />
       </a>
     </section>
     <mobile-nav></mobile-nav>

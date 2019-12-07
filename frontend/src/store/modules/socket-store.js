@@ -4,6 +4,7 @@ import store from '@/store/index'
 // socket.emit('test event', 'this is a testing string')
 socket.on('userNotif', ({ msg }) => {
   store.commit({ type: 'pushToUserNotifs', msg })
+  console.log('123333');
 })
 socket.on('userMsgNotif', function ({ chatId, msg }) {
   store.dispatch({ type: 'pushUserMsg', chatId, msg })
@@ -15,12 +16,15 @@ export default {
   getters: {
     userNotifs(state) {
       if (state.userNotifs.length) {
+        console.log('blabliblue');
         return state.userNotifs.length
       } else return null
     }
   },
   mutations: {
+   
     pushToUserNotifs(state, { txt }) {
+      console.log('pushing user notif');
       state.userNotifs.push(txt)
     },
     clearUserNotifs(state) {

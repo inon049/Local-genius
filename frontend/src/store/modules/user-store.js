@@ -31,6 +31,10 @@ export default {
     setUsers(state, { users }) {
       state.users = users
     },
+    updateUser(state,{user}){
+      let idx = state.users.findIndex(currUser=>user._id===currUser._id)
+      state.users[idx]=user
+    },
     setUser(state, { user }) {
       state.loggedInUser = user
     },
@@ -45,6 +49,10 @@ export default {
     }
   },
   actions: {
+    async updateUser(context,{user}){
+      const updatedUser = await userService.update(user)
+      context.commit({type:'updateUser',user})
+    },
     async loadUsers(context) {
       const users = await userService.query();
       context.commit({ type: 'setUsers', users })

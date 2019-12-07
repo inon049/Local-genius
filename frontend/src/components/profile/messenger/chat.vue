@@ -28,7 +28,8 @@ export default {
     return {
       msg: {
         txt: "",
-        isRead: false
+        isRead: false,
+        userType:''
       }
     };
   },
@@ -75,6 +76,9 @@ export default {
     if (this.chat.msgs.length) {
       this.sortMsgs();
     }
+    console.log(this.user,'loggdinUsa')
+    this.userType = (this.user._id===chat.user._id) ? 'user' :'guide'
+    console.log(this.userType,'<userType');
   },
   watch: {
     "chat.msgs"() {

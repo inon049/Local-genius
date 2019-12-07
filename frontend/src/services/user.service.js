@@ -4,9 +4,13 @@ import httpService from '@/services/http.service'
 
 const USER_URL = 'user/'
 
+
 async function query() {
     const users = await httpService.get(USER_URL)
     return users
+}
+function update(user){
+return httpService.put(USER_URL + user._id,user)
 }
 
 async function getById(_id) {
@@ -40,7 +44,8 @@ export default {
     getInterests,
     login,
     signup,
-    logout
+    logout,
+    update
 }
 
 

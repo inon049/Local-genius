@@ -3,11 +3,10 @@ module.exports = connectSockets
 let socketMap= {
 
 }
-
 function connectSockets(io) {
     io.on('connection', socket => {    
         socket.on('createUserSocket', userId =>{
-            socketMap[userId] =socket
+            socketMap[userId] = socket
             console.log(userId,'<socketmap connection');
         })
         socket.on('sendNotif', notif =>{
