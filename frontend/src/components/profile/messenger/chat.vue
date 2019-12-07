@@ -2,7 +2,7 @@
   <section id="recent" class="chat" v-if="chat!==null">
     <div class="chat-header">
       <img :src="img" />
-      <h1>{{chat.user.name}}</h1>
+      <h1>{{name}}</h1>
     </div>
     <div id="chat" class="chat-txt">
       <div class="msg" :class="checkMsg(msg)" v-for="(msg,idx) in chat.msgs" :key="idx">
@@ -29,7 +29,8 @@ export default {
       msg: {
         txt: "",
         isRead: false
-      }
+      },
+      name: ""
     };
   },
   methods: {
@@ -38,11 +39,8 @@ export default {
       else return "sent-msg";
     },
     checkUrl(msg) {
-      // console.log(msg ,'msg');
-      // console.log(this.user._id, "loggedIn");
-      // console.log(this.chat.user._id, 'chat.user');
-      if (msg.fromId === this.user._id) return this.chat.guide.imgUrl;
-      else return this.chat.user.imgUrl;
+      if (msg.fromId === this.chat.user._id) return this.chat.user.imgUrl;
+      else return this.chat.guide.imgUrl;
     },
     sendMsg() {
       if (this.msg.txt) {
@@ -60,31 +58,36 @@ export default {
         if (msg.fromId !== this.user._id) msg.in = true;
       });
     },
-   
+    checkName() {
+      if (this.user._id === this.chat.user._id)
+        this.name = this.chat.guide.name;
+      else if (this.user._id === this.chat.guide._id)
+        this.name = this.chat.user.name;
+    }
   },
   computed: {
     img() {
-      // console.log(this.chat,'chat');
-      // console.log(this.user._id, 'loogedin.id');
-      if (this.user._id === this.chat.user.id) return this.chat.guide.imgUrl;
-      else if (this.user._id === this.chat.guide.id)
+      if (this.user._id === this.chat.user._id) return this.chat.guide.imgUrl;
+      else if (this.user._id === this.chat.guide._id)
         return this.chat.user.imgUrl;
     }
   },
-  created() {
+  mounted() {
     if (this.chat.msgs.length) {
       this.sortMsgs();
     }
+    this.checkName();
   },
   watch: {
     "chat.msgs"() {
       this.sortMsgs();
+      this.checkName();
     }
   },
-  updated(){            
-  var elem = this.$el
-  elem.scrollTop = elem.scrollHeight;
-},
+  updated() {
+    var elem = this.$el;
+    elem.scrollTop = elem.scrollHeight;
+  }
 };
 </script>
 
