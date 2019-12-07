@@ -21,6 +21,11 @@ Vue.use(VueCarousel);
 
 
 Vue.config.productionTip = false
+Vue.config.pwa = {
+    name :"Local Genius",
+    themeColor : '#ffffff',
+}
+console.log(Vue.config.pwa,'pwa');
 
 new Vue({
     router,
