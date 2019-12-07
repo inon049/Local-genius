@@ -16,6 +16,9 @@ import reviewList from "./review-list";
 import reviewAdd from "./review-add";
 
 export default {
+  props:{
+    filter : Object
+  },
   data() {
     return {
       filterBy: null
@@ -62,17 +65,8 @@ export default {
       });
     }
   },
-  async created() {
-    const filterBy = {
-      _id: this.guide._id,
-      isGuide: true,
-      recent: 1
-    };
-    this.filterBy = filterBy;
-    await this.$store.dispatch({
-      type: "loadReviews",
-      filterBy
-    });
+  created() {
+    this.filterBy = this.filter 
   },
   components: {
     reviewList,

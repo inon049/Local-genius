@@ -24,7 +24,7 @@
     <div class="details-banner">
       <p class="from-p">I'm from: {{guide.city}}</p>
       <p class="langs-p">Languages: <span v-for="(lang,idx) in guide.langs" :key="idx">{{lang}}</span></p>
-      <img src="@/assets/img/banner.png">
+      <img src="@/assets/img/banner2.jpg">
     </div>
     <div class="flex row">
       <div class="questions-container container flex col">
