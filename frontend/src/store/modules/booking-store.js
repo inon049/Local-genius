@@ -9,40 +9,40 @@ export default {
         booking(state) {
             return state.currBooking
         },
-        bookings(state){
+        bookings(state) {
             return state.bookings
         }
     },
     mutations: {
-        setCurrBooking(state,{booking}){
+        setCurrBooking(state, { booking }) {
             state.currBooking = booking
         },
-        setBookings(state,{bookings}){
+        setBookings(state, { bookings }) {
             state.bookings = bookings
         }
     },
     actions: {
         async saveBooking(context, { booking }) {
             await context.dispatch({ type: "loadChats" });
-            let chats= context.rootGetters.chats
-            if(!chats.some(chat=>{ 
-                return chat.guide._id===booking.toGuideId && chat.user._id===booking.byUserId
-            })){
-                context.dispatch({type:'createChat', chat:{guideId:booking.toGuideId,userId:booking.byUserId}})
+            let chats = context.rootGetters.chats
+            if (!chats.some(chat => {
+                return chat.guide._id === booking.toGuideId && chat.user._id === booking.byUserId
+            })) {
+                context.dispatch({ type: 'createChat', chat: { guideId: booking.toGuideId, userId: booking.byUserId } })
             }
-                const currBooking = await bookingService.add(booking)
-                context.commit({ type: 'setCurrBooking', booking : currBooking })
-                context.dispatch({type:'sendNotif' , to: booking.toGuideId, msg:'You just got a new customer'})
-                return currBooking
+            const currBooking = await bookingService.add(booking)
+            context.commit({ type: 'setCurrBooking', booking: currBooking })
+            context.dispatch({ type: 'sendNotif', to: booking.toGuideId, msg: 'You just got a new customer' })
+            return currBooking
 
-           
-            
+
+
         },
-        async loadBookings(context,{filterBy}){
+        async loadBookings(context, { filterBy }) {
             const bookings = await bookingService.query(filterBy)
-            context.commit({type:'setBookings', bookings})
+            context.commit({ type: 'setBookings', bookings })
             return bookings
         },
-        
+
     }
 }

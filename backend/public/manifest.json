@@ -1,1 +1,21 @@
-{"name":"local-genius","short_name":"local-genius","theme_color":"#4DBA87","icons":[{"src":"./img/icons/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"./img/icons/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"start_url":".","display":"standalone","background_color":"#000000"}
+{
+    "name": "local-genius",
+    "short_name": "local-genius",
+    "theme_color": "#4DBA87",
+    "icons": [
+        {
+            "src": "./img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "gcm_sender_id": "BG_-0lICXdy1UFl7-xvvRS_DaV-VCMiz1eYD-T_P9RLcZqQE1Csu8HZOkpVrF0bTrp4-yHfx4eybynHrGmXI4qY"
+}

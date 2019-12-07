@@ -29,9 +29,6 @@ async function add(booking) {
     return bookingConfirm
 }
 
-////CHANGE ALL BOOKING STUFF TO QUERY
-//delete all the booking with new Date() at "at" in the db
-
 export default {
     query,
     add,
