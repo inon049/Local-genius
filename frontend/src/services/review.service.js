@@ -29,7 +29,7 @@ async function add(review) {
 }
 
 async function remove(reviewId) {
-    const removeConfirm = await httpService.delete(`review`, reviewId)
+    const removeConfirm = await httpService.delete(`review/${reviewId}`)
     return removeConfirm
 }
 

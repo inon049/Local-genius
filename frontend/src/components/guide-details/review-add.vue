@@ -18,7 +18,7 @@
           <button class="add-review-btn">Send</button>
         </div>
       </form>
-      <reviewDetails class="new-review" :review="review"></reviewDetails>
+      <reviewDetails :loggedInUser="loggedInUser" class="new-review" :review="review"></reviewDetails>
     </div>
   </section>
 </template>
