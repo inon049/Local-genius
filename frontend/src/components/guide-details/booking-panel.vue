@@ -32,8 +32,8 @@
             </p>
           </div>
         </div>
-        <transition enter-active-class="animated zoomIn">
           <img class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">
+        <transition enter-active-class="animated zoomIn">
           <img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png" />
         </transition>
         <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
@@ -103,6 +103,7 @@ export default {
   },
   created() {
     this.booking.toGuideId = this.$route.params._id;
+    if(this.$store.getters.loggedInUser)
     this.booking.byUserId = this.$store.getters.loggedInUser._id;
   }
 };

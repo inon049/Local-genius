@@ -4,7 +4,7 @@
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <template v-if="user">
-        <router-link style="position:relative;" to="/profile/summary"><img src="@/assets/img/notification.png" v-if="notifs" class="notifs-bubble"/>Profile</router-link>
+        <router-link style="position:relative;" to="/profile"><img src="@/assets/img/notification.png" v-if="notifs" class="notifs-bubble"/>Profile</router-link>
         <button @click="logout">Logout</button>
       </template>
       <router-link v-else to="/login">Login</router-link>

@@ -1,7 +1,12 @@
 <template>
   <section class="review-list-container">
-    <review-add :loggedInUser="loggedInUser" :guide="guide" @saveReview="saveReview"></review-add>
-    <review-list :reviews="reviews"></review-list>
+    <review-add
+      v-if="loggedInUser.name"
+      :loggedInUser="loggedInUser"
+      :guide="guide"
+      @saveReview="saveReview"
+    ></review-add>
+    <review-list @removeReview="removeReview" :loggedInUser="loggedInUser" :reviews="reviews"></review-list>
   </section>
 </template>
 
@@ -21,10 +26,13 @@ export default {
       return this.$store.getters.guide;
     },
     reviews() {
+      if (!this.$store.getters.reviews) return []
       return this.$store.getters.reviews;
     },
     loggedInUser() {
-      return this.$store.getters.loggedInUser;
+      const loggedInUser = this.$store.getters.loggedInUser;
+      if (loggedInUser) return this.$store.getters.loggedInUser;
+      else return { _id: "" };
     }
   },
   methods: {
@@ -37,6 +45,16 @@ export default {
       const newReview = await this.$store.dispatch({
         type: "saveReview",
         review
+      });
+      await this.$store.dispatch({
+        type: "loadReviews",
+        filterBy: JSON.parse(JSON.stringify(this.filterBy))
+      });
+    },
+    async removeReview(reviewId) {
+      await this.$store.dispatch({
+        type: "removeReview",
+        reviewId
       });
       await this.$store.dispatch({
         type: "loadReviews",
