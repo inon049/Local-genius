@@ -18,17 +18,30 @@
           class="details-input"
           placeholder="More about yourself"
         />
+        <h2>Add a profile picture</h2>
+        <label class="input-label" for="file">
+          <img src="../../assets/img/upload.png" />
+          <input id="profile" class="upload-input" @change="uploadProfileImg" type="file" />
+        </label>
+        <div class="imgs-input-preview" v-if="this.guide.profileImgUrl">
+          <img :src="this.guide.profileImgUrl" />
+          <button @click="deleteProfileImg">X</button>
+        </div>
         <h2>Add photos that describes you best</h2>
-        <label class="input-label" for="file"><img src="../../assets/img/upload.png">
-        <input id="file" class="upload-input" @change="upload" type="file" multiple/>
+        <label class="input-label" for="file">
+          <img src="../../assets/img/upload.png" />
+          <input id="file" class="upload-input" @change="upload" type="file" multiple />
         </label>
         <div class="imgs-input-preview" v-if="this.guide.imgUrls">
-          <div v-for="(img) in this.guide.imgUrls" :key="img"><img :src="img" /><button  @click="deleteImg(img)">X</button></div>
+          <div v-for="(img) in this.guide.imgUrls" :key="img">
+            <img :src="img" />
+            <button @click="deleteImg(img)">X</button>
+          </div>
         </div>
         <h2>Pick some questions that you connect with</h2>
-        <div class="quest flex col" v-for="(quest,idx) in questions" :key="idx">
-          <label :for="idx">{{quest}}</label>
-          <input :id="idx" type="text" />
+        <div class="quest flex col" v-for="(ans,quest,idx) in questions" :key="idx">
+          <label :for="quest">{{quest}}</label>
+          <input v-model="questions[quest]" :id="quest" type="text" />
         </div>
         <button @click="save" class="save-btn">SAVE</button>
       </div>
@@ -46,26 +59,35 @@ export default {
     return {
       fileList: [],
       selectedQuest: [],
-      questions: [
-        "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?",
-        "IF TOMORROW WAS YOUR LAST DAY IN YOUR CITY BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?",
-        "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?",
-        "WHAT ARE YOU WORKING ON THESE DAYS?",
-        "WHAT’S THE SPOT IN YOUR CITY YOU WOULDN’T BE CAUGHT DEAD IN?",
-        "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?",
-        "NAME SOME SPOTS IN YOUR CITY THAT ARE GOOD FOR A TINDER DATE",
-        "WHAT MAKES YOU HAPPY?",
-        "WHAT’S YOUR CHOICE OF TRANSPORTATION IN YOUR CITY AND WHY?",
-        "WHAT ARE THE SPOTS A FIRST-TIME VISITOR CAN’T MISS?",
-        "WHERE DO YOU GO IF YOU HAVE TWO HOURS TO KILL?",
-        "WHAT WOULD MAKE A PERFECT DAY IN THE SUN FOR YOU?",
-        "WHAT’S THE THING YOU LOVE TO DO IN YOUR CITY THAT YOU NEVER GET TO DO?",
-        "WHAT DO YOU DO AND WHY DO YOU DO IT?",
-        "WHAT’S YOUR DREAM JOB?",
-        "WHAT DRIVES YOU MAD THESE DAYS?"
-      ],
+      questions: {
+        "WHO’S YOUR HERO (DEAD OR ALIVE) AND WHERE WOULD YOU TAKE THEM TO SHOW THEM A GOOD TIME?":
+          "",
+        "IF TOMORROW WAS YOUR LAST DAY IN YOUR CITY BEFORE YOU LEFT FOR GOOD, HOW AND WHERE WOULD YOU SPEND IT?":
+          "",
+        "WHAT’S THE THING YOU LOVE DOING THAT ISN’T WORK, RELATIONSHIP OR FAMILY RELATED?":
+          "",
+        "WHAT ARE YOU WORKING ON THESE DAYS?": "",
+        "WHAT’S THE SPOT IN YOUR CITY YOU WOULDN’T BE CAUGHT DEAD IN?": "",
+        "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "",
+        "NAME SOME SPOTS IN YOUR CITY THAT ARE GOOD FOR A TINDER DATE": "",
+        "WHAT MAKES YOU HAPPY?": "",
+        "WHAT’S YOUR CHOICE OF TRANSPORTATION IN YOUR CITY AND WHY?": "",
+        "WHAT ARE THE SPOTS A FIRST-TIME VISITOR CAN’T MISS?": "",
+        "WHERE DO YOU GO IF YOU HAVE TWO HOURS TO KILL?": "",
+        "WHAT WOULD MAKE A PERFECT DAY IN THE SUN FOR YOU?": "",
+        "WHAT’S THE THING YOU LOVE TO DO IN YOUR CITY THAT YOU NEVER GET TO DO?":
+          "",
+        "WHAT DO YOU DO AND WHY DO YOU DO IT?": "",
+        "WHAT’S YOUR DREAM JOB?": "",
+        "WHAT DRIVES YOU MAD THESE DAYS?": ""
+      },
       guide: {}
     };
+  },
+  computed: {
+    answer(ans) {
+      console.log(ans, "answer");
+    }
   },
   methods: {
     async upload(ev) {
@@ -79,14 +101,29 @@ export default {
         this.guide.imgUrls.push(url);
       });
     },
+    async uploadProfileImg(ev) {
+      var files = [];
+      for (let i in ev.target.files) {
+        if (typeof ev.target.files[i] === "object")
+          files.push(ev.target.files[i]);
+      }
+       var urls = files.forEach(async file => {
+        var { url } = await cloudinary.uploadImg(file);
+        this.guide.profileImgUrl = url;
+      });
+    },
     save() {
-      this.$emit("saveInfo", this.guide);
+      this.guide.questions = this.questions;
+      this.$emit("save", this.guide);
     },
     deleteImg(img) {
       var idx = this.guide.imgUrls.findIndex(img => {
         return img === img;
       });
       this.guide.imgUrls.splice(idx, 1);
+    },
+    deleteProfileImg() {
+      this.guide.profileImgUrl = "";
     }
   },
   created() {

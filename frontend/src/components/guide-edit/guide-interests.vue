@@ -67,14 +67,15 @@ export default {
     }
   },
   created() {
-    if (this.guideToEdit) this.guide = this.guideToEdit;
-    this.guideToEdit.interests.forEach(interest => {
-      if (interest.isSelected)
-        var selected = this.interests.find(
-          localInterest => localInterest.name === interest.name
-        );
-      selected.isSelected = true;
-    });
+    if (this.guideToEdit){
+      this.guide = this.guideToEdit;
+      this.guide.interests.forEach(interest => {
+        this.interests.forEach(localInterest => {
+          if(localInterest.name === interest) localInterest.isSelected = true
+        });
+      });
+      this.selectedInterests.interests = this.guide.interests
+    } 
   }
 };
 </script>
