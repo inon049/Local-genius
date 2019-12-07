@@ -16,13 +16,11 @@ export default {
   getters: {
     userNotifs(state) {
       if (state.userNotifs.length) {
-        console.log('blabliblue');
         return state.userNotifs.length
       } else return null
     }
   },
   mutations: {
-   
     pushToUserNotifs(state, { txt }) {
       console.log('pushing user notif');
       state.userNotifs.push(txt)
@@ -32,7 +30,6 @@ export default {
     }
   },
   actions: {
-    ///********* needs to happen after login currently in app.vue created()*********/
     createUserSocket(context) {
       let userId = context.rootGetters.loggedInUser._id
       socket.emit('createUserSocket', userId)
@@ -50,9 +47,5 @@ export default {
     clearUserNotifs(context) {
       context.commit('clearUserNotifs')
     }
-
-    // getChatHistory(context, {chatId}) {
-    //     socket.emit('getHistory', chatId)
-    // }
   }
 }
