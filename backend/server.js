@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
+const firebase = require("firebase/app");
 
 const app = express()
 const http = require('http').createServer(app);
@@ -14,6 +15,7 @@ const userRoutes = require('./api/user/user.routes')
 const reviewRoutes = require('./api/review/review.routes')
 const bookingRoutes = require('./api/booking/booking.routes')
 const chatRoutes = require('./api/chat/chat.routes')
+const notifRoutes = require('./api/notif/notif.routes')
 const connectSockets = require('./api/socket/socket.routes')
 
 
@@ -41,6 +43,7 @@ app.use('/api/user', userRoutes)
 app.use('/api/review', reviewRoutes)
 app.use('/api/booking', bookingRoutes)
 app.use('/api/chat', chatRoutes)
+app.use('/api/notif', notifRoutes)
 connectSockets(io)
 
 if (process.env.NODE_ENV === 'production') {

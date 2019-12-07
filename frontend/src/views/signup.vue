@@ -2,6 +2,16 @@
   <section class="login-form-container">
     <h1>SIGNUP</h1>
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px">
+      <el-form-item prop="name">
+        <el-input
+          placeholder="Name"
+          aria-placeholder="Name"
+          @keyup.enter.native="submitForm('ruleForm')"
+          type="text"
+          v-model="ruleForm.name"
+          autocomplete="off"
+        ></el-input>
+      </el-form-item>
       <el-form-item prop="email">
         <el-input
           placeholder="Email"
@@ -84,8 +94,13 @@ export default {
           type: "email",
           required: true,
           message: "Please input a valid email address",
-          trigger: "submit"
-        }
+          trigger: "blur"
+        },
+        name: {
+          required: true,
+          message: "Please input your name",
+          trigger: "blur"
+        },
       }
     };
   },
@@ -95,7 +110,8 @@ export default {
         if (valid) {
           const userCred = {
             password: this.ruleForm.password,
-            email: this.ruleForm.email
+            email: this.ruleForm.email,
+            name: this.ruleForm.name
           };
           await this.$store.dispatch({
             type: "signup",

@@ -1,24 +1,26 @@
 <template>
-  <section  class="home">
+  <section class="home">
     <div class="hero-container flex justify-center">
       <div class="titles">
         <h2>Travel perfection made simple.</h2>
         <h3>Connecting travelers with local guides worldwide</h3>
       </div>
       <city-filter :cities="cities"></city-filter>
-       <div class="join-btn-container">
-         Not a member?<router-link to="/signup">JOIN!</router-link>
-       </div>
-      <img class="hero-img" src="@/assets/img/home-bg2.jpg" alt /> 
-    <router-link  class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
+      <div class="join-btn-container">
+        Not a member?
+        <router-link to="/signup">JOIN!</router-link>
+      </div>
+      <img class="hero-img" src="@/assets/img/home-bg2.jpg" alt />
+      <router-link class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
     </div>
     <div class="container">
-      <h2 class="list-title">FEATURED DESTINATIONS</h2>
+      <div>
+        <h2 class="list-title">FEATURED DESTINATIONS</h2>
+      </div>
       <city-list :cities="cities"></city-list>
-    <h2 class="list-title">GUIDES OF THE MONTH</h2>
-    <guide-list :guides="guides"></guide-list>
+      <h2 class="list-title">GUIDES OF THE MONTH</h2>
+      <guide-list :guides="guides"></guide-list>
     </div>
- 
   </section>
 </template>
 
@@ -42,7 +44,7 @@ export default {
   data() {
     return {
       cities: [],
-      guides:[]
+      guides: []
     };
   },
   async created() {
@@ -51,9 +53,9 @@ export default {
 
     var guides = await userService.query();
     guides = JSON.parse(JSON.stringify(guides));
-    this.guides = guides.splice(0,4)
+    this.guides = guides.splice(0, 4);
   }
 };
 </script>
  <style>
- </style>
+</style>
