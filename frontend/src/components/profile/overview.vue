@@ -23,14 +23,10 @@
         <button class="dates-btn" @click="saveDates">Block these dates</button>
       </div>
     </div>
-    <h2 v-if="notifications" class="overview-headers">Notifications</h2>
-    <div class="overview-notifs-list">
-      <notif-preview
-        v-for="(notification,idx) in notifications"
-        :key="idx"
-        :notification="notification"
-      ></notif-preview>
-    </div>
+  <h2 v-if="notifications" class="overview-headers">Notifications</h2>
+  <div class="overview-notifs-list">
+    <notif-preview v-for="(notification,idx) in notifications" @click.native="notifClicked(notification)" :key="idx" :notification="notification"></notif-preview>
+  </div>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
       <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>
@@ -79,27 +75,29 @@ export default {
       bookings: [],
       reviews: [],
       disabledDates: [],
-      notifications: [
-        {
-          msg: "You just got a new customer",
-          type: "Booking"
-        },
-        {
-          msg: "You have a new message",
-          type: "Message"
-        }
-      ]
     };
   },
-  methods: {
+  methods:{
     selectDates(selected) {
       this.selectedDates = selected;
     },
-    saveDates() {
-      this.disabledDates.push(this.selectedDates);
+    dates(dates){
+      this.selectedDates = dates
+    },
+    saveDates(){
+      this.disabledDates.push(this.selectedDates)
+    },
+    notifClicked(notif){
+      notif=JSON.parse(JSON.stringify(notif))
+      notif.isRead=true
+      this.$store.dispatch({type:'updateNotif',notif})
+      // if(notif.type==='msg')
     }
   },
   computed: {
+     notifications(){
+   return this.$store.getters.userNotifs
+ },
     loggedInUser() {
       const loggedInUser = this.$store.getters.loggedInUser;
       if (loggedInUser) return this.$store.getters.loggedInUser;
