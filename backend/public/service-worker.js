@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.3e2d9d34c138145a73ec39015e16ac76.js"
+  "/precache-manifest.a5cb01d3cfc49c7054175b976f5237c4.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "Local-Genius"});
+workbox.core.setCacheNameDetails({prefix: "front-end"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
