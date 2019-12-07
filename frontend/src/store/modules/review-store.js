@@ -19,6 +19,10 @@ export default {
             const newReview = await reviewService.add(review)
             return newReview
         },
+        async removeReview(context ,{ reviewId }) {            
+            const removeConfirm = await reviewService.remove(reviewId)
+            return removeConfirm
+        },
         async loadReviews(context,{filterBy}){            
             const reviews = await reviewService.query(filterBy)
             context.commit({type:'setReviews', reviews})

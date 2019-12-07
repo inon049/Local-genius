@@ -103,6 +103,7 @@ export default {
   },
   created() {
     this.booking.toGuideId = this.$route.params._id;
+    if(this.$store.getters.loggedInUser)
     this.booking.byUserId = this.$store.getters.loggedInUser._id;
   }
 };

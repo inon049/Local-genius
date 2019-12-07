@@ -14,7 +14,7 @@
       </guide-filter>
     </div>
     <div v-if="guides.length===0" class="loading-svg">
-      <img src="@/assets/img/loading.svg" alt="loading">
+      <img src="@/assets/img/loading.svg" alt="loading" />
     </div>
     <guide-list v-else :guides="guidesToShow"></guide-list>
   </section>
