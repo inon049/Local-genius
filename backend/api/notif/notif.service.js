@@ -48,7 +48,6 @@ async function query(filterBy = {}) {
         ]
 
         var notifs = await collection.aggregate(pipeline).toArray()
-        console.log(notifs, 'notifsss');
         notifs = notifs.map(notif => {
             notif.from = { _id: notif.from._id, name: notif.from.name, imgUrl: notif.from.profileImgUrl }
             notif.to = { _id: notif.to._id, name: notif.to.name, imgUrl: notif.to.profileImgUrl }
