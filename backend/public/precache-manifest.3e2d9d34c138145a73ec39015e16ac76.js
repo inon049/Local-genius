@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "122fe9442fd495d3ebd3",
-    "url": "/css/app.2fcfd6b6.css"
+    "revision": "f44e35c8db57f7991ea9",
+    "url": "/css/app.447636d5.css"
   },
   {
     "revision": "d93d596533f02b4df93f",
@@ -96,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/avatar.e0947469.svg"
   },
   {
-    "revision": "018a98c9edd69cca322d9a00ec7eaff2",
-    "url": "/img/avatarFill.018a98c9.svg"
+    "revision": "768483e171c095102cf492787ae72c5e",
+    "url": "/img/avatarFill.768483e1.svg"
   },
   {
     "revision": "4bc87bb9e533514be20f77553f9d3f54",
@@ -112,8 +112,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/heart.2bc401ac.svg"
   },
   {
-    "revision": "4b71794798406f173aa2e51fe1b38bb2",
-    "url": "/img/heartFill.4b717947.svg"
+    "revision": "2a3fdfa7e80901413c0502ac476e3577",
+    "url": "/img/heartFill.2a3fdfa7.svg"
   },
   {
     "revision": "1921808e6c8ea20771f5b33d48cb0301",
@@ -124,8 +124,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/house.be227af4.svg"
   },
   {
-    "revision": "8468070ac56d1e7565610ae01b5ac36f",
-    "url": "/img/houseFill.8468070a.svg"
+    "revision": "4b7d00d301ccfa315f73fccb00e90483",
+    "url": "/img/houseFill.4b7d00d3.svg"
   },
   {
     "revision": "cebe8ef640fde1b7b102c5018b669806",
@@ -140,20 +140,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/notification.faec80f8.svg"
   },
   {
-    "revision": "c5f5879a78f8a996dedf78c6f3fea852",
-    "url": "/img/notificationFill.c5f5879a.svg"
+    "revision": "a85356071f2a9d4909c680ce73907aa2",
+    "url": "/img/notificationFill.a8535607.svg"
   },
   {
     "revision": "c663fa499a6ef0c80e74ec1350beae69",
     "url": "/img/upload.c663fa49.png"
   },
   {
-    "revision": "d2c8c6c770d01893ff5dc653b8a3256b",
+    "revision": "4c91bab521d63210daf1071cb0401b9f",
     "url": "/index.html"
   },
   {
-    "revision": "122fe9442fd495d3ebd3",
-    "url": "/js/app.32b2cd9f.js"
+    "revision": "f44e35c8db57f7991ea9",
+    "url": "/js/app.645fb998.js"
   },
   {
     "revision": "d93d596533f02b4df93f",

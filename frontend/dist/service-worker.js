@@ -17,7 +17,7 @@ importScripts(
   "/precache-manifest.59194e12c5eb5825361c6aaab4503467.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "front-end"});
+workbox.core.setCacheNameDetails({prefix: "Local-Genius"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
