@@ -75,6 +75,7 @@ export default {
       this.disabledDates.push(this.selectedDates)
     }
   },
+
   async created() {
     let id = this.$store.getters.loggedInUser._id;
     await this.$store.dispatch({ type: "getUserById", _id: id });
