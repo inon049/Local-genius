@@ -40,7 +40,7 @@ export default {
                     isRead:false,
                     }
                 context.dispatch({type:'addNotif',notif})
-                context.dispatch({type:'sendNotif' , notif})
+                context.dispatch({type:'sendBookingNotif' , notif})
                 return currBooking
 
         },

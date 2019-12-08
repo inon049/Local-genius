@@ -22,24 +22,15 @@ export default {
             let idx= state.notifs.findIndex(notif=>notif._id===updatedNotif._id)
             state.notifs[idx]=updatedNotif
         },
-        addNotif(state,{addedNotif}){
-            state.notifs.push(addedNotif)
-        },
         pushToUserNotifs(state,{notif}){
             state.notifs.push(notif)
         }
 
     },
     actions: {
-        async addNotif(context,{notif}){
-            const addedNotif = await notifService.add(notif)
-            console.log(addedNotif,'addedNotif<<');
-            if(notif.toId===context.rootGetters.loggedInUser._id){
-                context.commit({type:'addNotif',addedNotif})   
-            }
+       addNotif(context,{notif}){
+             notifService.add(notif)
           },
-          
-
         async updateNotif(context,{notif}){
             const updatedNotif = await notifService.update(notif)
             context.commit({type:'updateNotif',updatedNotif})   

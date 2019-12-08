@@ -2,13 +2,10 @@ import socket from '@/services/socket.service.js'
 import store from '@/store/index'
 
 // socket.emit('test event', 'this is a testing string')
-socket.on('insertUserNotif', (notif) => {
-  console.log(notif, 'from socket');
-  store.dispatch({type:'loadNotifs'})
+socket.on('insertUserNotif',(notif) => {
   store.dispatch({ type: 'pushToUserNotifs', notif})
 })
 socket.on('insertUserMsg', function ({ chatId, msg }) {
-  console.log('chatid>',chatId,'msg>',msg);
   store.dispatch({ type: 'pushUserMsg', chatId, msg })
 })
 export default {
@@ -23,8 +20,8 @@ export default {
       let userId = context.rootGetters.loggedInUser._id
       socket.emit('createUserSocket', userId)
     },
-    sendNotif(context, { notif }) {
-      socket.emit('sendNotif', notif)
+    sendBookingNotif(context, { notif }) {
+      socket.emit('sendBookingNotif', notif)
     },
     sendMsgNotif(context, {notif}) {
       socket.emit('sendMsgNotif', notif)
