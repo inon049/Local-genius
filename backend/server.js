@@ -20,13 +20,9 @@ const notifRoutes = require('./api/notif/notif.routes')
 const connectSockets = require('./api/socket/socket.routes')
 
 
-// const PUBLIC_VAPID_KEY ='BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o'
 
-// const PRIVATE_VAPID_KEY='GmbwzEwB3YQyIhZFKWC3m8NuSfYKwbmldV26q792UKk'
-const publicVapidKey = process.env.PUBLIC_VAPID_KEY;
-const privateVapidKey = process.env.PRIVATE_VAPID_KEY;
-// const publicVapidKey = 'BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o';
-// const privateVapidKey = 'GmbwzEwB3YQyIhZFKWC3m8NuSfYKwbmldV26q792UKk';
+const publicVapidKey = 'BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o';
+const privateVapidKey = 'GmbwzEwB3YQyIhZFKWC3m8NuSfYKwbmldV26q792UKk';
 
 webpush.setVapidDetails('mailto:dror.uzi5@gmail.com', publicVapidKey, privateVapidKey);
 
@@ -53,6 +49,20 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
+
+
+// routes
+app.use('/api/auth', authRoutes)
+app.use('/api/user', userRoutes)
+app.use('/api/review', reviewRoutes)
+app.use('/api/booking', bookingRoutes)
+app.use('/api/chat', chatRoutes)
+app.use('/api/notif', notifRoutes)
+connectSockets(io)
+
+app.use(require('express-static')('./'));
+
+
 app.post('/subscribe', (req, res) => {
     const subscription = req.body;
     res.status(201).json({});
@@ -66,20 +76,9 @@ app.post('/subscribe', (req, res) => {
 });
 
 
-
-// routes
-app.use('/api/auth', authRoutes)
-app.use('/api/user', userRoutes)
-app.use('/api/review', reviewRoutes)
-app.use('/api/booking', bookingRoutes)
-app.use('/api/chat', chatRoutes)
-app.use('/api/notif', notifRoutes)
-connectSockets(io)
-
-
-
 const port = process.env.PORT || 3000;
 http.listen(port, () => {
     console.log('Server is running on port: ' + port);
 });
+
 

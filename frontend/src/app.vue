@@ -14,7 +14,7 @@
 <script>
 import mainHeader from "./components/main-header";
 import mobileNav from "./components/mobile-nav";
-import pushNotifService from './services/push.notif.service'
+// import pushNotifService from './services/push.notif.service'
 export default {
   data() {
     return {

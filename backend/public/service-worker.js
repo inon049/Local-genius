@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8d29ea7d9b5bf1d04036d3fee0530d1d.js"
+  "/precache-manifest.6bc96ed7a8d209e02cc68c889d1c7f33.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "local-genius"});
@@ -24,8 +24,6 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-
-
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
