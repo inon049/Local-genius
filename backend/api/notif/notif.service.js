@@ -107,11 +107,6 @@ function _buildCriteria(filterBy) {
     if (filterBy.toId) {
         criteria.toId = ObjectId(filterBy.toId)
     }
-<<<<<<< HEAD
-
-    // console.log(criteria, ' notif crit');
-=======
     console.log(criteria,'crit');
->>>>>>> inon
     return criteria;
 }
