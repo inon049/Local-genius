@@ -106,6 +106,5 @@ function _buildCriteria(filterBy) {
     if (filterBy.toId) {
         criteria.toId = ObjectId(filterBy.toId)
     }
-    console.log(criteria, 'crit');
     return criteria;
 }

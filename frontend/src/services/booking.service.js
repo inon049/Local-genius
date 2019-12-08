@@ -9,7 +9,6 @@ import httpService from '@/services/http.service'
 // to get recent  -  recent : 1,
 // to get upcoming  -  upcoming : 1,
 // to get specific amount  -   amount : <AMOUNT>
-
 async function query(filterBy = {}) {
     var queryUrl = ``
 
@@ -17,7 +16,6 @@ async function query(filterBy = {}) {
         if (filterBy.isGuide) queryUrl += `toGuideId=${filterBy._id}&`
         else queryUrl += `byUserId=${filterBy._id}&`
     }
-
     for (const param in filterBy) {
         queryUrl += `${param}=${filterBy[param]}&`
     }

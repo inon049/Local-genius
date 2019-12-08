@@ -65,6 +65,7 @@ export default {
       const user = await userService.login(userCred);
       context.commit({ type: 'setUser', user })
       context.dispatch({type:'createUserSocket'})
+      context.dispatch({type:'loadNotifs'})
       return user;
     },
     async signup(context, { userCred }) {
