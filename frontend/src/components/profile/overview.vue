@@ -96,7 +96,7 @@ export default {
   },
   computed: {
      notifications(){
-   return this.$store.getters.userNotifs
+   return this.$store.getters.notifs
  },
     loggedInUser() {
       const loggedInUser = this.$store.getters.loggedInUser;

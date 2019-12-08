@@ -46,7 +46,6 @@ async function query(filterBy = {}) {
                 $unwind: '$from'
             }
         ]
-
         var notifs = await collection.aggregate(pipeline).toArray()
         notifs = notifs.map(notif => {
             notif.from = { _id: notif.from._id, name: notif.from.name, imgUrl: notif.from.profileImgUrl }
@@ -55,6 +54,7 @@ async function query(filterBy = {}) {
             delete notif.toId;
             return notif;
         })
+        console.log(notifs);
         return notifs
     } catch (err) {
         console.log('ERROR: cannot find notifs')
@@ -82,7 +82,7 @@ async function add(notif) {
         await collection.insertOne(notif);
         return notif;
     } catch (err) {
-        console.log(`ERROR: cannot insert reivew`)
+        console.log(`ERROR: cannot insert notification`)
         throw err;
     }
 }
@@ -107,7 +107,11 @@ function _buildCriteria(filterBy) {
     if (filterBy.toId) {
         criteria.toId = ObjectId(filterBy.toId)
     }
+<<<<<<< HEAD
 
     // console.log(criteria, ' notif crit');
+=======
+    console.log(criteria,'crit');
+>>>>>>> inon
     return criteria;
 }
