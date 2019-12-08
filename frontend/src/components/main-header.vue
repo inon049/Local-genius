@@ -31,7 +31,7 @@ export default {
       return this.$store.getters.loggedInUser;
     },
     notifs() {
-      return this.$store.getters.userNotifs;
+      return this.$store.getters.notifs;
     }
   },
   methods: {

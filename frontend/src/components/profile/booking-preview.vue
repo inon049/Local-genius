@@ -5,7 +5,9 @@
     <p class="date">{{ booking.createdAt | moment("calendar") }}</p>
     </div>
     <div class="booking-details flex">
+      <div class="booking-img">
     <img :src="imgUrl"/>
+      </div>
     <div class="booking-info flex">
       <ul>
       <li>For {{booking.attendees}} attendees</li>

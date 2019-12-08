@@ -2,7 +2,7 @@
   <section class="review-details">
     <div class="review-header">
       <div class="flex">
-        <img :src="imgUrl" />
+        <div class="img-container"><img :src="imgUrl"/></div>
         <div class="review-txt flex col">
           <div class="review-txt-title">
             <h2>{{review.byUser.name}}</h2>

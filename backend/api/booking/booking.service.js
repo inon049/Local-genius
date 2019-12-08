@@ -41,9 +41,9 @@ async function query(filterBy = {}) {
         },
     ]
 
+    if (filterBy.amount) pipeline.splice(1, 0, { $limit: +filterBy.amount })
     if (filterBy.recent) pipeline.splice(1, 0, { $sort: { createdAt: -1 } })
     if (filterBy.upcoming) pipeline.splice(1, 0, { $sort: { at: 1 } })
-    if (filterBy.amount) pipeline.splice(1, 0, { $limit: +filterBy.amount })
 
     try {
 
