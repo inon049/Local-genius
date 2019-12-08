@@ -11,5 +11,8 @@ export default {
   components: {
     profileMenu
   },
+  created(){
+    this.$store.dispatch({type:'loadNotifs'})
+  }
 };
 </script>

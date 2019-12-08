@@ -24,6 +24,7 @@ export default new Vuex.Store({
     socketStore,
     bookingStore,
     chatStore,
-    reviewStore
+    reviewStore,
+    notifStore
   }
 })

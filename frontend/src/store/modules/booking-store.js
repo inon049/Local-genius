@@ -34,13 +34,12 @@ export default {
                 context.commit({ type: 'setCurrBooking', booking : currBooking })
                 let notif ={
                     toId: booking.toGuideId,
-                    fromId: booking.fromUserId,
+                    fromId: booking.byUserId,
                     type:'booking',
                      txt:'You just got a new booking',
                     isRead:false,
-
                     }
-
+                    
                 context.dispatch({type:'addNotif',notif})
                 context.dispatch({type:'sendNotif' , notif})
                 return currBooking
