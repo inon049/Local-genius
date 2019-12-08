@@ -29,7 +29,7 @@ export default {
     await this.$store.dispatch({ type: "loadUsers" });
     await this.$store.dispatch({ type: "loadCities" });
     window.addEventListener("scroll", this.handleScroll);
-    pushNotifService.run()
+    // pushNotifService.run()
   },
   components: {
     mainHeader,
