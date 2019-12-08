@@ -2,7 +2,7 @@
 
 import httpService from '@/services/http.service'
 
-// get specific values from the bookings db :
+// how to get specific values from the bookings db :
 // you will need to send a filterBy object :
 // to get bookings for specific user  -  _id : <ID>
 // to get values for guide  -  isGuide:true  else will be by user
