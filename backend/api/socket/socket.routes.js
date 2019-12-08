@@ -10,14 +10,15 @@ function connectSockets(io) {
             console.log(userId,'<KIBEL TZINOR');
         })
         socket.on('sendNotif', notif =>{
-            console.log(notif,'noifcation ');
+            console.log(notif.toId,'<<<<noifcation ');
             if(socketMap[notif.toId])
-           socketMap[notif.toId].emit('userNotif',notif.msg)
+           socketMap[notif.toId].emit('insertUserNotif',notif)
         })
         socket.on('sendMsgNotif', notif =>{
-            console.log(notif,'<<<chat msg noifcation');
-            if(socketMap[notif.toId])
-           socketMap[notif.toId].emit('userMsgNotif',notif)
+            if(socketMap[notif.toId]){
+                socketMap[notif.toId].emit('insertUserMsg',notif)
+                socketMap[notif.toId].emit('insertUserNotif',notif)
+            }
         })
     })
 }

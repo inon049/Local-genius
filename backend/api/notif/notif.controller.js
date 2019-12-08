@@ -11,7 +11,6 @@ async function deleteNotif(req, res) {
 }
 
 async function createNotif(req, res) {
-    console.log('createNotif is runing');
     let notif = req.body;
     notif.createdAt=Date.now()
     notif = await notifService.add(notif)

@@ -99,11 +99,12 @@ export default {
       notif.isRead = true;
       this.$store.dispatch({ type: "updateNotif", notif });
       this.$emit("notifClicked", notif.type);
+      this.$store.dispatch({ type: "loadNotifs"});
     }
   },
   computed: {
     notifications() {
-      return this.$store.getters.notifs;
+      return this.$store.getters.unReadNotifs;
     },
     loggedInUser() {
       const loggedInUser = this.$store.getters.loggedInUser;

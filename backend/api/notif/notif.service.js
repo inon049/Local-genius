@@ -54,7 +54,6 @@ async function query(filterBy = {}) {
             delete notif.toId;
             return notif;
         })
-        console.log(notifs);
         return notifs
     } catch (err) {
         console.log('ERROR: cannot find notifs')
@@ -107,6 +106,5 @@ function _buildCriteria(filterBy) {
     if (filterBy.toId) {
         criteria.toId = ObjectId(filterBy.toId)
     }
-    console.log(criteria,'crit');
     return criteria;
 }

@@ -39,7 +39,6 @@ export default {
                      txt:'You just got a new booking',
                     isRead:false,
                     }
-                    
                 context.dispatch({type:'addNotif',notif})
                 context.dispatch({type:'sendNotif' , notif})
                 return currBooking
