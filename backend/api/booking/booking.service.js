@@ -10,42 +10,43 @@ module.exports = {
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('booking')
+
+    var pipeline = [
+        {
+            $match: criteria
+        },
+        {
+            $lookup:
+            {
+                from: 'user',
+                localField: 'byUserId',
+                foreignField: '_id',
+                as: 'byUser'
+            }
+        },
+        {
+            $unwind: '$byUser'
+        },
+        {
+            $lookup:
+            {
+                from: 'user',
+                localField: 'toGuideId',
+                foreignField: '_id',
+                as: 'toGuide'
+            }
+        },
+        {
+            $unwind: '$toGuide'
+        },
+    ]
+
+    if (filterBy.recent) pipeline.splice(1, 0, { $sort: { createdAt: -1 } })
+    if (filterBy.upcoming) pipeline.splice(1, 0, { $sort: { at: 1 } })
+    if (filterBy.amount) pipeline.splice(1, 0, { $limit: +filterBy.amount })
+
     try {
-        var pipeline = [
-            {
-                $match: criteria
-            },
-            (filterBy.recent) ? { $sort: { createdAt: -1 } } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            (filterBy.upcoming) ? { $sort: { at: 1 } } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            (filterBy.amount) ? { $limit: +filterBy.amount } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'byUserId',
-                    foreignField: '_id',
-                    as: 'byUser'
-                }
-            },
-            {
-                $unwind: '$byUser'
-            },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'toGuideId',
-                    foreignField: '_id',
-                    as: 'toGuide'
-                }
-            },
-            {
-                $unwind: '$toGuide'
-            },
-        ]
+
         var bookings = await collection.aggregate(pipeline).toArray()
 
         bookings = bookings.map(booking => {
@@ -100,9 +101,8 @@ function _buildCriteria(filterBy) {
         criteria.price = { $gte: +filterBy.price }
     }
     if (filterBy.upcoming) {
-        criteria.at = { $gte: Date.now()}
+        criteria.at = { $gte: Date.now() }
     }
     // console.log(criteria, ' booking crit');
     return criteria;
-
 }

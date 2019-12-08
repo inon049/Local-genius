@@ -7,12 +7,14 @@
         <img class="arrow-up" src="@/assets/img/arrow-up.png" />
       </a>
     </section>
+    <main-footer></main-footer>
     <mobile-nav></mobile-nav>
   </div>
 </template>
 
 <script>
 import mainHeader from "./components/main-header";
+import mainFooter from "./components/main-footer";
 import mobileNav from "./components/mobile-nav";
 export default {
   data() {
@@ -29,7 +31,8 @@ export default {
   },
   components: {
     mainHeader,
-    mobileNav
+    mobileNav,
+    mainFooter
   },
   methods:{
     handleScroll () {
