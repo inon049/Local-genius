@@ -9,8 +9,7 @@ function connectSockets(io) {
             socketMap[userId] = socket
             console.log(userId,'<KIBEL TZINOR');
         })
-        socket.on('sendNotif', notif =>{
-            console.log(notif.toId,'<<<<noifcation ');
+        socket.on('sendBookingNotif', notif =>{
             if(socketMap[notif.toId])
            socketMap[notif.toId].emit('insertUserNotif',notif)
         })
