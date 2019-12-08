@@ -76,6 +76,11 @@ app.post('/subscribe', (req, res) => {
 });
 
 
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
 const port = process.env.PORT || 3000;
 http.listen(port, () => {
     console.log('Server is running on port: ' + port);

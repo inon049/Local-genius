@@ -93,8 +93,8 @@ function _buildCriteria(filterBy) {
     if (filterBy.city) {
         criteria.city = filterBy.city
     }
-    if (filterBy.minBalance) {
-        criteria.balance = { $gte: +filterBy.minBalance }
+    if (filterBy.price) {
+        criteria.price = { $gte: +filterBy.price }
     }
     // console.log(criteria, 'user crit');
     return criteria;

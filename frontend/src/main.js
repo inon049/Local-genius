@@ -26,7 +26,6 @@ Vue.config.pwa = {
     name :"Local Genius",
     themeColor : '#ffffff',
 }
-console.log(Vue.config,'ppp');
 
 new Vue({
     router,

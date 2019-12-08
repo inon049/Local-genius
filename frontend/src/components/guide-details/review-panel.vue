@@ -16,9 +16,6 @@ import reviewList from "./review-list";
 import reviewAdd from "./review-add";
 
 export default {
-  props:{
-    filter : Object
-  },
   data() {
     return {
       filterBy: null
@@ -54,7 +51,7 @@ export default {
         filterBy: JSON.parse(JSON.stringify(this.filterBy))
       });
     },
-    async removeReview(reviewId) {
+    async removeReview(reviewId) {      
       await this.$store.dispatch({
         type: "removeReview",
         reviewId
@@ -66,7 +63,12 @@ export default {
     }
   },
   created() {
-    this.filterBy = this.filter 
+    const filterBy = {
+      _id: this.guide._id,
+      isGuide: true,
+      recent: 1
+    };
+    this.filterBy = filterBy 
   },
   components: {
     reviewList,

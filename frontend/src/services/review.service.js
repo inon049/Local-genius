@@ -9,12 +9,12 @@ import httpService from '@/services/http.service'
 // to get recent  -  recent : 1,
 // to get specific amount  -   amount : <AMOUNT>
 
-async function query(filterBy = {}) {
+async function query(filterBy = {}) {        
     var queryUrl = ``
-
-    if (!filterBy._id) queryUrl += ``
-    else if (filterBy.isGuide) queryUrl += `aboutGuideId=${filterBy._id}&`
-    else queryUrl += `byUserId=${filterBy._id}&`
+    if (filterBy._id) {
+        if (filterBy.isGuide) queryUrl += `aboutGuideId=${filterBy._id}&`
+        else queryUrl += `byUserId=${filterBy._id}&`
+    }
 
     for (const param in filterBy) {
         queryUrl += `${param}=${filterBy[param]}&`

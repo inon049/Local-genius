@@ -11,40 +11,39 @@ module.exports = {
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('review')
-    try {
-        var pipeline = [
+    var pipeline = [
+        {
+            $match: criteria
+        },
+        {
+            $lookup:
             {
-                $match: criteria
-            },
-            (filterBy.recent) ? { $sort: { createdAt: -1 } } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            (filterBy.amount) ? { $limit: +filterBy.amount } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'byUserId',
-                    foreignField: '_id',
-                    as: 'byUser'
-                }
-            },
-            {
-                $unwind: '$byUser'
-            },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'aboutGuideId',
-                    foreignField: '_id',
-                    as: 'aboutGuide'
-                }
-            },
-            {
-                $unwind: '$aboutGuide'
+                from: 'user',
+                localField: 'byUserId',
+                foreignField: '_id',
+                as: 'byUser'
             }
-        ]
+        },
+        {
+            $unwind: '$byUser'
+        },
+        {
+            $lookup:
+            {
+                from: 'user',
+                localField: 'aboutGuideId',
+                foreignField: '_id',
+                as: 'aboutGuide'
+            }
+        },
+        {
+            $unwind: '$aboutGuide'
+        }
+    ]
+    if (filterBy.amount) pipeline.splice(1, 0, { $limit: +filterBy.amount })
+    if (filterBy.recent) pipeline.splice(1, 0, { $sort: { createdAt: -1 } })
+
+    try {
 
         var reviews = await collection.aggregate(pipeline).toArray()
 

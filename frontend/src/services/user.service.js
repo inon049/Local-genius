@@ -9,8 +9,8 @@ async function query() {
     const users = await httpService.get(USER_URL)
     return users
 }
-function update(user){
-return httpService.put(USER_URL + user._id,user)
+function update(user) {
+    return httpService.put(USER_URL + user._id, user)
 }
 
 async function getById(_id) {
@@ -19,8 +19,13 @@ async function getById(_id) {
 }
 
 async function login(userCred) {
-    const user = await httpService.post('auth/login', userCred)    
-    return _handleLogin(user)
+    try {
+        const user = await httpService.post('auth/login', userCred)
+        if(user) return _handleLogin(user)
+    }
+    catch (err) {
+        console.log(err);
+    }
 }
 
 async function signup(userCred) {
@@ -34,7 +39,7 @@ async function logout() {
 }
 
 function _handleLogin(user) {
-    sessionStorage.setItem('user', JSON.stringify(user))    
+    sessionStorage.setItem('user', JSON.stringify(user))
     return user;
 }
 

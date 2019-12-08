@@ -26,8 +26,7 @@ export default {
             chatService.createChat(chat)
         },
         async sendMsg(context,{chatId,msg}){
-            // console.log(chatId,msg,'b4 server msg<');
-         await chatService.addMsg(chatId,msg)
+            await chatService.addMsg(chatId,msg)
             context.commit({type:'pushChatMsg',msg,chatId})
             let notif = {
                 type:'msg',
@@ -35,9 +34,11 @@ export default {
                 fromId:msg.fromId,
                 chatId,
                 msg,
-                isRead:false
+                isRead:false,
+                txt:'New chat messege'
             }
             context.dispatch({type:'sendMsgNotif',notif})
+            context.dispatch({type:'addNotif',notif})
         },
         async loadChats(context){
             let id = context.rootGetters.loggedInUser._id;
