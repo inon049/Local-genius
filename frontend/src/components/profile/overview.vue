@@ -24,15 +24,10 @@
         <button class="dates-btn" @click="saveDates">Block these dates</button>
       </div>
     </div>
-    <h2 v-if="notifications" class="overview-headers">Notifications</h2>
-    <div class="overview-notifs-list">
-      <notif-preview
-        v-for="(notification,idx) in notifications"
-        @click.native="notifClicked(notification)"
-        :key="idx"
-        :notification="notification"
-      ></notif-preview>
-    </div>
+  <div  v-if="notifications" class="overview-notifs-list">
+  <h2 v-if="notifications" class="overview-headers">Notifications</h2>
+    <notif-preview v-for="(notification,idx) in notifications" @click.native="notifClicked(notification)" :key="idx" :notification="notification"></notif-preview>
+  </div>
     <h2 class="overview-headers">Upcoming Bookings:</h2>
     <div class="overview-booking-list">
       <booking-preview v-for="(booking,idx) in bookings" :key="idx" :booking="booking"></booking-preview>

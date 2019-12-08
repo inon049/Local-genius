@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server"
@@ -11,11 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "express-static": "^1.2.6",
     "firebase": "^7.5.2",
     "json-server": "^0.15.1",
     "mongodb": "^3.3.5",
     "socket.io": "^2.3.0",
-    "v-calendar": "^1.0.0-beta.22"
+    "v-calendar": "^1.0.0-beta.22",
+    "web-push": "^3.4.3"
   }
 }

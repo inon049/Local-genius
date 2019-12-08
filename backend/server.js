@@ -9,16 +9,22 @@ const firebase = require("firebase/app");
 const app = express()
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
-
+const webpush = require('web-push');
 const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
 const reviewRoutes = require('./api/review/review.routes')
 const bookingRoutes = require('./api/booking/booking.routes')
+app.use(require('body-parser').json());
 const chatRoutes = require('./api/chat/chat.routes')
 const notifRoutes = require('./api/notif/notif.routes')
 const connectSockets = require('./api/socket/socket.routes')
 
 
+
+const publicVapidKey = 'BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o';
+const privateVapidKey = 'GmbwzEwB3YQyIhZFKWC3m8NuSfYKwbmldV26q792UKk';
+
+webpush.setVapidDetails('mailto:dror.uzi5@gmail.com', publicVapidKey, privateVapidKey);
 
 
 app.use(cookieParser())
@@ -30,7 +36,6 @@ app.use(session({
     cookie: { secure: false }
 }))
 
-
 if (process.env.NODE_ENV !== 'production') {
     const corsOptions = {
         origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
@@ -38,6 +43,13 @@ if (process.env.NODE_ENV !== 'production') {
     };
     app.use(cors(corsOptions));
 }
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.resolve(__dirname, 'public')));
+}
+
+
+
 
 // routes
 app.use('/api/auth', authRoutes)
@@ -48,16 +60,30 @@ app.use('/api/chat', chatRoutes)
 app.use('/api/notif', notifRoutes)
 connectSockets(io)
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'public')));
-}
-//HEROKU FIX
+app.use(require('express-static')('./'));
+
+
+app.post('/subscribe', (req, res) => {
+    const subscription = req.body;
+    res.status(201).json({});
+    const payload = JSON.stringify({ title: 'test' });
+
+    console.log(subscription);
+
+    webpush.sendNotification(subscription, payload).catch(error => {
+        console.error(error.stack);
+    });
+});
+
 
 app.get('*', (request, response) => {
     response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+
 const port = process.env.PORT || 3000;
 http.listen(port, () => {
     console.log('Server is running on port: ' + port);
 });
+
+

@@ -2,7 +2,7 @@
 
 import { register } from 'register-service-worker'
 
-// if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   register(`${process.env.BASE_URL}service-worker.js`, {
     ready () {
       console.log(
@@ -29,4 +29,13 @@ import { register } from 'register-service-worker'
       console.error('Error during service worker registration:', error)
     }
   })
-// }
+  self.addEventListener('push', ev => {
+    const data = ev.data.json();
+    console.log('Got push', data);
+    self.registration.showNotification(data.title, {
+      body: 'Hello, World!',
+      icon: 'http://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png'
+    });
+  });
+  
+}
