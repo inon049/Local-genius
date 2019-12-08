@@ -12,40 +12,40 @@ module.exports = {
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('notif')
-    try {
-        var pipeline = [
+
+    var pipeline = [
+        {
+            $match: criteria
+        },
+        { $sort: { createdAt: -1 } }
+        ,
+        {
+            $lookup:
             {
-                $match: criteria
-            },
-            { $sort: { createdAt: -1 } }
-            ,
-            (filterBy.amount) ? { $limit: +filterBy.amount } :
-                { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'toId',
-                    foreignField: '_id',
-                    as: 'to'
-                }
-            },
-            {
-                $unwind: '$to'
-            },
-            {
-                $lookup:
-                {
-                    from: 'user',
-                    localField: 'fromId',
-                    foreignField: '_id',
-                    as: 'from'
-                }
-            },
-            {
-                $unwind: '$from'
+                from: 'user',
+                localField: 'toId',
+                foreignField: '_id',
+                as: 'to'
             }
-        ]
+        },
+        {
+            $unwind: '$to'
+        },
+        {
+            $lookup:
+            {
+                from: 'user',
+                localField: 'fromId',
+                foreignField: '_id',
+                as: 'from'
+            }
+        },
+        {
+            $unwind: '$from'
+        }
+    ]
+    if (filterBy.amount) pipeline.splice(2, 0, { $limit: +filterBy.amount })
+    try {
         var notifs = await collection.aggregate(pipeline).toArray()
         notifs = notifs.map(notif => {
             notif.from = { _id: notif.from._id, name: notif.from.name, imgUrl: notif.from.profileImgUrl }

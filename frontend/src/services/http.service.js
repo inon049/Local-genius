@@ -39,9 +39,9 @@ async function ajax(endpoint, method='get', data=null) {
     } catch (err) {
         console.log('ERROR IN AJAX CALL:',err);
         
-        // if (err.response.status === 401) {
-        //     router.push('/');
-        // }
+        if (err.response.status === 401) {
+            router.push('/login');
+        }
     }
 }
 

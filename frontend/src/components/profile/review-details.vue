@@ -2,7 +2,9 @@
   <section class="review-details">
     <div class="review-header">
       <div class="flex">
-        <div class="img-container"><img :src="imgUrl"/></div>
+        <div class="img-container">
+          <img :src="imgUrl" />
+        </div>
         <div class="review-txt flex col">
           <div class="review-txt-title">
             <h2>{{review.byUser.name}}</h2>
@@ -31,7 +33,7 @@ export default {
   props: {
     review: Object,
     loggedInUser: {
-      type: Object,
+      type: Object
     }
   },
   methods: {
@@ -47,8 +49,6 @@ export default {
       return imgUrl;
     }
   },
-  created() {
-  
-  }
+  created() {}
 };
 </script>

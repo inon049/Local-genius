@@ -19,6 +19,8 @@ const notifRoutes = require('./api/notif/notif.routes')
 const connectSockets = require('./api/socket/socket.routes')
 
 
+
+
 app.use(cookieParser())
 app.use(bodyParser.json());
 app.use(session({
@@ -49,6 +51,11 @@ connectSockets(io)
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname, 'public')));
 }
+//HEROKU FIX
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const port = process.env.PORT || 3000;
 http.listen(port, () => {
