@@ -1,6 +1,6 @@
 <template>
 <section class="footer">
-    <p>&copy; Inon Ori Dror</p>
+    <p>Local-Genius &copy; {{currYear}}  by Inon Ori Dror</p>
 </section>
 </template>
 
@@ -13,7 +13,9 @@ export default {
     };
   },
   computed: {
-
+    currYear(){
+     return new Date().getFullYear()
+    }
   },
   methods: {
 

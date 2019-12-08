@@ -110,17 +110,23 @@
   }
   .city-filter {
     position: absolute;
-    width: 40%;
+    width: 85%;
     margin-top: 17rem;
     @include for-very-very-narrow-layout {
       margin-top: 17rem;
+      width: 65%;
     }
     @include for-very-narrow-layout {
       margin-top: 20rem;
+      width: 40%;
+    }
+    @include for-narrow-layout {
+      margin-top: 21rem;
+      width: 35%;
     }
     @include for-normal-layout {
       margin-top: 21rem;
-      width: 40%;
+      width: 35%;
     }
     @include for-mid-wide-layout {
       width: 35%;

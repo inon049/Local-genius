@@ -1,7 +1,7 @@
 <template>
   <section class="guide-details-container mt-10">
     <guide-personal-info :guide="guide"></guide-personal-info>
-    <review-panel :filter="filter" :guide="guide" v-if="guide"></review-panel>
+    <review-panel :guide="guide" v-if="guide"></review-panel>
   </section>
 </template>
 
