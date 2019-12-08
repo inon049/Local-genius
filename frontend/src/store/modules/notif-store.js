@@ -18,7 +18,7 @@ export default {
             let idx= state.notifs.findIndex(notif=>notif._id===updatedNotif._id)
         },
         addNotif(state,{addedNotif}){
-
+            state.notifs.push(addedNotif)
         }
     },
     actions: {
