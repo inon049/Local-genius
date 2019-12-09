@@ -20,16 +20,16 @@
           </div>
          
         </div>
-        <div>
+        <div class="guide-price-rate">
           <div class="guide-price flex align-center">
             <h2>{{price}}&#36;</h2>
             <h4>For my tour</h4>
           </div>
           <div class="booking-rate">
-            <p>
-              <span>★</span>
+              <h2>★</h2>
+            <h3>
               {{guide.rate}}
-            </p>
+            </h3>
           </div>
         </div>
           <img class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">

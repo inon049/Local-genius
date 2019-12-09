@@ -132,12 +132,29 @@
   align-items: center;
   background-color: rgb(240, 240, 240);
   border-radius: 5px;
-  width: 32%;
-  margin: 0 2px;
-  font-size: 0.9rem;
+  width: 13%;
+  max-width: 120px;
+  margin: 0 10px;
+  font-size: 1rem;
   padding: 5px 5px;
+  padding:5px;;
+  @include for-very-very-narrow-layout{
+    width: 32%;
+    margin: 0 5px;
+  }
+  p{
+    margin: 0;
+    display: none;
+    @include for-very-very-narrow-layout{
+      display: block;
+      font-size: 0.9rem;
+    }
+  }
   img {
-    width: 15%;
+    width: 80%;
+    @include for-very-very-narrow-layout{
+      width: 15%;
+    }
   }
 }
 

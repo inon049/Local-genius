@@ -12,7 +12,7 @@
             class="guide-interest"
             :class="interest"
           >
-            {{interest.toUpperCase()}}
+            <p>{{interest.toUpperCase()}}</p>
             <img
               :src="require('@/assets/img/interests/' + interest + '.png')"
             />
@@ -32,7 +32,7 @@
           <h1>TELL US A LITTLE BIT ABOUT YOURSELF</h1>
           <h2>{{guide.about}}</h2>
         </div>
-        <div class="giude-details">
+        <div class="guide-details">
           <div v-for="(ans,question,idx) in guide.questions" :key="idx">
             <h1>{{question}}</h1>
             <h3>{{ans}}</h3>

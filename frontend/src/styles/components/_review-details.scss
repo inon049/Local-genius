@@ -6,45 +6,69 @@
   border-radius: 3px;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
+
   p {
     margin: 0;
   }
   .review-header {
     width: 100%;
-    .review-txt {
-      width: 100%;
-      justify-self: flex-end;
-      padding: 0 15px;
-
-      .review-txt-title {
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        .rate {
-          color: #de4d5cce;
-          margin-left: 25px;
+    .review-main-txt{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include for-very-very-narrow-layout{
+        flex-direction: row;
+        text-align: start;
+      }
+      .review-txt {
+        width: 100%;
+        justify-self: flex-end;
+        padding: 0 15px;
+        .review-txt-title {
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          .review-time-rate{
+            display: flex;
+            flex-direction: column-reverse;
+            @include for-very-very-very-narrow-layout{
+              justify-content: space-around;
+            }
+            @include for-very-very-narrow-layout{
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            .rate {
+              color: #de4d5cce;
+              margin-left: 0;
+              @include for-very-very-narrow-layout{
+                margin-left: 25px;
+              }
+            }
+          }
         }
       }
-    }
-    h2 {
-      font-size: 1rem;
-    }
-    h3 {
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: underline;
-      margin-bottom: 10px;
-    }
-    .img-container {
-      width: 100px;
-      height: 100px;
-      img {
-        // width: 100px;
-        // height: 100px;
-        max-width: 100%;
-        height: auto;
-        border-radius: 50%;
+      h2 {
+        font-size: 1rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+      .img-container {
+        width: 100px;
+        height: 100px;
+        img {
+          // width: 100px;
+          // height: 100px;
+          max-width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -59,5 +83,9 @@
     &:hover {
       background-color: rgb(206, 206, 206);
     }
+  }
+  @include for-narrow-layout{
+    width: 80%;
+  
   }
 }

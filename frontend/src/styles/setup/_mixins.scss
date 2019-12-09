@@ -1,4 +1,9 @@
 /* Media queries Breakpoint mixins */
+@mixin for-very-very-very-narrow-layout {
+    @media (min-width: 350px) {
+        @content;
+    }
+}
 @mixin for-very-very-narrow-layout {
     @media (min-width: 450px) {
         @content;

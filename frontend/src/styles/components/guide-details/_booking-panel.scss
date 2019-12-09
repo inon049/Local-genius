@@ -1,10 +1,7 @@
 .booking-panel-container {
+  bottom: 5vh;
   .booking-desktop {
     display: none;
-  }
-  bottom: 5vh;
-  @include for-very-narrow-layout{
-    bottom: 0;
   }
   font-size: 1.5rem;
   position: fixed;
@@ -13,9 +10,12 @@
   text-align: center;
   border-top: 1px solid #bbbbbb;
   background-color: #ffffff;
-  height: rem(107px);
+  height: 4.5rem;
   padding: 20px;
   z-index: 5;
+  @include for-very-narrow-layout {
+    bottom: 0;
+  }
   @include for-mid-narrow-layout {
     display: flex;
     align-items: center;
@@ -29,41 +29,71 @@
     padding: rem(25px);
     margin: 0px;
     height: 42.875rem;
-    border-top:none;
+    border-top: none;
     border: 1px solid #bbbbbb;
     .booking-desktop {
       display: block;
     }
   }
-  .confirm-img{
+ 
+  .confirm-img {
     height: 50px;
     width: 50px;
-    margin-top:10px
+    margin-top: 10px;
   }
 }
-
-.guide-price {
-  h4 {
-    margin-left: 10px;
-    font-size:1.2rem;
-
+.guide-price-rate {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 35%;
+  .guide-price {
+    h4 {
+      margin-left: 10px;
+      font-size: 1.2rem;
+      display: none;
+      @include for-narrow-layout {
+        display: block;
+      }
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-right:10px;
+    }
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include for-very-narrow-layout {
+      margin-bottom: 15px;
+    }
+    @include for-mid-narrow-layout {
+      margin-top: 15px;
+    }
   }
-  h2{
-    font-size: 1.3rem;
-    font-weight: 700;
+  @include for-very-very-narrow-layout{
+    width: 28%;
   }
-  line-height: 20px;
-  margin-bottom:15px;
-  margin-top:0;
+  @include for-very-narrow-layout{
+    width: 22%;
+  }
+  @include for-narrow-layout{
+    width: 35%;
+  }
+  
   @include for-mid-narrow-layout{
-    margin-top:15px; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
   }
 }
+
 .persons {
   display: none;
   margin-top: 15px;
   width: 100%;
-  @include for-mid-narrow-layout{
+  @include for-mid-narrow-layout {
     display: block;
   }
   select {
@@ -75,19 +105,19 @@
     background-color: #ffffff;
   }
 }
-.loading-booking{
+.loading-booking {
   height: 50px;
-    width: 50px;
-    margin-top:10px
+  width: 50px;
+  margin-top: 10px;
 }
-.scroll{
+.scroll {
   text-decoration: none;
   width: inherit;
   display: none;
   justify-content: center;
   color: $clr5;
   @include for-mid-narrow-layout {
-  display: flex;
+    display: flex;
   }
 }
 
@@ -112,21 +142,32 @@
   }
 }
 .booking-rate {
-  p {
-    margin: 0;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
   }
-  font-size: 1.2rem;
-  span {
-    font-size: 1.4rem;
-    margin-bottom: 0;
+  h3{
+    font-size: 1.3rem;
+    font-weight: 4F00;
+    margin-left: 5px;
   }
 }
 .booking-price-rate {
   color: #de4d5c;
   flex-direction: row-reverse;
   justify-content: space-between;
-  width: 100%;
   display: flex;
+  margin:0 auto;
+  width: 100%;
+  @include for-very-narrow-layout{
+    width: 90%;
+  }
+  @include for-narrow-layout{
+
+    width: 100%;
+  }
   @include for-mid-narrow-layout {
     margin-top: 20px;
     flex-direction: column;
@@ -135,92 +176,89 @@
 }
 .booking-panel {
   color: #de4d5c;
+  width: 100%;
   h1 {
     font-size: 2rem;
     margin-bottom: 15px;
   }
   flex-direction: row;
   justify-content: space-between;
-  max-width: rem(700px);
+  max-width: 46rem;
   margin: 0 auto;
   @include for-mid-narrow-layout {
     flex-direction: column;
   }
 }
 
-.el-radio-button__inner:hover{
-color: black!important;
+.el-radio-button__inner:hover {
+  color: black !important;
 }
-.persons-header{
-
-  margin-bottom:10px;
+.persons-header {
+  margin-bottom: 10px;
 }
 .show-modal {
-  .close-btn{
+  .close-btn {
     position: absolute;
     right: 30px;
     border: 1px solid #de4d5c;
     cursor: pointer;
     padding: 0 5px;
-    &:hover{
+    &:hover {
       background-color: #de4d5c48;
     }
   }
   height: 90%;
-  .booking-panel{
+  .booking-panel {
     flex-direction: column;
     align-items: center;
   }
-  .persons{
-
+  .persons {
     display: block !important;
   }
   .booking-desktop {
     display: block !important;
   }
-  .booking-price-rate{
+  .booking-price-rate {
     flex-direction: column;
     align-items: center;
   }
-  .book-btn{
+  .book-btn {
     display: block;
     width: 60%;
-    margin-top:15px;
+    margin-top: 15px;
   }
-  .guide-price{
-    margin-top:15px;
+  .guide-price {
+    margin-top: 15px;
   }
   .booking-modal {
     display: flex;
     flex-direction: column;
-
   }
-  .modal-btn{
+  .modal-btn {
     display: none;
   }
-  @include for-narrow-layout{
+  @include for-narrow-layout {
     height: 60%;
     .booking-price-rate {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
     }
-    .book-btn{
+    .book-btn {
       width: 60%;
     }
-    .booking-panel{
+    .booking-panel {
       margin: 0 auto;
       flex-direction: row;
     }
-  
   }
 }
-.notif-img{
+.notif-img {
   width: 20px;
   height: 20px;
 }
 
-.modal-btn{
+.modal-btn {
   display: block;
   background-color: rgb(255, 90, 95);
   outline: none;
@@ -229,15 +267,16 @@ color: black!important;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-  width: 30%;
   margin: 0;
-  height: rem(60px);
-  @include for-mid-narrow-layout{
-    display: none;
+  height: auto;
+  width:22%;
+  align-self: baseline;
+  height:2.3rem;
+  @include for-mid-narrow-layout {
+  display: none;
   }
 }
 
-
-.booked{
+.booked {
   background-color: grey;
 }
