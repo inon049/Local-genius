@@ -12,7 +12,10 @@
     gap: 35px;
   }
   > * {
-    height: 530px;
+    height: 490px;
+    @include for-narrow-layout {
+      height: 550px;
+    }
   }
 }
 

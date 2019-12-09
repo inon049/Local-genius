@@ -66,9 +66,9 @@ function getInterests() {
         { name: "Animals", isSelected: false },
         { name: "OutDoor", isSelected: false },
         { name: "Food", isSelected: false },
-        { name: "Photography", isSelected: false },
+        { name: "Photos", isSelected: false },
         { name: "Luxury", isSelected: false },
-        { name: "Architecture", isSelected: false },
+        { name: "Architonic", isSelected: false },
         { name: "Science", isSelected: false }
     ]
 }
