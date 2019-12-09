@@ -39,8 +39,8 @@ export default {
                      txt:'You just got a new booking',
                     isRead:false,
                     }
-                context.dispatch({type:'addNotif',notif})
-                context.dispatch({type:'sendBookingNotif' , notif})
+                    var addedNotif =  await context.dispatch({type:'addNotif',notif})
+                    context.dispatch({type:'sendBookingNotif',notif:addedNotif.ops[0]})
                 return currBooking
 
         },

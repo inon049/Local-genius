@@ -31,7 +31,6 @@ export default {
   },
   methods: {
     notifClicked(type) {
-      console.log(type);
       if (type === "msg") this.activeName = "Messenger";
       else this.activeName = "Bookings";
     },

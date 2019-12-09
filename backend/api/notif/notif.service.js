@@ -78,8 +78,8 @@ async function add(notif) {
 
     const collection = await dbService.getCollection('notif')
     try {
-        await collection.insertOne(notif);
-        return notif;
+     const addedNotif = await collection.insertOne(notif);
+        return addedNotif;
     } catch (err) {
         console.log(`ERROR: cannot insert notification`)
         throw err;
@@ -92,7 +92,6 @@ async function update(notif) {
         const strId = notif._id
         const _id = ObjectId(strId)
         const newIsRead = notif.isRead
-        delete notif._id
         await collection.updateOne({ _id }, { $set: { isRead: newIsRead } })
         return notif
     } catch (err) {
@@ -105,6 +104,9 @@ function _buildCriteria(filterBy) {
     const criteria = {}
     if (filterBy.toId) {
         criteria.toId = ObjectId(filterBy.toId)
+    }
+    if (filterBy._id) {
+        criteria._id = ObjectId(filterBy._id)
     }
     return criteria;
 }
