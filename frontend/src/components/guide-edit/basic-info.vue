@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     save() {
-      this.$emit("save", this.guide);
+      this.$emit("saveInfo", this.guide);
     }
   },
   created() {

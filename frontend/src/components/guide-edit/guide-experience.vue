@@ -19,7 +19,7 @@
           placeholder="More about yourself"
         />
         <h2>Add a profile picture</h2>
-        <label class="input-label" for="file">
+        <label class="input-label" for="profile">
           <img src="../../assets/img/upload.png" />
           <input id="profile" class="upload-input" @change="uploadProfileImg" type="file" />
         </label>
@@ -114,7 +114,9 @@ export default {
     },
     save() {
       this.guide.questions = this.questions;
-      this.$emit("save", this.guide);
+      this.guide.type="guide"
+      this.$emit("saveInfo", this.guide);
+      this.$emit('save')
     },
     deleteImg(img) {
       var idx = this.guide.imgUrls.findIndex(img => {

@@ -45,7 +45,9 @@ export default {
     return {
       cities: [],
       guides: [],
-      guide: ''
+      guide: {
+        _id: ''
+      }
     };
   },
   async created() {
@@ -55,8 +57,9 @@ export default {
     var guides = await userService.query();
     guides = JSON.parse(JSON.stringify(guides));
     this.guides = guides.splice(0, 4);
-    if(this.$store.getters.loggedInUser)
-    this.guide = this.$store.getters.loggedInUser
+    if(this.$store.getters.loggedInUser){
+      this.guide = this.$store.getters.loggedInUser
+    }
   }
 };
 </script>

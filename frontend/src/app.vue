@@ -16,7 +16,7 @@
 import mainHeader from "./components/main-header";
 import mainFooter from "./components/main-footer";
 import mobileNav from "./components/mobile-nav";
-// import pushNotifService from './services/push.notif.service'
+import pushNotifService from './services/push.notif.service'
 export default {
   data() {
     return {
@@ -29,7 +29,6 @@ export default {
     await this.$store.dispatch({ type: "loadUsers" });
     await this.$store.dispatch({ type: "loadCities" });
     window.addEventListener("scroll", this.handleScroll);
-    // pushNotifService.run()
   },
   components: {
     mainHeader,

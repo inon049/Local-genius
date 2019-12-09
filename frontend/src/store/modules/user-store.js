@@ -78,8 +78,10 @@ export default {
       context.commit({ type: 'setUser', user: null })
     },
     async addGuide(context, { guide }) {
-      const newGuide = userService.getById(guide._id)
-      if(newGuide) await userService.update(newGuide);
+      if(guide._id){
+        const newGuide = userService.getById(guide._id)
+        await userService.update(newGuide);
+      }
       else await userService.add(guide)
     }
   },

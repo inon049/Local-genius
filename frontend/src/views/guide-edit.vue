@@ -2,7 +2,7 @@
   <div class="edit-guide-container mt-10">
     <el-tabs type="border-card" v-model="activeName" @tab-click="setCmp">
       <el-tab-pane v-for="(page,idx) in cmps" :key="idx" :label="page" :name="page">
-        <component @start="start" @save="save" :is="activeName" :guideToEdit="guideToEdit"></component>
+        <component @start="start" @saveInfo="saveInfo" @save="save" :is="activeName" :guideToEdit="guideToEdit"></component>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -47,13 +47,14 @@ export default {
     currCmp(cmp) {
       return (this.cmp = cmp);
     },
-    save(guide) {
-      console.log('saved!');
-      this.guideToEdit = guide;
+    save() {
       this.$store.dispatch({
         type: "addGuide",
-        guide: JSON.parse(JSON.stringify(guide))
+        guide: JSON.parse(JSON.stringify(this.guideToEdit))
       });
+    },
+    saveInfo(guide){
+      this.guideToEdit = guide;
     },
     start() {
       this.activeName = "Information";
