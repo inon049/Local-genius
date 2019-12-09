@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.66796890086d021dd555f9727abed4ca.js"
+  "/precache-manifest.0af27e87f0328cc486e883785d5bf3c3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "local-genius"});
