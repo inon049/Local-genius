@@ -10,16 +10,16 @@ import httpService from '@/services/http.service'
 // to get upcoming  -  upcoming : 1,
 // to get specific amount  -   amount : <AMOUNT>
 async function query(filterBy = {}) {
-    var queryUrl = ``
+    let queryStr = ``
 
     if (filterBy._id){
-        if (filterBy.isGuide) queryUrl += `toGuideId=${filterBy._id}&`
-        else queryUrl += `byUserId=${filterBy._id}&`
+        if (filterBy.isGuide) queryStr += `toGuideId=${filterBy._id}&`
+        else queryStr += `byUserId=${filterBy._id}&`
     }
     for (const param in filterBy) {
-        queryUrl += `${param}=${filterBy[param]}&`
+        queryStr += `${param}=${filterBy[param]}&`
     }
-    const bookings = await httpService.get(`booking/?${queryUrl}`)
+    const bookings = await httpService.get(`booking/?${queryStr}`)
     return bookings
 }
 
