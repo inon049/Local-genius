@@ -37,8 +37,8 @@ export default {
                 isRead:false,
                 txt:'New chat messege'
             }
-            context.dispatch({type:'sendMsgNotif',notif})
-            context.dispatch({type:'addNotif',notif})
+          var addedNotif =  await context.dispatch({type:'addNotif',notif})
+            context.dispatch({type:'sendMsgNotif',notif:addedNotif.ops[0]})
         },
         async loadChats(context){
             let id = context.rootGetters.loggedInUser._id;

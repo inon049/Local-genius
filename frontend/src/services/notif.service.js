@@ -8,9 +8,16 @@ export default {
     add
 }
 
-function query(id){
-    console.log('id in query',id);
-   return httpService.get(`notif/?toId=${id}`)
+function query(filterBy){
+    //Query all user notifs
+    if (filterBy.toId) {
+        return httpService.get(`notif/?toId=${filterBy.toId}`)
+    }
+    //GetById
+    if (filterBy._id) {
+        console.log(filterBy._id, 'filertetrby id');
+        return httpService.get(`notif/?_id=${filterBy._id}`)
+    }
 }
 
 function add(notif){

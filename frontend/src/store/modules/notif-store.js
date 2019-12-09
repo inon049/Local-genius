@@ -6,13 +6,9 @@ export default {
         notifs:[]
            },
     getters: {
-        notifs(state){
-            return state.notifs
-        },
         unReadNotifs(state){
             return state.notifs.filter(notif=>!notif.isRead)
         }
-        
     },
     mutations: {
         setNotifs(state,{notifs}){
@@ -20,7 +16,7 @@ export default {
         },
         updateNotif(state,{updatedNotif}){
             let idx= state.notifs.findIndex(notif=>notif._id===updatedNotif._id)
-            state.notifs[idx]=updatedNotif
+            state.notifs.splice(idx,1,updatedNotif)
         },
         pushToUserNotifs(state,{notif}){
             state.notifs.push(notif)
@@ -29,7 +25,7 @@ export default {
     },
     actions: {
        addNotif(context,{notif}){
-             notifService.add(notif)
+            return notifService.add(notif)
           },
         async updateNotif(context,{notif}){
             const updatedNotif = await notifService.update(notif)
@@ -38,11 +34,12 @@ export default {
 
         async loadNotifs(context){
             let id = context.rootGetters.loggedInUser._id;
-            let notifs = await notifService.query(id)
+            let notifs = await notifService.query({toId:id})
             context.commit({type:'setNotifs',notifs})
         },
-        pushToUserNotifs(context,{notif}){
-            context.commit({type:'pushToUserNotifs',notif})
+        async pushToUserNotifs(context,{notif}){
+            let formattedNotif = await notifService.query({_id:notif._id})
+            context.commit({type:'pushToUserNotifs',notif:formattedNotif[0]})
         }
 
     },

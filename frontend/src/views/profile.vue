@@ -1,7 +1,6 @@
 <template>
   <section class="profile mt-10">
     <profile-menu></profile-menu>
-    <router-view class="router" />
   </section>
 </template>
 
@@ -11,8 +10,5 @@ export default {
   components: {
     profileMenu
   },
-  created(){
-    this.$store.dispatch({type:'loadNotifs'})
-  }
 };
 </script>

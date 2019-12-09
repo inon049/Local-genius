@@ -28,6 +28,7 @@ export default {
       this.$store.dispatch({ type: "createUserSocket" });
     await this.$store.dispatch({ type: "loadUsers" });
     await this.$store.dispatch({ type: "loadCities" });
+    await this.$store.dispatch({type:'loadNotifs'})
     window.addEventListener("scroll", this.handleScroll);
   },
   components: {
