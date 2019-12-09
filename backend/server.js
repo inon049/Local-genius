@@ -43,10 +43,7 @@ if (process.env.NODE_ENV !== 'production') {
     };
     app.use(cors(corsOptions));
 }
-
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'public')));
-}
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 
 
@@ -60,7 +57,7 @@ app.use('/api/chat', chatRoutes)
 app.use('/api/notif', notifRoutes)
 connectSockets(io)
 
-app.use(require('express-static')('./'));
+// app.use(require('express-static')('./'));
 
 
 app.post('/subscribe', (req, res) => {
