@@ -10,6 +10,8 @@ import VAnimateCss from 'v-animate-css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueCarousel from 'vue-carousel';
+import { runInContext } from 'vm'
+import pushNotifService from './services/push.notif.service'
 var VueScrollTo = require('vue-scrollto');
 
 Vue.use(VueScrollTo)
@@ -36,3 +38,7 @@ new Vue({
 
 
 
+// if('serviceWorker' in navigator){
+//     // console.log('ppp');
+//     pushNotifService.send().catch(err=> console.log(err))
+// }

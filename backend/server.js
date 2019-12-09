@@ -43,7 +43,6 @@ if (process.env.NODE_ENV !== 'production') {
     };
     app.use(cors(corsOptions));
 }
-app.use(express.static(path.resolve(__dirname, 'public')));
 
 
 
@@ -71,7 +70,7 @@ app.post('/subscribe', (req, res) => {
     });
 });
 
-// app.use(require('express-static')('./'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.get('*', (request, response) => {
     response.sendFile(path.join(__dirname, 'public', 'index.html'));

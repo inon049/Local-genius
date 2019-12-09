@@ -63,7 +63,7 @@ export default {
     },
     save() {
       this.guide.interests = this.selectedInterests.interests;
-      this.$emit("save", this.guide);
+      this.$emit("saveInfo", this.guide);
     }
   },
   created() {
