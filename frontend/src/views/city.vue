@@ -7,7 +7,7 @@
           Find your guides, get their insight on the city, and enjoy {{currCity.name}}
           like it was your second home!
         </h4>
-        <button @click="toggleFilter">Find the guide for me</button>
+        <button @click="toggleFilter">Find by interest</button>
       </div>
       <guide-filter @filtered="setFilter" :isOpen="isFilterOpen" :interests="interests">
         <button @click="toggleFilter" class="filter-close-btn">x</button>

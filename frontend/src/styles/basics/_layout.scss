@@ -38,11 +38,21 @@
   border-bottom: 1px solid $clr2;
   z-index: 100;
   .notifs-bubble{
-    width: 20px;
+    width: 23px;
     position: absolute;
     top: -11px;
     left: -13px;
-    z-index: 99999;
+    z-index: 100;
+  }
+  .notifs-count{
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    position: absolute;
+    font-size: 10px;
+    top: -12px;
+    left: 1px;
+    z-index: 101;
   }
   .logo {
     font-family: Kaushan;

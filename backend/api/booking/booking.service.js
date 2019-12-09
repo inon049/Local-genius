@@ -103,6 +103,5 @@ function _buildCriteria(filterBy) {
     if (filterBy.upcoming) {
         criteria.at = { $gte: Date.now() }
     }
-    // console.log(criteria, ' booking crit');
     return criteria;
 }
