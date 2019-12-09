@@ -4,7 +4,13 @@
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <template v-if="user">
-        <router-link style="position:relative;" to="/profile"><img src="@/assets/img/notification.png" v-if="notifs" class="notifs-bubble"/>Profile</router-link>
+        <router-link style="position:relative;" to="/profile">
+        <template v-if="notifs" >
+          <p class="notifs-count">{{notifs}}</p>
+          <img src="@/assets/img/notiff.png" class="notifs-bubble" />
+        </template>
+          Profile
+        </router-link>
         <button @click="logout">Logout</button>
       </template>
       <router-link v-else to="/login">Login</router-link>
@@ -31,8 +37,7 @@ export default {
       return this.$store.getters.loggedInUser;
     },
     notifs() {
-      if(this.$store.getters.unReadNotifs.length)
-      return true
+      return (this.$store.getters.unReadNotifs.length);
     }
   },
   methods: {
