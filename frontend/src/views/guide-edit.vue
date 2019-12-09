@@ -48,6 +48,7 @@ export default {
       return (this.cmp = cmp);
     },
     save(guide) {
+      console.log('saved!');
       this.guideToEdit = guide;
       this.$store.dispatch({
         type: "addGuide",

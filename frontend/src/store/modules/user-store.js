@@ -51,7 +51,7 @@ export default {
   actions: {
     async updateUser(context,{user}){
       const updatedUser = await userService.update(user)
-      context.commit({type:'updateUser',user})
+      context.commit({type:'updateUser',updatedUser})
     },
     async loadUsers(context) {
       const users = await userService.query();
@@ -78,7 +78,9 @@ export default {
       context.commit({ type: 'setUser', user: null })
     },
     async addGuide(context, { guide }) {
-      console.log('new guide in store', guide);
+      const newGuide = userService.getById(guide._id)
+      if(newGuide) await userService.update(newGuide);
+      else await userService.add(guide)
     }
   },
 }

@@ -67,7 +67,7 @@ export default {
     }
   },
   created() {
-    if (this.guideToEdit){
+    if (this.guideToEdit.interests){
       this.guide = this.guideToEdit;
       this.guide.interests.forEach(interest => {
         this.interests.forEach(localInterest => {

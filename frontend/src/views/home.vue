@@ -11,7 +11,7 @@
         <router-link to="/signup">JOIN!</router-link>
       </div>
       <img class="hero-img" src="@/assets/img/home-bg2.jpg" alt />
-      <router-link class="become-guide-btn" to="/guide/edit">BECOME A GUIDE</router-link>
+      <router-link class="become-guide-btn" :to="`/guide/edit/${guide._id}`">BECOME A GUIDE</router-link>
     </div>
     <div class="container">
       <div>
@@ -44,7 +44,8 @@ export default {
   data() {
     return {
       cities: [],
-      guides: []
+      guides: [],
+      guide: ''
     };
   },
   async created() {
@@ -54,6 +55,8 @@ export default {
     var guides = await userService.query();
     guides = JSON.parse(JSON.stringify(guides));
     this.guides = guides.splice(0, 4);
+    if(this.$store.getters.loggedInUser)
+    this.guide = this.$store.getters.loggedInUser
   }
 };
 </script>
