@@ -19,8 +19,10 @@
     </div>
     <div class="guide-top-data">
       <div class="guide-name">
-        <router-link :to="'/guide/' + guide._id">{{guide.name}}</router-link>(
-        <p v-for="(lang,idx) in guide.langs" :key="idx">{{lang}}</p>)
+        <router-link :to="'/guide/' + guide._id">{{guide.name}}</router-link>
+        <div class='guide-langs'>
+          (<p v-for="(lang,idx) in guide.langs" :key="idx">{{lang}}</p>)
+        </div>
       </div>
       <div class="rating">
         <p>
@@ -60,8 +62,7 @@ export default {
   data() {
     return {};
   },
-  methods: {
-  },
+  methods: {},
   computed: {},
   components: {
     "vue-tiny-slider": VueTinySlider
