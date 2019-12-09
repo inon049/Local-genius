@@ -41,9 +41,9 @@ export default {
         { name: "Animals", isSelected: false },
         { name: "OutDoor", isSelected: false },
         { name: "Food", isSelected: false },
-        { name: "Photography", isSelected: false },
+        { name: "Photos", isSelected: false },
         { name: "Luxury", isSelected: false },
-        { name: "Architecture", isSelected: false },
+        { name: "Architonic", isSelected: false },
         { name: "Science", isSelected: false }
       ]
     };
@@ -67,7 +67,7 @@ export default {
     }
   },
   created() {
-    if (this.guideToEdit){
+    if (this.guideToEdit.interests){
       this.guide = this.guideToEdit;
       this.guide.interests.forEach(interest => {
         this.interests.forEach(localInterest => {

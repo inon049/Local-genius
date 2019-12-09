@@ -9,8 +9,13 @@ async function query() {
     const users = await httpService.get(USER_URL)
     return users
 }
+
 function update(user) {
     return httpService.put(USER_URL + user._id, user)
+}
+
+function add(user){
+    return httpService.post(USER_URL,user)
 }
 
 async function getById(_id) {
@@ -50,7 +55,8 @@ export default {
     login,
     signup,
     logout,
-    update
+    update,
+    add
 }
 
 
@@ -66,9 +72,9 @@ function getInterests() {
         { name: "Animals", isSelected: false },
         { name: "OutDoor", isSelected: false },
         { name: "Food", isSelected: false },
-        { name: "Photography", isSelected: false },
+        { name: "Photos", isSelected: false },
         { name: "Luxury", isSelected: false },
-        { name: "Architecture", isSelected: false },
+        { name: "Architonic", isSelected: false },
         { name: "Science", isSelected: false }
     ]
 }

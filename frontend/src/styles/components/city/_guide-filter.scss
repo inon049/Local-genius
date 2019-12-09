@@ -1,21 +1,43 @@
 .guide-filter-container {
-  width: 100%;
+  width: 90%;
   position: absolute;
   top: 0;
   z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include for-very-narrow-layout{
+    width: 100%;
+  }
+
 }
 
 .guide-interests-filter-list {
   position: relative;
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
-  padding: 25px;
-  width: 60%;
+  padding: 25px 10px;
+  width: 95%;
   list-style: none;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include for-very-very-narrow-layout {
+  }
+  @include for-very-narrow-layout {
+    padding: 25px 10px;
+    width: 80%;
+  }
+  @include for-narrow-layout {
+  }
+  @include for-mid-narrow-layout {
+    padding: 25px;
+    width: 60%;
+  }
+  h2 {
+    text-align: center;
+  }
 }
 
 .guide-filter-interest {
@@ -25,15 +47,24 @@
   align-items: center;
   background-color: rgb(233, 233, 233);
   border-radius: 5px;
-  width: 48%;
+  width: 45%;
   height: 25%;
-  margin: 5px 5px;
-  font-size: 1.5rem;
+  margin: 5px 3px;
+  font-size: 0.8rem;
   padding: 2px 5px;
   cursor: pointer;
   img {
     width: 12%;
     pointer-events: none;
+  }
+  @include for-very-narrow-layout {
+    margin: 5px 5px;
+    font-size: 1.3rem;
+    width: 45%;
+  }
+  @include for-narrow-layout {
+    font-size: 1.5rem;
+    width: 48%;
   }
 }
 
@@ -51,18 +82,24 @@
     outline: none;
     background-color: rgb(255, 90, 95);
     border: none;
-    padding: 10px;
-    width: 60%;
+    padding: 7px;
+    width: 40%;
     border-radius: 3px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     align-self: center;
     margin-top: 10px;
     cursor: pointer;
+    @include for-very-narrow-layout {
+      width: 50%;
+      font-size: 1.2rem;
+      padding: 10px;
+
+    }
   }
 }
 
-.filter-header{
+.filter-header {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -70,7 +107,7 @@
   margin-bottom: 10px;
 }
 
-.filter-close-btn{
+.filter-close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -79,8 +116,7 @@
   border-radius: 2px;
   background-color: rgb(233, 233, 233);
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: rgb(207, 207, 207);
   }
-
 }

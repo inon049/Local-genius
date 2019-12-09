@@ -37,7 +37,14 @@
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
     right: 10px;
     top: auto;
+    bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    @include for-very-very-very-narrow-layout{
     bottom: 30px;
+      flex-direction: row;
+      align-items: center;
+    }
     @include for-medium-layout {
       top: 90px;
       bottom: auto;
@@ -62,7 +69,6 @@
     font-family: Lato;
     padding-top: 0.5rem;
     text-align: center;
-
     h2 {
       font-size: 1.9rem;
       font-weight: 700;
@@ -90,7 +96,7 @@
     @include for-very-narrow-layout {
       font-size: 2.3rem;
       text-align: center;
-      padding-top: 6.3rem;
+      padding-top: 9.3rem;
     }
     @include for-narrow-layout {
       h2 {
@@ -117,21 +123,13 @@
       width: 65%;
     }
     @include for-very-narrow-layout {
-      margin-top: 20rem;
+      margin-top: 24rem;
       width: 40%;
     }
     @include for-narrow-layout {
-      margin-top: 21rem;
       width: 35%;
     }
-    @include for-normal-layout {
-      margin-top: 21rem;
-      width: 35%;
-    }
-    @include for-mid-wide-layout {
-      width: 35%;
-    }
-
+  
     input {
       width: 100%;
       height: 3rem;
@@ -142,7 +140,10 @@
       border: 0;
       outline: none;
       &::placeholder {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        @include for-very-narrow-layout{
+          font-size:1.2rem
+        }
       }
     }
     option {
@@ -189,7 +190,7 @@
 .scroll-up {
   text-decoration: none;
   position: fixed;
-  bottom: 45px;
+  bottom: 11px;
   right: 0;
   width: 25px;
   display: flex;
@@ -200,6 +201,10 @@
   border-radius: 3px;
   z-index: 1000;
   @include for-very-narrow-layout {
+    bottom: 22px;
+    right: 10px;
+  }
+  @include for-mid-narrow-layout{
     bottom: 10px;
     right: 22px;
   }

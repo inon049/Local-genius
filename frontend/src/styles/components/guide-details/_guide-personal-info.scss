@@ -16,6 +16,7 @@
     margin: 0 auto;
   }
   .questions-container {
+    align-self: center;
     h1 {
       font-size: 1.3rem;
     }
@@ -23,7 +24,6 @@
       font-size: 1.2rem;
       font-weight: 400;
     }
-    margin: 0;
     @include for-mid-narrow-layout {
       margin-right: 10px;
     }
@@ -40,23 +40,27 @@
     margin-bottom: 10px;
   }
 }
-.giude-details {
+.guide-details {
   column-gap: 40px;
   break-inside: avoid-column;
   padding-right: 0;
   color: $clr1;
-  > *:not(:last-child) {
+  > * {
     border-bottom: 1px solid $clr3;
     padding-bottom: 20px;
-  }
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
     margin-top: 20px;
+    &:last-child {
+      border-bottom: none;
+    }
     &:first-child {
       margin-top: 0;
     }
   }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
   h3 {
     margin-bottom: 40px;
     font-weight: 400;
@@ -81,17 +85,17 @@
 }
 .profile-img {
   object-fit: contain;
-  width: 25rem;
   align-self: center;
-  @include for-medium-layout {
+  width: 17rem;
+  object-fit: cover;
+  @include for-very-very-narrow-layout {
     width: 20rem;
-    object-fit: cover;
   }
 }
 
 .personal-title-container {
   align-self: center;
-  // margin-bottom: rem(40px);
+  margin-bottom: 15px;
   flex-direction: column;
   border-bottom: 1px solid $clr3;
   padding-bottom: rem(20px);
@@ -175,9 +179,15 @@
   h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 30px;
-    margin-right: 10px;
+    margin-bottom: 10px;
     overflow-wrap: normal;
+    width: 100%;
+    text-align: center;
+    @include for-narrow-layout {
+      margin-right: 10px;
+      width: auto;
+      text-align: start;
+    }
   }
   @include for-medium-layout {
     width: 50%;
@@ -188,11 +198,46 @@
     padding-bottom: 0;
     padding-left: 0;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
     @include for-narrow-layout {
       margin: 0;
+      justify-content: flex-start;
+
     }
     li {
-      height: rem(30px);
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(240, 240, 240);
+      border-radius: 5px;
+      width: 12%;
+      max-width: 120px;
+      margin: 0 10px;
+      font-size: 1rem;
+      padding: 5px 5px;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      @include for-very-very-narrow-layout {
+        justify-content: space-between;
+        width: 32%;
+        margin: 0 5px;
+      }
+      p {
+        margin: 0;
+        display: none;
+        @include for-very-very-narrow-layout {
+          display: block;
+          font-size: 0.9rem;
+        }
+      }
+      img {
+        width: 80%;
+        @include for-very-very-narrow-layout {
+          width: 15%;
+        }
+      }
     }
     li:first-child {
       margin-left: 0;

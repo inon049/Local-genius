@@ -1,14 +1,14 @@
 <template>
   <section class="review-details">
     <div class="review-header">
-      <div class="flex">
+      <div class="review-main-txt">
         <div class="img-container">
           <img :src="imgUrl" />
         </div>
         <div class="review-txt flex col">
           <div class="review-txt-title">
             <h2>{{review.byUser.name}}</h2>
-            <div class="flex space-between">
+            <div class="review-time-rate flex space-between">
               <span
                 :title="+review.createdAt|moment('calendar')"
               >{{+review.createdAt | moment("calendar") }}</span>
