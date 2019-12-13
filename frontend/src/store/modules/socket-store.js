@@ -20,6 +20,11 @@ export default {
       let userId = context.rootGetters.loggedInUser._id
       socket.emit('createUserSocket', userId)
     },
+    deleteUserSocket(context){
+      console.log('heere!!!');
+      let userId = context.rootGetters.loggedInUser._id
+      socket.emit('deleteUserSocket', userId)
+    },
     sendBookingNotif(context, { notif }) {
       socket.emit('sendBookingNotif', notif)
     },

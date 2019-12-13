@@ -1,33 +1,22 @@
 const publicVapidKey = 'BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o';
-import httpService from './http.service'
 
-
-async function send() {
+async function register() {
     if ('serviceWorker' in navigator) {
-        console.log('Registering service worker');
-        // REFRESH!!!!!
         const registration = await navigator.serviceWorker.register('/worker.js', { scope: '/' });
-        console.log('Registered service worker');
-
-        console.log('Registering push');
         const subscription = await registration.pushManager.
-            subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-            });
-        console.log('Registered push',subscription);
-
-        console.log('Sending push');
-        await fetch('//localhost:3000/subscribe', {
-            method: 'POST',
-            body: JSON.stringify(subscription),
-            headers: {
-                'content-type': 'application/json'
+        subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+        });
+        await fetch('api/push-notif/subscribe',{
+            method:"POST" ,
+            body:JSON.stringify(subscription),
+            headers:{
+                'content-type':'application/json'
             }
         });
-        console.log('Sent push');
+        console.log('service worker Registeration sent to server...');
     } else console.log('push not supported');
-    }
 }
 
 function urlBase64ToUint8Array(base64String) {
@@ -46,5 +35,5 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 export default {
-    send
+    register
 }
