@@ -11,7 +11,7 @@
       <div class="booking-price-rate flex">
         <div class="persons flex space-around">
           <label for="persons">
-            <h4  id="book" class="persons-header">How many people?</h4>
+            <h4   class="persons-header">How many people?</h4>
           </label>
           <div>
             <el-radio-group text-color="black" fill="rgba(255, 90, 95, 0.23)" v-model="booking.attendees" size="medium">
@@ -32,12 +32,12 @@
             </h3>
           </div>
         </div>
-          <img class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">
+          <img  id="book" class="loading-booking" v-if="isLoading" src="../../assets/img/loading.svg">
         <transition enter-active-class="animated zoomIn">
           <img class="confirm-img" v-if="isBooking" src="../../assets/img/confirm.png" />
         </transition>
-        <button @click="click" class="modal-btn" ref="bookBtn">Book</button>
-         <button class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn"><a class="scroll" href="#" v-scroll-to="'#book'"></a>Book</button>
+        <button  @click="click" class="modal-btn" ref="bookBtn">Book</button>
+         <button  class="book-btn" @click="onBook" :class="{booked : isBooking}" ref="bookBtn"><a class="scroll" href="#" v-scroll-to="'#book'"></a>Book</button>
       </div>
     </div>
   </div>
@@ -96,6 +96,12 @@ export default {
         type: "saveBooking",
         booking: JSON.parse(JSON.stringify(this.booking))
       });
+        if(this.isOpen){
+            setTimeout(() => {
+              this.isOpen = false
+              this.isBooking = false
+            }, 3000);
+          }
     },
     setDate(date) {
       this.booking.at = date;
@@ -107,6 +113,8 @@ export default {
     this.booking.byUserId = this.$store.getters.loggedInUser._id;
   }
 };
+        //  <img class="message-btn" src="../../assets/img/text-msg.png">
+
 </script>
 
 <style>

@@ -46,11 +46,6 @@ var gCities = [
         imgUrl: 'https://bigseventravel.com/wp-content/uploads/2019/03/anastasia-sklyar-1171169-unsplash-1024x683.jpg'
     },
     {
-        _id: '108',
-        name: 'Seoul',
-        imgUrl: 'https://cdn.pixabay.com/photo/2015/02/14/08/26/gwanghwamun-636113_1280.jpg',
-    },
-    {
         _id: '109',
         name: 'Barcelona',
         imgUrl: 'https://cdn.pixabay.com/photo/2014/04/26/10/02/parc-guell-332390_1280.jpg',
@@ -59,6 +54,11 @@ var gCities = [
         _id: '110',
         name: 'Rome',
         imgUrl: 'https://cdn.pixabay.com/photo/2012/03/01/00/33/trevi-19688_1280.jpg',
+    },
+    {
+        _id: '111',
+        name: 'London',
+        imgUrl: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
     },
 
 ]
