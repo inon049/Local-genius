@@ -4,6 +4,7 @@
     <datalist id="cities">
       <option style="width:100%" v-for="city in cities" :key="city._id" :value="city.name"></option>
     </datalist>
+    <button class="btn">Search</button>
   </section>
 </template>
 

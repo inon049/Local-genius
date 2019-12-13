@@ -4,8 +4,8 @@
     <div class="nav-bar" id="nav">
       <router-link to="/">Home</router-link>
       <template v-if="user">
-        <router-link style="position:relative;" to="/profile">
-        <template v-if="notifs" >
+        <router-link  style="position:relative;" to="/profile">
+        <template  v-if="notifs" >
           <p class="notifs-count">{{notifs}}</p>
           <img src="@/assets/img/notiff.png" class="notifs-bubble" />
         </template>
@@ -50,7 +50,8 @@ export default {
     },
     goToHome() {
       this.$router.replace("/");
-    }
+    },
+
   },
   created() {
     eventBus.$on("book", () => {

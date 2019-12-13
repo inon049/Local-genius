@@ -1,4 +1,5 @@
 .home {
+
   margin-bottom: 10vh;
   width: 100%;
   @include for-very-narrow-layout {
@@ -118,6 +119,7 @@
     position: absolute;
     width: 85%;
     margin-top: 17rem;
+    display: flex;
     @include for-very-very-narrow-layout {
       margin-top: 17rem;
       width: 65%;
@@ -184,6 +186,24 @@
         width: 25%;
       }
     }
+  }
+  .btn{
+    height: 3rem;
+    background-color: rgba(255, 90, 96, 0.781);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  align-self: flex-end;
+  display: none;
+
+  @include for-very-very-narrow-layout{
+    display: block;
+  }
   }
 }
 
