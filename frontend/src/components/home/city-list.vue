@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     citiesToWhow() {
-        return JSON.parse(JSON.stringify(this.cities)).splice(0, 4);
+        return JSON.parse(JSON.stringify(this.cities)).splice(0, 8);
     }
   },
 };

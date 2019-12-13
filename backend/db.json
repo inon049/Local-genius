@@ -1,4 +1,43 @@
 {
+    {
+        
+        "name": "Ioanna Rhu",
+        "email": "Ioanna@ww.com",
+        "password": "11",
+        "type": "guide",
+        "rate": 4.7,
+        "langs": [
+            "English",
+            "Greek"
+            
+        ],
+        "profileImgUrl": "https://dlq9ebkqqrcon.cloudfront.net/cde5b5b6-1535-4a24-9517-f8263791c293/ed62c47a0d0aec19.jpg",
+        "imgUrls": [
+            "https://dlq9ebkqqrcon.cloudfront.net/cde5b5b6-1535-4a24-9517-f8263791c293/69eaa5ca3ff5aa2d.jpg",
+            "https://dlq9ebkqqrcon.cloudfront.net/cde5b5b6-1535-4a24-9517-f8263791c293/306bd177606252c3.jpg",
+            "https://dlq9ebkqqrcon.cloudfront.net/cde5b5b6-1535-4a24-9517-f8263791c293/64f25c109c75e3cd.jpg",
+             "https://dlq9ebkqqrcon.cloudfront.net/cde5b5b6-1535-4a24-9517-f8263791c293/dbb4c0f308c91d01.jpg"
+        ],
+        "city": "Athens",
+        "desc": " I have many recommendations for just about anything - from vintage shops to hammams - but my main encouragement for travelers in Athens is to just let themselves wander around the city and discover it step by step.",
+        "about": "As a front office agent at a Boutique Hotel, I gets to work with visitors and promote the greek lifestyle I love so much. I have many recommendations for just about anything - from vintage shops to hammams - but my main encouragement for travelers in Athens is to just let themselves wander around the city and discover it step by step.",
+        "price": 53,
+        "interests": [
+            "Food",
+            "Coffee",
+            "OutDoor"
+        ],
+        "questions": {
+            "WHO’S YOUR HERO AND WHERE IN SYDNEY WOULD YOU TAKE THEM OUT FOR A SERIOUS HANG?": "I would take Frida Kahlo a tour around the Partheno and ancient forum",
+            "NAME SOME SPOTS IN ATHENS THAT ARE GOOD FOR A TINDER DATE": "Thisio for drinks, Flisvos marina for a walk by the sea, lycabettus hill to watch the sunset",
+            "TOMORROW’S YOUR LAST DAY IN ATHENS. HOW DO YOU SPEND IT?": "Taking a large walk around the centre of Athens",
+            "WHAT’S YOUR FAVORITE VACATION CITY IN THE WORLD AND WHY?": "Istanbul because of the combination of purple sky and the smell of Shisha gives a mysterious vibe in this city i really love it",
+            "WHAT’S THE AREA/ SPOT IN TOWN YOU’LL NEVER BE CAUGHT DEAD IN?": "Exarcheia"
+        },
+        "link": "https://www.coolcousin.com/cities/athens/ioanna-cde5b5b6/"
+
+
+
     "chat": [
         {
             "guideId": "5de3ed727fe0b526944c41ed",

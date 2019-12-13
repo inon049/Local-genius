@@ -27,7 +27,7 @@ async function send() {
         });
         console.log('Sent push');
     } else console.log('push not supported');
-    }
+    
 }
 
 function urlBase64ToUint8Array(base64String) {

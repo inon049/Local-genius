@@ -8,6 +8,7 @@
         items="1"
         :nav="false"
         :controlsText="['&#10094;','&#10095;']"
+        :rewind="true"
       >
         <div class="ratio-guide-img">
           <img :src="guide.profileImgUrl" @click="showGuideProfile(guide._id)" />
@@ -70,8 +71,10 @@ export default {
   methods: {
     showGuideProfile(id) {
       this.$router.push(`/guide/${id}`);
-    }
-  }
+    },
+  
+  },
+
 };
 </script>
 

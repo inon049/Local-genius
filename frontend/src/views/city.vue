@@ -57,6 +57,8 @@ export default {
           );
           return guides;
         });
+          // console.log('filtered', filteredGuides);
+
         return filteredGuides;
       }
     }
