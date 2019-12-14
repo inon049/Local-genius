@@ -45,7 +45,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8d54be95fb147c8ef34681a28d37021a",
-    "url": "/img/Architecture.8d54be95.png"
+    "url": "/img/Architonic.8d54be95.png"
   },
   {
     "revision": "caf5dac1e4c610953df21371faebf67f",
