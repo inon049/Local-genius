@@ -6,6 +6,7 @@
         <h3>Connecting travelers with local guides worldwide</h3>
       </div>
       <city-filter :cities="cities"></city-filter>
+      <router-link class="login-mobile" v-if="!guide._id" to="/login">Login</router-link>
       <div class="join-btn-container">
         Not a member?
         <router-link to="/signup">JOIN!</router-link>
@@ -46,20 +47,20 @@ export default {
       cities: [],
       guides: [],
       guide: {
-        _id: ''
+        
       }
     };
   },
   async created() {
     var cities = await cityService.query();
     this.cities = JSON.parse(JSON.stringify(cities));
-
     var guides = await userService.query();
     guides = JSON.parse(JSON.stringify(guides));
     this.guides = guides.splice(0, 4);
     if(this.$store.getters.loggedInUser){
       this.guide = this.$store.getters.loggedInUser
     }
+    
   }
 };
 </script>
