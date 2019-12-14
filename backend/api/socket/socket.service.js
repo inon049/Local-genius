@@ -26,19 +26,15 @@ function sendMsgNotif(notif) {
     if (socketMap[notif.toId]) {
         socketMap[notif.toId].emit('insertUserMsg', notif)
         socketMap[notif.toId].emit('insertUserNotif', notif)
-
     } else {
         pushNotifService.push(notif.toId, notif)
-        socketMap[notif.fromId].emit('insertUserNotif', notif)
     }
 }
 
 function deleteUserSocket(userId) {
     let isConnected = Object.keys(socketMap).find(key => key === userId)
     if (isConnected) {
-        console.log(socketMap[userId],'<<<<ppppppppppppppppppppppppppppppppppppppppppppppppp>>>>>>>>>>>>');
         delete socketMap[userId]
         console.log(`Tzinor shel>${userId} de_stroyed`);
-        console.log(socketMap[userId],'ppppppppppppppppppppppppppppppppppppppppppppppppp>>>>>>>>>>>>');
     }
 }
