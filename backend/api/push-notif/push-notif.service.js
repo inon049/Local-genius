@@ -13,7 +13,6 @@ module.exports = {
 async function subscribe(subscription,user){
 try{
     let userFromDb = await userService.getById(user._id)
-    console.log(userFromDb,'<UserfromDb');
     if(!userFromDb.serviceWorkers||!userFromDb.serviceWorkers.length){
         userFromDb.serviceWorkers=[subscription]
         userFromDb= await userService.update(userFromDb)
@@ -22,7 +21,6 @@ try{
         if(!userFromDb.serviceWorkers.some(sub=>sub.endpoint===subscription.endpoint)){
             userFromDb.serviceWorkers.push(subscription)
             userFromDb= await userService.update(userFromDb)
-            console.log('pushed to user.serviceWorkers',userFromDb)
         }else{
             console.log('SW Registered already ');
         }
