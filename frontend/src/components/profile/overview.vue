@@ -98,7 +98,7 @@ export default {
       notif = JSON.parse(JSON.stringify(notif));
       notif.isRead = true;
       await this.$store.dispatch({ type: "updateNotif", notif });
-      this.$emit('notifClicked',notif.type)
+      this.$emit('notifClicked',notif)
     }
   },
   computed: {

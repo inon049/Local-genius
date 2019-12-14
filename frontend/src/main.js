@@ -11,7 +11,6 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueCarousel from 'vue-carousel';
 import { runInContext } from 'vm'
-import pushNotifService from './services/push.notif.service'
 var VueScrollTo = require('vue-scrollto');
 
 Vue.use(VueScrollTo)
@@ -25,8 +24,8 @@ Vue.use(VueCarousel);
 
 Vue.config.productionTip = false
 Vue.config.pwa = {
-    name :"Local Genius",
-    themeColor : '#ffffff',
+    name: "Local Genius",
+    themeColor: '#ffffff',
 }
 
 new Vue({
@@ -35,10 +34,3 @@ new Vue({
     components: {},
     render: h => h(app)
 }).$mount('#app')
-
-
-
-// if('serviceWorker' in navigator){
-//     // console.log('ppp');
-//     pushNotifService.send().catch(err=> console.log(err))
-// }

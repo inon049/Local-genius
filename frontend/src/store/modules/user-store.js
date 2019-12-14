@@ -1,6 +1,6 @@
 
 import userService from '@/services/user.service'
-
+import pushNotifService from '@/services/push.notif.service'
 var localLoggedinUser = null
 if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user)
 
@@ -66,6 +66,7 @@ export default {
       context.commit({ type: 'setUser', user })
       context.dispatch({type:'createUserSocket'})
       context.dispatch({type:'loadNotifs'})
+      pushNotifService.register().catch(err=> console.log(err))
       return user;
     },
     async signup(context, { userCred }) {

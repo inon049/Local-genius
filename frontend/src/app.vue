@@ -16,7 +16,7 @@
 import mainHeader from "./components/main-header";
 import mainFooter from "./components/main-footer";
 import mobileNav from "./components/mobile-nav";
-import pushNotifService from './services/push.notif.service'
+import pushNotifService from "./services/push.notif.service";
 export default {
   data() {
     return {
@@ -28,29 +28,23 @@ export default {
       this.$store.dispatch({ type: "createUserSocket" });
     await this.$store.dispatch({ type: "loadUsers" });
     await this.$store.dispatch({ type: "loadCities" });
-    await this.$store.dispatch({type:'loadNotifs'})
+    await this.$store.dispatch({ type: "loadNotifs" });
     }
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("beforeunload", () => {
+      window.removeEventListener("scroll", this.handleScroll);
+      this.$store.dispatch("deleteUserSocket");
+    });
   },
   components: {
     mainHeader,
     mobileNav,
     mainFooter
   },
-  methods:{
-    handleScroll () {
-    this.isScroll = window.scrollY > 500;
-  }
-  },
-  mounted() {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function() {
-        navigator.serviceWorker.register("/service-worker.js");
-      });
+  methods: {
+    handleScroll() {
+      this.isScroll = window.scrollY > 500;
     }
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>

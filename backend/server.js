@@ -4,28 +4,18 @@ const cors = require('cors')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-const firebase = require("firebase/app");
 
 const app = express()
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
-const webpush = require('web-push');
 const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
 const reviewRoutes = require('./api/review/review.routes')
 const bookingRoutes = require('./api/booking/booking.routes')
-app.use(require('body-parser').json());
 const chatRoutes = require('./api/chat/chat.routes')
 const notifRoutes = require('./api/notif/notif.routes')
-const connectSockets = require('./api/socket/socket.routes')
-
-
-
-const publicVapidKey = 'BOf0qAhBz4a-lxagLIqN5ns4y6F4s2Ptailr_RP0abwLiozIceJ0EmZR8a7sHsR0wxSdhdtdbdpaZN4vfBRUS3o';
-const privateVapidKey = 'GmbwzEwB3YQyIhZFKWC3m8NuSfYKwbmldV26q792UKk';
-
-webpush.setVapidDetails('mailto:dror.uzi5@gmail.com', publicVapidKey, privateVapidKey);
-
+const pushNotifRoutes = require('./api/push-notif/push-notif.routes')
+const connectSockets = require('./api/socket/socket.controller')
 
 app.use(cookieParser())
 app.use(bodyParser.json());
@@ -54,21 +44,9 @@ app.use('/api/review', reviewRoutes)
 app.use('/api/booking', bookingRoutes)
 app.use('/api/chat', chatRoutes)
 app.use('/api/notif', notifRoutes)
+app.use('/api/push-notif', pushNotifRoutes)
 connectSockets(io)
 
-
-
-app.post('/subscribe', (req, res) => {
-    const subscription = req.body;
-    res.status(201).json({});
-    const payload = JSON.stringify({ title: 'test' });
-    
-    console.log(subscription);
-    
-    webpush.sendNotification(subscription, payload).catch(error => {
-        console.error(error.stack);
-    });
-});
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 

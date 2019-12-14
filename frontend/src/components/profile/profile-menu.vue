@@ -30,8 +30,11 @@ export default {
     });
   },
   methods: {
-    notifClicked(type) {
-      if (type === "msg") this.activeName = "Messenger";
+    notifClicked(notif) {
+      if (notif.type === "msg") {
+        this.$store.dispatch({type:'selectChat',chatId:notif.chatId})
+        this.activeName = "Messenger";
+      }
       else this.activeName = "Bookings";
     },
     setCmp(tab) {
