@@ -6,7 +6,8 @@
         <h3>Connecting travelers with local guides worldwide</h3>
       </div>
       <city-filter :cities="cities"></city-filter>
-      <router-link class="login-mobile" v-if="!guide._id" to="/login">Login</router-link>
+      <span class="login-mobile" v-if="guide._id" @click="logout">Logout</span>
+      <router-link  v-else  class="login-mobile" to="/login">Login</router-link>
       <div class="join-btn-container">
         Not a member?
         <router-link to="/signup">JOIN!</router-link>
@@ -50,6 +51,12 @@ export default {
         
       }
     };
+  },
+  methods:{
+      async logout() {
+      await this.$store.dispatch({ type: "logout" });
+      location.reload();
+    },
   },
   async created() {
     var cities = await cityService.query();
