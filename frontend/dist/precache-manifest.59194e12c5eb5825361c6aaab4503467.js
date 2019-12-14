@@ -45,7 +45,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8d54be95fb147c8ef34681a28d37021a",
-    "url": "/img/Architecture.8d54be95.png"
+    "url": "/img/Architonic.8d54be95.png"
   },
   {
     "revision": "caf5dac1e4c610953df21371faebf67f",
@@ -77,7 +77,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "c143c95b16fda81d820a6b53c07a5f90",
-    "url": "/img/Photography.c143c95b.png"
+    "url": "/img/Photos.c143c95b.png"
   },
   {
     "revision": "4e2c88e43ca598c25727c437fe1ecd84",

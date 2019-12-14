@@ -1,10 +1,10 @@
 console.log('service worker loaded');
 
 self.addEventListener('push', ev => {
-    const notif = ev.data.json();
-    console.log('Got push', notif)
-    self.registration.showNotification('Local-Genius', {
-        body: `${notif.txt}`,
-        icon: 'https://i.imgur.com/yqyJgdO.png'
+    const data = ev.data.json();
+    console.log('Got push', data);
+    self.registration.showNotification(data.title, {
+        body: 'Hello, World!',
+        icon: 'http://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png'
     });
 });
