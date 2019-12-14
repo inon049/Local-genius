@@ -21,8 +21,9 @@ export default {
   },
   methods: {
     selectChat(chat) {
-      
       this.selectedChat = chat;
+      this.$store.dispatch({type:'updateChat',chat})
+      //12
     },
     sendMsg(msg){
       this.$store.dispatch({type:'sendMsg',chatId:this.selectedChat._id,msg})

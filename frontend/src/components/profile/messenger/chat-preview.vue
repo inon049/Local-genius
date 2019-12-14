@@ -30,16 +30,12 @@ export default {
       }else return this.chat.user.name
     },
     isUnread(){
-      if(!this.chat.msgs.length) return false
+      if(!this.chat.msgs.length) return
       return !this.chat.msgs[this.chat.msgs.length-1].isRead
     }
   },
   created() {
-    // if(this.chat.msgs.length){
-    //   var num =this.chat.msgs.length
-    // console.log(this.chat.msgs[num-1]);
-    // }
-    
+
   }
 };
 </script>

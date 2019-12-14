@@ -23,7 +23,6 @@ export default {
       chat.msgs.forEach(msg => {
         msg.isRead = true;
       });
-      // console.log(chat,'ppp');
       this.$emit('selectChat',chat)
     }
   },
