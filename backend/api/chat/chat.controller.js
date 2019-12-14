@@ -14,9 +14,13 @@ async function addMsg(req,res){
     let chatId = req.params.id
     msg = await chatService.addMsg(msg,chatId)
     res.send(msg)
-    
 }
 
+async function updateChat(req,res){
+    let chat = req.body;
+    chat = await chatService.update(chat)
+    res.send(chat)
+}
 
 async function createChat(req, res) {
     let chat = req.body;
@@ -30,5 +34,6 @@ module.exports = {
     getChats,
     deleteChat,
     createChat,
-    addMsg
+    addMsg,
+    updateChat
 }

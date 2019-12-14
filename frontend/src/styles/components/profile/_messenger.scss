@@ -193,7 +193,17 @@
     }
 }
 
+.unred-chat-img{
+  border: 3px solid $clr5;
+}
 
+.unred-chat{
+  h4{
+    text-decoration: underline;
+    font-weight: bold !important ;
+  }
+  font-weight: bold  ;
+}
 
 #recent::-webkit-scrollbar-thumb {
   border-radius: 10px;
