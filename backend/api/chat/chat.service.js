@@ -6,18 +6,18 @@ module.exports = {
     query,
     remove,
     add,
-    addMsg
+    addMsg,
+    update
 }
 
 async function query(filterBy = {}) {
-    // const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection('chat')
     try {
         var pipeline = [
             {
-                $match: { $or: [ { guideId:ObjectId(filterBy.id) }, { userId: ObjectId(filterBy.id) } ] }
+                $match: { $or: [{ guideId: ObjectId(filterBy.id) }, { userId: ObjectId(filterBy.id) }] }
             },
-             { $sort: { updatedAt: -1 }} 
+            { $sort: { updatedAt: -1 } }
             ,
             (filterBy.amount) ? { $limit: +filterBy.amount } :
                 { $unwind: { path: '$pp', preserveNullAndEmptyArrays: true } },
@@ -49,13 +49,13 @@ async function query(filterBy = {}) {
 
         var chats = await collection.aggregate(pipeline).toArray()
         chats = chats.map(chat => {
-            chat.user={_id:chat.user._id,name: chat.user.name, imgUrl: chat.user.profileImgUrl }
-            chat.guide ={_id:chat.guide._id,name: chat.guide.name, imgUrl: chat.guide.profileImgUrl }
+            chat.user = { _id: chat.user._id, name: chat.user.name, imgUrl: chat.user.profileImgUrl }
+            chat.guide = { _id: chat.guide._id, name: chat.guide.name, imgUrl: chat.guide.profileImgUrl }
             delete chat.userId;
             delete chat.guideId;
-            chat.msgs.sort((a,b)=>{
-                if(a.createdAt>b.createdAt) return 1
-                if(a.createdAt<b.createdAt) return -1
+            chat.msgs.sort((a, b) => {
+                if (a.createdAt > b.createdAt) return 1
+                if (a.createdAt < b.createdAt) return -1
                 else return 0
             })
             return chat;
@@ -93,86 +93,35 @@ async function add(chat) {
     }
 }
 
-function _buildCriteria(filterBy) {
-    const criteria = {}
-    // console.log(criteria, ' chat crit');
-    return criteria;
+async function update(chat) {
+    const collection = await dbService.getCollection('chat')
+    try {
+        const msgs = chat.msgs
+        const strId = chat._id
+        const _id = ObjectId(strId)
+        await collection.updateOne({ _id }, { "$set":{ msgs }})
+        return chat
+    } catch (err) {
+        console.log(`ERROR: cannot update chat ${chat._id}`)
+        throw err;
+    }
 }
-async function addMsg(msg,chatId) {
-    msg.sentAt=Date.now()
+
+async function addMsg(msg, chatId) {
+    msg.sentAt = Date.now()
     console.log(chatId);
     const collection = await dbService.getCollection('chat')
-    chatId=ObjectId(chatId)
+    chatId = ObjectId(chatId)
     try {
-       let chat = await collection.update({ "_id":chatId },
-       {$push: { msgs: msg}},
-       { $set: { updatedAt : Date.now() }
-    }
-       )
-       return chat
+        let chat = await collection.update({ "_id": chatId },
+            { $push: { msgs: msg } },
+            {
+                $set: { updatedAt: Date.now() }
+            }
+        )
+        return chat
     } catch (err) {
         console.log(`ERROR: cannot add Msg`)
         throw err;
     }
 }
-
-
-
-// chatObj
-// {
-//     "_id":"sadasd",
-//     "guideId": "5de3ed727fe0b526944c41ed",
-//     "userId": "5de3ed727fe0b526944c41e5",
-//     "updatedAt":"1575294204999"
-//     "msgs": [
-//         {
-//             "fromId": "5de3ed727fe0b526944c41ed",
-//             "toId": "5de3ed727fe0b526944c41e5",
-//             "txt": "i had the best time of my life ty",
-//             "sentAt": "1575294204195",
-//             "isRead": true
-//         },
-//         {
-//             "fromId": "5de3ed727fe0b526944c41e5",
-//             "toId": "5de3ed727fe0b526944c41ed",
-//             "txt": "ty i enjoied too",
-//             "sentAt": "1575294204999",
-//             "isRead": false
-//         }
-//     ]
-// }
-
-
-
-// "INCOMINGchat": [
-//     {
-//         "_id":"5de3ed727fe0b526944c41ed",
-//         "updatedAt":"1575294204999",
-//         "msgs": [
-//             {
-//                 "fromId": "5de3ed727fe0b526944c41ed",
-//                 "toId": "5de3ed727fe0b526944c41e5",
-//                 "txt": "i had the best time of my life ty",
-//                 "sentAt": "1575294204195",
-//                 "isRead": true
-//             },
-//             {
-//                 "fromId": "5de3ed727fe0b526944c41e5",
-//                 "toId": "5de3ed727fe0b526944c41ed",
-//                 "txt": "ty i enjoied too",
-//                 "sentAt": "1575294204999",
-//                 "isRead": false
-//             }
-//         ],
-//         "guide":{
-//             "_id":"5de3ed727fe0b526944c41ed",
-//             "name":"ff",
-//             "imgUrl":"oo"
-//         },
-//         "user":{
-//             "_id":"5de3ed727fe0b526944c41ed",
-//             "name":"ff",
-//             "imgUrl":"oo"
-//         }
-//     }
-// ],

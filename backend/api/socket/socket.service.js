@@ -17,6 +17,8 @@ function createUserSocket(userId, socket) {
 function sendBookingNotif(notif) {
     if (socketMap[notif.toId]) {
         socketMap[notif.toId].emit('insertUserNotif', notif)
+        pushNotifService.push(notif.toId, notif)
+
     } else {
         pushNotifService.push(notif.toId, notif)
     }
@@ -26,6 +28,8 @@ function sendMsgNotif(notif) {
     if (socketMap[notif.toId]) {
         socketMap[notif.toId].emit('insertUserMsg', notif)
         socketMap[notif.toId].emit('insertUserNotif', notif)
+        pushNotifService.push(notif.toId, notif)
+
     } else {
         pushNotifService.push(notif.toId, notif)
     }

@@ -15,23 +15,29 @@ export default {
   },
   data() {
     return {
-      user: null,
+      user: null
     };
   },
   methods: {
     selectChat(chat) {
-       this.$store.dispatch({type:'selectChat',chatId:chat._id})
+      this.$store.dispatch({ type: "selectChat", chatId: chat._id });
+      this.$store.dispatch({ type: "updateChat", chat });
+      //12
     },
-    sendMsg(msg){
-      this.$store.dispatch({type:'sendMsg',chatId:this.selectedChat._id,msg})
+    sendMsg(msg) {
+      this.$store.dispatch({
+        type: "sendMsg",
+        chatId: this.selectedChat._id,
+        msg
+      });
     }
   },
   computed: {
     recentChats() {
       return this.$store.getters.chats;
     },
-    selectedChat(){
-      return this.$store.getters.currChat
+    selectedChat() {
+      return this.$store.getters.currChat;
     }
   },
   created() {
