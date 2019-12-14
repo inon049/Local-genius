@@ -1,7 +1,7 @@
 <template>
   <div class="chat-preview" v-if="chat">
-    <img :src="imgUrl" />
-    <div class="chat-preview-content">
+    <img :class="{'unred-chat-img': isUnread}" :src="imgUrl" />
+    <div class="chat-preview-content" :class="{'unred-chat': isUnread}">
       <h4>{{partnerName}}</h4>
       <div class="chat-preview-txt">
           <p v-if="chat.msgs.length">{{chat.msgs[chat.msgs.length-1].txt.substring(0,10)}}...</p>
@@ -28,9 +28,18 @@ export default {
       if(this.id===this.chat.user._id){
         return this.chat.guide.name
       }else return this.chat.user.name
+    },
+    isUnread(){
+      if(!this.chat.msgs.length) return false
+      return !this.chat.msgs[this.chat.msgs.length-1].isRead
     }
   },
   created() {
+    // if(this.chat.msgs.length){
+    //   var num =this.chat.msgs.length
+    // console.log(this.chat.msgs[num-1]);
+    // }
+    
   }
 };
 </script>
