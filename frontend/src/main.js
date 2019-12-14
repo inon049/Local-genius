@@ -24,8 +24,8 @@ Vue.use(VueCarousel);
 
 Vue.config.productionTip = false
 Vue.config.pwa = {
-    name :"Local Genius",
-    themeColor : '#ffffff',
+    name: "Local Genius",
+    themeColor: '#ffffff',
 }
 
 new Vue({

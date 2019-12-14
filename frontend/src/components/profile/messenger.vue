@@ -16,13 +16,11 @@ export default {
   data() {
     return {
       user: null,
-      selectedChat: null
     };
   },
   methods: {
     selectChat(chat) {
-      
-      this.selectedChat = chat;
+       this.$store.dispatch({type:'selectChat',chatId:chat._id})
     },
     sendMsg(msg){
       this.$store.dispatch({type:'sendMsg',chatId:this.selectedChat._id,msg})
@@ -31,6 +29,9 @@ export default {
   computed: {
     recentChats() {
       return this.$store.getters.chats;
+    },
+    selectedChat(){
+      return this.$store.getters.currChat
     }
   },
   created() {

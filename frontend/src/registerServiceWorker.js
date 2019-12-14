@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
   //       'App is being served from cache by a service worker.\n' +
   //       'For more details, visit https://goo.gl/AFskqB'
   //     )
-      
+
   //   },
   //   registered () {
   //     console.log('Service worker has been registered.')
@@ -31,14 +31,14 @@ if (process.env.NODE_ENV === 'production') {
   //   }
   // })
 
-  register(`${process.env.BASE_URL}worker.js`,{
+  register(`${process.env.BASE_URL}worker.js`, {
 
-    registered () {
+    registered() {
       console.log('worker.js registerd')
     },
-    error (error) {
+    error(error) {
       console.error(' worker.js Error during  registration:', error)
     }
   })
-  
+
 }

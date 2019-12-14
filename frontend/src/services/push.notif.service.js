@@ -4,15 +4,15 @@ async function register() {
     if ('serviceWorker' in navigator) {
         const registration = await navigator.serviceWorker.register('/worker.js', { scope: '/' });
         const subscription = await registration.pushManager.
-        subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-        });
-        await fetch('api/push-notif/subscribe',{
-            method:"POST" ,
-            body:JSON.stringify(subscription),
-            headers:{
-                'content-type':'application/json'
+            subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+            });
+        await fetch('api/push-notif/subscribe', {
+            method: "POST",
+            body: JSON.stringify(subscription),
+            headers: {
+                'content-type': 'application/json'
             }
         });
         console.log('service worker Registeration sent to server...');

@@ -2,12 +2,16 @@ import chatService from '@/services/chat.service'
 
 export default {
     state: {
-        chats:[]
+        chats:[],
+        currChat:null
     },
     getters: {
         chats(state){
             return state.chats
         },
+        currChat(state){
+            return state.currChat
+        }
     },
     mutations: {
         setChats(state,{chats}){
@@ -16,6 +20,10 @@ export default {
         pushChatMsg(state,{chatId,msg}){
             let idx = state.chats.findIndex(chat=>chat._id===chatId)
             state.chats[idx].msgs.push(msg)
+        },
+        selectChat(state,{chatId}){
+            let chat= state.chats.find(chat=>chat._id===chatId)
+            state.currChat = chat
         }
     },
     actions: {
@@ -39,6 +47,9 @@ export default {
             }
           var addedNotif =  await context.dispatch({type:'addNotif',notif})
             context.dispatch({type:'sendMsgNotif',notif:addedNotif.ops[0]})
+        },
+        selectChat(context,{chatId}){
+            context.commit({type:'selectChat',chatId})
         },
         async loadChats(context){
             let id = context.rootGetters.loggedInUser._id;

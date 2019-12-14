@@ -15,7 +15,7 @@ const bookingRoutes = require('./api/booking/booking.routes')
 const chatRoutes = require('./api/chat/chat.routes')
 const notifRoutes = require('./api/notif/notif.routes')
 const pushNotifRoutes = require('./api/push-notif/push-notif.routes')
-const connectSockets = require('./api/socket/socket.routes')
+const connectSockets = require('./api/socket/socket.controller')
 
 app.use(cookieParser())
 app.use(bodyParser.json());
