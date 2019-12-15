@@ -26,10 +26,8 @@ function sendMsgNotif(notif) {
     if (socketMap[notif.toId]) {
         socketMap[notif.toId].emit('insertUserMsg', notif)
         socketMap[notif.toId].emit('insertUserNotif', notif)
-
     } else {
         pushNotifService.push(notif.toId, notif)
-        socketMap[notif.fromId].emit('insertUserNotif', notif)
     }
 }
 
